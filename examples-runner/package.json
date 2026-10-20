@@ -1,0 +1,14 @@
+{
+  "name": "typegpu-examples-runner",
+  "private": true,
+  "type": "module",
+  "description": "Headless runner for all TypeGPU docs examples on a real WebGPU device (dawn.node). See README.md",
+  "dependencies": {
+    "webgpu": "0.6.2",
+    "vite": "8.0.5",
+    "jsdom": "27.0.0",
+    "jiti": "2.6.1",
+    "pngjs": "7.0.0",
+    "jpeg-js": "0.4.4"
+  }
+}
