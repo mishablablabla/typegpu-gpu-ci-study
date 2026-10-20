@@ -1,0 +1,9774 @@
+[
+ {
+  "op": "std.countOneBits",
+  "type": "i32",
+  "cases": 31,
+  "laneChecks": 31,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countOneBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countOneBits",
+  "type": "vec2i",
+  "cases": 31,
+  "laneChecks": 62,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countOneBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countOneBits",
+  "type": "vec3i",
+  "cases": 31,
+  "laneChecks": 93,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countOneBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countOneBits",
+  "type": "vec4i",
+  "cases": 31,
+  "laneChecks": 124,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countOneBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countOneBits",
+  "type": "u32",
+  "cases": 23,
+  "laneChecks": 23,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countOneBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countOneBits",
+  "type": "vec2u",
+  "cases": 23,
+  "laneChecks": 46,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countOneBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countOneBits",
+  "type": "vec3u",
+  "cases": 23,
+  "laneChecks": 69,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countOneBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countOneBits",
+  "type": "vec4u",
+  "cases": 23,
+  "laneChecks": 92,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countOneBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.reverseBits",
+  "type": "i32",
+  "cases": 31,
+  "laneChecks": 31,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for reverseBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.reverseBits",
+  "type": "vec2i",
+  "cases": 31,
+  "laneChecks": 62,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for reverseBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.reverseBits",
+  "type": "vec3i",
+  "cases": 31,
+  "laneChecks": 93,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for reverseBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.reverseBits",
+  "type": "vec4i",
+  "cases": 31,
+  "laneChecks": 124,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for reverseBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.reverseBits",
+  "type": "u32",
+  "cases": 23,
+  "laneChecks": 23,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for reverseBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.reverseBits",
+  "type": "vec2u",
+  "cases": 23,
+  "laneChecks": 46,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for reverseBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.reverseBits",
+  "type": "vec3u",
+  "cases": 23,
+  "laneChecks": 69,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for reverseBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.reverseBits",
+  "type": "vec4u",
+  "cases": 23,
+  "laneChecks": 92,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for reverseBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countLeadingZeros",
+  "type": "i32",
+  "cases": 31,
+  "laneChecks": 31,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countLeadingZeros not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countLeadingZeros",
+  "type": "vec2i",
+  "cases": 31,
+  "laneChecks": 62,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countLeadingZeros not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countLeadingZeros",
+  "type": "vec3i",
+  "cases": 31,
+  "laneChecks": 93,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countLeadingZeros not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countLeadingZeros",
+  "type": "vec4i",
+  "cases": 31,
+  "laneChecks": 124,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countLeadingZeros not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countLeadingZeros",
+  "type": "u32",
+  "cases": 23,
+  "laneChecks": 23,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countLeadingZeros not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countLeadingZeros",
+  "type": "vec2u",
+  "cases": 23,
+  "laneChecks": 46,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countLeadingZeros not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countLeadingZeros",
+  "type": "vec3u",
+  "cases": 23,
+  "laneChecks": 69,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countLeadingZeros not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countLeadingZeros",
+  "type": "vec4u",
+  "cases": 23,
+  "laneChecks": 92,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countLeadingZeros not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countTrailingZeros",
+  "type": "i32",
+  "cases": 31,
+  "laneChecks": 31,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countTrailingZeros not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countTrailingZeros",
+  "type": "vec2i",
+  "cases": 31,
+  "laneChecks": 62,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countTrailingZeros not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countTrailingZeros",
+  "type": "vec3i",
+  "cases": 31,
+  "laneChecks": 93,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countTrailingZeros not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countTrailingZeros",
+  "type": "vec4i",
+  "cases": 31,
+  "laneChecks": 124,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countTrailingZeros not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countTrailingZeros",
+  "type": "u32",
+  "cases": 23,
+  "laneChecks": 23,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countTrailingZeros not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countTrailingZeros",
+  "type": "vec2u",
+  "cases": 23,
+  "laneChecks": 46,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countTrailingZeros not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countTrailingZeros",
+  "type": "vec3u",
+  "cases": 23,
+  "laneChecks": 69,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countTrailingZeros not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.countTrailingZeros",
+  "type": "vec4u",
+  "cases": 23,
+  "laneChecks": 92,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for countTrailingZeros not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.firstLeadingBit",
+  "type": "i32",
+  "cases": 31,
+  "laneChecks": 31,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for firstLeadingBit not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.firstLeadingBit",
+  "type": "vec2i",
+  "cases": 31,
+  "laneChecks": 62,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for firstLeadingBit not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.firstLeadingBit",
+  "type": "vec3i",
+  "cases": 31,
+  "laneChecks": 93,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for firstLeadingBit not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.firstLeadingBit",
+  "type": "vec4i",
+  "cases": 31,
+  "laneChecks": 124,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for firstLeadingBit not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.firstLeadingBit",
+  "type": "u32",
+  "cases": 23,
+  "laneChecks": 23,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for firstLeadingBit not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.firstLeadingBit",
+  "type": "vec2u",
+  "cases": 23,
+  "laneChecks": 46,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for firstLeadingBit not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.firstLeadingBit",
+  "type": "vec3u",
+  "cases": 23,
+  "laneChecks": 69,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for firstLeadingBit not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.firstLeadingBit",
+  "type": "vec4u",
+  "cases": 23,
+  "laneChecks": 92,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for firstLeadingBit not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.firstTrailingBit",
+  "type": "i32",
+  "cases": 31,
+  "laneChecks": 31,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for firstTrailingBit not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.firstTrailingBit",
+  "type": "vec2i",
+  "cases": 31,
+  "laneChecks": 62,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for firstTrailingBit not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.firstTrailingBit",
+  "type": "vec3i",
+  "cases": 31,
+  "laneChecks": 93,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for firstTrailingBit not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.firstTrailingBit",
+  "type": "vec4i",
+  "cases": 31,
+  "laneChecks": 124,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for firstTrailingBit not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.firstTrailingBit",
+  "type": "u32",
+  "cases": 23,
+  "laneChecks": 23,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for firstTrailingBit not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.firstTrailingBit",
+  "type": "vec2u",
+  "cases": 23,
+  "laneChecks": 46,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for firstTrailingBit not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.firstTrailingBit",
+  "type": "vec3u",
+  "cases": 23,
+  "laneChecks": 69,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for firstTrailingBit not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.firstTrailingBit",
+  "type": "vec4u",
+  "cases": 23,
+  "laneChecks": 92,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for firstTrailingBit not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.abs",
+  "type": "i32",
+  "cases": 31,
+  "laneChecks": 31,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 1,
+   "outOfTypeRange": 1,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       -2147483648
+      ]
+     ],
+     "got": [
+      2147483648
+     ],
+     "want": [
+      -2147483648
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.abs",
+  "type": "vec2i",
+  "cases": 31,
+  "laneChecks": 62,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.abs",
+  "type": "vec3i",
+  "cases": 31,
+  "laneChecks": 93,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.abs",
+  "type": "vec4i",
+  "cases": 31,
+  "laneChecks": 124,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.abs",
+  "type": "u32",
+  "cases": 23,
+  "laneChecks": 23,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.abs",
+  "type": "vec2u",
+  "cases": 23,
+  "laneChecks": 46,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.abs",
+  "type": "vec3u",
+  "cases": 23,
+  "laneChecks": 69,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.abs",
+  "type": "vec4u",
+  "cases": 23,
+  "laneChecks": 92,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.sign",
+  "type": "i32",
+  "cases": 31,
+  "laneChecks": 31,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.sign",
+  "type": "vec2i",
+  "cases": 31,
+  "laneChecks": 62,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.sign",
+  "type": "vec3i",
+  "cases": 31,
+  "laneChecks": 93,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.sign",
+  "type": "vec4i",
+  "cases": 31,
+  "laneChecks": 124,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "Math.abs",
+  "type": "i32",
+  "cases": 31,
+  "laneChecks": 31,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 1,
+   "outOfTypeRange": 1,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       -2147483648
+      ]
+     ],
+     "got": [
+      2147483648
+     ],
+     "want": [
+      -2147483648
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "Math.abs",
+  "type": "u32",
+  "cases": 23,
+  "laneChecks": 23,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "Math.sign",
+  "type": "i32",
+  "cases": 31,
+  "laneChecks": 31,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "Math.clz32",
+  "type": "i32",
+  "cases": 31,
+  "laneChecks": 31,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "Math.clz32",
+  "type": "u32",
+  "cases": 23,
+  "laneChecks": 23,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "~x",
+  "type": "i32",
+  "cases": 31,
+  "laneChecks": 31,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "~x",
+  "type": "vec2i",
+  "cases": 31,
+  "laneChecks": 62,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 61,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 31,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       65536
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      -1,
+      -65537
+     ]
+    },
+    {
+     "args": [
+      [
+       1,
+       -65536
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      -2,
+      65535
+     ]
+    },
+    {
+     "args": [
+      [
+       1,
+       -65536
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      -2,
+      65535
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "~x",
+  "type": "vec3i",
+  "cases": 31,
+  "laneChecks": 93,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 92,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 31,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       65536,
+       -305419896
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      -1,
+      -65537,
+      305419895
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       65536,
+       -305419896
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      -1,
+      -65537,
+      305419895
+     ]
+    },
+    {
+     "args": [
+      [
+       1,
+       -65536,
+       32768
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      -2,
+      65535,
+      -32769
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "~x",
+  "type": "vec4i",
+  "cases": 31,
+  "laneChecks": 124,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 123,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 31,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       65536,
+       -305419896,
+       32767
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      -1,
+      -65537,
+      305419895,
+      -32768
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       65536,
+       -305419896,
+       32767
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      -1,
+      -65537,
+      305419895,
+      -32768
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       65536,
+       -305419896,
+       32767
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      -1,
+      -65537,
+      305419895,
+      -32768
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "~x",
+  "type": "u32",
+  "cases": 23,
+  "laneChecks": 23,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 16,
+   "outOfTypeRange": 16,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      4294967295
+     ]
+    },
+    {
+     "args": [
+      [
+       1
+      ]
+     ],
+     "got": [
+      -2
+     ],
+     "want": [
+      4294967294
+     ]
+    },
+    {
+     "args": [
+      [
+       2
+      ]
+     ],
+     "got": [
+      -3
+     ],
+     "want": [
+      4294967293
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "~x",
+  "type": "vec2u",
+  "cases": 23,
+  "laneChecks": 46,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 46,
+   "outOfTypeRange": 23,
+   "wrongVectorKind": 23,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       65535
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      4294967295,
+      4294901760
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       65535
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      4294967295,
+      4294901760
+     ]
+    },
+    {
+     "args": [
+      [
+       1,
+       65536
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      4294967294,
+      4294901759
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "~x",
+  "type": "vec3u",
+  "cases": 23,
+  "laneChecks": 69,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 69,
+   "outOfTypeRange": 23,
+   "wrongVectorKind": 23,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       65535,
+       4294967295
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      4294967295,
+      4294901760,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       65535,
+       4294967295
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      4294967295,
+      4294901760,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       65535,
+       4294967295
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      4294967295,
+      4294901760,
+      0
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "~x",
+  "type": "vec4u",
+  "cases": 23,
+  "laneChecks": 92,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 92,
+   "outOfTypeRange": 23,
+   "wrongVectorKind": 23,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       65535,
+       4294967295,
+       16
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      4294967295,
+      4294901760,
+      0,
+      4294967279
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       65535,
+       4294967295,
+       16
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      4294967295,
+      4294901760,
+      0,
+      4294967279
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       65535,
+       4294967295,
+       16
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      4294967295,
+      4294901760,
+      0,
+      4294967279
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a & b",
+  "type": "i32",
+  "cases": 961,
+  "laneChecks": 961,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a & b",
+  "type": "vec2i",
+  "cases": 961,
+  "laneChecks": 1922,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 1535,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 961,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       7
+      ],
+      [
+       0,
+       65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7
+      ],
+      [
+       1,
+       -65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7
+      ],
+      [
+       -1,
+       1431655765
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      5
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a & b",
+  "type": "vec3i",
+  "cases": 961,
+  "laneChecks": 2883,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 2496,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 961,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536
+      ],
+      [
+       0,
+       65536,
+       -305419896
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      65536
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536
+      ],
+      [
+       0,
+       65536,
+       -305419896
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      65536
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536
+      ],
+      [
+       1,
+       -65536,
+       32768
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a & b",
+  "type": "vec4i",
+  "cases": 961,
+  "laneChecks": 3844,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 3457,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 961,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536,
+       2147483646
+      ],
+      [
+       0,
+       65536,
+       -305419896,
+       32767
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      65536,
+      32766
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536,
+       2147483646
+      ],
+      [
+       0,
+       65536,
+       -305419896,
+       32767
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      65536,
+      32766
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536,
+       2147483646
+      ],
+      [
+       0,
+       65536,
+       -305419896,
+       32767
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      65536,
+      32766
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a & b",
+  "type": "u32",
+  "cases": 529,
+  "laneChecks": 529,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 49,
+   "outOfTypeRange": 49,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       2863311530
+      ],
+      [
+       2863311530
+      ]
+     ],
+     "got": [
+      -1431655766
+     ],
+     "want": [
+      2863311530
+     ]
+    },
+    {
+     "args": [
+      [
+       2863311530
+      ],
+      [
+       4042322160
+      ]
+     ],
+     "got": [
+      -1600085856
+     ],
+     "want": [
+      2694881440
+     ]
+    },
+    {
+     "args": [
+      [
+       2863311530
+      ],
+      [
+       3735928559
+      ]
+     ],
+     "got": [
+      -1968657750
+     ],
+     "want": [
+      2326309546
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a & b",
+  "type": "vec2u",
+  "cases": 529,
+  "laneChecks": 1058,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 839,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 529,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       32
+      ],
+      [
+       0,
+       65535
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      32
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32
+      ],
+      [
+       1,
+       65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32
+      ],
+      [
+       2,
+       1431655765
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a & b",
+  "type": "vec3u",
+  "cases": 529,
+  "laneChecks": 1587,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 1368,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 529,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       32,
+       16
+      ],
+      [
+       0,
+       65535,
+       4294967295
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      32,
+      16
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16
+      ],
+      [
+       0,
+       65535,
+       4294967295
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      32,
+      16
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16
+      ],
+      [
+       1,
+       65536,
+       4294967294
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      16
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a & b",
+  "type": "vec4u",
+  "cases": 529,
+  "laneChecks": 2116,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 1897,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 529,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       32,
+       16,
+       305419896
+      ],
+      [
+       0,
+       65535,
+       4294967295,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      32,
+      16,
+      16
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16,
+       305419896
+      ],
+      [
+       0,
+       65535,
+       4294967295,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      32,
+      16,
+      16
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16,
+       305419896
+      ],
+      [
+       0,
+       65535,
+       4294967295,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      32,
+      16,
+      16
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a | b",
+  "type": "i32",
+  "cases": 961,
+  "laneChecks": 961,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a | b",
+  "type": "vec2i",
+  "cases": 961,
+  "laneChecks": 1922,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 1921,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 961,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       7
+      ],
+      [
+       0,
+       65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7
+      ],
+      [
+       1,
+       -65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      -65529
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7
+      ],
+      [
+       1,
+       -65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      -65529
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a | b",
+  "type": "vec3i",
+  "cases": 961,
+  "laneChecks": 2883,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 2882,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 961,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536
+      ],
+      [
+       0,
+       65536,
+       -305419896
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543,
+      -305419896
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536
+      ],
+      [
+       0,
+       65536,
+       -305419896
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543,
+      -305419896
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536
+      ],
+      [
+       1,
+       -65536,
+       32768
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      -65529,
+      98304
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a | b",
+  "type": "vec4i",
+  "cases": 961,
+  "laneChecks": 3844,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 3843,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 961,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536,
+       2147483646
+      ],
+      [
+       0,
+       65536,
+       -305419896,
+       32767
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543,
+      -305419896,
+      2147483647
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536,
+       2147483646
+      ],
+      [
+       0,
+       65536,
+       -305419896,
+       32767
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543,
+      -305419896,
+      2147483647
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536,
+       2147483646
+      ],
+      [
+       0,
+       65536,
+       -305419896,
+       32767
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543,
+      -305419896,
+      2147483647
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a | b",
+  "type": "u32",
+  "cases": 529,
+  "laneChecks": 529,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 273,
+   "outOfTypeRange": 273,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       2863311530
+      ]
+     ],
+     "got": [
+      -1431655766
+     ],
+     "want": [
+      2863311530
+     ]
+    },
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       4042322160
+      ]
+     ],
+     "got": [
+      -252645136
+     ],
+     "want": [
+      4042322160
+     ]
+    },
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       3735928559
+      ]
+     ],
+     "got": [
+      -559038737
+     ],
+     "want": [
+      3735928559
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a | b",
+  "type": "vec2u",
+  "cases": 529,
+  "laneChecks": 1058,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 1057,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 529,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       32
+      ],
+      [
+       0,
+       65535
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65535
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32
+      ],
+      [
+       1,
+       65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      65568
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32
+      ],
+      [
+       1,
+       65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      65568
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a | b",
+  "type": "vec3u",
+  "cases": 529,
+  "laneChecks": 1587,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 1586,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 529,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       32,
+       16
+      ],
+      [
+       0,
+       65535,
+       4294967295
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65535,
+      4294967295
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16
+      ],
+      [
+       0,
+       65535,
+       4294967295
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65535,
+      4294967295
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16
+      ],
+      [
+       1,
+       65536,
+       4294967294
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      65568,
+      4294967294
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a | b",
+  "type": "vec4u",
+  "cases": 529,
+  "laneChecks": 2116,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 2115,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 529,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       32,
+       16,
+       305419896
+      ],
+      [
+       0,
+       65535,
+       4294967295,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65535,
+      4294967295,
+      305419896
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16,
+       305419896
+      ],
+      [
+       0,
+       65535,
+       4294967295,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65535,
+      4294967295,
+      305419896
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16,
+       305419896
+      ],
+      [
+       0,
+       65535,
+       4294967295,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65535,
+      4294967295,
+      305419896
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a ^ b",
+  "type": "i32",
+  "cases": 961,
+  "laneChecks": 961,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a ^ b",
+  "type": "vec2i",
+  "cases": 961,
+  "laneChecks": 1922,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 1887,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 961,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       7
+      ],
+      [
+       0,
+       65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7
+      ],
+      [
+       1,
+       -65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      -65529
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7
+      ],
+      [
+       1,
+       -65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      -65529
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a ^ b",
+  "type": "vec3i",
+  "cases": 961,
+  "laneChecks": 2883,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 2848,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 961,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536
+      ],
+      [
+       0,
+       65536,
+       -305419896
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543,
+      -305485432
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536
+      ],
+      [
+       0,
+       65536,
+       -305419896
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543,
+      -305485432
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536
+      ],
+      [
+       1,
+       -65536,
+       32768
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      -65529,
+      98304
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a ^ b",
+  "type": "vec4i",
+  "cases": 961,
+  "laneChecks": 3844,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 3809,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 961,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536,
+       2147483646
+      ],
+      [
+       0,
+       65536,
+       -305419896,
+       32767
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543,
+      -305485432,
+      2147450881
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536,
+       2147483646
+      ],
+      [
+       0,
+       65536,
+       -305419896,
+       32767
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543,
+      -305485432,
+      2147450881
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536,
+       2147483646
+      ],
+      [
+       0,
+       65536,
+       -305419896,
+       32767
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543,
+      -305485432,
+      2147450881
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a ^ b",
+  "type": "u32",
+  "cases": 529,
+  "laneChecks": 529,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 224,
+   "outOfTypeRange": 224,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       2863311530
+      ]
+     ],
+     "got": [
+      -1431655766
+     ],
+     "want": [
+      2863311530
+     ]
+    },
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       4042322160
+      ]
+     ],
+     "got": [
+      -252645136
+     ],
+     "want": [
+      4042322160
+     ]
+    },
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       3735928559
+      ]
+     ],
+     "got": [
+      -559038737
+     ],
+     "want": [
+      3735928559
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a ^ b",
+  "type": "vec2u",
+  "cases": 529,
+  "laneChecks": 1058,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 1035,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 529,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       32
+      ],
+      [
+       0,
+       65535
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65503
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32
+      ],
+      [
+       1,
+       65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      65568
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32
+      ],
+      [
+       1,
+       65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      65568
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a ^ b",
+  "type": "vec3u",
+  "cases": 529,
+  "laneChecks": 1587,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 1564,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 529,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       32,
+       16
+      ],
+      [
+       0,
+       65535,
+       4294967295
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65503,
+      4294967279
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16
+      ],
+      [
+       0,
+       65535,
+       4294967295
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65503,
+      4294967279
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16
+      ],
+      [
+       1,
+       65536,
+       4294967294
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      65568,
+      4294967278
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a ^ b",
+  "type": "vec4u",
+  "cases": 529,
+  "laneChecks": 2116,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 2093,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 529,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       32,
+       16,
+       305419896
+      ],
+      [
+       0,
+       65535,
+       4294967295,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65503,
+      4294967279,
+      305419880
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16,
+       305419896
+      ],
+      [
+       0,
+       65535,
+       4294967295,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65503,
+      4294967279,
+      305419880
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16,
+       305419896
+      ],
+      [
+       0,
+       65535,
+       4294967295,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65503,
+      4294967279,
+      305419880
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a << s",
+  "type": "i32",
+  "cases": 156,
+  "laneChecks": 156,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a << s",
+  "type": "vec2i",
+  "cases": 156,
+  "laneChecks": 312,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 262,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       -1073741824
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824
+      ],
+      [
+       1,
+       7
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824
+      ],
+      [
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a << s",
+  "type": "vec3i",
+  "cases": 156,
+  "laneChecks": 468,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 418,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      725352448
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      725352448
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896
+      ],
+      [
+       1,
+       7,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      1450704896
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a << s",
+  "type": "vec4i",
+  "cases": 156,
+  "laneChecks": 624,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 574,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896,
+       2
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      725352448,
+      -2147483648
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896,
+       2
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      725352448,
+      -2147483648
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896,
+       2
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      725352448,
+      -2147483648
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a << s",
+  "type": "u32",
+  "cases": 156,
+  "laneChecks": 156,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 56,
+   "outOfTypeRange": 56,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       1
+      ],
+      [
+       31
+      ]
+     ],
+     "got": [
+      -2147483648
+     ],
+     "want": [
+      2147483648
+     ]
+    },
+    {
+     "args": [
+      [
+       1
+      ],
+      [
+       63
+      ]
+     ],
+     "got": [
+      -2147483648
+     ],
+     "want": [
+      2147483648
+     ]
+    },
+    {
+     "args": [
+      [
+       1
+      ],
+      [
+       4294967295
+      ]
+     ],
+     "got": [
+      -2147483648
+     ],
+     "want": [
+      2147483648
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a << s",
+  "type": "vec2u",
+  "cases": 156,
+  "laneChecks": 312,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 274,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       1073741824
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824
+      ],
+      [
+       1,
+       7
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824
+      ],
+      [
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a << s",
+  "type": "vec3u",
+  "cases": 156,
+  "laneChecks": 468,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 430,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      32768
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      32768
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       1,
+       7,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      65536
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a << s",
+  "type": "vec4u",
+  "cases": 156,
+  "laneChecks": 624,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 586,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649,
+       3
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      32768,
+      3221225472
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649,
+       3
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      32768,
+      3221225472
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649,
+       3
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      32768,
+      3221225472
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >> s",
+  "type": "i32",
+  "cases": 156,
+  "laneChecks": 156,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >> s",
+  "type": "vec2i",
+  "cases": 156,
+  "laneChecks": 312,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 260,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       -1073741824
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      -268435456
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824
+      ],
+      [
+       1,
+       7
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      -8388608
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824
+      ],
+      [
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      -32768
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >> s",
+  "type": "vec3i",
+  "cases": 156,
+  "laneChecks": 468,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 416,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      -268435456,
+      9320
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      -268435456,
+      9320
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896
+      ],
+      [
+       1,
+       7,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      -8388608,
+      4660
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >> s",
+  "type": "vec4i",
+  "cases": 156,
+  "laneChecks": 624,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 572,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896,
+       2
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      -268435456,
+      9320,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896,
+       2
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      -268435456,
+      9320,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896,
+       2
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      -268435456,
+      9320,
+      0
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >> s",
+  "type": "u32",
+  "cases": 156,
+  "laneChecks": 156,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 65,
+   "outOfTypeRange": 65,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       4294967295
+      ],
+      [
+       0
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      4294967295
+     ]
+    },
+    {
+     "args": [
+      [
+       4294967295
+      ],
+      [
+       1
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      2147483647
+     ]
+    },
+    {
+     "args": [
+      [
+       4294967295
+      ],
+      [
+       2
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      1073741823
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >> s",
+  "type": "vec2u",
+  "cases": 156,
+  "laneChecks": 312,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 263,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       1073741824
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824
+      ],
+      [
+       1,
+       7
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      8388608
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824
+      ],
+      [
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      32768
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >> s",
+  "type": "vec3u",
+  "cases": 156,
+  "laneChecks": 468,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 419,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456,
+      65536
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456,
+      65536
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       1,
+       7,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      8388608,
+      32768
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >> s",
+  "type": "vec4u",
+  "cases": 156,
+  "laneChecks": 624,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 575,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649,
+       3
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456,
+      65536,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649,
+       3
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456,
+      65536,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649,
+       3
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456,
+      65536,
+      0
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >>> s",
+  "type": "u32",
+  "cases": 156,
+  "laneChecks": 156,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >>> s",
+  "type": "vec2u",
+  "cases": 156,
+  "laneChecks": 312,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 263,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       1073741824
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824
+      ],
+      [
+       1,
+       7
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      8388608
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824
+      ],
+      [
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      32768
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >>> s",
+  "type": "vec3u",
+  "cases": 156,
+  "laneChecks": 468,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 419,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456,
+      65536
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456,
+      65536
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       1,
+       7,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      8388608,
+      32768
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >>> s",
+  "type": "vec4u",
+  "cases": 156,
+  "laneChecks": 624,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 575,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649,
+       3
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456,
+      65536,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649,
+       3
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456,
+      65536,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649,
+       3
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456,
+      65536,
+      0
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.bitShiftLeft",
+  "type": "vec2i",
+  "cases": 156,
+  "laneChecks": 312,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.bitShiftLeft",
+  "type": "vec3i",
+  "cases": 156,
+  "laneChecks": 468,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.bitShiftLeft",
+  "type": "vec4i",
+  "cases": 156,
+  "laneChecks": 624,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.bitShiftLeft",
+  "type": "vec2u",
+  "cases": 156,
+  "laneChecks": 312,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.bitShiftLeft",
+  "type": "vec3u",
+  "cases": 156,
+  "laneChecks": 468,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.bitShiftLeft",
+  "type": "vec4u",
+  "cases": 156,
+  "laneChecks": 624,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.bitShiftRight",
+  "type": "vec2i",
+  "cases": 156,
+  "laneChecks": 312,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.bitShiftRight",
+  "type": "vec3i",
+  "cases": 156,
+  "laneChecks": 468,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.bitShiftRight",
+  "type": "vec4i",
+  "cases": 156,
+  "laneChecks": 624,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.bitShiftRight",
+  "type": "vec2u",
+  "cases": 156,
+  "laneChecks": 312,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.bitShiftRight",
+  "type": "vec3u",
+  "cases": 156,
+  "laneChecks": 468,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.bitShiftRight",
+  "type": "vec4u",
+  "cases": 156,
+  "laneChecks": 624,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a <<= s",
+  "type": "i32",
+  "cases": 156,
+  "laneChecks": 156,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a <<= s",
+  "type": "vec2i",
+  "cases": 156,
+  "laneChecks": 312,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 262,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       -1073741824
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824
+      ],
+      [
+       1,
+       7
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824
+      ],
+      [
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a <<= s",
+  "type": "vec3i",
+  "cases": 156,
+  "laneChecks": 468,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 418,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      725352448
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      725352448
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896
+      ],
+      [
+       1,
+       7,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      1450704896
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a <<= s",
+  "type": "vec4i",
+  "cases": 156,
+  "laneChecks": 624,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 574,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896,
+       2
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      725352448,
+      -2147483648
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896,
+       2
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      725352448,
+      -2147483648
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896,
+       2
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      725352448,
+      -2147483648
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a <<= s",
+  "type": "u32",
+  "cases": 156,
+  "laneChecks": 156,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 56,
+   "outOfTypeRange": 56,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       1
+      ],
+      [
+       31
+      ]
+     ],
+     "got": [
+      -2147483648
+     ],
+     "want": [
+      2147483648
+     ]
+    },
+    {
+     "args": [
+      [
+       1
+      ],
+      [
+       63
+      ]
+     ],
+     "got": [
+      -2147483648
+     ],
+     "want": [
+      2147483648
+     ]
+    },
+    {
+     "args": [
+      [
+       1
+      ],
+      [
+       4294967295
+      ]
+     ],
+     "got": [
+      -2147483648
+     ],
+     "want": [
+      2147483648
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a <<= s",
+  "type": "vec2u",
+  "cases": 156,
+  "laneChecks": 312,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 274,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       1073741824
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824
+      ],
+      [
+       1,
+       7
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824
+      ],
+      [
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a <<= s",
+  "type": "vec3u",
+  "cases": 156,
+  "laneChecks": 468,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 430,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      32768
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      32768
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       1,
+       7,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      65536
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a <<= s",
+  "type": "vec4u",
+  "cases": 156,
+  "laneChecks": 624,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 586,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649,
+       3
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      32768,
+      3221225472
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649,
+       3
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      32768,
+      3221225472
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649,
+       3
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      32768,
+      3221225472
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >>= s",
+  "type": "i32",
+  "cases": 156,
+  "laneChecks": 156,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >>= s",
+  "type": "vec2i",
+  "cases": 156,
+  "laneChecks": 312,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 260,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       -1073741824
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      -268435456
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824
+      ],
+      [
+       1,
+       7
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      -8388608
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824
+      ],
+      [
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      -32768
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >>= s",
+  "type": "vec3i",
+  "cases": 156,
+  "laneChecks": 468,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 416,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      -268435456,
+      9320
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      -268435456,
+      9320
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896
+      ],
+      [
+       1,
+       7,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      -8388608,
+      4660
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >>= s",
+  "type": "vec4i",
+  "cases": 156,
+  "laneChecks": 624,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 572,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896,
+       2
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      -268435456,
+      9320,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896,
+       2
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      -268435456,
+      9320,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896,
+       2
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      -268435456,
+      9320,
+      0
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >>= s",
+  "type": "u32",
+  "cases": 156,
+  "laneChecks": 156,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 65,
+   "outOfTypeRange": 65,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       4294967295
+      ],
+      [
+       0
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      4294967295
+     ]
+    },
+    {
+     "args": [
+      [
+       4294967295
+      ],
+      [
+       1
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      2147483647
+     ]
+    },
+    {
+     "args": [
+      [
+       4294967295
+      ],
+      [
+       2
+      ]
+     ],
+     "got": [
+      -1
+     ],
+     "want": [
+      1073741823
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >>= s",
+  "type": "vec2u",
+  "cases": 156,
+  "laneChecks": 312,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 263,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       1073741824
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824
+      ],
+      [
+       1,
+       7
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      8388608
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824
+      ],
+      [
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      32768
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >>= s",
+  "type": "vec3u",
+  "cases": 156,
+  "laneChecks": 468,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 419,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456,
+      65536
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456,
+      65536
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       1,
+       7,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      8388608,
+      32768
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >>= s",
+  "type": "vec4u",
+  "cases": 156,
+  "laneChecks": 624,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 575,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649,
+       3
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456,
+      65536,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649,
+       3
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456,
+      65536,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649,
+       3
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456,
+      65536,
+      0
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >>>= s",
+  "type": "u32",
+  "cases": 156,
+  "laneChecks": 156,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >>>= s",
+  "type": "vec2u",
+  "cases": 156,
+  "laneChecks": 312,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 263,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       1073741824
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824
+      ],
+      [
+       1,
+       7
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      8388608
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824
+      ],
+      [
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      32768
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >>>= s",
+  "type": "vec3u",
+  "cases": 156,
+  "laneChecks": 468,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 419,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456,
+      65536
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456,
+      65536
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       1,
+       7,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      8388608,
+      32768
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a >>>= s",
+  "type": "vec4u",
+  "cases": 156,
+  "laneChecks": 624,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 575,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 156,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649,
+       3
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456,
+      65536,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649,
+       3
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456,
+      65536,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649,
+       3
+      ],
+      [
+       0,
+       2,
+       15,
+       30
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      268435456,
+      65536,
+      0
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a &= b",
+  "type": "i32",
+  "cases": 961,
+  "laneChecks": 961,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a &= b",
+  "type": "vec2i",
+  "cases": 961,
+  "laneChecks": 1922,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 1535,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 961,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       7
+      ],
+      [
+       0,
+       65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7
+      ],
+      [
+       1,
+       -65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7
+      ],
+      [
+       -1,
+       1431655765
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      5
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a &= b",
+  "type": "vec3i",
+  "cases": 961,
+  "laneChecks": 2883,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 2496,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 961,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536
+      ],
+      [
+       0,
+       65536,
+       -305419896
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      65536
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536
+      ],
+      [
+       0,
+       65536,
+       -305419896
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      65536
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536
+      ],
+      [
+       1,
+       -65536,
+       32768
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a &= b",
+  "type": "vec4i",
+  "cases": 961,
+  "laneChecks": 3844,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 3457,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 961,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536,
+       2147483646
+      ],
+      [
+       0,
+       65536,
+       -305419896,
+       32767
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      65536,
+      32766
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536,
+       2147483646
+      ],
+      [
+       0,
+       65536,
+       -305419896,
+       32767
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      65536,
+      32766
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536,
+       2147483646
+      ],
+      [
+       0,
+       65536,
+       -305419896,
+       32767
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      65536,
+      32766
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a &= b",
+  "type": "u32",
+  "cases": 529,
+  "laneChecks": 529,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 49,
+   "outOfTypeRange": 49,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       2863311530
+      ],
+      [
+       2863311530
+      ]
+     ],
+     "got": [
+      -1431655766
+     ],
+     "want": [
+      2863311530
+     ]
+    },
+    {
+     "args": [
+      [
+       2863311530
+      ],
+      [
+       4042322160
+      ]
+     ],
+     "got": [
+      -1600085856
+     ],
+     "want": [
+      2694881440
+     ]
+    },
+    {
+     "args": [
+      [
+       2863311530
+      ],
+      [
+       3735928559
+      ]
+     ],
+     "got": [
+      -1968657750
+     ],
+     "want": [
+      2326309546
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a &= b",
+  "type": "vec2u",
+  "cases": 529,
+  "laneChecks": 1058,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 839,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 529,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       32
+      ],
+      [
+       0,
+       65535
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      32
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32
+      ],
+      [
+       1,
+       65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32
+      ],
+      [
+       2,
+       1431655765
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a &= b",
+  "type": "vec3u",
+  "cases": 529,
+  "laneChecks": 1587,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 1368,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 529,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       32,
+       16
+      ],
+      [
+       0,
+       65535,
+       4294967295
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      32,
+      16
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16
+      ],
+      [
+       0,
+       65535,
+       4294967295
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      32,
+      16
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16
+      ],
+      [
+       1,
+       65536,
+       4294967294
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      0,
+      16
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a &= b",
+  "type": "vec4u",
+  "cases": 529,
+  "laneChecks": 2116,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 1897,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 529,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       32,
+       16,
+       305419896
+      ],
+      [
+       0,
+       65535,
+       4294967295,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      32,
+      16,
+      16
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16,
+       305419896
+      ],
+      [
+       0,
+       65535,
+       4294967295,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      32,
+      16,
+      16
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16,
+       305419896
+      ],
+      [
+       0,
+       65535,
+       4294967295,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      32,
+      16,
+      16
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a |= b",
+  "type": "i32",
+  "cases": 961,
+  "laneChecks": 961,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a |= b",
+  "type": "vec2i",
+  "cases": 961,
+  "laneChecks": 1922,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 1921,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 961,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       7
+      ],
+      [
+       0,
+       65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7
+      ],
+      [
+       1,
+       -65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      -65529
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7
+      ],
+      [
+       1,
+       -65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      -65529
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a |= b",
+  "type": "vec3i",
+  "cases": 961,
+  "laneChecks": 2883,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 2882,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 961,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536
+      ],
+      [
+       0,
+       65536,
+       -305419896
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543,
+      -305419896
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536
+      ],
+      [
+       0,
+       65536,
+       -305419896
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543,
+      -305419896
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536
+      ],
+      [
+       1,
+       -65536,
+       32768
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      -65529,
+      98304
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a |= b",
+  "type": "vec4i",
+  "cases": 961,
+  "laneChecks": 3844,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 3843,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 961,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536,
+       2147483646
+      ],
+      [
+       0,
+       65536,
+       -305419896,
+       32767
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543,
+      -305419896,
+      2147483647
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536,
+       2147483646
+      ],
+      [
+       0,
+       65536,
+       -305419896,
+       32767
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543,
+      -305419896,
+      2147483647
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536,
+       2147483646
+      ],
+      [
+       0,
+       65536,
+       -305419896,
+       32767
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543,
+      -305419896,
+      2147483647
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a |= b",
+  "type": "u32",
+  "cases": 529,
+  "laneChecks": 529,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 273,
+   "outOfTypeRange": 273,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       2863311530
+      ]
+     ],
+     "got": [
+      -1431655766
+     ],
+     "want": [
+      2863311530
+     ]
+    },
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       4042322160
+      ]
+     ],
+     "got": [
+      -252645136
+     ],
+     "want": [
+      4042322160
+     ]
+    },
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       3735928559
+      ]
+     ],
+     "got": [
+      -559038737
+     ],
+     "want": [
+      3735928559
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a |= b",
+  "type": "vec2u",
+  "cases": 529,
+  "laneChecks": 1058,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 1057,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 529,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       32
+      ],
+      [
+       0,
+       65535
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65535
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32
+      ],
+      [
+       1,
+       65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      65568
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32
+      ],
+      [
+       1,
+       65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      65568
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a |= b",
+  "type": "vec3u",
+  "cases": 529,
+  "laneChecks": 1587,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 1586,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 529,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       32,
+       16
+      ],
+      [
+       0,
+       65535,
+       4294967295
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65535,
+      4294967295
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16
+      ],
+      [
+       0,
+       65535,
+       4294967295
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65535,
+      4294967295
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16
+      ],
+      [
+       1,
+       65536,
+       4294967294
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      65568,
+      4294967294
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a |= b",
+  "type": "vec4u",
+  "cases": 529,
+  "laneChecks": 2116,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 2115,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 529,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       32,
+       16,
+       305419896
+      ],
+      [
+       0,
+       65535,
+       4294967295,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65535,
+      4294967295,
+      305419896
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16,
+       305419896
+      ],
+      [
+       0,
+       65535,
+       4294967295,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65535,
+      4294967295,
+      305419896
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16,
+       305419896
+      ],
+      [
+       0,
+       65535,
+       4294967295,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65535,
+      4294967295,
+      305419896
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a ^= b",
+  "type": "i32",
+  "cases": 961,
+  "laneChecks": 961,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a ^= b",
+  "type": "vec2i",
+  "cases": 961,
+  "laneChecks": 1922,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 1887,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 961,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       7
+      ],
+      [
+       0,
+       65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7
+      ],
+      [
+       1,
+       -65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      -65529
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7
+      ],
+      [
+       1,
+       -65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      -65529
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a ^= b",
+  "type": "vec3i",
+  "cases": 961,
+  "laneChecks": 2883,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 2848,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 961,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536
+      ],
+      [
+       0,
+       65536,
+       -305419896
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543,
+      -305485432
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536
+      ],
+      [
+       0,
+       65536,
+       -305419896
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543,
+      -305485432
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536
+      ],
+      [
+       1,
+       -65536,
+       32768
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      -65529,
+      98304
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a ^= b",
+  "type": "vec4i",
+  "cases": 961,
+  "laneChecks": 3844,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 3809,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 961,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536,
+       2147483646
+      ],
+      [
+       0,
+       65536,
+       -305419896,
+       32767
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543,
+      -305485432,
+      2147450881
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536,
+       2147483646
+      ],
+      [
+       0,
+       65536,
+       -305419896,
+       32767
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543,
+      -305485432,
+      2147450881
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       65536,
+       2147483646
+      ],
+      [
+       0,
+       65536,
+       -305419896,
+       32767
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65543,
+      -305485432,
+      2147450881
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a ^= b",
+  "type": "u32",
+  "cases": 529,
+  "laneChecks": 529,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 224,
+   "outOfTypeRange": 224,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       2863311530
+      ]
+     ],
+     "got": [
+      -1431655766
+     ],
+     "want": [
+      2863311530
+     ]
+    },
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       4042322160
+      ]
+     ],
+     "got": [
+      -252645136
+     ],
+     "want": [
+      4042322160
+     ]
+    },
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       3735928559
+      ]
+     ],
+     "got": [
+      -559038737
+     ],
+     "want": [
+      3735928559
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a ^= b",
+  "type": "vec2u",
+  "cases": 529,
+  "laneChecks": 1058,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 1035,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 529,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       32
+      ],
+      [
+       0,
+       65535
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65503
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32
+      ],
+      [
+       1,
+       65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      65568
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32
+      ],
+      [
+       1,
+       65536
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      65568
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a ^= b",
+  "type": "vec3u",
+  "cases": 529,
+  "laneChecks": 1587,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 1564,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 529,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       32,
+       16
+      ],
+      [
+       0,
+       65535,
+       4294967295
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65503,
+      4294967279
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16
+      ],
+      [
+       0,
+       65535,
+       4294967295
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65503,
+      4294967279
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16
+      ],
+      [
+       1,
+       65536,
+       4294967294
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      1,
+      65568,
+      4294967278
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a ^= b",
+  "type": "vec4u",
+  "cases": 529,
+  "laneChecks": 2116,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 2093,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 529,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [
+    {
+     "args": [
+      [
+       0,
+       32,
+       16,
+       305419896
+      ],
+      [
+       0,
+       65535,
+       4294967295,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65503,
+      4294967279,
+      305419880
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16,
+       305419896
+      ],
+      [
+       0,
+       65535,
+       4294967295,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65503,
+      4294967279,
+      305419880
+     ]
+    },
+    {
+     "args": [
+      [
+       0,
+       32,
+       16,
+       305419896
+      ],
+      [
+       0,
+       65535,
+       4294967295,
+       16
+      ]
+     ],
+     "got": [
+      0
+     ],
+     "want": [
+      0,
+      65503,
+      4294967279,
+      305419880
+     ]
+    }
+   ],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a & b (i32, u32)",
+  "type": "i32",
+  "cases": 713,
+  "laneChecks": 713,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a | b (i32, u32)",
+  "type": "i32",
+  "cases": 713,
+  "laneChecks": 713,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "a ^ b (i32, u32)",
+  "type": "i32",
+  "cases": 713,
+  "laneChecks": 713,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.min",
+  "type": "i32",
+  "cases": 961,
+  "laneChecks": 961,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.min",
+  "type": "vec2i",
+  "cases": 961,
+  "laneChecks": 1922,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.min",
+  "type": "vec3i",
+  "cases": 961,
+  "laneChecks": 2883,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.min",
+  "type": "vec4i",
+  "cases": 961,
+  "laneChecks": 3844,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.min",
+  "type": "u32",
+  "cases": 529,
+  "laneChecks": 529,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.min",
+  "type": "vec2u",
+  "cases": 529,
+  "laneChecks": 1058,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.min",
+  "type": "vec3u",
+  "cases": 529,
+  "laneChecks": 1587,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.min",
+  "type": "vec4u",
+  "cases": 529,
+  "laneChecks": 2116,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.max",
+  "type": "i32",
+  "cases": 961,
+  "laneChecks": 961,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.max",
+  "type": "vec2i",
+  "cases": 961,
+  "laneChecks": 1922,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.max",
+  "type": "vec3i",
+  "cases": 961,
+  "laneChecks": 2883,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.max",
+  "type": "vec4i",
+  "cases": 961,
+  "laneChecks": 3844,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.max",
+  "type": "u32",
+  "cases": 529,
+  "laneChecks": 529,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.max",
+  "type": "vec2u",
+  "cases": 529,
+  "laneChecks": 1058,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.max",
+  "type": "vec3u",
+  "cases": 529,
+  "laneChecks": 1587,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.max",
+  "type": "vec4u",
+  "cases": 529,
+  "laneChecks": 2116,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.clamp",
+  "type": "i32",
+  "cases": 3751,
+  "laneChecks": 3751,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.clamp",
+  "type": "vec2i",
+  "cases": 3751,
+  "laneChecks": 7502,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.clamp",
+  "type": "vec3i",
+  "cases": 3751,
+  "laneChecks": 11253,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.clamp",
+  "type": "vec4i",
+  "cases": 3751,
+  "laneChecks": 15004,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.clamp",
+  "type": "u32",
+  "cases": 2783,
+  "laneChecks": 2783,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.clamp",
+  "type": "vec2u",
+  "cases": 2783,
+  "laneChecks": 5566,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.clamp",
+  "type": "vec3u",
+  "cases": 2783,
+  "laneChecks": 8349,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.clamp",
+  "type": "vec4u",
+  "cases": 2783,
+  "laneChecks": 11132,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.extractBits",
+  "type": "i32",
+  "cases": 1984,
+  "laneChecks": 806,
+  "unverifiedLanes": 1178,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for extractBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.extractBits",
+  "type": "vec2i",
+  "cases": 1984,
+  "laneChecks": 1612,
+  "unverifiedLanes": 2356,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for extractBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.extractBits",
+  "type": "vec3i",
+  "cases": 1984,
+  "laneChecks": 2418,
+  "unverifiedLanes": 3534,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for extractBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.extractBits",
+  "type": "vec4i",
+  "cases": 1984,
+  "laneChecks": 3224,
+  "unverifiedLanes": 4712,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for extractBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.extractBits",
+  "type": "u32",
+  "cases": 1472,
+  "laneChecks": 598,
+  "unverifiedLanes": 874,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for extractBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.extractBits",
+  "type": "vec2u",
+  "cases": 1472,
+  "laneChecks": 1196,
+  "unverifiedLanes": 1748,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for extractBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.extractBits",
+  "type": "vec3u",
+  "cases": 1472,
+  "laneChecks": 1794,
+  "unverifiedLanes": 2622,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for extractBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.extractBits",
+  "type": "vec4u",
+  "cases": 1472,
+  "laneChecks": 2392,
+  "unverifiedLanes": 3496,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for extractBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.insertBits",
+  "type": "i32",
+  "cases": 2688,
+  "laneChecks": 1260,
+  "unverifiedLanes": 1428,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for insertBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.insertBits",
+  "type": "vec2i",
+  "cases": 2688,
+  "laneChecks": 2520,
+  "unverifiedLanes": 2856,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for insertBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.insertBits",
+  "type": "vec3i",
+  "cases": 2688,
+  "laneChecks": 3780,
+  "unverifiedLanes": 4284,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for insertBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.insertBits",
+  "type": "vec4i",
+  "cases": 2688,
+  "laneChecks": 5040,
+  "unverifiedLanes": 5712,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for insertBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.insertBits",
+  "type": "u32",
+  "cases": 2688,
+  "laneChecks": 1260,
+  "unverifiedLanes": 1428,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for insertBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.insertBits",
+  "type": "vec2u",
+  "cases": 2688,
+  "laneChecks": 2520,
+  "unverifiedLanes": 2856,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for insertBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.insertBits",
+  "type": "vec3u",
+  "cases": 2688,
+  "laneChecks": 3780,
+  "unverifiedLanes": 4284,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for insertBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.insertBits",
+  "type": "vec4u",
+  "cases": 2688,
+  "laneChecks": 5040,
+  "unverifiedLanes": 5712,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "throws",
+   "message": "CPU implementation for insertBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+  }
+ },
+ {
+  "op": "std.select (scalar cond)",
+  "type": "i32",
+  "cases": 432,
+  "laneChecks": 432,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.select (scalar cond)",
+  "type": "vec2i",
+  "cases": 432,
+  "laneChecks": 864,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.select (scalar cond)",
+  "type": "vec3i",
+  "cases": 432,
+  "laneChecks": 1296,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.select (scalar cond)",
+  "type": "vec4i",
+  "cases": 432,
+  "laneChecks": 1728,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.select (scalar cond)",
+  "type": "u32",
+  "cases": 432,
+  "laneChecks": 432,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "number"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.select (scalar cond)",
+  "type": "vec2u",
+  "cases": 432,
+  "laneChecks": 864,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.select (scalar cond)",
+  "type": "vec3u",
+  "cases": 432,
+  "laneChecks": 1296,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ },
+ {
+  "op": "std.select (scalar cond)",
+  "type": "vec4u",
+  "cases": 432,
+  "laneChecks": 1728,
+  "unverifiedLanes": 0,
+  "gpu": {
+   "mismatches": 0,
+   "first": []
+  },
+  "cpu": {
+   "status": "computes",
+   "mismatches": 0,
+   "outOfTypeRange": 0,
+   "wrongVectorKind": 0,
+   "jsTypes": [
+    "vec"
+   ],
+   "first": [],
+   "threwCases": 0
+  }
+ }
+]

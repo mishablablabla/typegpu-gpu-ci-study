@@ -1,0 +1,3 @@
+Copied unmodified from https://github.com/software-mansion/TypeGPU at commit e893ad11f215f08ef164fb20daae851702007185 (MIT, see LICENSE).
+Subset: docs examples used by the 13 example tests, the @typegpu/{color,noise,sdf,sort} package sources and the MNIST weights.
+Left out: thumbnail.png files (not read by the tests) and generated *.tsnotover.ts files. SHA256SUMS covers every file kept here.

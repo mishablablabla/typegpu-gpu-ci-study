@@ -1,0 +1,12 @@
+{
+ "file": "ported-smoothstep",
+ "groups": [],
+ "knownDivergences": [
+  {
+   "label": "smoothstep(0.5, 0.5, 0.6) == 0",
+   "reason": "WGSL: smoothstep(edge0, edge1, x) with edge0 == edge1 is an indeterminate value at runtime (and a shader-creation error for const edges); the CPU implementation returns 0",
+   "observed": "expected 1 to be +0 // Object.is equality"
+  }
+ ],
+ "observations": []
+}

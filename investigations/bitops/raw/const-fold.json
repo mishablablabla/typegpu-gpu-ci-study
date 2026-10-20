@@ -1,0 +1,4609 @@
+[
+ {
+  "op": "std.countOneBits",
+  "type": "i32",
+  "cases": 31,
+  "ok": 30,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 1,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 30,
+  "errKinds": {
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 1
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return countOneBits(0i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:24 error: value cannot be represented as 'i32'",
+     "wgsl": "urn countOneBits(-2147483648i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.countOneBits",
+  "type": "u32",
+  "cases": 23,
+  "ok": 23,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 23,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> u32 { return countOneBits(0u); } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.countOneBits",
+  "type": "vec3i",
+  "cases": 31,
+  "ok": 31,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 31,
+  "errKinds": {},
+  "sampleWgsl": "item_1() -> vec3i { return countOneBits(vec3i(0, 65536, -305419896)); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.countOneBits",
+  "type": "vec3u",
+  "cases": 23,
+  "ok": 23,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 23,
+  "errKinds": {},
+  "sampleWgsl": "item_1() -> vec3u { return countOneBits(vec3u(0, 65535, 4294967295)); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.reverseBits",
+  "type": "i32",
+  "cases": 31,
+  "ok": 30,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 1,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 30,
+  "errKinds": {
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 1
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return reverseBits(0i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:23 error: value cannot be represented as 'i32'",
+     "wgsl": "turn reverseBits(-2147483648i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.reverseBits",
+  "type": "u32",
+  "cases": 23,
+  "ok": 23,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 23,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> u32 { return reverseBits(0u); } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.reverseBits",
+  "type": "vec3i",
+  "cases": 31,
+  "ok": 31,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 31,
+  "errKinds": {},
+  "sampleWgsl": " item_1() -> vec3i { return reverseBits(vec3i(0, 65536, -305419896)); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.reverseBits",
+  "type": "vec3u",
+  "cases": 23,
+  "ok": 23,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 23,
+  "errKinds": {},
+  "sampleWgsl": " item_1() -> vec3u { return reverseBits(vec3u(0, 65535, 4294967295)); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.countLeadingZeros",
+  "type": "i32",
+  "cases": 31,
+  "ok": 30,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 1,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 30,
+  "errKinds": {
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 1
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return countLeadingZeros(0i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:29 error: value cannot be represented as 'i32'",
+     "wgsl": "ountLeadingZeros(-2147483648i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.countLeadingZeros",
+  "type": "u32",
+  "cases": 23,
+  "ok": 23,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 23,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> u32 { return countLeadingZeros(0u); } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.countLeadingZeros",
+  "type": "vec3i",
+  "cases": 31,
+  "ok": 31,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 31,
+  "errKinds": {},
+  "sampleWgsl": "1() -> vec3i { return countLeadingZeros(vec3i(0, 65536, -305419896)); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.countLeadingZeros",
+  "type": "vec3u",
+  "cases": 23,
+  "ok": 23,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 23,
+  "errKinds": {},
+  "sampleWgsl": "1() -> vec3u { return countLeadingZeros(vec3u(0, 65535, 4294967295)); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.countTrailingZeros",
+  "type": "i32",
+  "cases": 31,
+  "ok": 30,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 1,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 30,
+  "errKinds": {
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 1
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return countTrailingZeros(0i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:30 error: value cannot be represented as 'i32'",
+     "wgsl": "untTrailingZeros(-2147483648i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.countTrailingZeros",
+  "type": "u32",
+  "cases": 23,
+  "ok": 23,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 23,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> u32 { return countTrailingZeros(0u); } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.countTrailingZeros",
+  "type": "vec3i",
+  "cases": 31,
+  "ok": 31,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 31,
+  "errKinds": {},
+  "sampleWgsl": "() -> vec3i { return countTrailingZeros(vec3i(0, 65536, -305419896)); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.countTrailingZeros",
+  "type": "vec3u",
+  "cases": 23,
+  "ok": 23,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 23,
+  "errKinds": {},
+  "sampleWgsl": "() -> vec3u { return countTrailingZeros(vec3u(0, 65535, 4294967295)); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.firstLeadingBit",
+  "type": "i32",
+  "cases": 31,
+  "ok": 30,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 1,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 30,
+  "errKinds": {
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 1
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return firstLeadingBit(0i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:27 error: value cannot be represented as 'i32'",
+     "wgsl": " firstLeadingBit(-2147483648i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.firstLeadingBit",
+  "type": "u32",
+  "cases": 23,
+  "ok": 23,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 23,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> u32 { return firstLeadingBit(0u); } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.firstLeadingBit",
+  "type": "vec3i",
+  "cases": 31,
+  "ok": 31,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 31,
+  "errKinds": {},
+  "sampleWgsl": "m_1() -> vec3i { return firstLeadingBit(vec3i(0, 65536, -305419896)); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.firstLeadingBit",
+  "type": "vec3u",
+  "cases": 23,
+  "ok": 23,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 23,
+  "errKinds": {},
+  "sampleWgsl": "m_1() -> vec3u { return firstLeadingBit(vec3u(0, 65535, 4294967295)); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.firstTrailingBit",
+  "type": "i32",
+  "cases": 31,
+  "ok": 30,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 1,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 30,
+  "errKinds": {
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 1
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return firstTrailingBit(0i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:28 error: value cannot be represented as 'i32'",
+     "wgsl": "firstTrailingBit(-2147483648i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.firstTrailingBit",
+  "type": "u32",
+  "cases": 23,
+  "ok": 23,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 23,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> u32 { return firstTrailingBit(0u); } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.firstTrailingBit",
+  "type": "vec3i",
+  "cases": 31,
+  "ok": 31,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 31,
+  "errKinds": {},
+  "sampleWgsl": "_1() -> vec3i { return firstTrailingBit(vec3i(0, 65536, -305419896)); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.firstTrailingBit",
+  "type": "vec3u",
+  "cases": 23,
+  "ok": 23,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 23,
+  "errKinds": {},
+  "sampleWgsl": "_1() -> vec3u { return firstTrailingBit(vec3u(0, 65535, 4294967295)); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.abs",
+  "type": "i32",
+  "cases": 31,
+  "ok": 30,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 1,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 30,
+  "emittedCall": 0,
+  "errKinds": {
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 1
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return 0i; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:10 error: value cannot be represented as 'i32'",
+     "wgsl": "() -> i32 { return 2147483648i; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.abs",
+  "type": "u32",
+  "cases": 23,
+  "ok": 23,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 23,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> u32 { return 0u; } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.abs",
+  "type": "vec3i",
+  "cases": 31,
+  "ok": 31,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 31,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> vec3i { return vec3i(0, 65536, 305419896); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.abs",
+  "type": "vec3u",
+  "cases": 23,
+  "ok": 23,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 23,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> vec3u { return vec3u(0, 65535, 4294967295); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.sign",
+  "type": "i32",
+  "cases": 31,
+  "ok": 31,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 31,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> i32 { return 0i; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.sign",
+  "type": "vec3i",
+  "cases": 31,
+  "ok": 31,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 31,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> vec3i { return vec3i(0, 1, -1); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "Math.abs",
+  "type": "i32",
+  "cases": 31,
+  "ok": 30,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 1,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 30,
+  "emittedCall": 0,
+  "errKinds": {
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 1
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return 0i; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:10 error: value cannot be represented as 'i32'",
+     "wgsl": "() -> i32 { return 2147483648i; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "Math.abs",
+  "type": "u32",
+  "cases": 23,
+  "ok": 23,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 23,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> u32 { return 0u; } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "Math.sign",
+  "type": "i32",
+  "cases": 31,
+  "ok": 31,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 31,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> i32 { return 0i; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "Math.clz32",
+  "type": "i32",
+  "cases": 31,
+  "ok": 30,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 1,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 30,
+  "errKinds": {
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 1
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return countLeadingZeros(0i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:29 error: value cannot be represented as 'i32'",
+     "wgsl": "ountLeadingZeros(-2147483648i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "Math.clz32",
+  "type": "u32",
+  "cases": 23,
+  "ok": 23,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 23,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> u32 { return countLeadingZeros(0u); } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "~x",
+  "type": "i32",
+  "cases": 31,
+  "ok": 30,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 1,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 30,
+  "errKinds": {
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 1
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return ~0i; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": " -> i32 { return ~-2147483648i; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "~x",
+  "type": "u32",
+  "cases": 23,
+  "ok": 23,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 23,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> u32 { return ~0u; } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "~x",
+  "type": "vec3i",
+  "cases": 31,
+  "ok": 31,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 31,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> vec3i { return ~vec3i(0, 65536, -305419896); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "~x",
+  "type": "vec3u",
+  "cases": 23,
+  "ok": 23,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 23,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> vec3u { return ~vec3u(0, 65535, 4294967295); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a & b",
+  "type": "i32",
+  "cases": 36,
+  "ok": 33,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 3,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 33,
+  "errKinds": {
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 3
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return (0i & 0i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       1
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "2 { return (-2147483648i & 1i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       -305419896
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "n (-2147483648i & -305419896i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       2147483646
+      ],
+      [
+       -2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:26 error: value cannot be represented as 'i32'",
+     "wgsl": "n (2147483646i & -2147483648i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a & b",
+  "type": "u32",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 36,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> u32 { return (0u & 0u); } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a & b",
+  "type": "vec3i",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 36,
+  "errKinds": {},
+  "sampleWgsl": "-> vec3i { return (vec3i(0, 7, 65536) & vec3i(0, 65536, -305419896)); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a & b",
+  "type": "vec3u",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 36,
+  "errKinds": {},
+  "sampleWgsl": ") -> vec3u { return (vec3u(0, 32, 16) & vec3u(0, 65535, 4294967295)); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a | b",
+  "type": "i32",
+  "cases": 36,
+  "ok": 33,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 3,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 33,
+  "errKinds": {
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 3
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return (0i | 0i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       1
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "2 { return (-2147483648i | 1i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       -305419896
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "n (-2147483648i | -305419896i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       2147483646
+      ],
+      [
+       -2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:26 error: value cannot be represented as 'i32'",
+     "wgsl": "n (2147483646i | -2147483648i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a | b",
+  "type": "u32",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 36,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> u32 { return (0u | 0u); } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a | b",
+  "type": "vec3i",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 36,
+  "errKinds": {},
+  "sampleWgsl": "-> vec3i { return (vec3i(0, 7, 65536) | vec3i(0, 65536, -305419896)); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a | b",
+  "type": "vec3u",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 36,
+  "errKinds": {},
+  "sampleWgsl": ") -> vec3u { return (vec3u(0, 32, 16) | vec3u(0, 65535, 4294967295)); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a ^ b",
+  "type": "i32",
+  "cases": 36,
+  "ok": 33,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 3,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 33,
+  "errKinds": {
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 3
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return (0i ^ 0i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       1
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "2 { return (-2147483648i ^ 1i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       -305419896
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "n (-2147483648i ^ -305419896i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       2147483646
+      ],
+      [
+       -2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:26 error: value cannot be represented as 'i32'",
+     "wgsl": "n (2147483646i ^ -2147483648i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a ^ b",
+  "type": "u32",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 36,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> u32 { return (0u ^ 0u); } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a ^ b",
+  "type": "vec3i",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 36,
+  "errKinds": {},
+  "sampleWgsl": "-> vec3i { return (vec3i(0, 7, 65536) ^ vec3i(0, 65536, -305419896)); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a ^ b",
+  "type": "vec3u",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 36,
+  "errKinds": {},
+  "sampleWgsl": ") -> vec3u { return (vec3u(0, 32, 16) ^ vec3u(0, 65535, 4294967295)); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a << s",
+  "type": "i32",
+  "cases": 32,
+  "ok": 8,
+  "wrong": 0,
+  "rejectedExpected": 23,
+  "rejectedUnexpected": 1,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 8,
+  "errKinds": {
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: shift left value must be less than the bit width of the lhs, which": 11,
+   "shl overflow (signed) :: dawn: Error while parsing WGSL: :N:N error: shift left operation results in sign change": 10,
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 1,
+   "shl overflow (signed) :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 1,
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 1
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return (0i << 0u); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       0
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": " { return (-2147483648i << 0u); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       63
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: shift left value must be less than the bit width of the lhs, which is 32"
+    },
+    {
+     "args": [
+      [
+       1
+      ],
+      [
+       31
+      ]
+     ],
+     "specErr": "shl overflow (signed)",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: shift left operation results in sign change"
+    }
+   ]
+  }
+ },
+ {
+  "op": "a << s",
+  "type": "u32",
+  "cases": 32,
+  "ok": 9,
+  "wrong": 0,
+  "rejectedExpected": 23,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 9,
+  "errKinds": {
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: shift left value must be less than the bit width of the lhs, which": 12,
+   "shl overflow (unsigned) :: dawn: Error while parsing WGSL: :N:N error: 'N << N' cannot be represented as 'uN'": 11
+  },
+  "sampleWgsl": "fn item_1() -> u32 { return (0u << 0u); } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       63
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: shift left value must be less than the bit width of the lhs, which is 32"
+    },
+    {
+     "args": [
+      [
+       1
+      ],
+      [
+       4294967295
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: shift left value must be less than the bit width of the lhs, which is 32"
+    }
+   ]
+  }
+ },
+ {
+  "op": "a << s",
+  "type": "vec3i",
+  "cases": 32,
+  "ok": 2,
+  "wrong": 0,
+  "rejectedExpected": 30,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 2,
+  "errKinds": {
+   "shl overflow (signed) :: dawn: Error while parsing WGSL: :N:N error: shift left operation results in sign change": 8,
+   "shl overflow (signed) :: dawn: Error while parsing WGSL: :N:N error: shift left value must be less than the bit width of the lhs, which": 10,
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: shift left value must be less than the bit width of the lhs, which": 12
+  },
+  "sampleWgsl": "vec3i { return (vec3i(0, -1073741824, 305419896) << vec3u(0, 2, 15)); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "specErr": "shl overflow (signed)",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: shift left operation results in sign change"
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896
+      ],
+      [
+       16,
+       31,
+       33
+      ]
+     ],
+     "specErr": "shl overflow (signed)",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: shift left value must be less than the bit width of the lhs, which is 32"
+    }
+   ]
+  }
+ },
+ {
+  "op": "a << s",
+  "type": "vec3u",
+  "cases": 32,
+  "ok": 0,
+  "wrong": 0,
+  "rejectedExpected": 32,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 0,
+  "errKinds": {
+   "shl overflow (unsigned) :: dawn: Error while parsing WGSL: :N:N error: 'N << N' cannot be represented as 'uN'": 10,
+   "shl overflow (unsigned) :: dawn: Error while parsing WGSL: :N:N error: shift left value must be less than the bit width of the lhs, which": 8,
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: shift left value must be less than the bit width of the lhs, which": 14
+  },
+  "sampleWgsl": "vec3u { return (vec3u(0, 1073741824, 2147483649) << vec3u(0, 2, 15)); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "specErr": "shl overflow (unsigned)",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: '1073741824 << 2' cannot be represented as 'u32'"
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       16,
+       31,
+       33
+      ]
+     ],
+     "specErr": "shl overflow (unsigned)",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: shift left value must be less than the bit width of the lhs, which is 32"
+    }
+   ]
+  }
+ },
+ {
+  "op": "a >> s",
+  "type": "i32",
+  "cases": 32,
+  "ok": 18,
+  "wrong": 0,
+  "rejectedExpected": 12,
+  "rejectedUnexpected": 2,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 18,
+  "errKinds": {
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: shift right value must be less than the bit width of the lhs, whic": 11,
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 2,
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 1
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return (0i >> 0u); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       0
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": " { return (-2147483648i >> 0u); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       16
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "{ return (-2147483648i >> 16u); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       63
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: shift right value must be less than the bit width of the lhs, which is 32"
+    },
+    {
+     "args": [
+      [
+       1
+      ],
+      [
+       4294967295
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: shift right value must be less than the bit width of the lhs, which is 32"
+    }
+   ]
+  }
+ },
+ {
+  "op": "a >> s",
+  "type": "u32",
+  "cases": 32,
+  "ok": 20,
+  "wrong": 0,
+  "rejectedExpected": 12,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 20,
+  "errKinds": {
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: shift right value must be less than the bit width of the lhs, whic": 12
+  },
+  "sampleWgsl": "fn item_1() -> u32 { return (0u >> 0u); } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       63
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: shift right value must be less than the bit width of the lhs, which is 32"
+    },
+    {
+     "args": [
+      [
+       1
+      ],
+      [
+       4294967295
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: shift right value must be less than the bit width of the lhs, which is 32"
+    }
+   ]
+  }
+ },
+ {
+  "op": "a >> s",
+  "type": "vec3i",
+  "cases": 32,
+  "ok": 10,
+  "wrong": 0,
+  "rejectedExpected": 22,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 10,
+  "errKinds": {
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: shift right value must be less than the bit width of the lhs, whic": 22
+  },
+  "sampleWgsl": "vec3i { return (vec3i(0, -1073741824, 305419896) >> vec3u(0, 2, 15)); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896
+      ],
+      [
+       16,
+       31,
+       33
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: shift right value must be less than the bit width of the lhs, which is 32"
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       -305419896
+      ],
+      [
+       63,
+       4294967295,
+       1
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: shift right value must be less than the bit width of the lhs, which is 32"
+    }
+   ]
+  }
+ },
+ {
+  "op": "a >> s",
+  "type": "vec3u",
+  "cases": 32,
+  "ok": 10,
+  "wrong": 0,
+  "rejectedExpected": 22,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 10,
+  "errKinds": {
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: shift right value must be less than the bit width of the lhs, whic": 22
+  },
+  "sampleWgsl": "vec3u { return (vec3u(0, 1073741824, 2147483649) >> vec3u(0, 2, 15)); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       16,
+       31,
+       33
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: shift right value must be less than the bit width of the lhs, which is 32"
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       305419896
+      ],
+      [
+       63,
+       4294967295,
+       1
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: shift right value must be less than the bit width of the lhs, which is 32"
+    }
+   ]
+  }
+ },
+ {
+  "op": "a >>> s",
+  "type": "u32",
+  "cases": 32,
+  "ok": 20,
+  "wrong": 0,
+  "rejectedExpected": 12,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 20,
+  "errKinds": {
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: shift right value must be less than the bit width of the lhs, whic": 12
+  },
+  "sampleWgsl": "fn item_1() -> u32 { return (0u >> 0u); } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       63
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: shift right value must be less than the bit width of the lhs, which is 32"
+    },
+    {
+     "args": [
+      [
+       1
+      ],
+      [
+       4294967295
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: shift right value must be less than the bit width of the lhs, which is 32"
+    }
+   ]
+  }
+ },
+ {
+  "op": "a >>> s",
+  "type": "vec3u",
+  "cases": 32,
+  "ok": 10,
+  "wrong": 0,
+  "rejectedExpected": 22,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 10,
+  "errKinds": {
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: shift right value must be less than the bit width of the lhs, whic": 22
+  },
+  "sampleWgsl": "vec3u { return (vec3u(0, 1073741824, 2147483649) >> vec3u(0, 2, 15)); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       16,
+       31,
+       33
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: shift right value must be less than the bit width of the lhs, which is 32"
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       305419896
+      ],
+      [
+       63,
+       4294967295,
+       1
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: shift right value must be less than the bit width of the lhs, which is 32"
+    }
+   ]
+  }
+ },
+ {
+  "op": "std.bitShiftLeft",
+  "type": "vec3i",
+  "cases": 32,
+  "ok": 2,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 30,
+  "folded": 32,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> vec3i { return vec3i(0, 0, 725352448); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "specErr": "shl overflow (signed)",
+     "got": [
+      0,
+      0,
+      725352448
+     ],
+     "wgsl": "return vec3i(0, 0, 725352448); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item("
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896
+      ],
+      [
+       16,
+       31,
+       33
+      ]
+     ],
+     "specErr": "shl overflow (signed)",
+     "got": [
+      0,
+      0,
+      610839792
+     ],
+     "wgsl": "return vec3i(0, 0, 610839792); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item("
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       -305419896
+      ],
+      [
+       63,
+       4294967295,
+       1
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "got": [
+      0,
+      0,
+      -610839792
+     ],
+     "wgsl": "return vec3i(0, 0, -610839792); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item"
+    },
+    {
+     "args": [
+      [
+       1,
+       1431655765,
+       -305419896
+      ],
+      [
+       2,
+       15,
+       30
+      ]
+     ],
+     "specErr": "shl overflow (signed)",
+     "got": [
+      4,
+      -1431666688,
+      0
+     ],
+     "wgsl": "return vec3i(4, -1431666688, 0); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn ite"
+    }
+   ],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.bitShiftLeft",
+  "type": "vec3u",
+  "cases": 32,
+  "ok": 0,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 32,
+  "folded": 31,
+  "emittedCall": 1,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> vec3u { return vec3u(0, 0, 32768); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       0,
+       2,
+       15
+      ]
+     ],
+     "specErr": "shl overflow (unsigned)",
+     "got": [
+      0,
+      0,
+      32768
+     ],
+     "wgsl": "return vec3u(0, 0, 32768); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { "
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       16,
+       31,
+       33
+      ]
+     ],
+     "specErr": "shl overflow (unsigned)",
+     "got": [
+      0,
+      0,
+      2
+     ],
+     "wgsl": "return vec3u(0, 0, 2); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out "
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       305419896
+      ],
+      [
+       63,
+       4294967295,
+       1
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "got": [
+      0,
+      0,
+      610839792
+     ],
+     "wgsl": "return vec3u(0, 0, 610839792); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item("
+    },
+    {
+     "args": [
+      [
+       1,
+       1431655765,
+       305419896
+      ],
+      [
+       2,
+       15,
+       30
+      ]
+     ],
+     "specErr": "shl overflow (unsigned)",
+     "got": [
+      4,
+      2863300608,
+      0
+     ],
+     "wgsl": "return vec3u(4, 2863300608, 0); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item"
+    }
+   ],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.bitShiftRight",
+  "type": "vec3i",
+  "cases": 32,
+  "ok": 10,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 22,
+  "folded": 32,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> vec3i { return vec3i(0, -268435456, 9320); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896
+      ],
+      [
+       16,
+       31,
+       33
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "got": [
+      0,
+      -1,
+      152709948
+     ],
+     "wgsl": "return vec3i(0, -1, 152709948); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item"
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       -305419896
+      ],
+      [
+       63,
+       4294967295,
+       1
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "got": [
+      0,
+      -1,
+      -152709948
+     ],
+     "wgsl": "return vec3i(0, -1, -152709948); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn ite"
+    },
+    {
+     "args": [
+      [
+       1,
+       1431655765,
+       -305419896
+      ],
+      [
+       31,
+       33,
+       64
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "got": [
+      0,
+      715827882,
+      -305419896
+     ],
+     "wgsl": "return vec3i(0, 715827882, -305419896); } @group(0) @binding(0) var<storage, read_write> out: vec3i;"
+    },
+    {
+     "args": [
+      [
+       1,
+       3,
+       1073741824
+      ],
+      [
+       4294967295,
+       1,
+       7
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "got": [
+      0,
+      1,
+      8388608
+     ],
+     "wgsl": "return vec3i(0, 1, 8388608); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() "
+    }
+   ],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.bitShiftRight",
+  "type": "vec3u",
+  "cases": 32,
+  "ok": 10,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 22,
+  "folded": 31,
+  "emittedCall": 1,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> vec3u { return vec3u(0, 268435456, 65536); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       16,
+       31,
+       33
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "got": [
+      0,
+      0,
+      1073741824
+     ],
+     "wgsl": "return vec3u(0, 0, 1073741824); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item"
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       305419896
+      ],
+      [
+       63,
+       4294967295,
+       1
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "got": [
+      0,
+      0,
+      152709948
+     ],
+     "wgsl": "return vec3u(0, 0, 152709948); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item("
+    },
+    {
+     "args": [
+      [
+       1,
+       1431655765,
+       305419896
+      ],
+      [
+       31,
+       33,
+       64
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "got": [
+      0,
+      715827882,
+      305419896
+     ],
+     "wgsl": "return vec3u(0, 715827882, 305419896); } @group(0) @binding(0) var<storage, read_write> out: vec3u; "
+    },
+    {
+     "args": [
+      [
+       1,
+       2147483649,
+       3735928559
+      ],
+      [
+       4294967295,
+       1,
+       7
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "got": [
+      0,
+      1073741824,
+      29186941
+     ],
+     "wgsl": "return vec3u(0, 1073741824, 29186941); } @group(0) @binding(0) var<storage, read_write> out: vec3u; "
+    }
+   ],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a <<= s",
+  "type": "i32",
+  "cases": 32,
+  "ok": 18,
+  "wrong": 0,
+  "rejectedExpected": 12,
+  "rejectedUnexpected": 2,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 18,
+  "errKinds": {
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: shift left value must be less than the bit width of the lhs, which": 11,
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 2,
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 1
+  },
+  "sampleWgsl": "fn item_1() -> i32 { var x = 0i; x <<= 0u; return x; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       0
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "147483648i; x <<= 0u; return x; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       16
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "47483648i; x <<= 16u; return x; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       63
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :7:5 error: shift left value must be less than the bit width of the lhs, which is 32"
+    },
+    {
+     "args": [
+      [
+       1
+      ],
+      [
+       4294967295
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :7:5 error: shift left value must be less than the bit width of the lhs, which is 32"
+    }
+   ]
+  }
+ },
+ {
+  "op": "a <<= s",
+  "type": "u32",
+  "cases": 32,
+  "ok": 20,
+  "wrong": 0,
+  "rejectedExpected": 12,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 20,
+  "errKinds": {
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: shift left value must be less than the bit width of the lhs, which": 12
+  },
+  "sampleWgsl": "fn item_1() -> u32 { var x = 0u; x <<= 0u; return x; } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       63
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :7:5 error: shift left value must be less than the bit width of the lhs, which is 32"
+    },
+    {
+     "args": [
+      [
+       1
+      ],
+      [
+       4294967295
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :7:5 error: shift left value must be less than the bit width of the lhs, which is 32"
+    }
+   ]
+  }
+ },
+ {
+  "op": "a <<= s",
+  "type": "vec3i",
+  "cases": 32,
+  "ok": 10,
+  "wrong": 0,
+  "rejectedExpected": 22,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 10,
+  "errKinds": {
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: shift left value must be less than the bit width of the lhs, which": 22
+  },
+  "sampleWgsl": " = vec3i(0, -1073741824, 305419896); x <<= vec3u(0, 2, 15); return x; } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896
+      ],
+      [
+       16,
+       31,
+       33
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :7:5 error: shift left value must be less than the bit width of the lhs, which is 32"
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       -305419896
+      ],
+      [
+       63,
+       4294967295,
+       1
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :7:5 error: shift left value must be less than the bit width of the lhs, which is 32"
+    }
+   ]
+  }
+ },
+ {
+  "op": "a <<= s",
+  "type": "vec3u",
+  "cases": 32,
+  "ok": 10,
+  "wrong": 0,
+  "rejectedExpected": 22,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 10,
+  "errKinds": {
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: shift left value must be less than the bit width of the lhs, which": 22
+  },
+  "sampleWgsl": " = vec3u(0, 1073741824, 2147483649); x <<= vec3u(0, 2, 15); return x; } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       16,
+       31,
+       33
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :7:5 error: shift left value must be less than the bit width of the lhs, which is 32"
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       305419896
+      ],
+      [
+       63,
+       4294967295,
+       1
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :7:5 error: shift left value must be less than the bit width of the lhs, which is 32"
+    }
+   ]
+  }
+ },
+ {
+  "op": "a >>= s",
+  "type": "i32",
+  "cases": 32,
+  "ok": 18,
+  "wrong": 0,
+  "rejectedExpected": 12,
+  "rejectedUnexpected": 2,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 18,
+  "errKinds": {
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: shift right value must be less than the bit width of the lhs, whic": 11,
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 2,
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 1
+  },
+  "sampleWgsl": "fn item_1() -> i32 { var x = 0i; x >>= 0u; return x; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       0
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "147483648i; x >>= 0u; return x; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       16
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "47483648i; x >>= 16u; return x; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       63
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :7:5 error: shift right value must be less than the bit width of the lhs, which is 32"
+    },
+    {
+     "args": [
+      [
+       1
+      ],
+      [
+       4294967295
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :7:5 error: shift right value must be less than the bit width of the lhs, which is 32"
+    }
+   ]
+  }
+ },
+ {
+  "op": "a >>= s",
+  "type": "u32",
+  "cases": 32,
+  "ok": 20,
+  "wrong": 0,
+  "rejectedExpected": 12,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 20,
+  "errKinds": {
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: shift right value must be less than the bit width of the lhs, whic": 12
+  },
+  "sampleWgsl": "fn item_1() -> u32 { var x = 0u; x >>= 0u; return x; } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       63
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :7:5 error: shift right value must be less than the bit width of the lhs, which is 32"
+    },
+    {
+     "args": [
+      [
+       1
+      ],
+      [
+       4294967295
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :7:5 error: shift right value must be less than the bit width of the lhs, which is 32"
+    }
+   ]
+  }
+ },
+ {
+  "op": "a >>= s",
+  "type": "vec3i",
+  "cases": 32,
+  "ok": 10,
+  "wrong": 0,
+  "rejectedExpected": 22,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 10,
+  "errKinds": {
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: shift right value must be less than the bit width of the lhs, whic": 22
+  },
+  "sampleWgsl": " = vec3i(0, -1073741824, 305419896); x >>= vec3u(0, 2, 15); return x; } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       305419896
+      ],
+      [
+       16,
+       31,
+       33
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :7:5 error: shift right value must be less than the bit width of the lhs, which is 32"
+    },
+    {
+     "args": [
+      [
+       0,
+       -1073741824,
+       -305419896
+      ],
+      [
+       63,
+       4294967295,
+       1
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :7:5 error: shift right value must be less than the bit width of the lhs, which is 32"
+    }
+   ]
+  }
+ },
+ {
+  "op": "a >>= s",
+  "type": "vec3u",
+  "cases": 32,
+  "ok": 10,
+  "wrong": 0,
+  "rejectedExpected": 22,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 10,
+  "errKinds": {
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: shift right value must be less than the bit width of the lhs, whic": 22
+  },
+  "sampleWgsl": " = vec3u(0, 1073741824, 2147483649); x >>= vec3u(0, 2, 15); return x; } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       16,
+       31,
+       33
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :7:5 error: shift right value must be less than the bit width of the lhs, which is 32"
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       305419896
+      ],
+      [
+       63,
+       4294967295,
+       1
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :7:5 error: shift right value must be less than the bit width of the lhs, which is 32"
+    }
+   ]
+  }
+ },
+ {
+  "op": "a >>>= s",
+  "type": "u32",
+  "cases": 32,
+  "ok": 20,
+  "wrong": 0,
+  "rejectedExpected": 12,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 20,
+  "errKinds": {
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: shift right value must be less than the bit width of the lhs, whic": 12
+  },
+  "sampleWgsl": "fn item_1() -> u32 { var x = 0u; x >>= 0u; return x; } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       63
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :7:5 error: shift right value must be less than the bit width of the lhs, which is 32"
+    },
+    {
+     "args": [
+      [
+       1
+      ],
+      [
+       4294967295
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :7:5 error: shift right value must be less than the bit width of the lhs, which is 32"
+    }
+   ]
+  }
+ },
+ {
+  "op": "a >>>= s",
+  "type": "vec3u",
+  "cases": 32,
+  "ok": 10,
+  "wrong": 0,
+  "rejectedExpected": 22,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 10,
+  "errKinds": {
+   "shift amount >= bit width :: dawn: Error while parsing WGSL: :N:N error: shift right value must be less than the bit width of the lhs, whic": 22
+  },
+  "sampleWgsl": " = vec3u(0, 1073741824, 2147483649); x >>= vec3u(0, 2, 15); return x; } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       2147483649
+      ],
+      [
+       16,
+       31,
+       33
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :7:5 error: shift right value must be less than the bit width of the lhs, which is 32"
+    },
+    {
+     "args": [
+      [
+       0,
+       1073741824,
+       305419896
+      ],
+      [
+       63,
+       4294967295,
+       1
+      ]
+     ],
+     "specErr": "shift amount >= bit width",
+     "error": "dawn: Error while parsing WGSL: :7:5 error: shift right value must be less than the bit width of the lhs, which is 32"
+    }
+   ]
+  }
+ },
+ {
+  "op": "a &= b",
+  "type": "i32",
+  "cases": 36,
+  "ok": 33,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 3,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 33,
+  "errKinds": {
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 3
+  },
+  "sampleWgsl": "fn item_1() -> i32 { var x = 0i; x &= 0i; return x; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       1
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "2147483648i; x &= 1i; return x; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       -305419896
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "8i; x &= -305419896i; return x; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       2147483646
+      ],
+      [
+       -2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :7:9 error: value cannot be represented as 'i32'",
+     "wgsl": "i; x &= -2147483648i; return x; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a &= b",
+  "type": "u32",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 36,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> u32 { var x = 0u; x &= 0u; return x; } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a &= b",
+  "type": "vec3i",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 36,
+  "errKinds": {},
+  "sampleWgsl": "r x = vec3i(0, 7, 65536); x &= vec3i(0, 65536, -305419896); return x; } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a &= b",
+  "type": "vec3u",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 36,
+  "errKinds": {},
+  "sampleWgsl": "var x = vec3u(0, 32, 16); x &= vec3u(0, 65535, 4294967295); return x; } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a |= b",
+  "type": "i32",
+  "cases": 36,
+  "ok": 33,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 3,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 33,
+  "errKinds": {
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 3
+  },
+  "sampleWgsl": "fn item_1() -> i32 { var x = 0i; x |= 0i; return x; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       1
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "2147483648i; x |= 1i; return x; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       -305419896
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "8i; x |= -305419896i; return x; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       2147483646
+      ],
+      [
+       -2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :7:9 error: value cannot be represented as 'i32'",
+     "wgsl": "i; x |= -2147483648i; return x; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a |= b",
+  "type": "u32",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 36,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> u32 { var x = 0u; x |= 0u; return x; } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a |= b",
+  "type": "vec3i",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 36,
+  "errKinds": {},
+  "sampleWgsl": "r x = vec3i(0, 7, 65536); x |= vec3i(0, 65536, -305419896); return x; } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a |= b",
+  "type": "vec3u",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 36,
+  "errKinds": {},
+  "sampleWgsl": "var x = vec3u(0, 32, 16); x |= vec3u(0, 65535, 4294967295); return x; } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a ^= b",
+  "type": "i32",
+  "cases": 36,
+  "ok": 33,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 3,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 33,
+  "errKinds": {
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 3
+  },
+  "sampleWgsl": "fn item_1() -> i32 { var x = 0i; x ^= 0i; return x; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       1
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "2147483648i; x ^= 1i; return x; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       -305419896
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "8i; x ^= -305419896i; return x; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       2147483646
+      ],
+      [
+       -2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :7:9 error: value cannot be represented as 'i32'",
+     "wgsl": "i; x ^= -2147483648i; return x; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a ^= b",
+  "type": "u32",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 36,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> u32 { var x = 0u; x ^= 0u; return x; } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a ^= b",
+  "type": "vec3i",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 36,
+  "errKinds": {},
+  "sampleWgsl": "r x = vec3i(0, 7, 65536); x ^= vec3i(0, 65536, -305419896); return x; } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a ^= b",
+  "type": "vec3u",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 36,
+  "errKinds": {},
+  "sampleWgsl": "var x = vec3u(0, 32, 16); x ^= vec3u(0, 65535, 4294967295); return x; } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a & b (i32, u32)",
+  "type": "i32",
+  "cases": 36,
+  "ok": 32,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 4,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 32,
+  "errKinds": {
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 4
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return (0i & 0i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -7
+      ],
+      [
+       2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:18 error: value cannot be represented as 'i32'",
+     "wgsl": " { return (-7i & -2147483648i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       0
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "2 { return (-2147483648i & 0i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       305419896
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "rn (-2147483648i & 305419896i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       -305419896
+      ],
+      [
+       2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:26 error: value cannot be represented as 'i32'",
+     "wgsl": "n (-305419896i & -2147483648i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a | b (i32, u32)",
+  "type": "i32",
+  "cases": 36,
+  "ok": 32,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 4,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 32,
+  "errKinds": {
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 4
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return (0i | 0i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -7
+      ],
+      [
+       2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:18 error: value cannot be represented as 'i32'",
+     "wgsl": " { return (-7i | -2147483648i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       0
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "2 { return (-2147483648i | 0i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       305419896
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "rn (-2147483648i | 305419896i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       -305419896
+      ],
+      [
+       2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:26 error: value cannot be represented as 'i32'",
+     "wgsl": "n (-305419896i | -2147483648i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "a ^ b (i32, u32)",
+  "type": "i32",
+  "cases": 36,
+  "ok": 32,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 4,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 32,
+  "errKinds": {
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 4
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return (0i ^ 0i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -7
+      ],
+      [
+       2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:18 error: value cannot be represented as 'i32'",
+     "wgsl": " { return (-7i ^ -2147483648i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       0
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "2 { return (-2147483648i ^ 0i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       305419896
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:12 error: value cannot be represented as 'i32'",
+     "wgsl": "rn (-2147483648i ^ 305419896i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       -305419896
+      ],
+      [
+       2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:26 error: value cannot be represented as 'i32'",
+     "wgsl": "n (-305419896i ^ -2147483648i); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.min",
+  "type": "i32",
+  "cases": 36,
+  "ok": 33,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 3,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 33,
+  "emittedCall": 0,
+  "errKinds": {
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 3
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return 0i; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       1
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:11 error: value cannot be represented as 'i32'",
+     "wgsl": ") -> i32 { return -2147483648i; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       -305419896
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:11 error: value cannot be represented as 'i32'",
+     "wgsl": ") -> i32 { return -2147483648i; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       2147483646
+      ],
+      [
+       -2147483648
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:11 error: value cannot be represented as 'i32'",
+     "wgsl": ") -> i32 { return -2147483648i; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.min",
+  "type": "u32",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 36,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> u32 { return 0u; } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.min",
+  "type": "vec3i",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 36,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> vec3i { return vec3i(0, 7, -305419896); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.min",
+  "type": "vec3u",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 36,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> vec3u { return vec3u(0, 32, 16); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.max",
+  "type": "i32",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 36,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> i32 { return 0i; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.max",
+  "type": "u32",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 36,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> u32 { return 0u; } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.max",
+  "type": "vec3i",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 36,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> vec3i { return vec3i(0, 65536, 65536); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.max",
+  "type": "vec3u",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 36,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> vec3u { return vec3u(0, 65535, 4294967295); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.clamp",
+  "type": "i32",
+  "cases": 36,
+  "ok": 17,
+  "wrong": 0,
+  "rejectedExpected": 3,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 16,
+  "folded": 33,
+  "emittedCall": 0,
+  "errKinds": {
+   "low > high :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 3
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return 0i; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [
+    {
+     "args": [
+      [
+       1
+      ],
+      [
+       65536
+      ],
+      [
+       1
+      ]
+     ],
+     "specErr": "low > high",
+     "got": [
+      1
+     ],
+     "wgsl": "return 1i; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       2
+      ],
+      [
+       32767
+      ],
+      [
+       -1
+      ]
+     ],
+     "specErr": "low > high",
+     "got": [
+      -1
+     ],
+     "wgsl": "return -1i; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       -3
+      ],
+      [
+       0
+      ],
+      [
+       -65536
+      ]
+     ],
+     "specErr": "low > high",
+     "got": [
+      -65536
+     ],
+     "wgsl": "return -65536i; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1("
+    },
+    {
+     "args": [
+      [
+       -7
+      ],
+      [
+       65535
+      ],
+      [
+       32767
+      ]
+     ],
+     "specErr": "low > high",
+     "got": [
+      32767
+     ],
+     "wgsl": "return 32767i; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1()"
+    }
+   ],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       7
+      ],
+      [
+       65536
+      ],
+      [
+       -2147483648
+      ]
+     ],
+     "specErr": "low > high",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: value cannot be represented as 'i32'"
+    },
+    {
+     "args": [
+      [
+       -1431655766
+      ],
+      [
+       2
+      ],
+      [
+       -2147483648
+      ]
+     ],
+     "specErr": "low > high",
+     "error": "dawn: Error while parsing WGSL: :6:11 error: value cannot be represented as 'i32'"
+    }
+   ]
+  }
+ },
+ {
+  "op": "std.clamp",
+  "type": "u32",
+  "cases": 36,
+  "ok": 15,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 21,
+  "folded": 36,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> u32 { return 0u; } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       252645135
+      ],
+      [
+       1
+      ]
+     ],
+     "specErr": "low > high",
+     "got": [
+      1
+     ],
+     "wgsl": "return 1u; } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [
+       2
+      ]
+     ],
+     "specErr": "low > high",
+     "got": [
+      2
+     ],
+     "wgsl": "return 2u; } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       1
+      ],
+      [
+       305419896
+      ],
+      [
+       3
+      ]
+     ],
+     "specErr": "low > high",
+     "got": [
+      3
+     ],
+     "wgsl": "return 3u; } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }"
+    },
+    {
+     "args": [
+      [
+       2
+      ],
+      [
+       3735928559
+      ],
+      [
+       2863311530
+      ]
+     ],
+     "specErr": "low > high",
+     "got": [
+      2863311530
+     ],
+     "wgsl": "return 2863311530u; } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = ite"
+    }
+   ],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.clamp",
+  "type": "vec3i",
+  "cases": 36,
+  "ok": 6,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 30,
+  "folded": 36,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> vec3i { return vec3i(0, -2147483648, -65536); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [
+    {
+     "args": [
+      [
+       0,
+       2,
+       -3
+      ],
+      [
+       0,
+       256,
+       -65536
+      ],
+      [
+       0,
+       -2147483648,
+       -65536
+      ]
+     ],
+     "specErr": "low > high",
+     "got": [
+      0,
+      -2147483648,
+      -65536
+     ],
+     "wgsl": "return vec3i(0, -2147483648, -65536); } @group(0) @binding(0) var<storage, read_write> out: vec3i; f"
+    },
+    {
+     "args": [
+      [
+       0,
+       -2,
+       7
+      ],
+      [
+       -65536,
+       2,
+       65536
+      ],
+      [
+       32768,
+       32767,
+       256
+      ]
+     ],
+     "specErr": "low > high",
+     "got": [
+      0,
+      2,
+      256
+     ],
+     "wgsl": "return vec3i(0, 2, 256); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { ou"
+    },
+    {
+     "args": [
+      [
+       1,
+       3,
+       -7
+      ],
+      [
+       65536,
+       -1,
+       32768
+      ],
+      [
+       1,
+       0,
+       -2147483648
+      ]
+     ],
+     "specErr": "low > high",
+     "got": [
+      1,
+      0,
+      -2147483648
+     ],
+     "wgsl": "return vec3i(1, 0, -2147483648); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn ite"
+    },
+    {
+     "args": [
+      [
+       2,
+       -3,
+       256
+      ],
+      [
+       32767,
+       -2147483648,
+       256
+      ],
+      [
+       -1,
+       1,
+       0
+      ]
+     ],
+     "specErr": "low > high",
+     "got": [
+      -1,
+      -3,
+      0
+     ],
+     "wgsl": "return vec3i(-1, -3, 0); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { ou"
+    }
+   ],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.clamp",
+  "type": "vec3u",
+  "cases": 36,
+  "ok": 4,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 32,
+  "folded": 36,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> vec3u { return vec3u(0, 305419896, 4294967294); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [
+    {
+     "args": [
+      [
+       0,
+       16777216,
+       4294967294
+      ],
+      [
+       0,
+       2863311530,
+       4294967294
+      ],
+      [
+       0,
+       305419896,
+       4294967294
+      ]
+     ],
+     "specErr": "low > high",
+     "got": [
+      0,
+      305419896,
+      4294967294
+     ],
+     "wgsl": "return vec3u(0, 305419896, 4294967294); } @group(0) @binding(0) var<storage, read_write> out: vec3u;"
+    },
+    {
+     "args": [
+      [
+       0,
+       305419896,
+       2147483648
+      ],
+      [
+       252645135,
+       1,
+       4042322160
+      ],
+      [
+       1,
+       0,
+       305419896
+      ]
+     ],
+     "specErr": "low > high",
+     "got": [
+      1,
+      0,
+      305419896
+     ],
+     "wgsl": "return vec3u(1, 0, 305419896); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item("
+    },
+    {
+     "args": [
+      [
+       1,
+       305419896,
+       2147483647
+      ],
+      [
+       3,
+       4294967295,
+       2
+      ],
+      [
+       2,
+       1,
+       0
+      ]
+     ],
+     "specErr": "low > high",
+     "got": [
+      2,
+      1,
+      0
+     ],
+     "wgsl": "return vec3u(2, 1, 0); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out "
+    },
+    {
+     "args": [
+      [
+       1,
+       16,
+       2147483647
+      ],
+      [
+       305419896,
+       2863311530,
+       4294967294
+      ],
+      [
+       3,
+       2,
+       1
+      ]
+     ],
+     "specErr": "low > high",
+     "got": [
+      3,
+      2,
+      1
+     ],
+     "wgsl": "return vec3u(3, 2, 1); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out "
+    }
+   ],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.extractBits",
+  "type": "i32",
+  "cases": 36,
+  "ok": 25,
+  "wrong": 0,
+  "rejectedExpected": 10,
+  "rejectedUnexpected": 1,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 25,
+  "errKinds": {
+   "offset + count > 32 :: dawn: Error while parsing WGSL: :N:N error: 'offset' + 'count' must be less than or equal to the bit width of ": 10,
+   "no spec error :: dawn: Error while parsing WGSL: :N:N error: value cannot be represented as 'iN'": 1
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return extractBits(0i, 0u, 0u); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [
+    {
+     "args": [
+      [
+       -2147483648
+      ],
+      [
+       1
+      ],
+      [
+       0
+      ]
+     ],
+     "error": "dawn: Error while parsing WGSL: :6:23 error: value cannot be represented as 'i32'",
+     "wgsl": "ractBits(-2147483648i, 1u, 0u); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }"
+    }
+   ],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       4294967295
+      ],
+      [
+       0
+      ]
+     ],
+     "specErr": "offset + count > 32",
+     "error": "dawn: Error while parsing WGSL: :6:10 error: 'offset' + 'count' must be less than or equal to the bit width of 'e'"
+    },
+    {
+     "args": [
+      [
+       1
+      ],
+      [
+       33
+      ],
+      [
+       0
+      ]
+     ],
+     "specErr": "offset + count > 32",
+     "error": "dawn: Error while parsing WGSL: :6:10 error: 'offset' + 'count' must be less than or equal to the bit width of 'e'"
+    }
+   ]
+  }
+ },
+ {
+  "op": "std.extractBits",
+  "type": "u32",
+  "cases": 36,
+  "ok": 15,
+  "wrong": 0,
+  "rejectedExpected": 21,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 15,
+  "errKinds": {
+   "offset + count > 32 :: dawn: Error while parsing WGSL: :N:N error: 'offset' + 'count' must be less than or equal to the bit width of ": 21
+  },
+  "sampleWgsl": "fn item_1() -> u32 { return extractBits(0u, 0u, 0u); } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       32
+      ],
+      [
+       1
+      ]
+     ],
+     "specErr": "offset + count > 32",
+     "error": "dawn: Error while parsing WGSL: :6:10 error: 'offset' + 'count' must be less than or equal to the bit width of 'e'"
+    },
+    {
+     "args": [
+      [
+       1
+      ],
+      [
+       4294967295
+      ],
+      [
+       5
+      ]
+     ],
+     "specErr": "offset + count > 32",
+     "error": "dawn: Error while parsing WGSL: :6:10 error: 'offset' + 'count' must be less than or equal to the bit width of 'e'"
+    }
+   ]
+  }
+ },
+ {
+  "op": "std.extractBits",
+  "type": "vec3i",
+  "cases": 36,
+  "ok": 26,
+  "wrong": 0,
+  "rejectedExpected": 10,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 26,
+  "errKinds": {
+   "offset + count > 32 :: dawn: Error while parsing WGSL: :N:N error: 'offset' + 'count' must be less than or equal to the bit width of ": 10
+  },
+  "sampleWgsl": "em_1() -> vec3i { return extractBits(vec3i(0, 65536, 65536), 0u, 0u); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0,
+       0,
+       0
+      ],
+      [
+       4294967295
+      ],
+      [
+       0
+      ]
+     ],
+     "specErr": "offset + count > 32",
+     "error": "dawn: Error while parsing WGSL: :6:10 error: 'offset' + 'count' must be less than or equal to the bit width of 'e'"
+    },
+    {
+     "args": [
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       33
+      ],
+      [
+       0
+      ]
+     ],
+     "specErr": "offset + count > 32",
+     "error": "dawn: Error while parsing WGSL: :6:10 error: 'offset' + 'count' must be less than or equal to the bit width of 'e'"
+    }
+   ]
+  }
+ },
+ {
+  "op": "std.extractBits",
+  "type": "vec3u",
+  "cases": 36,
+  "ok": 15,
+  "wrong": 0,
+  "rejectedExpected": 21,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 15,
+  "errKinds": {
+   "offset + count > 32 :: dawn: Error while parsing WGSL: :N:N error: 'offset' + 'count' must be less than or equal to the bit width of ": 21
+  },
+  "sampleWgsl": ") -> vec3u { return extractBits(vec3u(0, 65536, 2147483647), 0u, 0u); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0,
+       1431655765,
+       2147483649
+      ],
+      [
+       32
+      ],
+      [
+       1
+      ]
+     ],
+     "specErr": "offset + count > 32",
+     "error": "dawn: Error while parsing WGSL: :6:10 error: 'offset' + 'count' must be less than or equal to the bit width of 'e'"
+    },
+    {
+     "args": [
+      [
+       1,
+       2863311530,
+       16777216
+      ],
+      [
+       4294967295
+      ],
+      [
+       5
+      ]
+     ],
+     "specErr": "offset + count > 32",
+     "error": "dawn: Error while parsing WGSL: :6:10 error: 'offset' + 'count' must be less than or equal to the bit width of 'e'"
+    }
+   ]
+  }
+ },
+ {
+  "op": "std.insertBits",
+  "type": "i32",
+  "cases": 36,
+  "ok": 17,
+  "wrong": 0,
+  "rejectedExpected": 19,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 17,
+  "errKinds": {
+   "offset + count > 32 :: dawn: Error while parsing WGSL: :N:N error: 'offset' + 'count' must be less than or equal to the bit width of ": 19
+  },
+  "sampleWgsl": "fn item_1() -> i32 { return insertBits(0i, 0i, 0u, 0u); } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       -2
+      ],
+      [
+       5
+      ],
+      [
+       32
+      ]
+     ],
+     "specErr": "offset + count > 32",
+     "error": "dawn: Error while parsing WGSL: :6:10 error: 'offset' + 'count' must be less than or equal to the bit width of 'e'"
+    },
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       32768
+      ],
+      [
+       32
+      ],
+      [
+       16
+      ]
+     ],
+     "specErr": "offset + count > 32",
+     "error": "dawn: Error while parsing WGSL: :6:10 error: 'offset' + 'count' must be less than or equal to the bit width of 'e'"
+    }
+   ]
+  }
+ },
+ {
+  "op": "std.insertBits",
+  "type": "u32",
+  "cases": 36,
+  "ok": 17,
+  "wrong": 0,
+  "rejectedExpected": 19,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 17,
+  "errKinds": {
+   "offset + count > 32 :: dawn: Error while parsing WGSL: :N:N error: 'offset' + 'count' must be less than or equal to the bit width of ": 19
+  },
+  "sampleWgsl": "fn item_1() -> u32 { return insertBits(0u, 0u, 0u, 0u); } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       7
+      ],
+      [
+       5
+      ],
+      [
+       32
+      ]
+     ],
+     "specErr": "offset + count > 32",
+     "error": "dawn: Error while parsing WGSL: :6:10 error: 'offset' + 'count' must be less than or equal to the bit width of 'e'"
+    },
+    {
+     "args": [
+      [
+       0
+      ],
+      [
+       3735928559
+      ],
+      [
+       32
+      ],
+      [
+       16
+      ]
+     ],
+     "specErr": "offset + count > 32",
+     "error": "dawn: Error while parsing WGSL: :6:10 error: 'offset' + 'count' must be less than or equal to the bit width of 'e'"
+    }
+   ]
+  }
+ },
+ {
+  "op": "std.insertBits",
+  "type": "vec3i",
+  "cases": 36,
+  "ok": 17,
+  "wrong": 0,
+  "rejectedExpected": 19,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 17,
+  "errKinds": {
+   "offset + count > 32 :: dawn: Error while parsing WGSL: :N:N error: 'offset' + 'count' must be less than or equal to the bit width of ": 19
+  },
+  "sampleWgsl": "{ return insertBits(vec3i(0, -3, 65535), vec3i(0, 32767, 1), 0u, 0u); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0,
+       7,
+       65535
+      ],
+      [
+       -2,
+       0,
+       32767
+      ],
+      [
+       5
+      ],
+      [
+       32
+      ]
+     ],
+     "specErr": "offset + count > 32",
+     "error": "dawn: Error while parsing WGSL: :6:10 error: 'offset' + 'count' must be less than or equal to the bit width of 'e'"
+    },
+    {
+     "args": [
+      [
+       0,
+       7,
+       0
+      ],
+      [
+       32768,
+       -2,
+       0
+      ],
+      [
+       32
+      ],
+      [
+       16
+      ]
+     ],
+     "specErr": "offset + count > 32",
+     "error": "dawn: Error while parsing WGSL: :6:10 error: 'offset' + 'count' must be less than or equal to the bit width of 'e'"
+    }
+   ]
+  }
+ },
+ {
+  "op": "std.insertBits",
+  "type": "vec3u",
+  "cases": 36,
+  "ok": 17,
+  "wrong": 0,
+  "rejectedExpected": 19,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 0,
+  "emittedCall": 17,
+  "errKinds": {
+   "offset + count > 32 :: dawn: Error while parsing WGSL: :N:N error: 'offset' + 'count' must be less than or equal to the bit width of ": 19
+  },
+  "sampleWgsl": "nsertBits(vec3u(0, 256, 252645135), vec3u(0, 4042322160, 1), 0u, 0u); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": [
+    {
+     "args": [
+      [
+       0,
+       65535,
+       252645135
+      ],
+      [
+       7,
+       0,
+       4042322160
+      ],
+      [
+       5
+      ],
+      [
+       32
+      ]
+     ],
+     "specErr": "offset + count > 32",
+     "error": "dawn: Error while parsing WGSL: :6:10 error: 'offset' + 'count' must be less than or equal to the bit width of 'e'"
+    },
+    {
+     "args": [
+      [
+       0,
+       65535,
+       0
+      ],
+      [
+       3735928559,
+       7,
+       0
+      ],
+      [
+       32
+      ],
+      [
+       16
+      ]
+     ],
+     "specErr": "offset + count > 32",
+     "error": "dawn: Error while parsing WGSL: :6:10 error: 'offset' + 'count' must be less than or equal to the bit width of 'e'"
+    }
+   ]
+  }
+ },
+ {
+  "op": "std.select (scalar cond)",
+  "type": "i32",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 36,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> i32 { return 0i; } @group(0) @binding(0) var<storage, read_write> out: i32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.select (scalar cond)",
+  "type": "u32",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 36,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> u32 { return 0u; } @group(0) @binding(0) var<storage, read_write> out: u32; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.select (scalar cond)",
+  "type": "vec3i",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 36,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> vec3i { return vec3i(0, 2, 7); } @group(0) @binding(0) var<storage, read_write> out: vec3i; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ },
+ {
+  "op": "std.select (scalar cond)",
+  "type": "vec3u",
+  "cases": 36,
+  "ok": 36,
+  "wrong": 0,
+  "rejectedExpected": 0,
+  "rejectedUnexpected": 0,
+  "acceptedAlthoughSpecError": 0,
+  "folded": 36,
+  "emittedCall": 0,
+  "errKinds": {},
+  "sampleWgsl": "fn item_1() -> vec3u { return vec3u(0, 3, 65535); } @group(0) @binding(0) var<storage, read_write> out: vec3u; fn item() { out = item_1(); }",
+  "examples": {
+   "wrong": [],
+   "rejectedUnexpected": [],
+   "acceptedAlthoughSpecError": [],
+   "rejectedExpected": []
+  }
+ }
+]

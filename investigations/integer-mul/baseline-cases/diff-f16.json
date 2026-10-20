@@ -1,0 +1,6988 @@
+{
+ "file": "diff-f16",
+ "groups": [
+  {
+   "op": "add",
+   "type": "f16",
+   "semantics": "WGSL",
+   "policy": {
+    "id": "correctly-rounded",
+    "basis": "spec",
+    "describe": "WGSL: addition, subtraction and multiplication are correctly rounded; subnormal inputs/outputs may be flushed to zero"
+   },
+   "total": 169,
+   "pass": 165,
+   "fail": 0,
+   "knownDivergence": 0,
+   "investigate": 4,
+   "rows": [
+    {
+     "id": "add:f16:0",
+     "inputs": [
+      [
+       0
+      ],
+      [
+       0
+      ]
+     ],
+     "cpu": [
+      0
+     ],
+     "gpu": [
+      0
+     ],
+     "want": [
+      0
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "add:f16:1",
+     "inputs": [
+      [
+       0
+      ],
+      [
+       0
+      ]
+     ],
+     "cpu": [
+      0
+     ],
+     "gpu": [
+      0
+     ],
+     "want": [
+      0
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "add:f16:2",
+     "inputs": [
+      [
+       0
+      ],
+      [
+       1
+      ]
+     ],
+     "cpu": [
+      1
+     ],
+     "gpu": [
+      1
+     ],
+     "want": [
+      1
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "add:f16:98",
+     "inputs": [
+      [
+       65504
+      ],
+      [
+       65504
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      131008
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:f16:101",
+     "inputs": [
+      [
+       65504
+      ],
+      [
+       2048
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      67552
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:f16:112",
+     "inputs": [
+      [
+       -65504
+      ],
+      [
+       -65504
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      -131008
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:f16:137",
+     "inputs": [
+      [
+       2048
+      ],
+      [
+       65504
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      67552
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    }
+   ],
+   "cpuVsGpu": {
+    "compared": 169,
+    "identical": 169,
+    "differ": 0,
+    "maxUlpDiff": null
+   },
+   "truncated": 0
+  },
+  {
+   "op": "add",
+   "type": "vec2h",
+   "semantics": "WGSL",
+   "policy": {
+    "id": "correctly-rounded",
+    "basis": "spec",
+    "describe": "WGSL: addition, subtraction and multiplication are correctly rounded; subnormal inputs/outputs may be flushed to zero"
+   },
+   "total": 169,
+   "pass": 161,
+   "fail": 0,
+   "knownDivergence": 0,
+   "investigate": 8,
+   "rows": [
+    {
+     "id": "add:vec2h:0",
+     "inputs": [
+      [
+       0,
+       -1
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "cpu": [
+      0,
+      1
+     ],
+     "gpu": [
+      0,
+      1
+     ],
+     "want": [
+      0,
+      1
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "add:vec2h:1",
+     "inputs": [
+      [
+       0,
+       -1
+      ],
+      [
+       0,
+       1.0009765625
+      ]
+     ],
+     "cpu": [
+      0,
+      0.0009765625
+     ],
+     "gpu": [
+      0,
+      0.0009765625
+     ],
+     "want": [
+      0,
+      0.0009765625
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "add:vec2h:2",
+     "inputs": [
+      [
+       0,
+       -1
+      ],
+      [
+       1,
+       65504
+      ]
+     ],
+     "cpu": [
+      1,
+      65504
+     ],
+     "gpu": [
+      1,
+      65504
+     ],
+     "want": [
+      1,
+      65503
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "add:vec2h:54",
+     "inputs": [
+      [
+       0.5,
+       65504
+      ],
+      [
+       1,
+       65504
+      ]
+     ],
+     "cpu": [
+      1.5,
+      null
+     ],
+     "gpu": [
+      1.5,
+      null
+     ],
+     "want": [
+      1.5,
+      131008
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec2h:57",
+     "inputs": [
+      [
+       0.5,
+       65504
+      ],
+      [
+       2,
+       2048
+      ]
+     ],
+     "cpu": [
+      2.5,
+      null
+     ],
+     "gpu": [
+      2.5,
+      null
+     ],
+     "want": [
+      2.5,
+      67552
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec2h:68",
+     "inputs": [
+      [
+       2,
+       -65504
+      ],
+      [
+       -1,
+       -65504
+      ]
+     ],
+     "cpu": [
+      1,
+      null
+     ],
+     "gpu": [
+      1,
+      null
+     ],
+     "want": [
+      1,
+      -131008
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec2h:93",
+     "inputs": [
+      [
+       65504,
+       2048
+      ],
+      [
+       1,
+       65504
+      ]
+     ],
+     "cpu": [
+      65504,
+      null
+     ],
+     "gpu": [
+      65504,
+      null
+     ],
+     "want": [
+      65505,
+      67552
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec2h:98",
+     "inputs": [
+      [
+       65504,
+       2048
+      ],
+      [
+       65504,
+       0.0999755859375
+      ]
+     ],
+     "cpu": [
+      null,
+      2048
+     ],
+     "gpu": [
+      null,
+      2048
+     ],
+     "want": [
+      131008,
+      2048.0999755859375
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec2h:101",
+     "inputs": [
+      [
+       65504,
+       2048
+      ],
+      [
+       2048,
+       1
+      ]
+     ],
+     "cpu": [
+      null,
+      2048
+     ],
+     "gpu": [
+      null,
+      2048
+     ],
+     "want": [
+      67552,
+      2049
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec2h:112",
+     "inputs": [
+      [
+       -65504,
+       3
+      ],
+      [
+       -65504,
+       0
+      ]
+     ],
+     "cpu": [
+      null,
+      3
+     ],
+     "gpu": [
+      null,
+      3
+     ],
+     "want": [
+      -131008,
+      3
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec2h:137",
+     "inputs": [
+      [
+       2048,
+       0
+      ],
+      [
+       65504,
+       0.0999755859375
+      ]
+     ],
+     "cpu": [
+      null,
+      0.0999755859375
+     ],
+     "gpu": [
+      null,
+      0.0999755859375
+     ],
+     "want": [
+      67552,
+      0.0999755859375
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    }
+   ],
+   "cpuVsGpu": {
+    "compared": 169,
+    "identical": 169,
+    "differ": 0,
+    "maxUlpDiff": null
+   },
+   "truncated": 0
+  },
+  {
+   "op": "add",
+   "type": "vec4h",
+   "semantics": "WGSL",
+   "policy": {
+    "id": "correctly-rounded",
+    "basis": "spec",
+    "describe": "WGSL: addition, subtraction and multiplication are correctly rounded; subnormal inputs/outputs may be flushed to zero"
+   },
+   "total": 169,
+   "pass": 153,
+   "fail": 0,
+   "knownDivergence": 0,
+   "investigate": 16,
+   "rows": [
+    {
+     "id": "add:vec4h:0",
+     "inputs": [
+      [
+       0,
+       -1,
+       1.0009765625,
+       0.00006103515625
+      ],
+      [
+       0,
+       2,
+       2048,
+       1
+      ]
+     ],
+     "cpu": [
+      0,
+      1,
+      2050,
+      1
+     ],
+     "gpu": [
+      0,
+      1,
+      2050,
+      1
+     ],
+     "want": [
+      0,
+      1,
+      2049.0009765625,
+      1.00006103515625
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "add:vec4h:1",
+     "inputs": [
+      [
+       0,
+       -1,
+       1.0009765625,
+       0.00006103515625
+      ],
+      [
+       0,
+       1.0009765625,
+       3,
+       -1
+      ]
+     ],
+     "cpu": [
+      0,
+      0.0009765625,
+      4,
+      -1
+     ],
+     "gpu": [
+      0,
+      0.0009765625,
+      4,
+      -1
+     ],
+     "want": [
+      0,
+      0.0009765625,
+      4.0009765625,
+      -0.99993896484375
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "add:vec4h:2",
+     "inputs": [
+      [
+       0,
+       -1,
+       1.0009765625,
+       0.00006103515625
+      ],
+      [
+       1,
+       65504,
+       0.0999755859375,
+       0.5
+      ]
+     ],
+     "cpu": [
+      1,
+      65504,
+      1.1005859375,
+      0.5
+     ],
+     "gpu": [
+      1,
+      65504,
+      1.1005859375,
+      0.5
+     ],
+     "want": [
+      1,
+      65503,
+      1.1009521484375,
+      0.50006103515625
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "add:vec4h:13",
+     "inputs": [
+      [
+       0,
+       0.5,
+       65504,
+       2048
+      ],
+      [
+       0,
+       2,
+       2048,
+       1
+      ]
+     ],
+     "cpu": [
+      0,
+      2.5,
+      null,
+      2048
+     ],
+     "gpu": [
+      0,
+      2.5,
+      null,
+      2048
+     ],
+     "want": [
+      0,
+      2.5,
+      67552,
+      2049
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec4h:18",
+     "inputs": [
+      [
+       0,
+       0.5,
+       65504,
+       2048
+      ],
+      [
+       2,
+       2048,
+       1,
+       65504
+      ]
+     ],
+     "cpu": [
+      2,
+      2048,
+      65504,
+      null
+     ],
+     "gpu": [
+      2,
+      2048,
+      65504,
+      null
+     ],
+     "want": [
+      2,
+      2048.5,
+      65505,
+      67552
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 3,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 3,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec4h:23",
+     "inputs": [
+      [
+       0,
+       0.5,
+       65504,
+       2048
+      ],
+      [
+       2048,
+       1,
+       65504,
+       0.0999755859375
+      ]
+     ],
+     "cpu": [
+      2048,
+      1.5,
+      null,
+      2048
+     ],
+     "gpu": [
+      2048,
+      1.5,
+      null,
+      2048
+     ],
+     "want": [
+      2048,
+      1.5,
+      131008,
+      2048.0999755859375
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec4h:37",
+     "inputs": [
+      [
+       1,
+       2,
+       -65504,
+       3
+      ],
+      [
+       3,
+       -1,
+       -65504,
+       0
+      ]
+     ],
+     "cpu": [
+      4,
+      1,
+      null,
+      3
+     ],
+     "gpu": [
+      4,
+      1,
+      null,
+      3
+     ],
+     "want": [
+      4,
+      1,
+      -131008,
+      3
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec4h:54",
+     "inputs": [
+      [
+       0.5,
+       65504,
+       2048,
+       0
+      ],
+      [
+       1,
+       65504,
+       0.0999755859375,
+       0.5
+      ]
+     ],
+     "cpu": [
+      1.5,
+      null,
+      2048,
+      0.5
+     ],
+     "gpu": [
+      1.5,
+      null,
+      2048,
+      0.5
+     ],
+     "want": [
+      1.5,
+      131008,
+      2048.0999755859375,
+      0.5
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec4h:57",
+     "inputs": [
+      [
+       0.5,
+       65504,
+       2048,
+       0
+      ],
+      [
+       2,
+       2048,
+       1,
+       65504
+      ]
+     ],
+     "cpu": [
+      2.5,
+      null,
+      2048,
+      65504
+     ],
+     "gpu": [
+      2.5,
+      null,
+      2048,
+      65504
+     ],
+     "want": [
+      2.5,
+      67552,
+      2049,
+      65504
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec4h:62",
+     "inputs": [
+      [
+       0.5,
+       65504,
+       2048,
+       0
+      ],
+      [
+       2048,
+       1,
+       65504,
+       0.0999755859375
+      ]
+     ],
+     "cpu": [
+      2048,
+      65504,
+      null,
+      0.0999755859375
+     ],
+     "gpu": [
+      2048,
+      65504,
+      null,
+      0.0999755859375
+     ],
+     "want": [
+      2048.5,
+      65505,
+      67552,
+      0.0999755859375
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec4h:68",
+     "inputs": [
+      [
+       2,
+       -65504,
+       3,
+       0
+      ],
+      [
+       -1,
+       -65504,
+       0,
+       2
+      ]
+     ],
+     "cpu": [
+      1,
+      null,
+      3,
+      2
+     ],
+     "gpu": [
+      1,
+      null,
+      3,
+      2
+     ],
+     "want": [
+      1,
+      -131008,
+      3,
+      2
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec4h:93",
+     "inputs": [
+      [
+       65504,
+       2048,
+       0,
+       -1
+      ],
+      [
+       1,
+       65504,
+       0.0999755859375,
+       0.5
+      ]
+     ],
+     "cpu": [
+      65504,
+      null,
+      0.0999755859375,
+      -0.5
+     ],
+     "gpu": [
+      65504,
+      null,
+      0.0999755859375,
+      -0.5
+     ],
+     "want": [
+      65505,
+      67552,
+      0.0999755859375,
+      -0.5
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec4h:98",
+     "inputs": [
+      [
+       65504,
+       2048,
+       0,
+       -1
+      ],
+      [
+       65504,
+       0.0999755859375,
+       0.5,
+       0.00006103515625
+      ]
+     ],
+     "cpu": [
+      null,
+      2048,
+      0.5,
+      -1
+     ],
+     "gpu": [
+      null,
+      2048,
+      0.5,
+      -1
+     ],
+     "want": [
+      131008,
+      2048.0999755859375,
+      0.5,
+      -0.99993896484375
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec4h:101",
+     "inputs": [
+      [
+       65504,
+       2048,
+       0,
+       -1
+      ],
+      [
+       2048,
+       1,
+       65504,
+       0.0999755859375
+      ]
+     ],
+     "cpu": [
+      null,
+      2048,
+      65504,
+      -0.89990234375
+     ],
+     "gpu": [
+      null,
+      2048,
+      65504,
+      -0.89990234375
+     ],
+     "want": [
+      67552,
+      2049,
+      65504,
+      -0.9000244140625
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec4h:112",
+     "inputs": [
+      [
+       -65504,
+       3,
+       0,
+       0.5
+      ],
+      [
+       -65504,
+       0,
+       2,
+       2048
+      ]
+     ],
+     "cpu": [
+      null,
+      3,
+      2,
+      2048
+     ],
+     "gpu": [
+      null,
+      3,
+      2,
+      2048
+     ],
+     "want": [
+      -131008,
+      3,
+      2,
+      2048.5
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec4h:137",
+     "inputs": [
+      [
+       2048,
+       0,
+       -1,
+       1.0009765625
+      ],
+      [
+       65504,
+       0.0999755859375,
+       0.5,
+       0.00006103515625
+      ]
+     ],
+     "cpu": [
+      null,
+      0.0999755859375,
+      -0.5,
+      1.0009765625
+     ],
+     "gpu": [
+      null,
+      0.0999755859375,
+      -0.5,
+      1.0009765625
+     ],
+     "want": [
+      67552,
+      0.0999755859375,
+      -0.5,
+      1.00103759765625
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec4h:148",
+     "inputs": [
+      [
+       3,
+       0,
+       0.5,
+       65504
+      ],
+      [
+       2,
+       2048,
+       1,
+       65504
+      ]
+     ],
+     "cpu": [
+      5,
+      2048,
+      1.5,
+      null
+     ],
+     "gpu": [
+      5,
+      2048,
+      1.5,
+      null
+     ],
+     "want": [
+      5,
+      2048,
+      1.5,
+      131008
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 3,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 3,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec4h:151",
+     "inputs": [
+      [
+       3,
+       0,
+       0.5,
+       65504
+      ],
+      [
+       -65504,
+       0,
+       2,
+       2048
+      ]
+     ],
+     "cpu": [
+      -65504,
+      0,
+      2.5,
+      null
+     ],
+     "gpu": [
+      -65504,
+      0,
+      2.5,
+      null
+     ],
+     "want": [
+      -65501,
+      0,
+      2.5,
+      67552
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 3,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 3,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "add:vec4h:162",
+     "inputs": [
+      [
+       0.0999755859375,
+       1,
+       2,
+       -65504
+      ],
+      [
+       1.0009765625,
+       3,
+       -1,
+       -65504
+      ]
+     ],
+     "cpu": [
+      1.1005859375,
+      4,
+      1,
+      null
+     ],
+     "gpu": [
+      1.1005859375,
+      4,
+      1,
+      null
+     ],
+     "want": [
+      1.1009521484375,
+      4,
+      1,
+      -131008
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 3,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 3,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    }
+   ],
+   "cpuVsGpu": {
+    "compared": 169,
+    "identical": 169,
+    "differ": 0,
+    "maxUlpDiff": null
+   },
+   "truncated": 0
+  },
+  {
+   "op": "sub",
+   "type": "f16",
+   "semantics": "WGSL",
+   "policy": {
+    "id": "correctly-rounded",
+    "basis": "spec",
+    "describe": "WGSL: addition, subtraction and multiplication are correctly rounded; subnormal inputs/outputs may be flushed to zero"
+   },
+   "total": 169,
+   "pass": 165,
+   "fail": 0,
+   "knownDivergence": 0,
+   "investigate": 4,
+   "rows": [
+    {
+     "id": "sub:f16:0",
+     "inputs": [
+      [
+       0
+      ],
+      [
+       0
+      ]
+     ],
+     "cpu": [
+      0
+     ],
+     "gpu": [
+      0
+     ],
+     "want": [
+      0
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "sub:f16:1",
+     "inputs": [
+      [
+       0
+      ],
+      [
+       0
+      ]
+     ],
+     "cpu": [
+      0
+     ],
+     "gpu": [
+      0
+     ],
+     "want": [
+      0
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "sub:f16:2",
+     "inputs": [
+      [
+       0
+      ],
+      [
+       1
+      ]
+     ],
+     "cpu": [
+      -1
+     ],
+     "gpu": [
+      -1
+     ],
+     "want": [
+      -1
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "sub:f16:99",
+     "inputs": [
+      [
+       65504
+      ],
+      [
+       -65504
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      131008
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:f16:111",
+     "inputs": [
+      [
+       -65504
+      ],
+      [
+       65504
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      -131008
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:f16:114",
+     "inputs": [
+      [
+       -65504
+      ],
+      [
+       2048
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      -67552
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:f16:138",
+     "inputs": [
+      [
+       2048
+      ],
+      [
+       -65504
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      67552
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    }
+   ],
+   "cpuVsGpu": {
+    "compared": 169,
+    "identical": 169,
+    "differ": 0,
+    "maxUlpDiff": null
+   },
+   "truncated": 0
+  },
+  {
+   "op": "sub",
+   "type": "vec2h",
+   "semantics": "WGSL",
+   "policy": {
+    "id": "correctly-rounded",
+    "basis": "spec",
+    "describe": "WGSL: addition, subtraction and multiplication are correctly rounded; subnormal inputs/outputs may be flushed to zero"
+   },
+   "total": 169,
+   "pass": 161,
+   "fail": 0,
+   "knownDivergence": 0,
+   "investigate": 8,
+   "rows": [
+    {
+     "id": "sub:vec2h:0",
+     "inputs": [
+      [
+       0,
+       -1
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "cpu": [
+      0,
+      -3
+     ],
+     "gpu": [
+      0,
+      -3
+     ],
+     "want": [
+      0,
+      -3
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "sub:vec2h:1",
+     "inputs": [
+      [
+       0,
+       -1
+      ],
+      [
+       0,
+       1.0009765625
+      ]
+     ],
+     "cpu": [
+      0,
+      -2
+     ],
+     "gpu": [
+      0,
+      -2
+     ],
+     "want": [
+      0,
+      -2.0009765625
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "sub:vec2h:2",
+     "inputs": [
+      [
+       0,
+       -1
+      ],
+      [
+       1,
+       65504
+      ]
+     ],
+     "cpu": [
+      -1,
+      -65504
+     ],
+     "gpu": [
+      -1,
+      -65504
+     ],
+     "want": [
+      -1,
+      -65505
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "sub:vec2h:55",
+     "inputs": [
+      [
+       0.5,
+       65504
+      ],
+      [
+       -1,
+       -65504
+      ]
+     ],
+     "cpu": [
+      1.5,
+      null
+     ],
+     "gpu": [
+      1.5,
+      null
+     ],
+     "want": [
+      1.5,
+      131008
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec2h:67",
+     "inputs": [
+      [
+       2,
+       -65504
+      ],
+      [
+       1,
+       65504
+      ]
+     ],
+     "cpu": [
+      1,
+      null
+     ],
+     "gpu": [
+      1,
+      null
+     ],
+     "want": [
+      1,
+      -131008
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec2h:70",
+     "inputs": [
+      [
+       2,
+       -65504
+      ],
+      [
+       2,
+       2048
+      ]
+     ],
+     "cpu": [
+      0,
+      null
+     ],
+     "gpu": [
+      0,
+      null
+     ],
+     "want": [
+      0,
+      -67552
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec2h:94",
+     "inputs": [
+      [
+       65504,
+       2048
+      ],
+      [
+       -1,
+       -65504
+      ]
+     ],
+     "cpu": [
+      65504,
+      null
+     ],
+     "gpu": [
+      65504,
+      null
+     ],
+     "want": [
+      65505,
+      67552
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec2h:99",
+     "inputs": [
+      [
+       65504,
+       2048
+      ],
+      [
+       -65504,
+       0
+      ]
+     ],
+     "cpu": [
+      null,
+      2048
+     ],
+     "gpu": [
+      null,
+      2048
+     ],
+     "want": [
+      131008,
+      2048
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec2h:111",
+     "inputs": [
+      [
+       -65504,
+       3
+      ],
+      [
+       65504,
+       0.0999755859375
+      ]
+     ],
+     "cpu": [
+      null,
+      2.900390625
+     ],
+     "gpu": [
+      null,
+      2.900390625
+     ],
+     "want": [
+      -131008,
+      2.9000244140625
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec2h:114",
+     "inputs": [
+      [
+       -65504,
+       3
+      ],
+      [
+       2048,
+       1
+      ]
+     ],
+     "cpu": [
+      null,
+      2
+     ],
+     "gpu": [
+      null,
+      2
+     ],
+     "want": [
+      -67552,
+      2
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec2h:138",
+     "inputs": [
+      [
+       2048,
+       0
+      ],
+      [
+       -65504,
+       0
+      ]
+     ],
+     "cpu": [
+      null,
+      0
+     ],
+     "gpu": [
+      null,
+      0
+     ],
+     "want": [
+      67552,
+      0
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    }
+   ],
+   "cpuVsGpu": {
+    "compared": 169,
+    "identical": 169,
+    "differ": 0,
+    "maxUlpDiff": null
+   },
+   "truncated": 0
+  },
+  {
+   "op": "sub",
+   "type": "vec4h",
+   "semantics": "WGSL",
+   "policy": {
+    "id": "correctly-rounded",
+    "basis": "spec",
+    "describe": "WGSL: addition, subtraction and multiplication are correctly rounded; subnormal inputs/outputs may be flushed to zero"
+   },
+   "total": 169,
+   "pass": 153,
+   "fail": 0,
+   "knownDivergence": 0,
+   "investigate": 16,
+   "rows": [
+    {
+     "id": "sub:vec4h:0",
+     "inputs": [
+      [
+       0,
+       -1,
+       1.0009765625,
+       0.00006103515625
+      ],
+      [
+       0,
+       2,
+       2048,
+       1
+      ]
+     ],
+     "cpu": [
+      0,
+      -3,
+      -2047,
+      -1
+     ],
+     "gpu": [
+      0,
+      -3,
+      -2047,
+      -1
+     ],
+     "want": [
+      0,
+      -3,
+      -2046.9990234375,
+      -0.99993896484375
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "sub:vec4h:1",
+     "inputs": [
+      [
+       0,
+       -1,
+       1.0009765625,
+       0.00006103515625
+      ],
+      [
+       0,
+       1.0009765625,
+       3,
+       -1
+      ]
+     ],
+     "cpu": [
+      0,
+      -2,
+      -1.9990234375,
+      1
+     ],
+     "gpu": [
+      0,
+      -2,
+      -1.9990234375,
+      1
+     ],
+     "want": [
+      0,
+      -2.0009765625,
+      -1.9990234375,
+      1.00006103515625
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "sub:vec4h:2",
+     "inputs": [
+      [
+       0,
+       -1,
+       1.0009765625,
+       0.00006103515625
+      ],
+      [
+       1,
+       65504,
+       0.0999755859375,
+       0.5
+      ]
+     ],
+     "cpu": [
+      -1,
+      -65504,
+      0.90087890625,
+      -0.5
+     ],
+     "gpu": [
+      -1,
+      -65504,
+      0.90087890625,
+      -0.5
+     ],
+     "want": [
+      -1,
+      -65505,
+      0.9010009765625,
+      -0.49993896484375
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "sub:vec4h:19",
+     "inputs": [
+      [
+       0,
+       0.5,
+       65504,
+       2048
+      ],
+      [
+       1.0009765625,
+       3,
+       -1,
+       -65504
+      ]
+     ],
+     "cpu": [
+      -1.0009765625,
+      -2.5,
+      65504,
+      null
+     ],
+     "gpu": [
+      -1.0009765625,
+      -2.5,
+      65504,
+      null
+     ],
+     "want": [
+      -1.0009765625,
+      -2.5,
+      65505,
+      67552
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 3,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 3,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec4h:24",
+     "inputs": [
+      [
+       0,
+       0.5,
+       65504,
+       2048
+      ],
+      [
+       3,
+       -1,
+       -65504,
+       0
+      ]
+     ],
+     "cpu": [
+      -3,
+      1.5,
+      null,
+      2048
+     ],
+     "gpu": [
+      -3,
+      1.5,
+      null,
+      2048
+     ],
+     "want": [
+      -3,
+      1.5,
+      131008,
+      2048
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec4h:26",
+     "inputs": [
+      [
+       1,
+       2,
+       -65504,
+       3
+      ],
+      [
+       0,
+       2,
+       2048,
+       1
+      ]
+     ],
+     "cpu": [
+      1,
+      0,
+      null,
+      2
+     ],
+     "gpu": [
+      1,
+      0,
+      null,
+      2
+     ],
+     "want": [
+      1,
+      0,
+      -67552,
+      2
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec4h:36",
+     "inputs": [
+      [
+       1,
+       2,
+       -65504,
+       3
+      ],
+      [
+       2048,
+       1,
+       65504,
+       0.0999755859375
+      ]
+     ],
+     "cpu": [
+      -2047,
+      1,
+      null,
+      2.900390625
+     ],
+     "gpu": [
+      -2047,
+      1,
+      null,
+      2.900390625
+     ],
+     "want": [
+      -2047,
+      1,
+      -131008,
+      2.9000244140625
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec4h:55",
+     "inputs": [
+      [
+       0.5,
+       65504,
+       2048,
+       0
+      ],
+      [
+       -1,
+       -65504,
+       0,
+       2
+      ]
+     ],
+     "cpu": [
+      1.5,
+      null,
+      2048,
+      -2
+     ],
+     "gpu": [
+      1.5,
+      null,
+      2048,
+      -2
+     ],
+     "want": [
+      1.5,
+      131008,
+      2048,
+      -2
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec4h:63",
+     "inputs": [
+      [
+       0.5,
+       65504,
+       2048,
+       0
+      ],
+      [
+       3,
+       -1,
+       -65504,
+       0
+      ]
+     ],
+     "cpu": [
+      -2.5,
+      65504,
+      null,
+      0
+     ],
+     "gpu": [
+      -2.5,
+      65504,
+      null,
+      0
+     ],
+     "want": [
+      -2.5,
+      65505,
+      67552,
+      0
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec4h:67",
+     "inputs": [
+      [
+       2,
+       -65504,
+       3,
+       0
+      ],
+      [
+       1,
+       65504,
+       0.0999755859375,
+       0.5
+      ]
+     ],
+     "cpu": [
+      1,
+      null,
+      2.900390625,
+      -0.5
+     ],
+     "gpu": [
+      1,
+      null,
+      2.900390625,
+      -0.5
+     ],
+     "want": [
+      1,
+      -131008,
+      2.9000244140625,
+      -0.5
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec4h:70",
+     "inputs": [
+      [
+       2,
+       -65504,
+       3,
+       0
+      ],
+      [
+       2,
+       2048,
+       1,
+       65504
+      ]
+     ],
+     "cpu": [
+      0,
+      null,
+      2,
+      -65504
+     ],
+     "gpu": [
+      0,
+      null,
+      2,
+      -65504
+     ],
+     "want": [
+      0,
+      -67552,
+      2,
+      -65504
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec4h:94",
+     "inputs": [
+      [
+       65504,
+       2048,
+       0,
+       -1
+      ],
+      [
+       -1,
+       -65504,
+       0,
+       2
+      ]
+     ],
+     "cpu": [
+      65504,
+      null,
+      0,
+      -3
+     ],
+     "gpu": [
+      65504,
+      null,
+      0,
+      -3
+     ],
+     "want": [
+      65505,
+      67552,
+      0,
+      -3
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec4h:99",
+     "inputs": [
+      [
+       65504,
+       2048,
+       0,
+       -1
+      ],
+      [
+       -65504,
+       0,
+       2,
+       2048
+      ]
+     ],
+     "cpu": [
+      null,
+      2048,
+      -2,
+      -2048
+     ],
+     "gpu": [
+      null,
+      2048,
+      -2,
+      -2048
+     ],
+     "want": [
+      131008,
+      2048,
+      -2,
+      -2049
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec4h:111",
+     "inputs": [
+      [
+       -65504,
+       3,
+       0,
+       0.5
+      ],
+      [
+       65504,
+       0.0999755859375,
+       0.5,
+       0.00006103515625
+      ]
+     ],
+     "cpu": [
+      null,
+      2.900390625,
+      -0.5,
+      0.5
+     ],
+     "gpu": [
+      null,
+      2.900390625,
+      -0.5,
+      0.5
+     ],
+     "want": [
+      -131008,
+      2.9000244140625,
+      -0.5,
+      0.49993896484375
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec4h:114",
+     "inputs": [
+      [
+       -65504,
+       3,
+       0,
+       0.5
+      ],
+      [
+       2048,
+       1,
+       65504,
+       0.0999755859375
+      ]
+     ],
+     "cpu": [
+      null,
+      2,
+      -65504,
+      0.39990234375
+     ],
+     "gpu": [
+      null,
+      2,
+      -65504,
+      0.39990234375
+     ],
+     "want": [
+      -67552,
+      2,
+      -65504,
+      0.4000244140625
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec4h:138",
+     "inputs": [
+      [
+       2048,
+       0,
+       -1,
+       1.0009765625
+      ],
+      [
+       -65504,
+       0,
+       2,
+       2048
+      ]
+     ],
+     "cpu": [
+      null,
+      0,
+      -3,
+      -2047
+     ],
+     "gpu": [
+      null,
+      0,
+      -3,
+      -2047
+     ],
+     "want": [
+      67552,
+      0,
+      -3,
+      -2046.9990234375
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec4h:149",
+     "inputs": [
+      [
+       3,
+       0,
+       0.5,
+       65504
+      ],
+      [
+       1.0009765625,
+       3,
+       -1,
+       -65504
+      ]
+     ],
+     "cpu": [
+      1.9990234375,
+      -3,
+      1.5,
+      null
+     ],
+     "gpu": [
+      1.9990234375,
+      -3,
+      1.5,
+      null
+     ],
+     "want": [
+      1.9990234375,
+      -3,
+      1.5,
+      131008
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 3,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 3,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec4h:161",
+     "inputs": [
+      [
+       0.0999755859375,
+       1,
+       2,
+       -65504
+      ],
+      [
+       2,
+       2048,
+       1,
+       65504
+      ]
+     ],
+     "cpu": [
+      -1.900390625,
+      -2047,
+      1,
+      null
+     ],
+     "gpu": [
+      -1.900390625,
+      -2047,
+      1,
+      null
+     ],
+     "want": [
+      -1.9000244140625,
+      -2047,
+      1,
+      -131008
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 3,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 3,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "sub:vec4h:164",
+     "inputs": [
+      [
+       0.0999755859375,
+       1,
+       2,
+       -65504
+      ],
+      [
+       -65504,
+       0,
+       2,
+       2048
+      ]
+     ],
+     "cpu": [
+      65504,
+      1,
+      0,
+      null
+     ],
+     "gpu": [
+      65504,
+      1,
+      0,
+      null
+     ],
+     "want": [
+      65504.09997558594,
+      1,
+      0,
+      -67552
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 3,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 3,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    }
+   ],
+   "cpuVsGpu": {
+    "compared": 169,
+    "identical": 169,
+    "differ": 0,
+    "maxUlpDiff": null
+   },
+   "truncated": 0
+  },
+  {
+   "op": "mul",
+   "type": "f16",
+   "semantics": "WGSL",
+   "policy": {
+    "id": "correctly-rounded",
+    "basis": "spec",
+    "describe": "WGSL: addition, subtraction and multiplication are correctly rounded; subnormal inputs/outputs may be flushed to zero"
+   },
+   "total": 169,
+   "pass": 148,
+   "fail": 0,
+   "knownDivergence": 0,
+   "investigate": 21,
+   "rows": [
+    {
+     "id": "mul:f16:0",
+     "inputs": [
+      [
+       0
+      ],
+      [
+       0
+      ]
+     ],
+     "cpu": [
+      0
+     ],
+     "gpu": [
+      0
+     ],
+     "want": [
+      0
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "mul:f16:1",
+     "inputs": [
+      [
+       0
+      ],
+      [
+       0
+      ]
+     ],
+     "cpu": [
+      0
+     ],
+     "gpu": [
+      0
+     ],
+     "want": [
+      0
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "mul:f16:2",
+     "inputs": [
+      [
+       0
+      ],
+      [
+       1
+      ]
+     ],
+     "cpu": [
+      0
+     ],
+     "gpu": [
+      0
+     ],
+     "want": [
+      0
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "mul:f16:72",
+     "inputs": [
+      [
+       2
+      ],
+      [
+       65504
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      131008
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:f16:73",
+     "inputs": [
+      [
+       2
+      ],
+      [
+       -65504
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      -131008
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:f16:85",
+     "inputs": [
+      [
+       1.0009765625
+      ],
+      [
+       65504
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      65567.96875
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:f16:86",
+     "inputs": [
+      [
+       1.0009765625
+      ],
+      [
+       -65504
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      -65567.96875
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:f16:96",
+     "inputs": [
+      [
+       65504
+      ],
+      [
+       2
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      131008
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:f16:97",
+     "inputs": [
+      [
+       65504
+      ],
+      [
+       1.0009765625
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      65567.96875
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:f16:98",
+     "inputs": [
+      [
+       65504
+      ],
+      [
+       65504
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      4290774016
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:f16:99",
+     "inputs": [
+      [
+       65504
+      ],
+      [
+       -65504
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      -4290774016
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:f16:101",
+     "inputs": [
+      [
+       65504
+      ],
+      [
+       2048
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      134152192
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:f16:102",
+     "inputs": [
+      [
+       65504
+      ],
+      [
+       3
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      196512
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:f16:109",
+     "inputs": [
+      [
+       -65504
+      ],
+      [
+       2
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      -131008
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:f16:110",
+     "inputs": [
+      [
+       -65504
+      ],
+      [
+       1.0009765625
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      -65567.96875
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:f16:111",
+     "inputs": [
+      [
+       -65504
+      ],
+      [
+       65504
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      -4290774016
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:f16:112",
+     "inputs": [
+      [
+       -65504
+      ],
+      [
+       -65504
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      4290774016
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:f16:114",
+     "inputs": [
+      [
+       -65504
+      ],
+      [
+       2048
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      -134152192
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:f16:115",
+     "inputs": [
+      [
+       -65504
+      ],
+      [
+       3
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      -196512
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:f16:137",
+     "inputs": [
+      [
+       2048
+      ],
+      [
+       65504
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      134152192
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:f16:138",
+     "inputs": [
+      [
+       2048
+      ],
+      [
+       -65504
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      -134152192
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:f16:140",
+     "inputs": [
+      [
+       2048
+      ],
+      [
+       2048
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      4194304
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:f16:150",
+     "inputs": [
+      [
+       3
+      ],
+      [
+       65504
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      196512
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:f16:151",
+     "inputs": [
+      [
+       3
+      ],
+      [
+       -65504
+      ]
+     ],
+     "cpu": [
+      null
+     ],
+     "gpu": [
+      null
+     ],
+     "want": [
+      -196512
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    }
+   ],
+   "cpuVsGpu": {
+    "compared": 169,
+    "identical": 169,
+    "differ": 0,
+    "maxUlpDiff": null
+   },
+   "truncated": 0
+  },
+  {
+   "op": "mul",
+   "type": "vec2h",
+   "semantics": "WGSL",
+   "policy": {
+    "id": "correctly-rounded",
+    "basis": "spec",
+    "describe": "WGSL: addition, subtraction and multiplication are correctly rounded; subnormal inputs/outputs may be flushed to zero"
+   },
+   "total": 169,
+   "pass": 128,
+   "fail": 0,
+   "knownDivergence": 0,
+   "investigate": 41,
+   "rows": [
+    {
+     "id": "mul:vec2h:0",
+     "inputs": [
+      [
+       0,
+       -1
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "cpu": [
+      0,
+      -2
+     ],
+     "gpu": [
+      0,
+      -2
+     ],
+     "want": [
+      0,
+      -2
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "mul:vec2h:1",
+     "inputs": [
+      [
+       0,
+       -1
+      ],
+      [
+       0,
+       1.0009765625
+      ]
+     ],
+     "cpu": [
+      0,
+      -1.0009765625
+     ],
+     "gpu": [
+      0,
+      -1.0009765625
+     ],
+     "want": [
+      0,
+      -1.0009765625
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "mul:vec2h:2",
+     "inputs": [
+      [
+       0,
+       -1
+      ],
+      [
+       1,
+       65504
+      ]
+     ],
+     "cpu": [
+      0,
+      -65504
+     ],
+     "gpu": [
+      0,
+      -65504
+     ],
+     "want": [
+      0,
+      -65504
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "mul:vec2h:28",
+     "inputs": [
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       65504
+      ]
+     ],
+     "cpu": [
+      1,
+      null
+     ],
+     "gpu": [
+      1,
+      null
+     ],
+     "want": [
+      1,
+      131008
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:29",
+     "inputs": [
+      [
+       1,
+       2
+      ],
+      [
+       -1,
+       -65504
+      ]
+     ],
+     "cpu": [
+      -1,
+      null
+     ],
+     "gpu": [
+      -1,
+      null
+     ],
+     "want": [
+      -1,
+      -131008
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:41",
+     "inputs": [
+      [
+       -1,
+       1.0009765625
+      ],
+      [
+       1,
+       65504
+      ]
+     ],
+     "cpu": [
+      -1,
+      null
+     ],
+     "gpu": [
+      -1,
+      null
+     ],
+     "want": [
+      -1,
+      65567.96875
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:42",
+     "inputs": [
+      [
+       -1,
+       1.0009765625
+      ],
+      [
+       -1,
+       -65504
+      ]
+     ],
+     "cpu": [
+      1,
+      null
+     ],
+     "gpu": [
+      1,
+      null
+     ],
+     "want": [
+      1,
+      -65567.96875
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:52",
+     "inputs": [
+      [
+       0.5,
+       65504
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "cpu": [
+      0,
+      null
+     ],
+     "gpu": [
+      0,
+      null
+     ],
+     "want": [
+      0,
+      131008
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:53",
+     "inputs": [
+      [
+       0.5,
+       65504
+      ],
+      [
+       0,
+       1.0009765625
+      ]
+     ],
+     "cpu": [
+      0,
+      null
+     ],
+     "gpu": [
+      0,
+      null
+     ],
+     "want": [
+      0,
+      65567.96875
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:54",
+     "inputs": [
+      [
+       0.5,
+       65504
+      ],
+      [
+       1,
+       65504
+      ]
+     ],
+     "cpu": [
+      0.5,
+      null
+     ],
+     "gpu": [
+      0.5,
+      null
+     ],
+     "want": [
+      0.5,
+      4290774016
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:55",
+     "inputs": [
+      [
+       0.5,
+       65504
+      ],
+      [
+       -1,
+       -65504
+      ]
+     ],
+     "cpu": [
+      -0.5,
+      null
+     ],
+     "gpu": [
+      -0.5,
+      null
+     ],
+     "want": [
+      -0.5,
+      -4290774016
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:57",
+     "inputs": [
+      [
+       0.5,
+       65504
+      ],
+      [
+       2,
+       2048
+      ]
+     ],
+     "cpu": [
+      1,
+      null
+     ],
+     "gpu": [
+      1,
+      null
+     ],
+     "want": [
+      1,
+      134152192
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:58",
+     "inputs": [
+      [
+       0.5,
+       65504
+      ],
+      [
+       1.0009765625,
+       3
+      ]
+     ],
+     "cpu": [
+      0.50048828125,
+      null
+     ],
+     "gpu": [
+      0.50048828125,
+      null
+     ],
+     "want": [
+      0.50048828125,
+      196512
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:65",
+     "inputs": [
+      [
+       2,
+       -65504
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "cpu": [
+      0,
+      null
+     ],
+     "gpu": [
+      0,
+      null
+     ],
+     "want": [
+      0,
+      -131008
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:66",
+     "inputs": [
+      [
+       2,
+       -65504
+      ],
+      [
+       0,
+       1.0009765625
+      ]
+     ],
+     "cpu": [
+      0,
+      null
+     ],
+     "gpu": [
+      0,
+      null
+     ],
+     "want": [
+      0,
+      -65567.96875
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:67",
+     "inputs": [
+      [
+       2,
+       -65504
+      ],
+      [
+       1,
+       65504
+      ]
+     ],
+     "cpu": [
+      2,
+      null
+     ],
+     "gpu": [
+      2,
+      null
+     ],
+     "want": [
+      2,
+      -4290774016
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:68",
+     "inputs": [
+      [
+       2,
+       -65504
+      ],
+      [
+       -1,
+       -65504
+      ]
+     ],
+     "cpu": [
+      -2,
+      null
+     ],
+     "gpu": [
+      -2,
+      null
+     ],
+     "want": [
+      -2,
+      4290774016
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:70",
+     "inputs": [
+      [
+       2,
+       -65504
+      ],
+      [
+       2,
+       2048
+      ]
+     ],
+     "cpu": [
+      4,
+      null
+     ],
+     "gpu": [
+      4,
+      null
+     ],
+     "want": [
+      4,
+      -134152192
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:71",
+     "inputs": [
+      [
+       2,
+       -65504
+      ],
+      [
+       1.0009765625,
+       3
+      ]
+     ],
+     "cpu": [
+      2.001953125,
+      null
+     ],
+     "gpu": [
+      2.001953125,
+      null
+     ],
+     "want": [
+      2.001953125,
+      -196512
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:72",
+     "inputs": [
+      [
+       2,
+       -65504
+      ],
+      [
+       65504,
+       0.0999755859375
+      ]
+     ],
+     "cpu": [
+      null,
+      -6548
+     ],
+     "gpu": [
+      null,
+      -6548
+     ],
+     "want": [
+      131008,
+      -6548.80078125
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:73",
+     "inputs": [
+      [
+       2,
+       -65504
+      ],
+      [
+       -65504,
+       0
+      ]
+     ],
+     "cpu": [
+      null,
+      0
+     ],
+     "gpu": [
+      null,
+      0
+     ],
+     "want": [
+      -131008,
+      0
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:85",
+     "inputs": [
+      [
+       1.0009765625,
+       0.00006103515625
+      ],
+      [
+       65504,
+       0.0999755859375
+      ]
+     ],
+     "cpu": [
+      null,
+      0.000006079673767089844
+     ],
+     "gpu": [
+      null,
+      0.000006079673767089844
+     ],
+     "want": [
+      65567.96875,
+      0.000006102025508880615
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:86",
+     "inputs": [
+      [
+       1.0009765625,
+       0.00006103515625
+      ],
+      [
+       -65504,
+       0
+      ]
+     ],
+     "cpu": [
+      null,
+      0
+     ],
+     "gpu": [
+      null,
+      0
+     ],
+     "want": [
+      -65567.96875,
+      0
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:93",
+     "inputs": [
+      [
+       65504,
+       2048
+      ],
+      [
+       1,
+       65504
+      ]
+     ],
+     "cpu": [
+      65504,
+      null
+     ],
+     "gpu": [
+      65504,
+      null
+     ],
+     "want": [
+      65504,
+      134152192
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:94",
+     "inputs": [
+      [
+       65504,
+       2048
+      ],
+      [
+       -1,
+       -65504
+      ]
+     ],
+     "cpu": [
+      -65504,
+      null
+     ],
+     "gpu": [
+      -65504,
+      null
+     ],
+     "want": [
+      -65504,
+      -134152192
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:96",
+     "inputs": [
+      [
+       65504,
+       2048
+      ],
+      [
+       2,
+       2048
+      ]
+     ],
+     "cpu": [
+      null,
+      null
+     ],
+     "gpu": [
+      null,
+      null
+     ],
+     "want": [
+      131008,
+      4194304
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:97",
+     "inputs": [
+      [
+       65504,
+       2048
+      ],
+      [
+       1.0009765625,
+       3
+      ]
+     ],
+     "cpu": [
+      null,
+      6144
+     ],
+     "gpu": [
+      null,
+      6144
+     ],
+     "want": [
+      65567.96875,
+      6144
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:98",
+     "inputs": [
+      [
+       65504,
+       2048
+      ],
+      [
+       65504,
+       0.0999755859375
+      ]
+     ],
+     "cpu": [
+      null,
+      204.75
+     ],
+     "gpu": [
+      null,
+      204.75
+     ],
+     "want": [
+      4290774016,
+      204.75
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:99",
+     "inputs": [
+      [
+       65504,
+       2048
+      ],
+      [
+       -65504,
+       0
+      ]
+     ],
+     "cpu": [
+      null,
+      0
+     ],
+     "gpu": [
+      null,
+      0
+     ],
+     "want": [
+      -4290774016,
+      0
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:101",
+     "inputs": [
+      [
+       65504,
+       2048
+      ],
+      [
+       2048,
+       1
+      ]
+     ],
+     "cpu": [
+      null,
+      2048
+     ],
+     "gpu": [
+      null,
+      2048
+     ],
+     "want": [
+      134152192,
+      2048
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:102",
+     "inputs": [
+      [
+       65504,
+       2048
+      ],
+      [
+       3,
+       -1
+      ]
+     ],
+     "cpu": [
+      null,
+      -2048
+     ],
+     "gpu": [
+      null,
+      -2048
+     ],
+     "want": [
+      196512,
+      -2048
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 0,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 0,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:106",
+     "inputs": [
+      [
+       -65504,
+       3
+      ],
+      [
+       1,
+       65504
+      ]
+     ],
+     "cpu": [
+      -65504,
+      null
+     ],
+     "gpu": [
+      -65504,
+      null
+     ],
+     "want": [
+      -65504,
+      196512
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec2h:107",
+     "inputs": [
+      [
+       -65504,
+       3
+      ],
+      [
+       -1,
+       -65504
+      ]
+     ],
+     "cpu": [
+      65504,
+      null
+     ],
+     "gpu": [
+      65504,
+      null
+     ],
+     "want": [
+      65504,
+      -196512
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    }
+   ],
+   "cpuVsGpu": {
+    "compared": 169,
+    "identical": 169,
+    "differ": 0,
+    "maxUlpDiff": null
+   },
+   "truncated": 11
+  },
+  {
+   "op": "mul",
+   "type": "vec4h",
+   "semantics": "WGSL",
+   "policy": {
+    "id": "correctly-rounded",
+    "basis": "spec",
+    "describe": "WGSL: addition, subtraction and multiplication are correctly rounded; subnormal inputs/outputs may be flushed to zero"
+   },
+   "total": 169,
+   "pass": 89,
+   "fail": 0,
+   "knownDivergence": 0,
+   "investigate": 80,
+   "rows": [
+    {
+     "id": "mul:vec4h:0",
+     "inputs": [
+      [
+       0,
+       -1,
+       1.0009765625,
+       0.00006103515625
+      ],
+      [
+       0,
+       2,
+       2048,
+       1
+      ]
+     ],
+     "cpu": [
+      0,
+      -2,
+      2050,
+      0.00006103515625
+     ],
+     "gpu": [
+      0,
+      -2,
+      2050,
+      0.00006103515625
+     ],
+     "want": [
+      0,
+      -2,
+      2050,
+      0.00006103515625
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "mul:vec4h:1",
+     "inputs": [
+      [
+       0,
+       -1,
+       1.0009765625,
+       0.00006103515625
+      ],
+      [
+       0,
+       1.0009765625,
+       3,
+       -1
+      ]
+     ],
+     "cpu": [
+      0,
+      -1.0009765625,
+      3.00390625,
+      -0.00006103515625
+     ],
+     "gpu": [
+      0,
+      -1.0009765625,
+      3.00390625,
+      -0.00006103515625
+     ],
+     "want": [
+      0,
+      -1.0009765625,
+      3.0029296875,
+      -0.00006103515625
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "mul:vec4h:2",
+     "inputs": [
+      [
+       0,
+       -1,
+       1.0009765625,
+       0.00006103515625
+      ],
+      [
+       1,
+       65504,
+       0.0999755859375,
+       0.5
+      ]
+     ],
+     "cpu": [
+      0,
+      -65504,
+      0.10009765625,
+      0.000030517578125
+     ],
+     "gpu": [
+      0,
+      -65504,
+      0.10009765625,
+      0.000030517578125
+     ],
+     "want": [
+      0,
+      -65504,
+      0.10007321834564209,
+      0.000030517578125
+     ],
+     "status": "pass",
+     "issues": []
+    },
+    {
+     "id": "mul:vec4h:10",
+     "inputs": [
+      [
+       0,
+       -1,
+       1.0009765625,
+       0.00006103515625
+      ],
+      [
+       2048,
+       1,
+       65504,
+       0.0999755859375
+      ]
+     ],
+     "cpu": [
+      0,
+      -1,
+      null,
+      0.000006079673767089844
+     ],
+     "gpu": [
+      0,
+      -1,
+      null,
+      0.000006079673767089844
+     ],
+     "want": [
+      0,
+      -1,
+      65567.96875,
+      0.000006102025508880615
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:11",
+     "inputs": [
+      [
+       0,
+       -1,
+       1.0009765625,
+       0.00006103515625
+      ],
+      [
+       3,
+       -1,
+       -65504,
+       0
+      ]
+     ],
+     "cpu": [
+      0,
+      1,
+      null,
+      0
+     ],
+     "gpu": [
+      0,
+      1,
+      null,
+      0
+     ],
+     "want": [
+      0,
+      1,
+      -65567.96875,
+      0
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:13",
+     "inputs": [
+      [
+       0,
+       0.5,
+       65504,
+       2048
+      ],
+      [
+       0,
+       2,
+       2048,
+       1
+      ]
+     ],
+     "cpu": [
+      0,
+      1,
+      null,
+      2048
+     ],
+     "gpu": [
+      0,
+      1,
+      null,
+      2048
+     ],
+     "want": [
+      0,
+      1,
+      134152192,
+      2048
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:14",
+     "inputs": [
+      [
+       0,
+       0.5,
+       65504,
+       2048
+      ],
+      [
+       0,
+       1.0009765625,
+       3,
+       -1
+      ]
+     ],
+     "cpu": [
+      0,
+      0.50048828125,
+      null,
+      -2048
+     ],
+     "gpu": [
+      0,
+      0.50048828125,
+      null,
+      -2048
+     ],
+     "want": [
+      0,
+      0.50048828125,
+      196512,
+      -2048
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:18",
+     "inputs": [
+      [
+       0,
+       0.5,
+       65504,
+       2048
+      ],
+      [
+       2,
+       2048,
+       1,
+       65504
+      ]
+     ],
+     "cpu": [
+      0,
+      1024,
+      65504,
+      null
+     ],
+     "gpu": [
+      0,
+      1024,
+      65504,
+      null
+     ],
+     "want": [
+      0,
+      1024,
+      65504,
+      134152192
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 3,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 3,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:19",
+     "inputs": [
+      [
+       0,
+       0.5,
+       65504,
+       2048
+      ],
+      [
+       1.0009765625,
+       3,
+       -1,
+       -65504
+      ]
+     ],
+     "cpu": [
+      0,
+      1.5,
+      -65504,
+      null
+     ],
+     "gpu": [
+      0,
+      1.5,
+      -65504,
+      null
+     ],
+     "want": [
+      0,
+      1.5,
+      -65504,
+      -134152192
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 3,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 3,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:21",
+     "inputs": [
+      [
+       0,
+       0.5,
+       65504,
+       2048
+      ],
+      [
+       -65504,
+       0,
+       2,
+       2048
+      ]
+     ],
+     "cpu": [
+      0,
+      0,
+      null,
+      null
+     ],
+     "gpu": [
+      0,
+      0,
+      null,
+      null
+     ],
+     "want": [
+      0,
+      0,
+      131008,
+      4194304
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 3,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 3,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:22",
+     "inputs": [
+      [
+       0,
+       0.5,
+       65504,
+       2048
+      ],
+      [
+       0.00006103515625,
+       0,
+       1.0009765625,
+       3
+      ]
+     ],
+     "cpu": [
+      0,
+      0,
+      null,
+      6144
+     ],
+     "gpu": [
+      0,
+      0,
+      null,
+      6144
+     ],
+     "want": [
+      0,
+      0,
+      65567.96875,
+      6144
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:23",
+     "inputs": [
+      [
+       0,
+       0.5,
+       65504,
+       2048
+      ],
+      [
+       2048,
+       1,
+       65504,
+       0.0999755859375
+      ]
+     ],
+     "cpu": [
+      0,
+      0.5,
+      null,
+      204.75
+     ],
+     "gpu": [
+      0,
+      0.5,
+      null,
+      204.75
+     ],
+     "want": [
+      0,
+      0.5,
+      4290774016,
+      204.75
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:24",
+     "inputs": [
+      [
+       0,
+       0.5,
+       65504,
+       2048
+      ],
+      [
+       3,
+       -1,
+       -65504,
+       0
+      ]
+     ],
+     "cpu": [
+      0,
+      -0.5,
+      null,
+      0
+     ],
+     "gpu": [
+      0,
+      -0.5,
+      null,
+      0
+     ],
+     "want": [
+      0,
+      -0.5,
+      -4290774016,
+      0
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:26",
+     "inputs": [
+      [
+       1,
+       2,
+       -65504,
+       3
+      ],
+      [
+       0,
+       2,
+       2048,
+       1
+      ]
+     ],
+     "cpu": [
+      0,
+      4,
+      null,
+      3
+     ],
+     "gpu": [
+      0,
+      4,
+      null,
+      3
+     ],
+     "want": [
+      0,
+      4,
+      -134152192,
+      3
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:27",
+     "inputs": [
+      [
+       1,
+       2,
+       -65504,
+       3
+      ],
+      [
+       0,
+       1.0009765625,
+       3,
+       -1
+      ]
+     ],
+     "cpu": [
+      0,
+      2.001953125,
+      null,
+      -3
+     ],
+     "gpu": [
+      0,
+      2.001953125,
+      null,
+      -3
+     ],
+     "want": [
+      0,
+      2.001953125,
+      -196512,
+      -3
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:28",
+     "inputs": [
+      [
+       1,
+       2,
+       -65504,
+       3
+      ],
+      [
+       1,
+       65504,
+       0.0999755859375,
+       0.5
+      ]
+     ],
+     "cpu": [
+      1,
+      null,
+      -6548,
+      1.5
+     ],
+     "gpu": [
+      1,
+      null,
+      -6548,
+      1.5
+     ],
+     "want": [
+      1,
+      131008,
+      -6548.80078125,
+      1.5
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:29",
+     "inputs": [
+      [
+       1,
+       2,
+       -65504,
+       3
+      ],
+      [
+       -1,
+       -65504,
+       0,
+       2
+      ]
+     ],
+     "cpu": [
+      -1,
+      null,
+      0,
+      6
+     ],
+     "gpu": [
+      -1,
+      null,
+      0,
+      6
+     ],
+     "want": [
+      -1,
+      -131008,
+      0,
+      6
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:31",
+     "inputs": [
+      [
+       1,
+       2,
+       -65504,
+       3
+      ],
+      [
+       2,
+       2048,
+       1,
+       65504
+      ]
+     ],
+     "cpu": [
+      2,
+      4096,
+      -65504,
+      null
+     ],
+     "gpu": [
+      2,
+      4096,
+      -65504,
+      null
+     ],
+     "want": [
+      2,
+      4096,
+      -65504,
+      196512
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 3,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 3,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:32",
+     "inputs": [
+      [
+       1,
+       2,
+       -65504,
+       3
+      ],
+      [
+       1.0009765625,
+       3,
+       -1,
+       -65504
+      ]
+     ],
+     "cpu": [
+      1.0009765625,
+      6,
+      65504,
+      null
+     ],
+     "gpu": [
+      1.0009765625,
+      6,
+      65504,
+      null
+     ],
+     "want": [
+      1.0009765625,
+      6,
+      65504,
+      -196512
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 3,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 3,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:34",
+     "inputs": [
+      [
+       1,
+       2,
+       -65504,
+       3
+      ],
+      [
+       -65504,
+       0,
+       2,
+       2048
+      ]
+     ],
+     "cpu": [
+      -65504,
+      0,
+      null,
+      6144
+     ],
+     "gpu": [
+      -65504,
+      0,
+      null,
+      6144
+     ],
+     "want": [
+      -65504,
+      0,
+      -131008,
+      6144
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:35",
+     "inputs": [
+      [
+       1,
+       2,
+       -65504,
+       3
+      ],
+      [
+       0.00006103515625,
+       0,
+       1.0009765625,
+       3
+      ]
+     ],
+     "cpu": [
+      0.00006103515625,
+      0,
+      null,
+      9
+     ],
+     "gpu": [
+      0.00006103515625,
+      0,
+      null,
+      9
+     ],
+     "want": [
+      0.00006103515625,
+      0,
+      -65567.96875,
+      9
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:36",
+     "inputs": [
+      [
+       1,
+       2,
+       -65504,
+       3
+      ],
+      [
+       2048,
+       1,
+       65504,
+       0.0999755859375
+      ]
+     ],
+     "cpu": [
+      2048,
+      2,
+      null,
+      0.2998046875
+     ],
+     "gpu": [
+      2048,
+      2,
+      null,
+      0.2998046875
+     ],
+     "want": [
+      2048,
+      2,
+      -4290774016,
+      0.2999267578125
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:37",
+     "inputs": [
+      [
+       1,
+       2,
+       -65504,
+       3
+      ],
+      [
+       3,
+       -1,
+       -65504,
+       0
+      ]
+     ],
+     "cpu": [
+      3,
+      -2,
+      null,
+      0
+     ],
+     "gpu": [
+      3,
+      -2,
+      null,
+      0
+     ],
+     "want": [
+      3,
+      -2,
+      4290774016,
+      0
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:41",
+     "inputs": [
+      [
+       -1,
+       1.0009765625,
+       0.00006103515625,
+       0.0999755859375
+      ],
+      [
+       1,
+       65504,
+       0.0999755859375,
+       0.5
+      ]
+     ],
+     "cpu": [
+      -1,
+      null,
+      0.000006079673767089844,
+      0.04998779296875
+     ],
+     "gpu": [
+      -1,
+      null,
+      0.000006079673767089844,
+      0.04998779296875
+     ],
+     "want": [
+      -1,
+      65567.96875,
+      0.000006102025508880615,
+      0.04998779296875
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:42",
+     "inputs": [
+      [
+       -1,
+       1.0009765625,
+       0.00006103515625,
+       0.0999755859375
+      ],
+      [
+       -1,
+       -65504,
+       0,
+       2
+      ]
+     ],
+     "cpu": [
+      1,
+      null,
+      0,
+      0.199951171875
+     ],
+     "gpu": [
+      1,
+      null,
+      0,
+      0.199951171875
+     ],
+     "want": [
+      1,
+      -65567.96875,
+      0,
+      0.199951171875
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:52",
+     "inputs": [
+      [
+       0.5,
+       65504,
+       2048,
+       0
+      ],
+      [
+       0,
+       2,
+       2048,
+       1
+      ]
+     ],
+     "cpu": [
+      0,
+      null,
+      null,
+      0
+     ],
+     "gpu": [
+      0,
+      null,
+      null,
+      0
+     ],
+     "want": [
+      0,
+      131008,
+      4194304,
+      0
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:53",
+     "inputs": [
+      [
+       0.5,
+       65504,
+       2048,
+       0
+      ],
+      [
+       0,
+       1.0009765625,
+       3,
+       -1
+      ]
+     ],
+     "cpu": [
+      0,
+      null,
+      6144,
+      0
+     ],
+     "gpu": [
+      0,
+      null,
+      6144,
+      0
+     ],
+     "want": [
+      0,
+      65567.96875,
+      6144,
+      0
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:54",
+     "inputs": [
+      [
+       0.5,
+       65504,
+       2048,
+       0
+      ],
+      [
+       1,
+       65504,
+       0.0999755859375,
+       0.5
+      ]
+     ],
+     "cpu": [
+      0.5,
+      null,
+      204.75,
+      0
+     ],
+     "gpu": [
+      0.5,
+      null,
+      204.75,
+      0
+     ],
+     "want": [
+      0.5,
+      4290774016,
+      204.75,
+      0
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:55",
+     "inputs": [
+      [
+       0.5,
+       65504,
+       2048,
+       0
+      ],
+      [
+       -1,
+       -65504,
+       0,
+       2
+      ]
+     ],
+     "cpu": [
+      -0.5,
+      null,
+      0,
+      0
+     ],
+     "gpu": [
+      -0.5,
+      null,
+      0,
+      0
+     ],
+     "want": [
+      -0.5,
+      -4290774016,
+      0,
+      0
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:57",
+     "inputs": [
+      [
+       0.5,
+       65504,
+       2048,
+       0
+      ],
+      [
+       2,
+       2048,
+       1,
+       65504
+      ]
+     ],
+     "cpu": [
+      1,
+      null,
+      2048,
+      0
+     ],
+     "gpu": [
+      1,
+      null,
+      2048,
+      0
+     ],
+     "want": [
+      1,
+      134152192,
+      2048,
+      0
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:58",
+     "inputs": [
+      [
+       0.5,
+       65504,
+       2048,
+       0
+      ],
+      [
+       1.0009765625,
+       3,
+       -1,
+       -65504
+      ]
+     ],
+     "cpu": [
+      0.50048828125,
+      null,
+      -2048,
+      0
+     ],
+     "gpu": [
+      0.50048828125,
+      null,
+      -2048,
+      0
+     ],
+     "want": [
+      0.50048828125,
+      196512,
+      -2048,
+      0
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 1,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 1,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:62",
+     "inputs": [
+      [
+       0.5,
+       65504,
+       2048,
+       0
+      ],
+      [
+       2048,
+       1,
+       65504,
+       0.0999755859375
+      ]
+     ],
+     "cpu": [
+      1024,
+      65504,
+      null,
+      0
+     ],
+     "gpu": [
+      1024,
+      65504,
+      null,
+      0
+     ],
+     "want": [
+      1024,
+      65504,
+      134152192,
+      0
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    },
+    {
+     "id": "mul:vec4h:63",
+     "inputs": [
+      [
+       0.5,
+       65504,
+       2048,
+       0
+      ],
+      [
+       3,
+       -1,
+       -65504,
+       0
+      ]
+     ],
+     "cpu": [
+      1.5,
+      -65504,
+      null,
+      0
+     ],
+     "gpu": [
+      1.5,
+      -65504,
+      null,
+      0
+     ],
+     "want": [
+      1.5,
+      -65504,
+      -134152192,
+      0
+     ],
+     "status": "investigate",
+     "issues": [
+      {
+       "lane": 2,
+       "target": "gpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      },
+      {
+       "lane": 2,
+       "target": "cpu",
+       "verdict": "investigate",
+       "detail": "inf/NaN involved (WGSL: implementations may assume these do not occur) — observation only"
+      }
+     ]
+    }
+   ],
+   "cpuVsGpu": {
+    "compared": 169,
+    "identical": 169,
+    "differ": 0,
+    "maxUlpDiff": null
+   },
+   "truncated": 50
+  }
+ ],
+ "knownDivergences": [],
+ "observations": []
+}

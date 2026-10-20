@@ -1,0 +1,30 @@
+import { create, globals } from 'webgpu';
+Object.assign(globalThis, globals);
+const gpu = create([]);
+const adapter = await gpu.requestAdapter(); const device = await adapter.requestDevice();
+const run = async (name, body, ty) => {
+  const code = `@group(0) @binding(0) var<storage, read_write> o: array<${ty}, 2>;\n@compute @workgroup_size(1) fn main() { ${body} }`;
+  device.pushErrorScope('validation');
+  const m = device.createShaderModule({ code });
+  const info = await m.getCompilationInfo();
+  const errs = info.messages.filter((x) => x.type === 'error').map((x) => x.message.split('\n')[0]);
+  await device.popErrorScope();
+  if (errs.length) { console.log(name.padEnd(34), 'REJECTED:', errs[0]); return; }
+  const buf = device.createBuffer({ size: 16, usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_SRC });
+  const stg = device.createBuffer({ size: 16, usage: GPUBufferUsage.COPY_DST | GPUBufferUsage.MAP_READ });
+  const bgl = device.createBindGroupLayout({ entries: [{ binding: 0, visibility: GPUShaderStage.COMPUTE, buffer: { type: 'storage' } }] });
+  const p = device.createComputePipeline({ layout: device.createPipelineLayout({ bindGroupLayouts: [bgl] }), compute: { module: m, entryPoint: 'main' } });
+  const bg = device.createBindGroup({ layout: bgl, entries: [{ binding: 0, resource: { buffer: buf } }] });
+  const enc = device.createCommandEncoder(); const pass = enc.beginComputePass(); pass.setPipeline(p); pass.setBindGroup(0, bg); pass.dispatchWorkgroups(1); pass.end();
+  enc.copyBufferToBuffer(buf, 0, stg, 0, 16); device.queue.submit([enc.finish()]); await stg.mapAsync(GPUMapMode.READ);
+  const arr = ty === 'u32' ? new Uint32Array(stg.getMappedRange().slice(0)) : new Int32Array(stg.getMappedRange().slice(0));
+  console.log(name.padEnd(34), 'accepted ->', Array.from(arr).slice(0, 2).join(','));
+};
+await run('const i32 add MAX+1', 'const c = i32(2147483647) + i32(1); o[0] = c;', 'i32');
+await run('const i32 mul MAX*MAX', 'const c = i32(2147483647) * i32(2147483647); o[0] = c;', 'i32');
+await run('const u32 mul UMAX*UMAX', 'const c = u32(4294967295) * u32(4294967295); o[0] = c;', 'u32');
+await run('const vec2i add MAX+1', 'const c = vec2i(2147483647) + vec2i(1); o[0] = c.x; o[1] = c.y;', 'i32');
+await run('const vec2i mul MAX*MAX', 'const c = vec2i(2147483647) * vec2i(2147483647); o[0] = c.x; o[1] = c.y;', 'i32');
+await run('const vec2u mul UMAX*UMAX', 'const c = vec2u(4294967295) * vec2u(4294967295); o[0] = c.x; o[1] = c.y;', 'u32');
+await run('const i32 MIN via i32(-2147483648)', 'const c = i32(-2147483648); o[0] = c;', 'i32');
+await run('literal -2147483648i', 'o[0] = -2147483648i;', 'i32');

@@ -1,0 +1,1935 @@
+{
+ "meta": {
+  "generatedAt": "2026-10-16T10:24:40.338Z",
+  "versions": {
+   "typegpu": "0.12.7",
+   "unplugin-typegpu": "0.12.5",
+   "webgpu": "0.6.2",
+   "vitest": "4.1.11",
+   "node": "v24.21.0"
+  },
+  "adapter": {
+   "vendor": "apple",
+   "architecture": "metal-3",
+   "device": "apple-m3-pro",
+   "isFallbackAdapter": false
+  },
+  "command": "node investigations/integer-mul/run.mjs"
+ },
+ "verdict": {
+  "originalDiscrepancyConfirmed": true,
+  "classification": "real TypeGPU CPU defect (not a harness/specification issue)",
+  "smallestReproducer": {
+   "operation": "std.mul(vec2i, vec2i)",
+   "inputs": {
+    "a": [
+     2147483647,
+     2147483647
+    ],
+    "b": [
+     2147483647,
+     2147483647
+    ]
+   },
+   "expectedBigInt": [
+    1,
+    1
+   ],
+   "cpu": [
+    0,
+    0
+   ],
+   "gpuTypegpu": [
+    1,
+    1
+   ],
+   "gpuRawWgsl": [
+    1,
+    1
+   ],
+   "cpuTrace": {
+    "exactProduct": "4611686014132420609",
+    "f64Product": "4611686014132420608",
+    "f64ProductIsExact": false,
+    "f64Product | 0 (i32 cast used by vec2i)": 0
+   }
+  }
+ },
+ "summary": {
+  "tests": {
+   "total": 73,
+   "passed": 73,
+   "failed": 0,
+   "skipped": 0
+  },
+  "regressionTestsForConfirmedDefects": {
+   "total": 8,
+   "defectStillPresent": 8,
+   "defectFixed": 0
+  }
+ },
+ "categories": {
+  "confirmedDefects": [
+   {
+    "id": "#1",
+    "title": "CPU integer multiplication goes through JS Number (f64) and loses low bits when the exact product exceeds 2^53",
+    "operations": [
+     "std.mul(vecNi|vecNu, vecNi|vecNu)",
+     "operator `*` on integer vectors inside a 'use gpu' function run on the CPU",
+     "std.mul(vec, scalar) and std.mul(scalar, vec)",
+     "d.i32(std.mul(a, b)) / d.u32(std.mul(a, b)) on scalars"
+    ],
+    "types": [
+     "vec2i",
+     "vec3i",
+     "vec4i",
+     "vec2u",
+     "vec3u",
+     "vec4u",
+     "i32/u32 via explicit cast"
+    ],
+    "cause": "packages/typegpu/src/std/operators.ts cpuMul -> generalizeFn((a, b) => a * b) (f64 multiply) -> vec constructor -> castElement = i32/u32 schema -> `v | 0` / `(v & 0xffffffff) >>> 0` on the already-rounded double",
+    "affectedInputSpace": {
+     "i32 |a|,|b| <= 94906265": {
+      "samples": 4000,
+      "cpuWrong": 0,
+      "modelPredictsWrong": 0,
+      "percentWrong": 0
+     },
+     "u32 a,b <= 94906265": {
+      "samples": 4000,
+      "cpuWrong": 0,
+      "modelPredictsWrong": 0,
+      "percentWrong": 0
+     },
+     "i32 full-range pairs": {
+      "samples": 4000,
+      "cpuWrong": 3721,
+      "modelPredictsWrong": 3721,
+      "percentWrong": 93
+     },
+     "u32 full-range pairs": {
+      "samples": 4000,
+      "cpuWrong": 3899,
+      "modelPredictsWrong": 3899,
+      "percentWrong": 97.5
+     },
+     "u32 state * 747796405 (PCG multiplier)": {
+      "samples": 4000,
+      "cpuWrong": 3945,
+      "modelPredictsWrong": 3945,
+      "percentWrong": 98.6
+     },
+     "u32 state * 2654435761 (Knuth multiplicative hash)": {
+      "samples": 4000,
+      "cpuWrong": 3976,
+      "modelPredictsWrong": 3976,
+      "percentWrong": 99.4
+     },
+     "u32 state * 1664525 (NR LCG)": {
+      "samples": 4000,
+      "cpuWrong": 0,
+      "modelPredictsWrong": 0,
+      "percentWrong": 0
+     }
+    },
+    "cpuMismatchBelow2pow53": {
+     "vec2i": 0,
+     "vec3i": 0,
+     "vec4i": 0,
+     "vec2u": 0,
+     "vec3u": 0,
+     "vec4u": 0
+    },
+    "regressionTests": [
+     {
+      "name": "[WGSL semantics] GPU std.mul(vec2i) conforms; [CPU] characterised [CONFIRMED DEFECT #1] CPU std.mul(vec2i) equals the 32-bit wrapped product for every lane",
+      "status": "passed"
+     },
+     {
+      "name": "[WGSL semantics] GPU std.mul(vec3i) conforms; [CPU] characterised [CONFIRMED DEFECT #1] CPU std.mul(vec3i) equals the 32-bit wrapped product for every lane",
+      "status": "passed"
+     },
+     {
+      "name": "[WGSL semantics] GPU std.mul(vec4i) conforms; [CPU] characterised [CONFIRMED DEFECT #1] CPU std.mul(vec4i) equals the 32-bit wrapped product for every lane",
+      "status": "passed"
+     },
+     {
+      "name": "[WGSL semantics] GPU std.mul(vec2u) conforms; [CPU] characterised [CONFIRMED DEFECT #1] CPU std.mul(vec2u) equals the 32-bit wrapped product for every lane",
+      "status": "passed"
+     },
+     {
+      "name": "[WGSL semantics] GPU std.mul(vec3u) conforms; [CPU] characterised [CONFIRMED DEFECT #1] CPU std.mul(vec3u) equals the 32-bit wrapped product for every lane",
+      "status": "passed"
+     },
+     {
+      "name": "[WGSL semantics] GPU std.mul(vec4u) conforms; [CPU] characterised [CONFIRMED DEFECT #1] CPU std.mul(vec4u) equals the 32-bit wrapped product for every lane",
+      "status": "passed"
+     },
+     {
+      "name": "[CONFIRMED DEFECT #1 — scope] other CPU paths that multiply through f64 [CONFIRMED DEFECT #1] operator `a * b` (vec2i) on the CPU equals the 32-bit wrapped product",
+      "status": "passed"
+     },
+     {
+      "name": "[CONFIRMED DEFECT #1 — scope] other CPU paths that multiply through f64 [CONFIRMED DEFECT #1] CPU d.i32(std.mul(INT_MAX, INT_MAX)) equals the 32-bit wrapped product",
+      "status": "passed"
+     }
+    ]
+   }
+  ],
+  "expectedSpecificationDifferences": [
+   {
+    "id": "E1",
+    "what": "std.intdiv (scalars): CPU follows its documented formula trunc(trunc(a)/trunc(b)); GPU follows WGSL integer division",
+    "differs": [
+     {
+      "a": 5,
+      "b": 0,
+      "cpu": "Infinity",
+      "gpu": 5
+     },
+     {
+      "a": 0,
+      "b": 0,
+      "cpu": "NaN",
+      "gpu": 0
+     },
+     {
+      "a": -2147483648,
+      "b": -1,
+      "cpu": 2147483648,
+      "gpu": -2147483648
+     }
+    ]
+   },
+   {
+    "id": "E2",
+    "what": "std.div / std.mod on integer vectors: GPU = WGSL integer rules for every lane; CPU is correct wherever it does not throw; CPU throws FiniteMathAssumptionError on a zero divisor",
+    "evidence": {
+     "div:vec2i": {
+      "lanes": 800,
+      "gpuMismatches": 0,
+      "cpuMismatchesInRowsThatDidNotThrow": 0,
+      "cpuThrewRows": 40
+     },
+     "div:vec3i": {
+      "lanes": 1200,
+      "gpuMismatches": 0,
+      "cpuMismatchesInRowsThatDidNotThrow": 0,
+      "cpuThrewRows": 60
+     },
+     "div:vec4i": {
+      "lanes": 1600,
+      "gpuMismatches": 0,
+      "cpuMismatchesInRowsThatDidNotThrow": 0,
+      "cpuThrewRows": 80
+     },
+     "div:vec2u": {
+      "lanes": 800,
+      "gpuMismatches": 0,
+      "cpuMismatchesInRowsThatDidNotThrow": 0,
+      "cpuThrewRows": 40
+     },
+     "div:vec3u": {
+      "lanes": 1200,
+      "gpuMismatches": 0,
+      "cpuMismatchesInRowsThatDidNotThrow": 0,
+      "cpuThrewRows": 60
+     },
+     "div:vec4u": {
+      "lanes": 1600,
+      "gpuMismatches": 0,
+      "cpuMismatchesInRowsThatDidNotThrow": 0,
+      "cpuThrewRows": 80
+     },
+     "mod:vec2i": {
+      "lanes": 800,
+      "gpuMismatches": 0,
+      "cpuMismatchesInRowsThatDidNotThrow": 0,
+      "cpuThrewRows": 40
+     },
+     "mod:vec3i": {
+      "lanes": 1200,
+      "gpuMismatches": 0,
+      "cpuMismatchesInRowsThatDidNotThrow": 0,
+      "cpuThrewRows": 60
+     },
+     "mod:vec4i": {
+      "lanes": 1600,
+      "gpuMismatches": 0,
+      "cpuMismatchesInRowsThatDidNotThrow": 0,
+      "cpuThrewRows": 80
+     },
+     "mod:vec2u": {
+      "lanes": 800,
+      "gpuMismatches": 0,
+      "cpuMismatchesInRowsThatDidNotThrow": 0,
+      "cpuThrewRows": 40
+     },
+     "mod:vec3u": {
+      "lanes": 1200,
+      "gpuMismatches": 0,
+      "cpuMismatchesInRowsThatDidNotThrow": 0,
+      "cpuThrewRows": 60
+     },
+     "mod:vec4u": {
+      "lanes": 1600,
+      "gpuMismatches": 0,
+      "cpuMismatchesInRowsThatDidNotThrow": 0,
+      "cpuThrewRows": 80
+     }
+    }
+   },
+   {
+    "id": "E3",
+    "what": "scalar i32/u32 are plain JS numbers on the CPU (no wrap-around without an explicit cast) — by design, see reports/report.json known divergences"
+   }
+  ],
+  "unsupported": [
+   {
+    "id": "U1",
+    "what": "std.intdiv on integer vectors is rejected by TypeGPU (signature accepts i32/u32 scalars only)",
+    "message": "Resolution of the following tree failed: | - computePipelineCore | - computeFn:<unnamed>"
+   }
+  ],
+  "unverifiedHypotheses": [
+   {
+    "id": "H1",
+    "what": "Scalar std.div / std.mod on integers are compiled to f32 operations (observed in emitted WGSL); their GPU precision above 2^24 and zero-divisor behaviour were not investigated further here"
+   },
+   {
+    "id": "H2",
+    "what": "Impact on user code that emulates integer hashes/PRNGs on the CPU with `*` on u32 vectors: demonstrated for a PCG/Knuth-style multiplier on random u32 states, not demonstrated on any real TypeGPU user code"
+   },
+   {
+    "id": "H3",
+    "what": "Other CPU paths that might multiply through f64 (e.g. matrices of integers do not exist in WGSL; compound `*=` operators; std functions built on mul) were not enumerated"
+   }
+  ]
+ },
+ "evidence": {
+  "mulMatrix": {
+   "vec2i": {
+    "lanes": 800,
+    "lanesAbove2pow53": 142,
+    "cpuMismatches": 68,
+    "gpuMismatches": 0,
+    "cpuThrew": 0,
+    "cpuMismatchesWhereF64ProductWasExact": 0,
+    "cpuMismatchesBelow2pow53": 0,
+    "cpuMismatchSamples": [
+     {
+      "type": "vec2i",
+      "lane": 0,
+      "a": 2147483647,
+      "b": 2147483647,
+      "expected": 1,
+      "cpu": 0,
+      "gpu": 1,
+      "exactProduct": "4611686014132420609"
+     },
+     {
+      "type": "vec2i",
+      "lane": 0,
+      "a": 2147483647,
+      "b": 94906265,
+      "expected": 2052577383,
+      "cpu": 2052577376,
+      "gpu": 2052577383,
+      "exactProduct": "203809652085348455"
+     },
+     {
+      "type": "vec2i",
+      "lane": 0,
+      "a": 2147483647,
+      "b": 94906266,
+      "expected": -94906266,
+      "cpu": -94906272,
+      "gpu": -94906266,
+      "exactProduct": "203809654232832102"
+     },
+     {
+      "type": "vec2i",
+      "lane": 0,
+      "a": 2147483647,
+      "b": 94906267,
+      "expected": 2052577381,
+      "cpu": 2052577376,
+      "gpu": 2052577381,
+      "exactProduct": "203809656380315749"
+     },
+     {
+      "type": "vec2i",
+      "lane": 0,
+      "a": 2147483647,
+      "b": 134217727,
+      "expected": 2013265921,
+      "cpu": 2013265920,
+      "gpu": 2013265921,
+      "exactProduct": "288230373870010369"
+     }
+    ],
+    "gpuMismatchSamples": [],
+    "cpuEqualsModelForEveryLane": true
+   },
+   "vec3i": {
+    "lanes": 1200,
+    "lanesAbove2pow53": 213,
+    "cpuMismatches": 102,
+    "gpuMismatches": 0,
+    "cpuThrew": 0,
+    "cpuMismatchesWhereF64ProductWasExact": 0,
+    "cpuMismatchesBelow2pow53": 0,
+    "cpuMismatchSamples": [
+     {
+      "type": "vec3i",
+      "lane": 0,
+      "a": 2147483647,
+      "b": 2147483647,
+      "expected": 1,
+      "cpu": 0,
+      "gpu": 1,
+      "exactProduct": "4611686014132420609"
+     },
+     {
+      "type": "vec3i",
+      "lane": 0,
+      "a": 2147483647,
+      "b": 94906265,
+      "expected": 2052577383,
+      "cpu": 2052577376,
+      "gpu": 2052577383,
+      "exactProduct": "203809652085348455"
+     },
+     {
+      "type": "vec3i",
+      "lane": 0,
+      "a": 2147483647,
+      "b": 94906266,
+      "expected": -94906266,
+      "cpu": -94906272,
+      "gpu": -94906266,
+      "exactProduct": "203809654232832102"
+     },
+     {
+      "type": "vec3i",
+      "lane": 0,
+      "a": 2147483647,
+      "b": 94906267,
+      "expected": 2052577381,
+      "cpu": 2052577376,
+      "gpu": 2052577381,
+      "exactProduct": "203809656380315749"
+     },
+     {
+      "type": "vec3i",
+      "lane": 0,
+      "a": 2147483647,
+      "b": 134217727,
+      "expected": 2013265921,
+      "cpu": 2013265920,
+      "gpu": 2013265921,
+      "exactProduct": "288230373870010369"
+     }
+    ],
+    "gpuMismatchSamples": [],
+    "cpuEqualsModelForEveryLane": true
+   },
+   "vec4i": {
+    "lanes": 1600,
+    "lanesAbove2pow53": 284,
+    "cpuMismatches": 136,
+    "gpuMismatches": 0,
+    "cpuThrew": 0,
+    "cpuMismatchesWhereF64ProductWasExact": 0,
+    "cpuMismatchesBelow2pow53": 0,
+    "cpuMismatchSamples": [
+     {
+      "type": "vec4i",
+      "lane": 0,
+      "a": 2147483647,
+      "b": 2147483647,
+      "expected": 1,
+      "cpu": 0,
+      "gpu": 1,
+      "exactProduct": "4611686014132420609"
+     },
+     {
+      "type": "vec4i",
+      "lane": 0,
+      "a": 2147483647,
+      "b": 94906265,
+      "expected": 2052577383,
+      "cpu": 2052577376,
+      "gpu": 2052577383,
+      "exactProduct": "203809652085348455"
+     },
+     {
+      "type": "vec4i",
+      "lane": 0,
+      "a": 2147483647,
+      "b": 94906266,
+      "expected": -94906266,
+      "cpu": -94906272,
+      "gpu": -94906266,
+      "exactProduct": "203809654232832102"
+     },
+     {
+      "type": "vec4i",
+      "lane": 0,
+      "a": 2147483647,
+      "b": 94906267,
+      "expected": 2052577381,
+      "cpu": 2052577376,
+      "gpu": 2052577381,
+      "exactProduct": "203809656380315749"
+     },
+     {
+      "type": "vec4i",
+      "lane": 0,
+      "a": 2147483647,
+      "b": 134217727,
+      "expected": 2013265921,
+      "cpu": 2013265920,
+      "gpu": 2013265921,
+      "exactProduct": "288230373870010369"
+     }
+    ],
+    "gpuMismatchSamples": [],
+    "cpuEqualsModelForEveryLane": true
+   },
+   "vec2u": {
+    "lanes": 800,
+    "lanesAbove2pow53": 318,
+    "cpuMismatches": 212,
+    "gpuMismatches": 0,
+    "cpuThrew": 0,
+    "cpuMismatchesWhereF64ProductWasExact": 0,
+    "cpuMismatchesBelow2pow53": 0,
+    "cpuMismatchSamples": [
+     {
+      "type": "vec2u",
+      "lane": 0,
+      "a": 4294967295,
+      "b": 4294967295,
+      "expected": 1,
+      "cpu": 0,
+      "gpu": 1,
+      "exactProduct": "18446744065119617025"
+     },
+     {
+      "type": "vec2u",
+      "lane": 0,
+      "a": 4294967295,
+      "b": 4294967294,
+      "expected": 2,
+      "cpu": 0,
+      "gpu": 2,
+      "exactProduct": "18446744060824649730"
+     },
+     {
+      "type": "vec2u",
+      "lane": 0,
+      "a": 4294967295,
+      "b": 2147483647,
+      "expected": 2147483649,
+      "cpu": 2147483648,
+      "gpu": 2147483649,
+      "exactProduct": "9223372030412324865"
+     },
+     {
+      "type": "vec2u",
+      "lane": 1,
+      "a": 2147483647,
+      "b": 4294967291,
+      "expected": 2147483653,
+      "cpu": 2147483648,
+      "gpu": 2147483653,
+      "exactProduct": "9223372021822390277"
+     },
+     {
+      "type": "vec2u",
+      "lane": 1,
+      "a": 2147483647,
+      "b": 94906265,
+      "expected": 2052577383,
+      "cpu": 2052577376,
+      "gpu": 2052577383,
+      "exactProduct": "203809652085348455"
+     }
+    ],
+    "gpuMismatchSamples": [],
+    "cpuEqualsModelForEveryLane": true
+   },
+   "vec3u": {
+    "lanes": 1200,
+    "lanesAbove2pow53": 477,
+    "cpuMismatches": 318,
+    "gpuMismatches": 0,
+    "cpuThrew": 0,
+    "cpuMismatchesWhereF64ProductWasExact": 0,
+    "cpuMismatchesBelow2pow53": 0,
+    "cpuMismatchSamples": [
+     {
+      "type": "vec3u",
+      "lane": 0,
+      "a": 4294967295,
+      "b": 4294967295,
+      "expected": 1,
+      "cpu": 0,
+      "gpu": 1,
+      "exactProduct": "18446744065119617025"
+     },
+     {
+      "type": "vec3u",
+      "lane": 0,
+      "a": 4294967295,
+      "b": 4294967294,
+      "expected": 2,
+      "cpu": 0,
+      "gpu": 2,
+      "exactProduct": "18446744060824649730"
+     },
+     {
+      "type": "vec3u",
+      "lane": 0,
+      "a": 4294967295,
+      "b": 2147483647,
+      "expected": 2147483649,
+      "cpu": 2147483648,
+      "gpu": 2147483649,
+      "exactProduct": "9223372030412324865"
+     },
+     {
+      "type": "vec3u",
+      "lane": 1,
+      "a": 2147483647,
+      "b": 4294967291,
+      "expected": 2147483653,
+      "cpu": 2147483648,
+      "gpu": 2147483653,
+      "exactProduct": "9223372021822390277"
+     },
+     {
+      "type": "vec3u",
+      "lane": 1,
+      "a": 2147483647,
+      "b": 94906265,
+      "expected": 2052577383,
+      "cpu": 2052577376,
+      "gpu": 2052577383,
+      "exactProduct": "203809652085348455"
+     }
+    ],
+    "gpuMismatchSamples": [],
+    "cpuEqualsModelForEveryLane": true
+   },
+   "vec4u": {
+    "lanes": 1600,
+    "lanesAbove2pow53": 636,
+    "cpuMismatches": 424,
+    "gpuMismatches": 0,
+    "cpuThrew": 0,
+    "cpuMismatchesWhereF64ProductWasExact": 0,
+    "cpuMismatchesBelow2pow53": 0,
+    "cpuMismatchSamples": [
+     {
+      "type": "vec4u",
+      "lane": 0,
+      "a": 4294967295,
+      "b": 4294967295,
+      "expected": 1,
+      "cpu": 0,
+      "gpu": 1,
+      "exactProduct": "18446744065119617025"
+     },
+     {
+      "type": "vec4u",
+      "lane": 0,
+      "a": 4294967295,
+      "b": 4294967294,
+      "expected": 2,
+      "cpu": 0,
+      "gpu": 2,
+      "exactProduct": "18446744060824649730"
+     },
+     {
+      "type": "vec4u",
+      "lane": 0,
+      "a": 4294967295,
+      "b": 2147483647,
+      "expected": 2147483649,
+      "cpu": 2147483648,
+      "gpu": 2147483649,
+      "exactProduct": "9223372030412324865"
+     },
+     {
+      "type": "vec4u",
+      "lane": 3,
+      "a": 4294967291,
+      "b": 3037000499,
+      "expected": 1994866689,
+      "cpu": 1994866688,
+      "gpu": 1994866689,
+      "exactProduct": "13043817805955678209"
+     },
+     {
+      "type": "vec4u",
+      "lane": 1,
+      "a": 2147483647,
+      "b": 4294967291,
+      "expected": 2147483653,
+      "cpu": 2147483648,
+      "gpu": 2147483653,
+      "exactProduct": "9223372021822390277"
+     }
+    ],
+    "gpuMismatchSamples": [],
+    "cpuEqualsModelForEveryLane": true
+   }
+  },
+  "related": {
+   "add:vec2i": {
+    "lanes": 800,
+    "lanesAbove2pow53": 0,
+    "cpuMismatches": 0,
+    "gpuMismatches": 0,
+    "cpuThrew": 0,
+    "cpuMismatchesWhereF64ProductWasExact": 0,
+    "cpuMismatchesBelow2pow53": 0
+   },
+   "add:vec3i": {
+    "lanes": 1200,
+    "lanesAbove2pow53": 0,
+    "cpuMismatches": 0,
+    "gpuMismatches": 0,
+    "cpuThrew": 0,
+    "cpuMismatchesWhereF64ProductWasExact": 0,
+    "cpuMismatchesBelow2pow53": 0
+   },
+   "add:vec4i": {
+    "lanes": 1600,
+    "lanesAbove2pow53": 0,
+    "cpuMismatches": 0,
+    "gpuMismatches": 0,
+    "cpuThrew": 0,
+    "cpuMismatchesWhereF64ProductWasExact": 0,
+    "cpuMismatchesBelow2pow53": 0
+   },
+   "add:vec2u": {
+    "lanes": 800,
+    "lanesAbove2pow53": 0,
+    "cpuMismatches": 0,
+    "gpuMismatches": 0,
+    "cpuThrew": 0,
+    "cpuMismatchesWhereF64ProductWasExact": 0,
+    "cpuMismatchesBelow2pow53": 0
+   },
+   "add:vec3u": {
+    "lanes": 1200,
+    "lanesAbove2pow53": 0,
+    "cpuMismatches": 0,
+    "gpuMismatches": 0,
+    "cpuThrew": 0,
+    "cpuMismatchesWhereF64ProductWasExact": 0,
+    "cpuMismatchesBelow2pow53": 0
+   },
+   "add:vec4u": {
+    "lanes": 1600,
+    "lanesAbove2pow53": 0,
+    "cpuMismatches": 0,
+    "gpuMismatches": 0,
+    "cpuThrew": 0,
+    "cpuMismatchesWhereF64ProductWasExact": 0,
+    "cpuMismatchesBelow2pow53": 0
+   },
+   "sub:vec2i": {
+    "lanes": 800,
+    "lanesAbove2pow53": 0,
+    "cpuMismatches": 0,
+    "gpuMismatches": 0,
+    "cpuThrew": 0,
+    "cpuMismatchesWhereF64ProductWasExact": 0,
+    "cpuMismatchesBelow2pow53": 0
+   },
+   "sub:vec3i": {
+    "lanes": 1200,
+    "lanesAbove2pow53": 0,
+    "cpuMismatches": 0,
+    "gpuMismatches": 0,
+    "cpuThrew": 0,
+    "cpuMismatchesWhereF64ProductWasExact": 0,
+    "cpuMismatchesBelow2pow53": 0
+   },
+   "sub:vec4i": {
+    "lanes": 1600,
+    "lanesAbove2pow53": 0,
+    "cpuMismatches": 0,
+    "gpuMismatches": 0,
+    "cpuThrew": 0,
+    "cpuMismatchesWhereF64ProductWasExact": 0,
+    "cpuMismatchesBelow2pow53": 0
+   },
+   "sub:vec2u": {
+    "lanes": 800,
+    "lanesAbove2pow53": 0,
+    "cpuMismatches": 0,
+    "gpuMismatches": 0,
+    "cpuThrew": 0,
+    "cpuMismatchesWhereF64ProductWasExact": 0,
+    "cpuMismatchesBelow2pow53": 0
+   },
+   "sub:vec3u": {
+    "lanes": 1200,
+    "lanesAbove2pow53": 0,
+    "cpuMismatches": 0,
+    "gpuMismatches": 0,
+    "cpuThrew": 0,
+    "cpuMismatchesWhereF64ProductWasExact": 0,
+    "cpuMismatchesBelow2pow53": 0
+   },
+   "sub:vec4u": {
+    "lanes": 1600,
+    "lanesAbove2pow53": 0,
+    "cpuMismatches": 0,
+    "gpuMismatches": 0,
+    "cpuThrew": 0,
+    "cpuMismatchesWhereF64ProductWasExact": 0,
+    "cpuMismatchesBelow2pow53": 0
+   },
+   "neg:vec2i": {
+    "rows": 20,
+    "cpuEqual": true,
+    "gpuEqual": true
+   },
+   "neg:vec3i": {
+    "rows": 20,
+    "cpuEqual": true,
+    "gpuEqual": true
+   },
+   "neg:vec4i": {
+    "rows": 20,
+    "cpuEqual": true,
+    "gpuEqual": true
+   }
+  },
+  "fractions": {
+   "i32 |a|,|b| <= 94906265": {
+    "samples": 4000,
+    "cpuWrong": 0,
+    "modelPredictsWrong": 0,
+    "percentWrong": 0
+   },
+   "u32 a,b <= 94906265": {
+    "samples": 4000,
+    "cpuWrong": 0,
+    "modelPredictsWrong": 0,
+    "percentWrong": 0
+   },
+   "i32 full-range pairs": {
+    "samples": 4000,
+    "cpuWrong": 3721,
+    "modelPredictsWrong": 3721,
+    "percentWrong": 93
+   },
+   "u32 full-range pairs": {
+    "samples": 4000,
+    "cpuWrong": 3899,
+    "modelPredictsWrong": 3899,
+    "percentWrong": 97.5
+   },
+   "u32 state * 747796405 (PCG multiplier)": {
+    "samples": 4000,
+    "cpuWrong": 3945,
+    "modelPredictsWrong": 3945,
+    "percentWrong": 98.6
+   },
+   "u32 state * 2654435761 (Knuth multiplicative hash)": {
+    "samples": 4000,
+    "cpuWrong": 3976,
+    "modelPredictsWrong": 3976,
+    "percentWrong": 99.4
+   },
+   "u32 state * 1664525 (NR LCG)": {
+    "samples": 4000,
+    "cpuWrong": 0,
+    "modelPredictsWrong": 0,
+    "percentWrong": 0
+   }
+  },
+  "named": [
+   {
+    "id": "INT_MAX*INT_MAX",
+    "type": "vec2i",
+    "a": 2147483647,
+    "b": 2147483647,
+    "exactProduct": "4611686014132420609",
+    "above2pow53": true,
+    "expected": 1,
+    "cpu": 0,
+    "gpu": 1,
+    "cpuCorrect": false,
+    "gpuCorrect": true,
+    "secondLane": {
+     "a": 7,
+     "b": -7,
+     "expected": -49,
+     "cpu": -49,
+     "gpu": -49
+    }
+   },
+   {
+    "id": "INT_MAX*INT_MIN",
+    "type": "vec2i",
+    "a": 2147483647,
+    "b": -2147483648,
+    "exactProduct": "-4611686016279904256",
+    "above2pow53": true,
+    "expected": -2147483648,
+    "cpu": -2147483648,
+    "gpu": -2147483648,
+    "cpuCorrect": true,
+    "gpuCorrect": true,
+    "secondLane": {
+     "a": 7,
+     "b": -7,
+     "expected": -49,
+     "cpu": -49,
+     "gpu": -49
+    }
+   },
+   {
+    "id": "INT_MIN*INT_MIN",
+    "type": "vec2i",
+    "a": -2147483648,
+    "b": -2147483648,
+    "exactProduct": "4611686018427387904",
+    "above2pow53": true,
+    "expected": 0,
+    "cpu": 0,
+    "gpu": 0,
+    "cpuCorrect": true,
+    "gpuCorrect": true,
+    "secondLane": {
+     "a": 7,
+     "b": -7,
+     "expected": -49,
+     "cpu": -49,
+     "gpu": -49
+    }
+   },
+   {
+    "id": "INT_MIN*-1",
+    "type": "vec2i",
+    "a": -2147483648,
+    "b": -1,
+    "exactProduct": "2147483648",
+    "above2pow53": false,
+    "expected": -2147483648,
+    "cpu": -2147483648,
+    "gpu": -2147483648,
+    "cpuCorrect": true,
+    "gpuCorrect": true,
+    "secondLane": {
+     "a": 7,
+     "b": -7,
+     "expected": -49,
+     "cpu": -49,
+     "gpu": -49
+    }
+   },
+   {
+    "id": "-1*-1",
+    "type": "vec2i",
+    "a": -1,
+    "b": -1,
+    "exactProduct": "1",
+    "above2pow53": false,
+    "expected": 1,
+    "cpu": 1,
+    "gpu": 1,
+    "cpuCorrect": true,
+    "gpuCorrect": true,
+    "secondLane": {
+     "a": 7,
+     "b": -7,
+     "expected": -49,
+     "cpu": -49,
+     "gpu": -49
+    }
+   },
+   {
+    "id": "0*INT_MAX",
+    "type": "vec2i",
+    "a": 0,
+    "b": 2147483647,
+    "exactProduct": "0",
+    "above2pow53": false,
+    "expected": 0,
+    "cpu": 0,
+    "gpu": 0,
+    "cpuCorrect": true,
+    "gpuCorrect": true,
+    "secondLane": {
+     "a": 7,
+     "b": -7,
+     "expected": -49,
+     "cpu": -49,
+     "gpu": -49
+    }
+   },
+   {
+    "id": "2*INT_MAX",
+    "type": "vec2i",
+    "a": 2,
+    "b": 2147483647,
+    "exactProduct": "4294967294",
+    "above2pow53": false,
+    "expected": -2,
+    "cpu": -2,
+    "gpu": -2,
+    "cpuCorrect": true,
+    "gpuCorrect": true,
+    "secondLane": {
+     "a": 7,
+     "b": -7,
+     "expected": -49,
+     "cpu": -49,
+     "gpu": -49
+    }
+   },
+   {
+    "id": "65536*65536",
+    "type": "vec2i",
+    "a": 65536,
+    "b": 65536,
+    "exactProduct": "4294967296",
+    "above2pow53": false,
+    "expected": 0,
+    "cpu": 0,
+    "gpu": 0,
+    "cpuCorrect": true,
+    "gpuCorrect": true,
+    "secondLane": {
+     "a": 7,
+     "b": -7,
+     "expected": -49,
+     "cpu": -49,
+     "gpu": -49
+    }
+   },
+   {
+    "id": "46341*46341",
+    "type": "vec2i",
+    "a": 46341,
+    "b": 46341,
+    "exactProduct": "2147488281",
+    "above2pow53": false,
+    "expected": -2147479015,
+    "cpu": -2147479015,
+    "gpu": -2147479015,
+    "cpuCorrect": true,
+    "gpuCorrect": true,
+    "secondLane": {
+     "a": 7,
+     "b": -7,
+     "expected": -49,
+     "cpu": -49,
+     "gpu": -49
+    }
+   },
+   {
+    "id": "94906265*94906265 (< 2^53)",
+    "type": "vec2i",
+    "a": 94906265,
+    "b": 94906265,
+    "exactProduct": "9007199136250225",
+    "above2pow53": false,
+    "expected": -118490767,
+    "cpu": -118490767,
+    "gpu": -118490767,
+    "cpuCorrect": true,
+    "gpuCorrect": true,
+    "secondLane": {
+     "a": 7,
+     "b": -7,
+     "expected": -49,
+     "cpu": -49,
+     "gpu": -49
+    }
+   },
+   {
+    "id": "94906267*94906267 (> 2^53, odd)",
+    "type": "vec2i",
+    "a": 94906267,
+    "b": 94906267,
+    "exactProduct": "9007199515875289",
+    "above2pow53": true,
+    "expected": 261134297,
+    "cpu": 261134296,
+    "gpu": 261134297,
+    "cpuCorrect": false,
+    "gpuCorrect": true,
+    "secondLane": {
+     "a": 7,
+     "b": -7,
+     "expected": -49,
+     "cpu": -49,
+     "gpu": -49
+    }
+   },
+   {
+    "id": "UMAX*UMAX",
+    "type": "vec2u",
+    "a": 4294967295,
+    "b": 4294967295,
+    "exactProduct": "18446744065119617025",
+    "above2pow53": true,
+    "expected": 1,
+    "cpu": 0,
+    "gpu": 1,
+    "cpuCorrect": false,
+    "gpuCorrect": true,
+    "secondLane": {
+     "a": 7,
+     "b": 9,
+     "expected": 63,
+     "cpu": 63,
+     "gpu": 63
+    }
+   },
+   {
+    "id": "UMAX*2",
+    "type": "vec2u",
+    "a": 4294967295,
+    "b": 2,
+    "exactProduct": "8589934590",
+    "above2pow53": false,
+    "expected": 4294967294,
+    "cpu": 4294967294,
+    "gpu": 4294967294,
+    "cpuCorrect": true,
+    "gpuCorrect": true,
+    "secondLane": {
+     "a": 7,
+     "b": 9,
+     "expected": 63,
+     "cpu": 63,
+     "gpu": 63
+    }
+   },
+   {
+    "id": "2^31*2",
+    "type": "vec2u",
+    "a": 2147483648,
+    "b": 2,
+    "exactProduct": "4294967296",
+    "above2pow53": false,
+    "expected": 0,
+    "cpu": 0,
+    "gpu": 0,
+    "cpuCorrect": true,
+    "gpuCorrect": true,
+    "secondLane": {
+     "a": 7,
+     "b": 9,
+     "expected": 63,
+     "cpu": 63,
+     "gpu": 63
+    }
+   },
+   {
+    "id": "3037000499*3037000499",
+    "type": "vec2u",
+    "a": 3037000499,
+    "b": 3037000499,
+    "exactProduct": "9223372030926249001",
+    "above2pow53": true,
+    "expected": 2661407785,
+    "cpu": 2661407744,
+    "gpu": 2661407785,
+    "cpuCorrect": false,
+    "gpuCorrect": true,
+    "secondLane": {
+     "a": 7,
+     "b": 9,
+     "expected": 63,
+     "cpu": 63,
+     "gpu": 63
+    }
+   }
+  ],
+  "negativeControls": {
+   "wrongCpuDetected": true,
+   "brokenGpuMismatches": 800,
+   "imulFixPassesRegressionCondition": true
+  },
+  "scalarAndMixed": {
+   "operatorMulVec2i": {
+    "lanes": 800,
+    "lanesAbove2pow53": 142,
+    "cpuMismatches": 68,
+    "gpuMismatches": 0,
+    "cpuThrew": 0,
+    "cpuMismatchesWhereF64ProductWasExact": 0,
+    "cpuMismatchesBelow2pow53": 0,
+    "cpuMismatchSamples": [
+     {
+      "type": "vec2i",
+      "lane": 0,
+      "a": 2147483647,
+      "b": 2147483647,
+      "expected": 1,
+      "cpu": 0,
+      "gpu": 1,
+      "exactProduct": "4611686014132420609"
+     },
+     {
+      "type": "vec2i",
+      "lane": 0,
+      "a": 2147483647,
+      "b": 94906265,
+      "expected": 2052577383,
+      "cpu": 2052577376,
+      "gpu": 2052577383,
+      "exactProduct": "203809652085348455"
+     },
+     {
+      "type": "vec2i",
+      "lane": 0,
+      "a": 2147483647,
+      "b": 94906266,
+      "expected": -94906266,
+      "cpu": -94906272,
+      "gpu": -94906266,
+      "exactProduct": "203809654232832102"
+     }
+    ]
+   },
+   "explicitCast": [
+    {
+     "type": "i32",
+     "a": 2147483647,
+     "b": 2147483647,
+     "expected": 1,
+     "cpu": 0,
+     "gpu": 1
+    },
+    {
+     "type": "u32",
+     "a": 4294967295,
+     "b": 4294967295,
+     "expected": 1,
+     "cpu": 0,
+     "gpu": 1
+    },
+    {
+     "type": "i32",
+     "a": -2147483648,
+     "b": -2147483648,
+     "expected": 0,
+     "cpu": 0,
+     "gpu": 0
+    },
+    {
+     "type": "u32",
+     "a": 2654435761,
+     "b": 747796405,
+     "expected": 2042384677,
+     "cpu": 2042384640,
+     "gpu": 2042384677
+    }
+   ],
+   "mixed": [
+    {
+     "type": "vec2i",
+     "scalar": 2147483647,
+     "vector": [
+      2147483647,
+      7
+     ],
+     "expected": [
+      1,
+      2147483641
+     ],
+     "gpu": [
+      1,
+      2147483641
+     ],
+     "cpuVectorTimesScalar": [
+      0,
+      2147483641
+     ],
+     "cpuScalarTimesVector": [
+      0,
+      2147483641
+     ]
+    },
+    {
+     "type": "vec2u",
+     "scalar": 4294967295,
+     "vector": [
+      4294967295,
+      7
+     ],
+     "expected": [
+      1,
+      4294967289
+     ],
+     "gpu": [
+      1,
+      4294967289
+     ],
+     "cpuVectorTimesScalar": [
+      0,
+      4294967289
+     ],
+     "cpuScalarTimesVector": [
+      0,
+      4294967289
+     ]
+    }
+   ]
+  },
+  "intdiv": [
+   {
+    "a": 7,
+    "b": 2,
+    "cpu": 3,
+    "gpu": 3,
+    "wgslExpected": 3,
+    "cpuMatchesDocumentedFormula": true,
+    "cpuEqualsWgsl": true
+   },
+   {
+    "a": -7,
+    "b": 2,
+    "cpu": -3,
+    "gpu": -3,
+    "wgslExpected": -3,
+    "cpuMatchesDocumentedFormula": true,
+    "cpuEqualsWgsl": true
+   },
+   {
+    "a": 2147483647,
+    "b": 1,
+    "cpu": 2147483647,
+    "gpu": 2147483647,
+    "wgslExpected": 2147483647,
+    "cpuMatchesDocumentedFormula": true,
+    "cpuEqualsWgsl": true
+   },
+   {
+    "a": -2147483648,
+    "b": 1,
+    "cpu": -2147483648,
+    "gpu": -2147483648,
+    "wgslExpected": -2147483648,
+    "cpuMatchesDocumentedFormula": true,
+    "cpuEqualsWgsl": true
+   },
+   {
+    "a": 5,
+    "b": 0,
+    "cpu": "Infinity",
+    "gpu": 5,
+    "wgslExpected": 5,
+    "cpuMatchesDocumentedFormula": true,
+    "cpuEqualsWgsl": false
+   },
+   {
+    "a": 0,
+    "b": 0,
+    "cpu": "NaN",
+    "gpu": 0,
+    "wgslExpected": 0,
+    "cpuMatchesDocumentedFormula": true,
+    "cpuEqualsWgsl": false
+   },
+   {
+    "a": -2147483648,
+    "b": -1,
+    "cpu": 2147483648,
+    "gpu": -2147483648,
+    "wgslExpected": -2147483648,
+    "cpuMatchesDocumentedFormula": true,
+    "cpuEqualsWgsl": false
+   }
+  ],
+  "divMod": {
+   "emittedWgsl": {
+    "std.div(i32,i32)": [
+     "return (f32(a) / f32(b_2));"
+    ],
+    "std.div(vec2i,vec2i)": [
+     "return (a / b_2);"
+    ],
+    "std.mod(vec2i,vec2i)": [
+     "return (a % b_2);"
+    ]
+   },
+   "div:vec2i": {
+    "lanes": 800,
+    "gpuMismatches": 0,
+    "cpuMismatchesInRowsThatDidNotThrow": 0,
+    "cpuThrewRows": 40,
+    "cpuThrewMessage": "threw: Cannot convert value 'Infinity' to type i32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+    "cpuBadSamples": []
+   },
+   "div:vec3i": {
+    "lanes": 1200,
+    "gpuMismatches": 0,
+    "cpuMismatchesInRowsThatDidNotThrow": 0,
+    "cpuThrewRows": 60,
+    "cpuThrewMessage": "threw: Cannot convert value 'Infinity' to type i32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+    "cpuBadSamples": []
+   },
+   "div:vec4i": {
+    "lanes": 1600,
+    "gpuMismatches": 0,
+    "cpuMismatchesInRowsThatDidNotThrow": 0,
+    "cpuThrewRows": 80,
+    "cpuThrewMessage": "threw: Cannot convert value 'Infinity' to type i32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+    "cpuBadSamples": []
+   },
+   "div:vec2u": {
+    "lanes": 800,
+    "gpuMismatches": 0,
+    "cpuMismatchesInRowsThatDidNotThrow": 0,
+    "cpuThrewRows": 40,
+    "cpuThrewMessage": "threw: Cannot convert value 'Infinity' to type u32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+    "cpuBadSamples": []
+   },
+   "div:vec3u": {
+    "lanes": 1200,
+    "gpuMismatches": 0,
+    "cpuMismatchesInRowsThatDidNotThrow": 0,
+    "cpuThrewRows": 60,
+    "cpuThrewMessage": "threw: Cannot convert value 'Infinity' to type u32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+    "cpuBadSamples": []
+   },
+   "div:vec4u": {
+    "lanes": 1600,
+    "gpuMismatches": 0,
+    "cpuMismatchesInRowsThatDidNotThrow": 0,
+    "cpuThrewRows": 80,
+    "cpuThrewMessage": "threw: Cannot convert value 'Infinity' to type u32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+    "cpuBadSamples": []
+   },
+   "mod:vec2i": {
+    "lanes": 800,
+    "gpuMismatches": 0,
+    "cpuMismatchesInRowsThatDidNotThrow": 0,
+    "cpuThrewRows": 40,
+    "cpuThrewMessage": "threw: Cannot convert value 'NaN' to type i32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+    "cpuBadSamples": []
+   },
+   "mod:vec3i": {
+    "lanes": 1200,
+    "gpuMismatches": 0,
+    "cpuMismatchesInRowsThatDidNotThrow": 0,
+    "cpuThrewRows": 60,
+    "cpuThrewMessage": "threw: Cannot convert value 'NaN' to type i32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+    "cpuBadSamples": []
+   },
+   "mod:vec4i": {
+    "lanes": 1600,
+    "gpuMismatches": 0,
+    "cpuMismatchesInRowsThatDidNotThrow": 0,
+    "cpuThrewRows": 80,
+    "cpuThrewMessage": "threw: Cannot convert value 'NaN' to type i32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+    "cpuBadSamples": []
+   },
+   "mod:vec2u": {
+    "lanes": 800,
+    "gpuMismatches": 0,
+    "cpuMismatchesInRowsThatDidNotThrow": 0,
+    "cpuThrewRows": 40,
+    "cpuThrewMessage": "threw: Cannot convert value 'NaN' to type u32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+    "cpuBadSamples": []
+   },
+   "mod:vec3u": {
+    "lanes": 1200,
+    "gpuMismatches": 0,
+    "cpuMismatchesInRowsThatDidNotThrow": 0,
+    "cpuThrewRows": 60,
+    "cpuThrewMessage": "threw: Cannot convert value 'NaN' to type u32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+    "cpuBadSamples": []
+   },
+   "mod:vec4u": {
+    "lanes": 1600,
+    "gpuMismatches": 0,
+    "cpuMismatchesInRowsThatDidNotThrow": 0,
+    "cpuThrewRows": 80,
+    "cpuThrewMessage": "threw: Cannot convert value 'NaN' to type u32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+    "cpuBadSamples": []
+   }
+  },
+  "reported": {
+   "inputs": [
+    [
+     2147483647,
+     2147483647
+    ],
+    [
+     2147483647,
+     2147483647
+    ]
+   ],
+   "expected": [
+    1,
+    1
+   ],
+   "cpu": [
+    0,
+    0
+   ],
+   "gpu": [
+    1,
+    1
+   ],
+   "viaHarness": "harness.ts run()"
+  },
+  "intdiv_vectorUnsupported": "Resolution of the following tree failed: | - computePipelineCore | - computeFn:<unnamed>"
+ },
+ "tests": [
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[reproduction] the reported case, through the PRE-EXISTING harness helpers std.mul(vec2i(INT_MAX), vec2i(INT_MAX)): CPU 0, GPU 1, expected 1",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[semantics] what the correct answer is (independent of TypeGPU) vec2i components are signed 32-bit; (2^31-1)^2 wraps to 1; INT_MIN*INT_MIN wraps to 0; INT_MIN*-1 wraps to INT_MIN",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec2i) conforms; [CPU] characterised collect",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec2i) conforms; [CPU] characterised GPU equals the BigInt expectation (32-bit wrap-around) for every lane",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec2i) conforms; [CPU] characterised CPU is always either correct or explained by the hypothesis \"ToInt32/ToUint32 of the f64 product\"",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec2i) conforms; [CPU] characterised CPU is exact whenever the exact product fits in 2^53 (no defect in that region)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec2i) conforms; [CPU] characterised CPU is wrong only where the f64 product was inexact",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec2i) conforms; [CPU] characterised [CONFIRMED DEFECT #1] CPU std.mul(vec2i) equals the 32-bit wrapped product for every lane",
+   "status": "passed",
+   "kind": "regression test for a confirmed defect (expected failure: passes while the defect exists)"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec3i) conforms; [CPU] characterised collect",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec3i) conforms; [CPU] characterised GPU equals the BigInt expectation (32-bit wrap-around) for every lane",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec3i) conforms; [CPU] characterised CPU is always either correct or explained by the hypothesis \"ToInt32/ToUint32 of the f64 product\"",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec3i) conforms; [CPU] characterised CPU is exact whenever the exact product fits in 2^53 (no defect in that region)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec3i) conforms; [CPU] characterised CPU is wrong only where the f64 product was inexact",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec3i) conforms; [CPU] characterised [CONFIRMED DEFECT #1] CPU std.mul(vec3i) equals the 32-bit wrapped product for every lane",
+   "status": "passed",
+   "kind": "regression test for a confirmed defect (expected failure: passes while the defect exists)"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec4i) conforms; [CPU] characterised collect",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec4i) conforms; [CPU] characterised GPU equals the BigInt expectation (32-bit wrap-around) for every lane",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec4i) conforms; [CPU] characterised CPU is always either correct or explained by the hypothesis \"ToInt32/ToUint32 of the f64 product\"",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec4i) conforms; [CPU] characterised CPU is exact whenever the exact product fits in 2^53 (no defect in that region)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec4i) conforms; [CPU] characterised CPU is wrong only where the f64 product was inexact",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec4i) conforms; [CPU] characterised [CONFIRMED DEFECT #1] CPU std.mul(vec4i) equals the 32-bit wrapped product for every lane",
+   "status": "passed",
+   "kind": "regression test for a confirmed defect (expected failure: passes while the defect exists)"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec2u) conforms; [CPU] characterised collect",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec2u) conforms; [CPU] characterised GPU equals the BigInt expectation (32-bit wrap-around) for every lane",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec2u) conforms; [CPU] characterised CPU is always either correct or explained by the hypothesis \"ToInt32/ToUint32 of the f64 product\"",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec2u) conforms; [CPU] characterised CPU is exact whenever the exact product fits in 2^53 (no defect in that region)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec2u) conforms; [CPU] characterised CPU is wrong only where the f64 product was inexact",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec2u) conforms; [CPU] characterised [CONFIRMED DEFECT #1] CPU std.mul(vec2u) equals the 32-bit wrapped product for every lane",
+   "status": "passed",
+   "kind": "regression test for a confirmed defect (expected failure: passes while the defect exists)"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec3u) conforms; [CPU] characterised collect",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec3u) conforms; [CPU] characterised GPU equals the BigInt expectation (32-bit wrap-around) for every lane",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec3u) conforms; [CPU] characterised CPU is always either correct or explained by the hypothesis \"ToInt32/ToUint32 of the f64 product\"",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec3u) conforms; [CPU] characterised CPU is exact whenever the exact product fits in 2^53 (no defect in that region)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec3u) conforms; [CPU] characterised CPU is wrong only where the f64 product was inexact",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec3u) conforms; [CPU] characterised [CONFIRMED DEFECT #1] CPU std.mul(vec3u) equals the 32-bit wrapped product for every lane",
+   "status": "passed",
+   "kind": "regression test for a confirmed defect (expected failure: passes while the defect exists)"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec4u) conforms; [CPU] characterised collect",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec4u) conforms; [CPU] characterised GPU equals the BigInt expectation (32-bit wrap-around) for every lane",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec4u) conforms; [CPU] characterised CPU is always either correct or explained by the hypothesis \"ToInt32/ToUint32 of the f64 product\"",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec4u) conforms; [CPU] characterised CPU is exact whenever the exact product fits in 2^53 (no defect in that region)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec4u) conforms; [CPU] characterised CPU is wrong only where the f64 product was inexact",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[WGSL semantics] GPU std.mul(vec4u) conforms; [CPU] characterised [CONFIRMED DEFECT #1] CPU std.mul(vec4u) equals the 32-bit wrapped product for every lane",
+   "status": "passed",
+   "kind": "regression test for a confirmed defect (expected failure: passes while the defect exists)"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[CONFIRMED DEFECT #1 — scope] other CPU paths that multiply through f64 operator `a * b` inside a 'use gpu' function called on the CPU",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[CONFIRMED DEFECT #1 — scope] other CPU paths that multiply through f64 [CONFIRMED DEFECT #1] operator `a * b` (vec2i) on the CPU equals the 32-bit wrapped product",
+   "status": "passed",
+   "kind": "regression test for a confirmed defect (expected failure: passes while the defect exists)"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[CONFIRMED DEFECT #1 — scope] other CPU paths that multiply through f64 explicit cast of a scalar product: i32(std.mul(2147483647, 2147483647)) — GPU conforms",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[CONFIRMED DEFECT #1 — scope] other CPU paths that multiply through f64 explicit cast of a scalar product: u32(std.mul(4294967295, 4294967295)) — GPU conforms",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[CONFIRMED DEFECT #1 — scope] other CPU paths that multiply through f64 explicit cast of a scalar product: i32(std.mul(-2147483648, -2147483648)) — GPU conforms",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[CONFIRMED DEFECT #1 — scope] other CPU paths that multiply through f64 explicit cast of a scalar product: u32(std.mul(2654435761, 747796405)) — GPU conforms",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[CONFIRMED DEFECT #1 — scope] other CPU paths that multiply through f64 [CONFIRMED DEFECT #1] CPU d.i32(std.mul(INT_MAX, INT_MAX)) equals the 32-bit wrapped product",
+   "status": "passed",
+   "kind": "regression test for a confirmed defect (expected failure: passes while the defect exists)"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[CONFIRMED DEFECT #1 — scope] other CPU paths that multiply through f64 vector × scalar and scalar × vector: GPU conforms, CPU recorded",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[related operations] traced separately — no shared defect expected for add / sub / neg add on all vector types: CPU == GPU == BigInt expectation",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[related operations] traced separately — no shared defect expected for add / sub / neg sub on all vector types: CPU == GPU == BigInt expectation",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[related operations] traced separately — no shared defect expected for add / sub / neg neg on signed vectors incl. INT_MIN: CPU == GPU == BigInt expectation",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[expected specification difference] intdiv: scalar-only API; documented CPU formula vs WGSL integer division CPU follows its documented formula trunc(trunc(a)/trunc(b)); GPU follows WGSL (divisor 0 -> dividend, INT_MIN/-1 -> INT_MIN)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[expected specification difference] intdiv: scalar-only API; documented CPU formula vs WGSL integer division intdiv is not available for vectors (signature rejects them) — unsupported, not a defect",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[div / mod] integer std.div and std.mod: SCALARS compile to f32 operations, VECTORS to integer operations records the WGSL that is emitted (scalar i32 vs vec2i)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[div / mod] integer std.div and std.mod: SCALARS compile to f32 operations, VECTORS to integer operations std.div on vec2i GPU follows the WGSL integer rules for every lane (incl. divisor 0 and INT_MIN / -1)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[div / mod] integer std.div and std.mod: SCALARS compile to f32 operations, VECTORS to integer operations std.div on vec3i GPU follows the WGSL integer rules for every lane (incl. divisor 0 and INT_MIN / -1)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[div / mod] integer std.div and std.mod: SCALARS compile to f32 operations, VECTORS to integer operations std.div on vec4i GPU follows the WGSL integer rules for every lane (incl. divisor 0 and INT_MIN / -1)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[div / mod] integer std.div and std.mod: SCALARS compile to f32 operations, VECTORS to integer operations std.div on vec2u GPU follows the WGSL integer rules for every lane (incl. divisor 0 and INT_MIN / -1)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[div / mod] integer std.div and std.mod: SCALARS compile to f32 operations, VECTORS to integer operations std.div on vec3u GPU follows the WGSL integer rules for every lane (incl. divisor 0 and INT_MIN / -1)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[div / mod] integer std.div and std.mod: SCALARS compile to f32 operations, VECTORS to integer operations std.div on vec4u GPU follows the WGSL integer rules for every lane (incl. divisor 0 and INT_MIN / -1)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[div / mod] integer std.div and std.mod: SCALARS compile to f32 operations, VECTORS to integer operations std.mod on vec2i GPU follows the WGSL integer rules for every lane (incl. divisor 0 and INT_MIN / -1)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[div / mod] integer std.div and std.mod: SCALARS compile to f32 operations, VECTORS to integer operations std.mod on vec3i GPU follows the WGSL integer rules for every lane (incl. divisor 0 and INT_MIN / -1)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[div / mod] integer std.div and std.mod: SCALARS compile to f32 operations, VECTORS to integer operations std.mod on vec4i GPU follows the WGSL integer rules for every lane (incl. divisor 0 and INT_MIN / -1)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[div / mod] integer std.div and std.mod: SCALARS compile to f32 operations, VECTORS to integer operations std.mod on vec2u GPU follows the WGSL integer rules for every lane (incl. divisor 0 and INT_MIN / -1)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[div / mod] integer std.div and std.mod: SCALARS compile to f32 operations, VECTORS to integer operations std.mod on vec3u GPU follows the WGSL integer rules for every lane (incl. divisor 0 and INT_MIN / -1)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[div / mod] integer std.div and std.mod: SCALARS compile to f32 operations, VECTORS to integer operations std.mod on vec4u GPU follows the WGSL integer rules for every lane (incl. divisor 0 and INT_MIN / -1)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[impact] how much of the input space is affected? (real CPU std.mul vs BigInt, 4000 deterministic samples each) both operands within 94906265 (= floor(sqrt(2^53))): no sample is wrong",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[impact] how much of the input space is affected? (real CPU std.mul vs BigInt, 4000 deterministic samples each) full-range operands: the large majority of samples are wrong, and the f64 model predicts exactly the wrong ones",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[impact] how much of the input space is affected? (real CPU std.mul vs BigInt, 4000 deterministic samples each) a multiplier that keeps u32 products below 2^53 is NOT affected: state * 1664525 (Numerical Recipes LCG)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[negative controls] the comparison and the test setup can detect wrong results a deliberately wrong CPU value (expected+1) is reported as a mismatch",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[negative controls] the comparison and the test setup can detect wrong results a deliberately wrong GPU function (std.mul(a,b)+1) is reported as a GPU mismatch",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[negative controls] the comparison and the test setup can detect wrong results the oracle agrees with a hand-computed value, not just with itself",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[negative controls] the comparison and the test setup can detect wrong results the regression condition is satisfiable: a Math.imul-based CPU multiply passes the same comparison on every type",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "integer-boundaries.test.ts",
+   "name": "[negative controls] the comparison and the test setup can detect wrong results named boundary cases (recorded for results.json)",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  },
+  {
+   "file": "reproducer.ts",
+   "name": "REPRODUCER: std.mul(vec2i(INT_MAX), vec2i(INT_MAX)) differs between CPU and GPU",
+   "status": "passed",
+   "kind": "ordinary assertion"
+  }
+ ]
+}

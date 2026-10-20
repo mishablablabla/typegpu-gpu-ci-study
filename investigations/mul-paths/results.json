@@ -1,0 +1,10393 @@
+{
+ "float": {
+  "mulForms": [
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.21797787026305532,
+    "gpuWorst": 0.21797787026305532
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.42242794792634714,
+    "gpuWorst": 0.42242794792634714
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.06291455202814086,
+    "gpuWorst": 0.06291455202814086
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.06291455202814086,
+    "gpuWorst": 0.06291455202814086
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.21797787026305532,
+    "gpuWorst": 0.21797787026305532
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.42242794792634714,
+    "gpuWorst": 0.42242794792634714
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.06291455202814086,
+    "gpuWorst": 0.06291455202814086
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.06291455202814086,
+    "gpuWorst": 0.06291455202814086
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.21797787026305532,
+    "gpuWorst": 0.21797787026305532
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.42242794792634714,
+    "gpuWorst": 0.42242794792634714
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.06291455202814086,
+    "gpuWorst": 0.06291455202814086
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.06291455202814086,
+    "gpuWorst": 0.06291455202814086
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.21797787026305532,
+    "gpuWorst": 0.21797787026305532
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.42242794792634714,
+    "gpuWorst": 0.42242794792634714
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.06291455202814086,
+    "gpuWorst": 0.06291455202814086
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.06291455202814086,
+    "gpuWorst": 0.06291455202814086
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.21797787026305532,
+    "gpuWorst": 0.21797787026305532
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.42242794792634714,
+    "gpuWorst": 0.42242794792634714
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.06291455202814086,
+    "gpuWorst": 0.06291455202814086
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.06291455202814086,
+    "gpuWorst": 0.06291455202814086
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.21797787026305532,
+    "gpuWorst": 0.21797787026305532
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.42242794792634714,
+    "gpuWorst": 0.42242794792634714
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.06291455202814086,
+    "gpuWorst": 0.06291455202814086
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.06291455202814086,
+    "gpuWorst": 0.06291455202814086
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.21797787026305532,
+    "gpuWorst": 0.21797787026305532
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.42242794792634714,
+    "gpuWorst": 0.42242794792634714
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.06291455202814086,
+    "gpuWorst": 0.06291455202814086
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.06291455202814086,
+    "gpuWorst": 0.06291455202814086
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.22205552937049913,
+    "gpuWorst": 0.22205552937049913
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.24219213812127968,
+    "gpuWorst": 0.24219213812127968
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.25165820245025394,
+    "gpuWorst": 0.25165820245025394
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.25165820245025394,
+    "gpuWorst": 0.25165820245025394
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.22205552937049913,
+    "gpuWorst": 0.22205552937049913
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.24219213812127968,
+    "gpuWorst": 0.24219213812127968
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.25165820245025394,
+    "gpuWorst": 0.25165820245025394
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.25165820245025394,
+    "gpuWorst": 0.25165820245025394
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.22205552937049913,
+    "gpuWorst": 0.22205552937049913
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.24219213812127968,
+    "gpuWorst": 0.24219213812127968
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.25165820245025394,
+    "gpuWorst": 0.25165820245025394
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.25165820245025394,
+    "gpuWorst": 0.25165820245025394
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.22205552937049913,
+    "gpuWorst": 0.22205552937049913
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.24219213812127968,
+    "gpuWorst": 0.24219213812127968
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.25165820245025394,
+    "gpuWorst": 0.25165820245025394
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.25165820245025394,
+    "gpuWorst": 0.25165820245025394
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5462194107443383,
+    "gpuWorst": 0.5462194107443383
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5938569573269076,
+    "gpuWorst": 0.5938569573269076
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5462194107443383,
+    "gpuWorst": 0.5462194107443383
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5938569573269076,
+    "gpuWorst": 0.5938569573269076
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5462194107443383,
+    "gpuWorst": 0.5462194107443383
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5938569573269076,
+    "gpuWorst": 0.5938569573269076
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5462194107443383,
+    "gpuWorst": 0.5462194107443383
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5938569573269076,
+    "gpuWorst": 0.5938569573269076
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5576950929484495,
+    "gpuWorst": 0.5576950929484495
+   },
+   {
+    "n": 2,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5267290873178618,
+    "gpuWorst": 0.5267290873178618
+   },
+   {
+    "n": 2,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5576950929484495,
+    "gpuWorst": 0.5576950929484495
+   },
+   {
+    "n": 2,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5267290873178618,
+    "gpuWorst": 0.5267290873178618
+   },
+   {
+    "n": 2,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.295689508582525,
+    "gpuWorst": 0.295689508582525
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7991559005457735,
+    "gpuWorst": 0.7991559005457735
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.295689508582525,
+    "gpuWorst": 0.295689508582525
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7991559005457735,
+    "gpuWorst": 0.7991559005457735
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.295689508582525,
+    "gpuWorst": 0.295689508582525
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7991559005457735,
+    "gpuWorst": 0.7991559005457735
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.295689508582525,
+    "gpuWorst": 0.295689508582525
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7991559005457735,
+    "gpuWorst": 0.7991559005457735
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.4324906722413992,
+    "gpuWorst": 0.4324906722413992
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.4745304225501284,
+    "gpuWorst": 0.4745304225501284
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.4324906722413992,
+    "gpuWorst": 0.4324906722413992
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.4745304225501284,
+    "gpuWorst": 0.4745304225501284
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.4324906722413992,
+    "gpuWorst": 0.4324906722413992
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.4745304225501284,
+    "gpuWorst": 0.4745304225501284
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.4324906722413992,
+    "gpuWorst": 0.4324906722413992
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.4745304225501284,
+    "gpuWorst": 0.4745304225501284
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.1811497840593115,
+    "gpuWorst": 0.1811497840593115
+   },
+   {
+    "n": 2,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5267290873178618,
+    "gpuWorst": 0.5267290873178618
+   },
+   {
+    "n": 2,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.1811497840593115,
+    "gpuWorst": 0.1811497840593115
+   },
+   {
+    "n": 2,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5267290873178618,
+    "gpuWorst": 0.5267290873178618
+   },
+   {
+    "n": 2,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*s",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*s",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*s",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0.05475929159977638
+   },
+   {
+    "n": 2,
+    "form": "s*s",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0.18144932253326296
+   },
+   {
+    "n": 2,
+    "form": "s*s",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*s",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*s",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*s",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*s",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0.05475929159977638
+   },
+   {
+    "n": 2,
+    "form": "s*s",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0.18144932253326296
+   },
+   {
+    "n": 2,
+    "form": "s*s",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*s",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*s",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*s",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*s",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0.05475929159977638
+   },
+   {
+    "n": 2,
+    "form": "s*s",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0.18144932253326296
+   },
+   {
+    "n": 2,
+    "form": "s*s",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 2,
+    "form": "s*s",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.13222129654215156,
+    "gpuWorst": 0.2381587968066088
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.12872985395327444,
+    "gpuWorst": 0.2309901367050591
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.13222129654215156,
+    "gpuWorst": 0.2381587968066088
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.12872985395327444,
+    "gpuWorst": 0.2309901367050591
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.13222129654215156,
+    "gpuWorst": 0.2381587968066088
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.12872985395327444,
+    "gpuWorst": 0.2309901367050591
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.13222129654215156,
+    "gpuWorst": 0.2381587968066088
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.12872985395327444,
+    "gpuWorst": 0.2309901367050591
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.13222129654215156,
+    "gpuWorst": 0.13222129654215156
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.1045103915627797,
+    "gpuWorst": 0.1045103915627797
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.13222129654215156,
+    "gpuWorst": 0.13222129654215156
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.1045103915627797,
+    "gpuWorst": 0.1045103915627797
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.13222129654215156,
+    "gpuWorst": 0.13222129654215156
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.1045103915627797,
+    "gpuWorst": 0.1045103915627797
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.13976501467505217,
+    "gpuWorst": 0.14509383231643702
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.1698021389729135,
+    "gpuWorst": 0.1698021389729135
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0.08388606374170905
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0.08388606374170905
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.13976501467505217,
+    "gpuWorst": 0.14509383231643702
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.1698021389729135,
+    "gpuWorst": 0.1698021389729135
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0.08388606374170905
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0.08388606374170905
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.13976501467505217,
+    "gpuWorst": 0.14509383231643702
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.1698021389729135,
+    "gpuWorst": 0.1698021389729135
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0.08388606374170905
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0.08388606374170905
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.13976501467505217,
+    "gpuWorst": 0.14509383231643702
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.1698021389729135,
+    "gpuWorst": 0.1698021389729135
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0.08388606374170905
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0.08388606374170905
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7710471092389983,
+    "gpuWorst": 0.7710471092389983
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5938569573269076,
+    "gpuWorst": 0.5938569573269076
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7710471092389983,
+    "gpuWorst": 0.7710471092389983
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5938569573269076,
+    "gpuWorst": 0.5938569573269076
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7710471092389983,
+    "gpuWorst": 0.7710471092389983
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5938569573269076,
+    "gpuWorst": 0.5938569573269076
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7710471092389983,
+    "gpuWorst": 0.7710471092389983
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5938569573269076,
+    "gpuWorst": 0.5938569573269076
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5576950929484495,
+    "gpuWorst": 0.5576950929484495
+   },
+   {
+    "n": 3,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5267290873178618,
+    "gpuWorst": 0.5267290873178618
+   },
+   {
+    "n": 3,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5576950929484495,
+    "gpuWorst": 0.5576950929484495
+   },
+   {
+    "n": 3,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5267290873178618,
+    "gpuWorst": 0.5267290873178618
+   },
+   {
+    "n": 3,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.3670970818260153,
+    "gpuWorst": 0.3670970818260153
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7991559005457735,
+    "gpuWorst": 0.7991559005457735
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.3670970818260153,
+    "gpuWorst": 0.3670970818260153
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7991559005457735,
+    "gpuWorst": 0.7991559005457735
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.3670970818260153,
+    "gpuWorst": 0.3670970818260153
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7991559005457735,
+    "gpuWorst": 0.7991559005457735
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.3670970818260153,
+    "gpuWorst": 0.3670970818260153
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7991559005457735,
+    "gpuWorst": 0.7991559005457735
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5462194107443383,
+    "gpuWorst": 0.5462194107443383
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5938569573269076,
+    "gpuWorst": 0.5938569573269076
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5462194107443383,
+    "gpuWorst": 0.5462194107443383
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5938569573269076,
+    "gpuWorst": 0.5938569573269076
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5462194107443383,
+    "gpuWorst": 0.5462194107443383
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5938569573269076,
+    "gpuWorst": 0.5938569573269076
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5462194107443383,
+    "gpuWorst": 0.5462194107443383
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5938569573269076,
+    "gpuWorst": 0.5938569573269076
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5289679313366513,
+    "gpuWorst": 0.5289679313366513
+   },
+   {
+    "n": 3,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5267290873178618,
+    "gpuWorst": 0.5267290873178618
+   },
+   {
+    "n": 3,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5289679313366513,
+    "gpuWorst": 0.5289679313366513
+   },
+   {
+    "n": 3,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5267290873178618,
+    "gpuWorst": 0.5267290873178618
+   },
+   {
+    "n": 3,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 3,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.175265406880497,
+    "gpuWorst": 0.175265406880497
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.09092870414156579,
+    "gpuWorst": 0.27056243734588936
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.04893353426599699,
+    "gpuWorst": 0.06291454405628184
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.04893353426599699,
+    "gpuWorst": 0.06291454405628184
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.175265406880497,
+    "gpuWorst": 0.175265406880497
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.09092870414156579,
+    "gpuWorst": 0.27056243734588936
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.04893353426599699,
+    "gpuWorst": 0.06291454405628184
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.04893353426599699,
+    "gpuWorst": 0.06291454405628184
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.175265406880497,
+    "gpuWorst": 0.175265406880497
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.09092870414156579,
+    "gpuWorst": 0.27056243734588936
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.04893353426599699,
+    "gpuWorst": 0.06291454405628184
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.04893353426599699,
+    "gpuWorst": 0.06291454405628184
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.175265406880497,
+    "gpuWorst": 0.175265406880497
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.09092870414156579,
+    "gpuWorst": 0.27056243734588936
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.04893353426599699,
+    "gpuWorst": 0.06291454405628184
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.04893353426599699,
+    "gpuWorst": 0.06291454405628184
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.07526537228296468,
+    "gpuWorst": 0.17176388523285027
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.06662113036248085,
+    "gpuWorst": 0.1392207704542799
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.04893353426599699,
+    "gpuWorst": 0.06291454405628184
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.04893353426599699,
+    "gpuWorst": 0.06291454405628184
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.07526537228296468,
+    "gpuWorst": 0.17176388523285027
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.06662113036248085,
+    "gpuWorst": 0.1392207704542799
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.04893353426599699,
+    "gpuWorst": 0.06291454405628184
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.04893353426599699,
+    "gpuWorst": 0.06291454405628184
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.07526537228296468,
+    "gpuWorst": 0.17176388523285027
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.06662113036248085,
+    "gpuWorst": 0.1392207704542799
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.04893353426599699,
+    "gpuWorst": 0.06291454405628184
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.04893353426599699,
+    "gpuWorst": 0.06291454405628184
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.08970158360745809,
+    "gpuWorst": 0.10959291273544947
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.09913176828537112,
+    "gpuWorst": 0.09913176828537112
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.03145727226407046,
+    "gpuWorst": 0.03145727226407046
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.03145727226407046,
+    "gpuWorst": 0.03145727226407046
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.08970158360745809,
+    "gpuWorst": 0.10959291273544947
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.09913176828537112,
+    "gpuWorst": 0.09913176828537112
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.03145727226407046,
+    "gpuWorst": 0.03145727226407046
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.03145727226407046,
+    "gpuWorst": 0.03145727226407046
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.08970158360745809,
+    "gpuWorst": 0.10959291273544947
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.09913176828537112,
+    "gpuWorst": 0.09913176828537112
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.03145727226407046,
+    "gpuWorst": 0.03145727226407046
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.03145727226407046,
+    "gpuWorst": 0.03145727226407046
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.08970158360745809,
+    "gpuWorst": 0.10959291273544947
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.09913176828537112,
+    "gpuWorst": 0.09913176828537112
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.03145727226407046,
+    "gpuWorst": 0.03145727226407046
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.03145727226407046,
+    "gpuWorst": 0.03145727226407046
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7710471092389983,
+    "gpuWorst": 0.7710471092389983
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.6146281606391892,
+    "gpuWorst": 0.6146281606391892
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7710471092389983,
+    "gpuWorst": 0.7710471092389983
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.6146281606391892,
+    "gpuWorst": 0.6146281606391892
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7710471092389983,
+    "gpuWorst": 0.7710471092389983
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.6146281606391892,
+    "gpuWorst": 0.6146281606391892
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7710471092389983,
+    "gpuWorst": 0.7710471092389983
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.6146281606391892,
+    "gpuWorst": 0.6146281606391892
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7348055390224871,
+    "gpuWorst": 0.7348055390224871
+   },
+   {
+    "n": 4,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5267290873178618,
+    "gpuWorst": 0.5267290873178618
+   },
+   {
+    "n": 4,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7348055390224871,
+    "gpuWorst": 0.7348055390224871
+   },
+   {
+    "n": 4,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5267290873178618,
+    "gpuWorst": 0.5267290873178618
+   },
+   {
+    "n": 4,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.4870672920455572,
+    "gpuWorst": 0.4870672920455572
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7991559005457735,
+    "gpuWorst": 0.7991559005457735
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.4870672920455572,
+    "gpuWorst": 0.4870672920455572
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7991559005457735,
+    "gpuWorst": 0.7991559005457735
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.4870672920455572,
+    "gpuWorst": 0.4870672920455572
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7991559005457735,
+    "gpuWorst": 0.7991559005457735
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.4870672920455572,
+    "gpuWorst": 0.4870672920455572
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.7991559005457735,
+    "gpuWorst": 0.7991559005457735
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5462194107443383,
+    "gpuWorst": 0.5462194107443383
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5938569573269076,
+    "gpuWorst": 0.5938569573269076
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5462194107443383,
+    "gpuWorst": 0.5462194107443383
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5938569573269076,
+    "gpuWorst": 0.5938569573269076
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5462194107443383,
+    "gpuWorst": 0.5462194107443383
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5938569573269076,
+    "gpuWorst": 0.5938569573269076
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a*=b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5462194107443383,
+    "gpuWorst": 0.5462194107443383
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a*=b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5938569573269076,
+    "gpuWorst": 0.5938569573269076
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a*=b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5576950929484495,
+    "gpuWorst": 0.5576950929484495
+   },
+   {
+    "n": 4,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5267290873178618,
+    "gpuWorst": 0.5267290873178618
+   },
+   {
+    "n": 4,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "exact",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "random",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5576950929484495,
+    "gpuWorst": 0.5576950929484495
+   },
+   {
+    "n": 4,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "random",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0.5267290873178618,
+    "gpuWorst": 0.5267290873178618
+   },
+   {
+    "n": 4,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 1,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   },
+   {
+    "n": 4,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "cancel",
+    "seed": 2,
+    "cpuOk": true,
+    "gpuOk": true,
+    "zeroSignDiffers": false,
+    "cpuWorst": 0,
+    "gpuWorst": 0
+   }
+  ],
+  "addSub": [
+   {
+    "l": "mat2x2f",
+    "r": "mat2x2f",
+    "op": "std.add",
+    "ok": true
+   },
+   {
+    "l": "mat2x2f",
+    "r": "mat2x2f",
+    "op": "a+b",
+    "ok": true
+   },
+   {
+    "l": "mat2x2f",
+    "r": "mat2x2f",
+    "op": "std.sub",
+    "ok": true
+   },
+   {
+    "l": "mat2x2f",
+    "r": "mat2x2f",
+    "op": "a-b",
+    "ok": true
+   },
+   {
+    "l": "mat2x2f",
+    "r": "mat2x2f",
+    "op": "a+=b",
+    "ok": true
+   },
+   {
+    "l": "mat2x2f",
+    "r": "mat2x2f",
+    "op": "a-=b",
+    "ok": true
+   },
+   {
+    "l": "vec2f",
+    "r": "vec2f",
+    "op": "std.add",
+    "ok": true
+   },
+   {
+    "l": "vec2f",
+    "r": "vec2f",
+    "op": "a+b",
+    "ok": true
+   },
+   {
+    "l": "vec2f",
+    "r": "vec2f",
+    "op": "std.sub",
+    "ok": true
+   },
+   {
+    "l": "vec2f",
+    "r": "vec2f",
+    "op": "a-b",
+    "ok": true
+   },
+   {
+    "l": "vec2f",
+    "r": "vec2f",
+    "op": "a+=b",
+    "ok": true
+   },
+   {
+    "l": "vec2f",
+    "r": "vec2f",
+    "op": "a-=b",
+    "ok": true
+   },
+   {
+    "l": "vec2f",
+    "r": "f32",
+    "op": "std.add",
+    "ok": true
+   },
+   {
+    "l": "vec2f",
+    "r": "f32",
+    "op": "a+b",
+    "ok": true
+   },
+   {
+    "l": "vec2f",
+    "r": "f32",
+    "op": "std.sub",
+    "ok": true
+   },
+   {
+    "l": "vec2f",
+    "r": "f32",
+    "op": "a-b",
+    "ok": true
+   },
+   {
+    "l": "vec2f",
+    "r": "f32",
+    "op": "a+=b",
+    "ok": true
+   },
+   {
+    "l": "vec2f",
+    "r": "f32",
+    "op": "a-=b",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "vec2f",
+    "op": "std.add",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "vec2f",
+    "op": "a+b",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "vec2f",
+    "op": "std.sub",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "vec2f",
+    "op": "a-b",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "f32",
+    "op": "std.add",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "f32",
+    "op": "a+b",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "f32",
+    "op": "std.sub",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "f32",
+    "op": "a-b",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "f32",
+    "op": "a+=b",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "f32",
+    "op": "a-=b",
+    "ok": true
+   },
+   {
+    "l": "mat3x3f",
+    "r": "mat3x3f",
+    "op": "std.add",
+    "ok": true
+   },
+   {
+    "l": "mat3x3f",
+    "r": "mat3x3f",
+    "op": "a+b",
+    "ok": true
+   },
+   {
+    "l": "mat3x3f",
+    "r": "mat3x3f",
+    "op": "std.sub",
+    "ok": true
+   },
+   {
+    "l": "mat3x3f",
+    "r": "mat3x3f",
+    "op": "a-b",
+    "ok": true
+   },
+   {
+    "l": "mat3x3f",
+    "r": "mat3x3f",
+    "op": "a+=b",
+    "ok": true
+   },
+   {
+    "l": "mat3x3f",
+    "r": "mat3x3f",
+    "op": "a-=b",
+    "ok": true
+   },
+   {
+    "l": "vec3f",
+    "r": "vec3f",
+    "op": "std.add",
+    "ok": true
+   },
+   {
+    "l": "vec3f",
+    "r": "vec3f",
+    "op": "a+b",
+    "ok": true
+   },
+   {
+    "l": "vec3f",
+    "r": "vec3f",
+    "op": "std.sub",
+    "ok": true
+   },
+   {
+    "l": "vec3f",
+    "r": "vec3f",
+    "op": "a-b",
+    "ok": true
+   },
+   {
+    "l": "vec3f",
+    "r": "vec3f",
+    "op": "a+=b",
+    "ok": true
+   },
+   {
+    "l": "vec3f",
+    "r": "vec3f",
+    "op": "a-=b",
+    "ok": true
+   },
+   {
+    "l": "vec3f",
+    "r": "f32",
+    "op": "std.add",
+    "ok": true
+   },
+   {
+    "l": "vec3f",
+    "r": "f32",
+    "op": "a+b",
+    "ok": true
+   },
+   {
+    "l": "vec3f",
+    "r": "f32",
+    "op": "std.sub",
+    "ok": true
+   },
+   {
+    "l": "vec3f",
+    "r": "f32",
+    "op": "a-b",
+    "ok": true
+   },
+   {
+    "l": "vec3f",
+    "r": "f32",
+    "op": "a+=b",
+    "ok": true
+   },
+   {
+    "l": "vec3f",
+    "r": "f32",
+    "op": "a-=b",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "vec3f",
+    "op": "std.add",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "vec3f",
+    "op": "a+b",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "vec3f",
+    "op": "std.sub",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "vec3f",
+    "op": "a-b",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "f32",
+    "op": "std.add",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "f32",
+    "op": "a+b",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "f32",
+    "op": "std.sub",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "f32",
+    "op": "a-b",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "f32",
+    "op": "a+=b",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "f32",
+    "op": "a-=b",
+    "ok": true
+   },
+   {
+    "l": "mat4x4f",
+    "r": "mat4x4f",
+    "op": "std.add",
+    "ok": true
+   },
+   {
+    "l": "mat4x4f",
+    "r": "mat4x4f",
+    "op": "a+b",
+    "ok": true
+   },
+   {
+    "l": "mat4x4f",
+    "r": "mat4x4f",
+    "op": "std.sub",
+    "ok": true
+   },
+   {
+    "l": "mat4x4f",
+    "r": "mat4x4f",
+    "op": "a-b",
+    "ok": true
+   },
+   {
+    "l": "mat4x4f",
+    "r": "mat4x4f",
+    "op": "a+=b",
+    "ok": true
+   },
+   {
+    "l": "mat4x4f",
+    "r": "mat4x4f",
+    "op": "a-=b",
+    "ok": true
+   },
+   {
+    "l": "vec4f",
+    "r": "vec4f",
+    "op": "std.add",
+    "ok": true
+   },
+   {
+    "l": "vec4f",
+    "r": "vec4f",
+    "op": "a+b",
+    "ok": true
+   },
+   {
+    "l": "vec4f",
+    "r": "vec4f",
+    "op": "std.sub",
+    "ok": true
+   },
+   {
+    "l": "vec4f",
+    "r": "vec4f",
+    "op": "a-b",
+    "ok": true
+   },
+   {
+    "l": "vec4f",
+    "r": "vec4f",
+    "op": "a+=b",
+    "ok": true
+   },
+   {
+    "l": "vec4f",
+    "r": "vec4f",
+    "op": "a-=b",
+    "ok": true
+   },
+   {
+    "l": "vec4f",
+    "r": "f32",
+    "op": "std.add",
+    "ok": true
+   },
+   {
+    "l": "vec4f",
+    "r": "f32",
+    "op": "a+b",
+    "ok": true
+   },
+   {
+    "l": "vec4f",
+    "r": "f32",
+    "op": "std.sub",
+    "ok": true
+   },
+   {
+    "l": "vec4f",
+    "r": "f32",
+    "op": "a-b",
+    "ok": true
+   },
+   {
+    "l": "vec4f",
+    "r": "f32",
+    "op": "a+=b",
+    "ok": true
+   },
+   {
+    "l": "vec4f",
+    "r": "f32",
+    "op": "a-=b",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "vec4f",
+    "op": "std.add",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "vec4f",
+    "op": "a+b",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "vec4f",
+    "op": "std.sub",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "vec4f",
+    "op": "a-b",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "f32",
+    "op": "std.add",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "f32",
+    "op": "a+b",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "f32",
+    "op": "std.sub",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "f32",
+    "op": "a-b",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "f32",
+    "op": "a+=b",
+    "ok": true
+   },
+   {
+    "l": "f32",
+    "r": "f32",
+    "op": "a-=b",
+    "ok": true
+   }
+  ],
+  "constFold": [
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "mat*mat",
+    "path": "a.mul(b)",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "mat*vec",
+    "path": "a.mul(b)",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "vec*mat",
+    "path": "a.mul(b)",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "mat*s",
+    "path": "a.mul(b)",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "vec*vec",
+    "path": "a.mul(b)",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "vec*s",
+    "path": "a.mul(b)",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 2,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": true
+   },
+   {
+    "n": 3,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": true
+   },
+   {
+    "n": 3,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 3,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": true
+   },
+   {
+    "n": 4,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": true
+   },
+   {
+    "n": 4,
+    "form": "s*mat",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "s*mat",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "exact",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "s*vec",
+    "path": "std.mul",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   },
+   {
+    "n": 4,
+    "form": "s*vec",
+    "path": "a*b",
+    "set": "random",
+    "folded": true,
+    "withinBound": true,
+    "bakedEqualsCpu": true,
+    "signOfZeroDiffers": false
+   }
+  ],
+  "ctors": [],
+  "misc": [
+   {
+    "name": "struct.v *= struct.w",
+    "cpu": [
+     21,
+     -8,
+     -5
+    ],
+    "gpu": [
+     21,
+     -8,
+     -5
+    ],
+    "expected": [
+     21,
+     -8,
+     -5
+    ]
+   },
+   {
+    "name": "struct.v *= struct.s",
+    "cpu": [
+     9,
+     -6,
+     15
+    ],
+    "gpu": [
+     9,
+     -6,
+     15
+    ],
+    "expected": [
+     9,
+     -6,
+     15
+    ]
+   },
+   {
+    "name": "struct.v += struct.w",
+    "cpu": [
+     10,
+     2,
+     4
+    ],
+    "gpu": [
+     10,
+     2,
+     4
+    ],
+    "expected": [
+     10,
+     2,
+     4
+    ]
+   },
+   {
+    "name": "struct.v -= struct.w",
+    "cpu": [
+     -4,
+     -6,
+     6
+    ],
+    "gpu": [
+     -4,
+     -6,
+     6
+    ],
+    "expected": [
+     -4,
+     -6,
+     6
+    ]
+   },
+   {
+    "name": "struct.s *= 5",
+    "cpu": [
+     15,
+     15,
+     15
+    ],
+    "gpu": [
+     15,
+     15,
+     15
+    ],
+    "expected": [
+     15,
+     15,
+     15
+    ]
+   },
+   {
+    "name": "arr[1] *= arr[0] (distinct elements)",
+    "cpu": [
+     21,
+     -8,
+     -5
+    ],
+    "gpu": [
+     21,
+     -8,
+     -5
+    ],
+    "expected": [
+     21,
+     -8,
+     -5
+    ]
+   },
+   {
+    "name": "arr[1] *= arr[1]",
+    "cpu": [
+     49,
+     16,
+     1
+    ],
+    "gpu": [
+     49,
+     16,
+     1
+    ],
+    "expected": [
+     49,
+     16,
+     1
+    ]
+   },
+   {
+    "name": "arr[i] *= s (dynamic i)",
+    "cpu": [
+     21,
+     12,
+     -3
+    ],
+    "gpu": [
+     21,
+     12,
+     -3
+    ],
+    "expected": [
+     21,
+     12,
+     -3
+    ]
+   },
+   {
+    "name": "x.y *= s",
+    "cpu": [
+     3,
+     -8,
+     5
+    ],
+    "gpu": [
+     3,
+     -8,
+     5
+    ],
+    "expected": [
+     3,
+     -8,
+     5
+    ]
+   },
+   {
+    "name": "x.y += s",
+    "cpu": [
+     3,
+     2,
+     5
+    ],
+    "gpu": [
+     3,
+     2,
+     5
+    ],
+    "expected": [
+     3,
+     2,
+     5
+    ]
+   },
+   {
+    "name": "a *= a (self alias)",
+    "cpu": [
+     9,
+     4,
+     25
+    ],
+    "gpu": [
+     9,
+     4,
+     25
+    ],
+    "expected": [
+     9,
+     4,
+     25
+    ]
+   },
+   {
+    "name": "x = x * x",
+    "cpu": [
+     9,
+     4,
+     25
+    ],
+    "gpu": [
+     9,
+     4,
+     25
+    ],
+    "expected": [
+     9,
+     4,
+     25
+    ]
+   },
+   {
+    "name": "x = x * y chain",
+    "cpu": [
+     63,
+     16,
+     -25
+    ],
+    "gpu": [
+     63,
+     16,
+     -25
+    ],
+    "expected": [
+     63,
+     16,
+     -25
+    ]
+   },
+   {
+    "negativeControl": 2,
+    "transposedDetected": true
+   },
+   {
+    "negativeControl": 3,
+    "transposedDetected": true
+   },
+   {
+    "negativeControl": 4,
+    "transposedDetected": true
+   },
+   {
+    "fmaVec": {
+     "cpu": {
+      "error": "CPU implementation for fma on vectors not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+     },
+     "gpu": [
+      5,
+      11,
+      19
+     ]
+    }
+   }
+  ]
+ },
+ "intPropagation": [
+  {
+   "path": "vec2i std.mul(v,v)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297
+   ],
+   "cpu": [
+    0,
+    261134296
+   ],
+   "gpu": [
+    1,
+    261134297
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec2i v*v",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297
+   ],
+   "cpu": [
+    0,
+    261134296
+   ],
+   "gpu": [
+    1,
+    261134297
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec2i v.mul(v)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297
+   ],
+   "cpu": [
+    0,
+    261134296
+   ],
+   "gpu": [
+    1,
+    261134297
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec2i v*=v",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297
+   ],
+   "cpu": [
+    0,
+    261134296
+   ],
+   "gpu": [
+    1,
+    261134297
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec2i std.mul(v,s)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    2052577381
+   ],
+   "cpu": [
+    0,
+    2052577376
+   ],
+   "gpu": [
+    1,
+    2052577381
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec2i v*s",
+   "kind": "runtime",
+   "expected": [
+    1,
+    2052577381
+   ],
+   "cpu": [
+    0,
+    2052577376
+   ],
+   "gpu": [
+    1,
+    2052577381
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec2i v.mul(s)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    2052577381
+   ],
+   "cpu": [
+    0,
+    2052577376
+   ],
+   "gpu": [
+    1,
+    2052577381
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec2i v*=s",
+   "kind": "runtime",
+   "expected": [
+    1,
+    2052577381
+   ],
+   "cpu": [
+    0,
+    2052577376
+   ],
+   "gpu": [
+    1,
+    2052577381
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec2i std.mul(s,v)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    2052577381
+   ],
+   "cpu": [
+    0,
+    2052577376
+   ],
+   "gpu": [
+    1,
+    2052577381
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec2i s*v",
+   "kind": "runtime",
+   "expected": [
+    1,
+    2052577381
+   ],
+   "cpu": [
+    0,
+    2052577376
+   ],
+   "gpu": [
+    1,
+    2052577381
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec3i std.mul(v,v)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297,
+    -2147479015
+   ],
+   "cpu": [
+    0,
+    261134296,
+    -2147479015
+   ],
+   "gpu": [
+    1,
+    261134297,
+    -2147479015
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec3i v*v",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297,
+    -2147479015
+   ],
+   "cpu": [
+    0,
+    261134296,
+    -2147479015
+   ],
+   "gpu": [
+    1,
+    261134297,
+    -2147479015
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec3i v.mul(v)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297,
+    -2147479015
+   ],
+   "cpu": [
+    0,
+    261134296,
+    -2147479015
+   ],
+   "gpu": [
+    1,
+    261134297,
+    -2147479015
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec3i v*=v",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297,
+    -2147479015
+   ],
+   "cpu": [
+    0,
+    261134296,
+    -2147479015
+   ],
+   "gpu": [
+    1,
+    261134297,
+    -2147479015
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec3i std.mul(v,s)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    2052577381,
+    2147437307
+   ],
+   "cpu": [
+    0,
+    2052577376,
+    2147437307
+   ],
+   "gpu": [
+    1,
+    2052577381,
+    2147437307
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec3i v*s",
+   "kind": "runtime",
+   "expected": [
+    1,
+    2052577381,
+    2147437307
+   ],
+   "cpu": [
+    0,
+    2052577376,
+    2147437307
+   ],
+   "gpu": [
+    1,
+    2052577381,
+    2147437307
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec3i v.mul(s)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    2052577381,
+    2147437307
+   ],
+   "cpu": [
+    0,
+    2052577376,
+    2147437307
+   ],
+   "gpu": [
+    1,
+    2052577381,
+    2147437307
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec3i v*=s",
+   "kind": "runtime",
+   "expected": [
+    1,
+    2052577381,
+    2147437307
+   ],
+   "cpu": [
+    0,
+    2052577376,
+    2147437307
+   ],
+   "gpu": [
+    1,
+    2052577381,
+    2147437307
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec3i std.mul(s,v)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    2052577381,
+    2147437307
+   ],
+   "cpu": [
+    0,
+    2052577376,
+    2147437307
+   ],
+   "gpu": [
+    1,
+    2052577381,
+    2147437307
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec3i s*v",
+   "kind": "runtime",
+   "expected": [
+    1,
+    2052577381,
+    2147437307
+   ],
+   "cpu": [
+    0,
+    2052577376,
+    2147437307
+   ],
+   "gpu": [
+    1,
+    2052577381,
+    2147437307
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec4i std.mul(v,v)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297,
+    -2147479015,
+    0
+   ],
+   "cpu": [
+    0,
+    261134296,
+    -2147479015,
+    0
+   ],
+   "gpu": [
+    1,
+    261134297,
+    -2147479015,
+    0
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec4i v*v",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297,
+    -2147479015,
+    0
+   ],
+   "cpu": [
+    0,
+    261134296,
+    -2147479015,
+    0
+   ],
+   "gpu": [
+    1,
+    261134297,
+    -2147479015,
+    0
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec4i v.mul(v)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297,
+    -2147479015,
+    0
+   ],
+   "cpu": [
+    0,
+    261134296,
+    -2147479015,
+    0
+   ],
+   "gpu": [
+    1,
+    261134297,
+    -2147479015,
+    0
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec4i v*=v",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297,
+    -2147479015,
+    0
+   ],
+   "cpu": [
+    0,
+    261134296,
+    -2147479015,
+    0
+   ],
+   "gpu": [
+    1,
+    261134297,
+    -2147479015,
+    0
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec4i std.mul(v,s)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    2052577381,
+    2147437307,
+    65536
+   ],
+   "cpu": [
+    0,
+    2052577376,
+    2147437307,
+    65536
+   ],
+   "gpu": [
+    1,
+    2052577381,
+    2147437307,
+    65536
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec4i v*s",
+   "kind": "runtime",
+   "expected": [
+    1,
+    2052577381,
+    2147437307,
+    65536
+   ],
+   "cpu": [
+    0,
+    2052577376,
+    2147437307,
+    65536
+   ],
+   "gpu": [
+    1,
+    2052577381,
+    2147437307,
+    65536
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec4i v.mul(s)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    2052577381,
+    2147437307,
+    65536
+   ],
+   "cpu": [
+    0,
+    2052577376,
+    2147437307,
+    65536
+   ],
+   "gpu": [
+    1,
+    2052577381,
+    2147437307,
+    65536
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec4i v*=s",
+   "kind": "runtime",
+   "expected": [
+    1,
+    2052577381,
+    2147437307,
+    65536
+   ],
+   "cpu": [
+    0,
+    2052577376,
+    2147437307,
+    65536
+   ],
+   "gpu": [
+    1,
+    2052577381,
+    2147437307,
+    65536
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec4i std.mul(s,v)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    2052577381,
+    2147437307,
+    65536
+   ],
+   "cpu": [
+    0,
+    2052577376,
+    2147437307,
+    65536
+   ],
+   "gpu": [
+    1,
+    2052577381,
+    2147437307,
+    65536
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec4i s*v",
+   "kind": "runtime",
+   "expected": [
+    1,
+    2052577381,
+    2147437307,
+    65536
+   ],
+   "cpu": [
+    0,
+    2052577376,
+    2147437307,
+    65536
+   ],
+   "gpu": [
+    1,
+    2052577381,
+    2147437307,
+    65536
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec2u std.mul(v,v)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297
+   ],
+   "cpu": [
+    0,
+    261134296
+   ],
+   "gpu": [
+    1,
+    261134297
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec2u v*v",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297
+   ],
+   "cpu": [
+    0,
+    261134296
+   ],
+   "gpu": [
+    1,
+    261134297
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec2u v.mul(v)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297
+   ],
+   "cpu": [
+    0,
+    261134296
+   ],
+   "gpu": [
+    1,
+    261134297
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec2u v*=v",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297
+   ],
+   "cpu": [
+    0,
+    261134296
+   ],
+   "gpu": [
+    1,
+    261134297
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec2u std.mul(v,s)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    4200061029
+   ],
+   "cpu": [
+    0,
+    4200061056
+   ],
+   "gpu": [
+    1,
+    4200061029
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec2u v*s",
+   "kind": "runtime",
+   "expected": [
+    1,
+    4200061029
+   ],
+   "cpu": [
+    0,
+    4200061056
+   ],
+   "gpu": [
+    1,
+    4200061029
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec2u v.mul(s)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    4200061029
+   ],
+   "cpu": [
+    0,
+    4200061056
+   ],
+   "gpu": [
+    1,
+    4200061029
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec2u v*=s",
+   "kind": "runtime",
+   "expected": [
+    1,
+    4200061029
+   ],
+   "cpu": [
+    0,
+    4200061056
+   ],
+   "gpu": [
+    1,
+    4200061029
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec2u std.mul(s,v)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    4200061029
+   ],
+   "cpu": [
+    0,
+    4200061056
+   ],
+   "gpu": [
+    1,
+    4200061029
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec2u s*v",
+   "kind": "runtime",
+   "expected": [
+    1,
+    4200061029
+   ],
+   "cpu": [
+    0,
+    4200061056
+   ],
+   "gpu": [
+    1,
+    4200061029
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec3u std.mul(v,v)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297,
+    2147488281
+   ],
+   "cpu": [
+    0,
+    261134296,
+    2147488281
+   ],
+   "gpu": [
+    1,
+    261134297,
+    2147488281
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec3u v*v",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297,
+    2147488281
+   ],
+   "cpu": [
+    0,
+    261134296,
+    2147488281
+   ],
+   "gpu": [
+    1,
+    261134297,
+    2147488281
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec3u v.mul(v)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297,
+    2147488281
+   ],
+   "cpu": [
+    0,
+    261134296,
+    2147488281
+   ],
+   "gpu": [
+    1,
+    261134297,
+    2147488281
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec3u v*=v",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297,
+    2147488281
+   ],
+   "cpu": [
+    0,
+    261134296,
+    2147488281
+   ],
+   "gpu": [
+    1,
+    261134297,
+    2147488281
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec3u std.mul(v,s)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    4200061029,
+    4294920955
+   ],
+   "cpu": [
+    0,
+    4200061056,
+    4294920955
+   ],
+   "gpu": [
+    1,
+    4200061029,
+    4294920955
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec3u v*s",
+   "kind": "runtime",
+   "expected": [
+    1,
+    4200061029,
+    4294920955
+   ],
+   "cpu": [
+    0,
+    4200061056,
+    4294920955
+   ],
+   "gpu": [
+    1,
+    4200061029,
+    4294920955
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec3u v.mul(s)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    4200061029,
+    4294920955
+   ],
+   "cpu": [
+    0,
+    4200061056,
+    4294920955
+   ],
+   "gpu": [
+    1,
+    4200061029,
+    4294920955
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec3u v*=s",
+   "kind": "runtime",
+   "expected": [
+    1,
+    4200061029,
+    4294920955
+   ],
+   "cpu": [
+    0,
+    4200061056,
+    4294920955
+   ],
+   "gpu": [
+    1,
+    4200061029,
+    4294920955
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec3u std.mul(s,v)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    4200061029,
+    4294920955
+   ],
+   "cpu": [
+    0,
+    4200061056,
+    4294920955
+   ],
+   "gpu": [
+    1,
+    4200061029,
+    4294920955
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec3u s*v",
+   "kind": "runtime",
+   "expected": [
+    1,
+    4200061029,
+    4294920955
+   ],
+   "cpu": [
+    0,
+    4200061056,
+    4294920955
+   ],
+   "gpu": [
+    1,
+    4200061029,
+    4294920955
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec4u std.mul(v,v)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297,
+    2147488281,
+    4080271360
+   ],
+   "cpu": [
+    0,
+    261134296,
+    2147488281,
+    4080271360
+   ],
+   "gpu": [
+    1,
+    261134297,
+    2147488281,
+    4080271360
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec4u v*v",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297,
+    2147488281,
+    4080271360
+   ],
+   "cpu": [
+    0,
+    261134296,
+    2147488281,
+    4080271360
+   ],
+   "gpu": [
+    1,
+    261134297,
+    2147488281,
+    4080271360
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec4u v.mul(v)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297,
+    2147488281,
+    4080271360
+   ],
+   "cpu": [
+    0,
+    261134296,
+    2147488281,
+    4080271360
+   ],
+   "gpu": [
+    1,
+    261134297,
+    2147488281,
+    4080271360
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec4u v*=v",
+   "kind": "runtime",
+   "expected": [
+    1,
+    261134297,
+    2147488281,
+    4080271360
+   ],
+   "cpu": [
+    0,
+    261134296,
+    2147488281,
+    4080271360
+   ],
+   "gpu": [
+    1,
+    261134297,
+    2147488281,
+    4080271360
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec4u std.mul(v,s)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    4200061029,
+    4294920955,
+    1257966796
+   ],
+   "cpu": [
+    0,
+    4200061056,
+    4294920955,
+    1257967616
+   ],
+   "gpu": [
+    1,
+    4200061029,
+    4294920955,
+    1257966796
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec4u v*s",
+   "kind": "runtime",
+   "expected": [
+    1,
+    4200061029,
+    4294920955,
+    1257966796
+   ],
+   "cpu": [
+    0,
+    4200061056,
+    4294920955,
+    1257967616
+   ],
+   "gpu": [
+    1,
+    4200061029,
+    4294920955,
+    1257966796
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec4u v.mul(s)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    4200061029,
+    4294920955,
+    1257966796
+   ],
+   "cpu": [
+    0,
+    4200061056,
+    4294920955,
+    1257967616
+   ],
+   "gpu": [
+    1,
+    4200061029,
+    4294920955,
+    1257966796
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec4u v*=s",
+   "kind": "runtime",
+   "expected": [
+    1,
+    4200061029,
+    4294920955,
+    1257966796
+   ],
+   "cpu": [
+    0,
+    4200061056,
+    4294920955,
+    1257967616
+   ],
+   "gpu": [
+    1,
+    4200061029,
+    4294920955,
+    1257966796
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec4u std.mul(s,v)",
+   "kind": "runtime",
+   "expected": [
+    1,
+    4200061029,
+    4294920955,
+    1257966796
+   ],
+   "cpu": [
+    0,
+    4200061056,
+    4294920955,
+    1257967616
+   ],
+   "gpu": [
+    1,
+    4200061029,
+    4294920955,
+    1257966796
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec4u s*v",
+   "kind": "runtime",
+   "expected": [
+    1,
+    4200061029,
+    4294920955,
+    1257966796
+   ],
+   "cpu": [
+    0,
+    4200061056,
+    4294920955,
+    1257967616
+   ],
+   "gpu": [
+    1,
+    4200061029,
+    4294920955,
+    1257966796
+   ],
+   "cpuMatchesExpected": false
+  },
+  {
+   "path": "vec2i std.mul(X,Y)",
+   "kind": "const",
+   "operatorKeptInWgsl": false,
+   "expected": [
+    1,
+    261134297
+   ],
+   "baked": [
+    0,
+    261134296
+   ],
+   "matches": false,
+   "wgslTail": "fn item() -> vec2i { return vec2i(0, 261134296); } @group(0) @binding(0) var<storage, read_write> o: vec2i; fn body() { o = item(); }"
+  },
+  {
+   "path": "vec2i X*Y",
+   "kind": "const",
+   "operatorKeptInWgsl": false,
+   "expected": [
+    1,
+    261134297
+   ],
+   "baked": [
+    0,
+    261134296
+   ],
+   "matches": false,
+   "wgslTail": "fn item() -> vec2i { return vec2i(0, 261134296); } @group(0) @binding(0) var<storage, read_write> o: vec2i; fn body() { o = item(); }"
+  },
+  {
+   "path": "vec2i X.mul(Y)",
+   "kind": "const",
+   "operatorKeptInWgsl": false,
+   "expected": [
+    1,
+    261134297
+   ],
+   "baked": [
+    0,
+    261134296
+   ],
+   "matches": false,
+   "wgslTail": "fn item() -> vec2i { return vec2i(0, 261134296); } @group(0) @binding(0) var<storage, read_write> o: vec2i; fn body() { o = item(); }"
+  },
+  {
+   "path": "vec2i std.mul(X,S(s))",
+   "kind": "const",
+   "operatorKeptInWgsl": false,
+   "expected": [
+    1,
+    2052577381
+   ],
+   "baked": [
+    0,
+    2052577376
+   ],
+   "matches": false,
+   "wgslTail": "fn item() -> vec2i { return vec2i(0, 2052577376); } @group(0) @binding(0) var<storage, read_write> o: vec2i; fn body() { o = item(); }"
+  },
+  {
+   "path": "vec2i X*S(s)",
+   "kind": "const",
+   "operatorKeptInWgsl": false,
+   "expected": [
+    1,
+    2052577381
+   ],
+   "baked": [
+    0,
+    2052577376
+   ],
+   "matches": false,
+   "wgslTail": "fn item() -> vec2i { return vec2i(0, 2052577376); } @group(0) @binding(0) var<storage, read_write> o: vec2i; fn body() { o = item(); }"
+  },
+  {
+   "path": "vec2i std.mul(S(s),X)",
+   "kind": "const",
+   "operatorKeptInWgsl": false,
+   "expected": [
+    1,
+    2052577381
+   ],
+   "baked": [
+    0,
+    2052577376
+   ],
+   "matches": false,
+   "wgslTail": "fn item() -> vec2i { return vec2i(0, 2052577376); } @group(0) @binding(0) var<storage, read_write> o: vec2i; fn body() { o = item(); }"
+  },
+  {
+   "path": "vec2i vec2i(X) *= Y (runtime var)",
+   "kind": "const",
+   "operatorKeptInWgsl": true,
+   "expected": [
+    1,
+    261134297
+   ],
+   "baked": [
+    1,
+    261134297
+   ],
+   "matches": true,
+   "wgslTail": " = vec2i(2147483647, 94906267); x *= vec2i(2147483647, 94906267); return x; } @group(0) @binding(0) var<storage, read_write> o: vec2i; fn body() { o = item(); }"
+  },
+  {
+   "path": "vec2u std.mul(X,Y)",
+   "kind": "const",
+   "operatorKeptInWgsl": false,
+   "expected": [
+    1,
+    261134297
+   ],
+   "baked": [
+    0,
+    261134296
+   ],
+   "matches": false,
+   "wgslTail": "fn item() -> vec2u { return vec2u(0, 261134296); } @group(0) @binding(0) var<storage, read_write> o: vec2u; fn body() { o = item(); }"
+  },
+  {
+   "path": "vec2u X*Y",
+   "kind": "const",
+   "operatorKeptInWgsl": false,
+   "expected": [
+    1,
+    261134297
+   ],
+   "baked": [
+    0,
+    261134296
+   ],
+   "matches": false,
+   "wgslTail": "fn item() -> vec2u { return vec2u(0, 261134296); } @group(0) @binding(0) var<storage, read_write> o: vec2u; fn body() { o = item(); }"
+  },
+  {
+   "path": "vec2u X.mul(Y)",
+   "kind": "const",
+   "operatorKeptInWgsl": false,
+   "expected": [
+    1,
+    261134297
+   ],
+   "baked": [
+    0,
+    261134296
+   ],
+   "matches": false,
+   "wgslTail": "fn item() -> vec2u { return vec2u(0, 261134296); } @group(0) @binding(0) var<storage, read_write> o: vec2u; fn body() { o = item(); }"
+  },
+  {
+   "path": "vec2u std.mul(X,S(s))",
+   "kind": "const",
+   "operatorKeptInWgsl": false,
+   "expected": [
+    1,
+    4200061029
+   ],
+   "baked": [
+    0,
+    4200061056
+   ],
+   "matches": false,
+   "wgslTail": "fn item() -> vec2u { return vec2u(0, 4200061056); } @group(0) @binding(0) var<storage, read_write> o: vec2u; fn body() { o = item(); }"
+  },
+  {
+   "path": "vec2u X*S(s)",
+   "kind": "const",
+   "operatorKeptInWgsl": false,
+   "expected": [
+    1,
+    4200061029
+   ],
+   "baked": [
+    0,
+    4200061056
+   ],
+   "matches": false,
+   "wgslTail": "fn item() -> vec2u { return vec2u(0, 4200061056); } @group(0) @binding(0) var<storage, read_write> o: vec2u; fn body() { o = item(); }"
+  },
+  {
+   "path": "vec2u std.mul(S(s),X)",
+   "kind": "const",
+   "operatorKeptInWgsl": false,
+   "expected": [
+    1,
+    4200061029
+   ],
+   "baked": [
+    0,
+    4200061056
+   ],
+   "matches": false,
+   "wgslTail": "fn item() -> vec2u { return vec2u(0, 4200061056); } @group(0) @binding(0) var<storage, read_write> o: vec2u; fn body() { o = item(); }"
+  },
+  {
+   "path": "vec2u vec2u(X) *= Y (runtime var)",
+   "kind": "const",
+   "operatorKeptInWgsl": true,
+   "expected": [
+    1,
+    261134297
+   ],
+   "baked": [
+    1,
+    261134297
+   ],
+   "matches": true,
+   "wgslTail": " = vec2u(4294967295, 94906267); x *= vec2u(4294967295, 94906267); return x; } @group(0) @binding(0) var<storage, read_write> o: vec2u; fn body() { o = item(); }"
+  },
+  {
+   "path": "vec2i std.sub/add (control)",
+   "kind": "control",
+   "pairs": 36,
+   "mismatches": 0
+  },
+  {
+   "path": "vec2u std.sub/add (control)",
+   "kind": "control",
+   "pairs": 36,
+   "mismatches": 0
+  },
+  {
+   "path": "vec2i std.dot",
+   "kind": "dot",
+   "cpu": 4620693213648296000,
+   "exactBigInt": "4620693213648295898",
+   "wrapped": 261134298,
+   "cpuIsExact": false
+  },
+  {
+   "path": "vec2i d.cast(std.dot)",
+   "kind": "dotCast",
+   "cpu": 261134336,
+   "expected": 261134298
+  },
+  {
+   "path": "vec2u std.dot",
+   "kind": "dot",
+   "cpu": 18455751264635490000,
+   "exactBigInt": "18455751264635492314",
+   "wrapped": 261134298,
+   "cpuIsExact": false
+  },
+  {
+   "path": "vec2u d.cast(std.dot)",
+   "kind": "dotCast",
+   "cpu": 261132288,
+   "expected": 261134298
+  },
+  {
+   "path": "vec2i += / -= (control)",
+   "kind": "control",
+   "pairs": 36,
+   "mismatches": 0
+  },
+  {
+   "path": "vec2u += / -= (control)",
+   "kind": "control",
+   "pairs": 36,
+   "mismatches": 0
+  }
+ ],
+ "newFindings": {
+  "N1 *=": {
+   "plainJs": [
+    30,
+    5,
+    7,
+    1
+   ],
+   "gpu": [
+    30,
+    5,
+    7,
+    1
+   ],
+   "cpu": [
+    50,
+    5,
+    7,
+    2
+   ]
+  },
+  "N1 +=": {
+   "plainJs": [
+    13,
+    5,
+    7,
+    1
+   ],
+   "gpu": [
+    13,
+    5,
+    7,
+    1
+   ],
+   "cpu": [
+    15,
+    5,
+    7,
+    2
+   ]
+  },
+  "N1 -=": {
+   "plainJs": [
+    -7,
+    5,
+    7,
+    1
+   ],
+   "gpu": [
+    -7,
+    5,
+    7,
+    1
+   ],
+   "cpu": [
+    -5,
+    5,
+    7,
+    2
+   ]
+  },
+  "N1 /=": {
+   "plainJs": [
+    1.5,
+    5,
+    7,
+    1
+   ],
+   "gpu": [
+    1.5,
+    5,
+    7,
+    1
+   ],
+   "cpu": [
+    2.5,
+    5,
+    7,
+    2
+   ]
+  },
+  "N2 vec2i [10,3] * 1.9 std.mul": {
+   "cpu": [
+    18,
+    5
+   ],
+   "gpu": [
+    10,
+    3
+   ],
+   "implicitConversionWarned": true,
+   "wgsl": "fn item_1(a: vec2i, b: f32) -> vec2i { return (a * i32(b)); } @group(0) @binding(0) var<storage, read_write> b: vec2i; @"
+  },
+  "N2 vec2i [10,3] * 1.9 a*b": {
+   "cpu": [
+    18,
+    5
+   ],
+   "gpu": [
+    10,
+    3
+   ],
+   "implicitConversionWarned": true,
+   "wgsl": "fn item_1(a: vec2i, b: f32) -> vec2i { return (a * i32(b)); } @group(0) @binding(0) var<storage, read_write> b: vec2i; @"
+  },
+  "N2 vec2i [10,3] * 1.9 a.mul(b)": {
+   "cpu": [
+    18,
+    5
+   ],
+   "gpu": [
+    10,
+    3
+   ],
+   "implicitConversionWarned": true,
+   "wgsl": "fn item_1(a: vec2i, b: f32) -> vec2i { return (a * i32(b)); } @group(0) @binding(0) var<storage, read_write> b: vec2i; @"
+  },
+  "N2 vec2i [10,3] * 1.9 b*a": {
+   "cpu": [
+    18,
+    5
+   ],
+   "gpu": [
+    10,
+    3
+   ],
+   "implicitConversionWarned": true,
+   "wgsl": "fn item_1(a: f32, b: vec2i) -> vec2i { return (i32(a) * b); } @group(0) @binding(0) var<storage, read_write> b: f32; @gr"
+  },
+  "N2 vec2i [10,3] * 1.5 std.mul": {
+   "cpu": [
+    15,
+    4
+   ],
+   "gpu": [
+    10,
+    3
+   ],
+   "implicitConversionWarned": true,
+   "wgsl": "fn item_1(a: vec2i, b: f32) -> vec2i { return (a * i32(b)); } @group(0) @binding(0) var<storage, read_write> b: vec2i; @"
+  },
+  "N2 vec2i [10,3] * 1.5 a*b": {
+   "cpu": [
+    15,
+    4
+   ],
+   "gpu": [
+    10,
+    3
+   ],
+   "implicitConversionWarned": true,
+   "wgsl": "fn item_1(a: vec2i, b: f32) -> vec2i { return (a * i32(b)); } @group(0) @binding(0) var<storage, read_write> b: vec2i; @"
+  },
+  "N2 vec2i [10,3] * 1.5 a.mul(b)": {
+   "cpu": [
+    15,
+    4
+   ],
+   "gpu": [
+    10,
+    3
+   ],
+   "implicitConversionWarned": true,
+   "wgsl": "fn item_1(a: vec2i, b: f32) -> vec2i { return (a * i32(b)); } @group(0) @binding(0) var<storage, read_write> b: vec2i; @"
+  },
+  "N2 vec2i [10,3] * 1.5 b*a": {
+   "cpu": [
+    15,
+    4
+   ],
+   "gpu": [
+    10,
+    3
+   ],
+   "implicitConversionWarned": true,
+   "wgsl": "fn item_1(a: f32, b: vec2i) -> vec2i { return (i32(a) * b); } @group(0) @binding(0) var<storage, read_write> b: f32; @gr"
+  },
+  "N2 vec2i [10,3] * -0.5 std.mul": {
+   "cpu": [
+    -5,
+    -1
+   ],
+   "gpu": [
+    0,
+    0
+   ],
+   "implicitConversionWarned": true,
+   "wgsl": "fn item_1(a: vec2i, b: f32) -> vec2i { return (a * i32(b)); } @group(0) @binding(0) var<storage, read_write> b: vec2i; @"
+  },
+  "N2 vec2i [10,3] * -0.5 a*b": {
+   "cpu": [
+    -5,
+    -1
+   ],
+   "gpu": [
+    0,
+    0
+   ],
+   "implicitConversionWarned": true,
+   "wgsl": "fn item_1(a: vec2i, b: f32) -> vec2i { return (a * i32(b)); } @group(0) @binding(0) var<storage, read_write> b: vec2i; @"
+  },
+  "N2 vec2i [10,3] * -0.5 a.mul(b)": {
+   "cpu": [
+    -5,
+    -1
+   ],
+   "gpu": [
+    0,
+    0
+   ],
+   "implicitConversionWarned": true,
+   "wgsl": "fn item_1(a: vec2i, b: f32) -> vec2i { return (a * i32(b)); } @group(0) @binding(0) var<storage, read_write> b: vec2i; @"
+  },
+  "N2 vec2i [10,3] * -0.5 b*a": {
+   "cpu": [
+    -5,
+    -1
+   ],
+   "gpu": [
+    0,
+    0
+   ],
+   "implicitConversionWarned": true,
+   "wgsl": "fn item_1(a: f32, b: vec2i) -> vec2i { return (i32(a) * b); } @group(0) @binding(0) var<storage, read_write> b: f32; @gr"
+  },
+  "N2 vec2u [10,3] * 2.5 std.mul": {
+   "cpu": [
+    25,
+    7
+   ],
+   "gpu": [
+    20,
+    6
+   ],
+   "implicitConversionWarned": true,
+   "wgsl": "fn item_1(a: vec2u, b: f32) -> vec2u { return (a * u32(b)); } @group(0) @binding(0) var<storage, read_write> b: vec2u; @"
+  },
+  "N2 vec2u [10,3] * 2.5 a*b": {
+   "cpu": [
+    25,
+    7
+   ],
+   "gpu": [
+    20,
+    6
+   ],
+   "implicitConversionWarned": true,
+   "wgsl": "fn item_1(a: vec2u, b: f32) -> vec2u { return (a * u32(b)); } @group(0) @binding(0) var<storage, read_write> b: vec2u; @"
+  },
+  "N2 vec2u [10,3] * 2.5 a.mul(b)": {
+   "cpu": [
+    25,
+    7
+   ],
+   "gpu": [
+    20,
+    6
+   ],
+   "implicitConversionWarned": true,
+   "wgsl": "fn item_1(a: vec2u, b: f32) -> vec2u { return (a * u32(b)); } @group(0) @binding(0) var<storage, read_write> b: vec2u; @"
+  },
+  "N2 vec2u [10,3] * 2.5 b*a": {
+   "cpu": [
+    25,
+    7
+   ],
+   "gpu": [
+    20,
+    6
+   ],
+   "implicitConversionWarned": true,
+   "wgsl": "fn item_1(a: f32, b: vec2u) -> vec2u { return (u32(a) * b); } @group(0) @binding(0) var<storage, read_write> b: f32; @gr"
+  },
+  "N2 vec3i [7,-7,100] * 0.5 std.mul": {
+   "cpu": [
+    3,
+    -3,
+    50
+   ],
+   "gpu": [
+    0,
+    0,
+    0
+   ],
+   "implicitConversionWarned": true,
+   "wgsl": "fn item_1(a: vec3i, b: f32) -> vec3i { return (a * i32(b)); } @group(0) @binding(0) var<storage, read_write> b: vec3i; @"
+  },
+  "N2 vec3i [7,-7,100] * 0.5 a*b": {
+   "cpu": [
+    3,
+    -3,
+    50
+   ],
+   "gpu": [
+    0,
+    0,
+    0
+   ],
+   "implicitConversionWarned": true,
+   "wgsl": "fn item_1(a: vec3i, b: f32) -> vec3i { return (a * i32(b)); } @group(0) @binding(0) var<storage, read_write> b: vec3i; @"
+  },
+  "N2 vec3i [7,-7,100] * 0.5 a.mul(b)": {
+   "cpu": [
+    3,
+    -3,
+    50
+   ],
+   "gpu": [
+    0,
+    0,
+    0
+   ],
+   "implicitConversionWarned": true,
+   "wgsl": "fn item_1(a: vec3i, b: f32) -> vec3i { return (a * i32(b)); } @group(0) @binding(0) var<storage, read_write> b: vec3i; @"
+  },
+  "N2 vec3i [7,-7,100] * 0.5 b*a": {
+   "cpu": [
+    3,
+    -3,
+    50
+   ],
+   "gpu": [
+    0,
+    0,
+    0
+   ],
+   "implicitConversionWarned": true,
+   "wgsl": "fn item_1(a: f32, b: vec3i) -> vec3i { return (i32(a) * b); } @group(0) @binding(0) var<storage, read_write> b: f32; @gr"
+  },
+  "N2 literal 1.5": {
+   "cpu": [
+    15,
+    4
+   ],
+   "gpu": [
+    10,
+    3
+   ]
+  },
+  "N2 folded": {
+   "baked": [
+    10,
+    3
+   ],
+   "wgsl": "fn value() -> vec2i { return vec2i(10, 3); } @group(0) @binding(0) var<storage, read_write> o: vec2i; fn body() { o = value(); }"
+  },
+  "N3 vec2f *= i32": {
+   "cpu": [
+    6,
+    9
+   ],
+   "compoundGpu": "VALIDATION: Error while parsing WGSL: :7:5 error: no matching overload for 'operator *= (vec2<f32>, i32)'",
+   "binaryGpu": [
+    6,
+    9
+   ]
+  },
+  "N3 vec2f *= u32": {
+   "cpu": [
+    6,
+    9
+   ],
+   "compoundGpu": "VALIDATION: Error while parsing WGSL: :7:5 error: no matching overload for 'operator *= (vec2<f32>, u32)'",
+   "binaryGpu": [
+    6,
+    9
+   ]
+  },
+  "N3 vec2f += i32": {
+   "cpu": [
+    5,
+    6
+   ],
+   "compoundGpu": "VALIDATION: Error while parsing WGSL: :7:5 error: no matching overload for 'operator += (vec2<f32>, i32)'",
+   "binaryGpu": [
+    5,
+    6
+   ]
+  },
+  "N3 vec2i *= u32": {
+   "cpu": [
+    6,
+    9
+   ],
+   "compoundGpu": "VALIDATION: Error while parsing WGSL: :7:5 error: no matching overload for 'operator *= (vec2<i32>, u32)'",
+   "binaryGpu": [
+    6,
+    9
+   ]
+  },
+  "N3 vec2u *= i32": {
+   "cpu": [
+    6,
+    9
+   ],
+   "compoundGpu": "VALIDATION: Error while parsing WGSL: :7:5 error: no matching overload for 'operator *= (vec2<u32>, i32)'",
+   "binaryGpu": [
+    6,
+    9
+   ]
+  },
+  "N3 vec2i *= f32": {
+   "cpu": [
+    3,
+    4
+   ],
+   "compoundGpu": "VALIDATION: Error while parsing WGSL: :7:5 error: no matching overload for 'operator *= (vec2<i32>, f32)'",
+   "binaryGpu": [
+    2,
+    3
+   ]
+  },
+  "N3 i32 *= f32": {
+   "cpu": 3,
+   "gpu": 2
+  },
+  "N4 fma i32": {
+   "cpu": 16777217,
+   "gpu": 16777216,
+   "wgsl": "fn f(a: i32, b: i32) -> f32 { return fma(f32(a), f32(b), 0f); } @group(0) @binding(0) var<storage, r"
+  },
+  "N4 u32*i32": {
+   "cpu": 8589934590,
+   "gpu": -2
+  },
+  "N5": {
+   "cpu": {
+    "error": "Cannot set property xy of [object Object] which has only a getter"
+   },
+   "gpu": [
+    10,
+    15
+   ],
+   "wgslLanguageFeatureSwizzleAssignment": true
+  },
+  "N6": {
+   "f1Cpu": [
+    10,
+    15
+   ],
+   "f1Gpu": "Resolution of the following tree failed: | - computePipelineCore | - computeFn:<unnamed> | - fn:wrappedCallback | - fn*:f1(vec2f, f32): 'a *= b' is invalid, because non-pointer arguments cannot be mut",
+   "f2Gpu": "Resolution of the following tree failed: | - computePipelineCore | - computeFn:<unnamed> | - fn:wrappedCallback | - fn*:f2(vec2f, f32): 'let x = a' is invalid, because references cannot be assigned to",
+   "callerAfterF2": [
+    4,
+    3
+   ],
+   "callerAfterF1": [
+    2,
+    3
+   ]
+  },
+  "N7 mat3 * vec4": {
+   "cpu": {
+    "error": "Unsupported signature. Kind 'mat3x3f' cannot be multiplied by 'vec4f'."
+   },
+   "gpu": "VALIDATION: Error while parsing WGSL: :6:11 error: no matching overload for 'operator * (mat3x3<f32>, vec4<f32>)'"
+  },
+  "N7 vec3i * mat3": {
+   "cpu": {
+    "error": "Unsupported signature. Kind 'vec3i' cannot be multiplied by 'mat3x3f'."
+   },
+   "gpu": "VALIDATION: Error while parsing WGSL: :6:11 error: no matching overload for 'operator * (vec3<i32>, mat3x3<f32>)'"
+  },
+  "N7 mat3 *= vec3": {
+   "cpu": {
+    "value": [
+     30,
+     36,
+     42
+    ]
+   },
+   "gpu": "VALIDATION: Error while parsing WGSL: :7:5 error: cannot assign 'vec3<f32>' to 'mat3x3<f32>'"
+  },
+  "N7 mix(vec2i, vec2i, 0.5)": {
+   "cpu": {
+    "error": "Unsupported signature. Expected one of 'number, vec2f, vec3f, vec4f, vec2h, vec3h, vec4h', got 'vec2i'."
+   },
+   "gpu": "VALIDATION: Error while parsing WGSL: :6:10 error: no matching call to 'mix(vec2<i32>, vec2<i32>, i32)'"
+  },
+  "N8": {
+   "cpu": [
+    3.0000000054977558e+38,
+    0,
+    0
+   ],
+   "gpu": [
+    null,
+    0,
+    0
+   ]
+  }
+ },
+ "matrixCtors": {
+  "ctors": [
+   {
+    "name": "translation4",
+    "arg": [
+     1,
+     2,
+     3
+    ],
+    "maxCpuErr": 0,
+    "maxGpuErr": 0
+   },
+   {
+    "name": "translation4",
+    "arg": [
+     -4,
+     0.5,
+     8
+    ],
+    "maxCpuErr": 0,
+    "maxGpuErr": 0
+   },
+   {
+    "name": "translation4",
+    "arg": [
+     0,
+     0,
+     0
+    ],
+    "maxCpuErr": 0,
+    "maxGpuErr": 0
+   },
+   {
+    "name": "scaling4",
+    "arg": [
+     1,
+     2,
+     3
+    ],
+    "maxCpuErr": 0,
+    "maxGpuErr": 0
+   },
+   {
+    "name": "scaling4",
+    "arg": [
+     -4,
+     0.5,
+     8
+    ],
+    "maxCpuErr": 0,
+    "maxGpuErr": 0
+   },
+   {
+    "name": "scaling4",
+    "arg": [
+     0,
+     0,
+     0
+    ],
+    "maxCpuErr": 0,
+    "maxGpuErr": 0
+   },
+   {
+    "name": "rotationX4",
+    "arg": 0,
+    "maxCpuErr": 0,
+    "maxGpuErr": 0
+   },
+   {
+    "name": "rotationX4",
+    "arg": 0.5,
+    "maxCpuErr": 1.1841544633739431e-8,
+    "maxGpuErr": 1.889938427979132e-8
+   },
+   {
+    "name": "rotationX4",
+    "arg": 1,
+    "maxCpuErr": 2.9256811640010483e-8,
+    "maxGpuErr": 3.159911643457747e-8
+   },
+   {
+    "name": "rotationX4",
+    "arg": 2.5,
+    "maxCpuErr": 2.8911344096549385e-8,
+    "maxGpuErr": 8.851598887194001e-8
+   },
+   {
+    "name": "rotationX4",
+    "arg": -1.25,
+    "maxCpuErr": 6.94181323535048e-9,
+    "maxGpuErr": 5.600490871060515e-8
+   },
+   {
+    "name": "rotationX4",
+    "arg": 1.5707963705062866,
+    "maxCpuErr": 1.7151244835361023e-15,
+    "maxGpuErr": 1.7151244835361023e-15
+   },
+   {
+    "name": "rotationY4",
+    "arg": 0,
+    "maxCpuErr": 0,
+    "maxGpuErr": 0
+   },
+   {
+    "name": "rotationY4",
+    "arg": 0.5,
+    "maxCpuErr": 1.1841544633739431e-8,
+    "maxGpuErr": 1.889938427979132e-8
+   },
+   {
+    "name": "rotationY4",
+    "arg": 1,
+    "maxCpuErr": 2.9256811640010483e-8,
+    "maxGpuErr": 3.159911643457747e-8
+   },
+   {
+    "name": "rotationY4",
+    "arg": 2.5,
+    "maxCpuErr": 2.8911344096549385e-8,
+    "maxGpuErr": 8.851598887194001e-8
+   },
+   {
+    "name": "rotationY4",
+    "arg": -1.25,
+    "maxCpuErr": 6.94181323535048e-9,
+    "maxGpuErr": 5.600490871060515e-8
+   },
+   {
+    "name": "rotationY4",
+    "arg": 1.5707963705062866,
+    "maxCpuErr": 1.7151244835361023e-15,
+    "maxGpuErr": 1.7151244835361023e-15
+   },
+   {
+    "name": "rotationZ4",
+    "arg": 0,
+    "maxCpuErr": 0,
+    "maxGpuErr": 0
+   },
+   {
+    "name": "rotationZ4",
+    "arg": 0.5,
+    "maxCpuErr": 1.1841544633739431e-8,
+    "maxGpuErr": 1.889938427979132e-8
+   },
+   {
+    "name": "rotationZ4",
+    "arg": 1,
+    "maxCpuErr": 2.9256811640010483e-8,
+    "maxGpuErr": 3.159911643457747e-8
+   },
+   {
+    "name": "rotationZ4",
+    "arg": 2.5,
+    "maxCpuErr": 2.8911344096549385e-8,
+    "maxGpuErr": 8.851598887194001e-8
+   },
+   {
+    "name": "rotationZ4",
+    "arg": -1.25,
+    "maxCpuErr": 6.94181323535048e-9,
+    "maxGpuErr": 5.600490871060515e-8
+   },
+   {
+    "name": "rotationZ4",
+    "arg": 1.5707963705062866,
+    "maxCpuErr": 1.7151244835361023e-15,
+    "maxGpuErr": 1.7151244835361023e-15
+   }
+  ],
+  "products": [
+   {
+    "name": "translate4",
+    "arg": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "name": "translate4",
+    "arg": [
+     -4,
+     0.5,
+     8
+    ]
+   },
+   {
+    "name": "translate4",
+    "arg": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "scale4",
+    "arg": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "name": "scale4",
+    "arg": [
+     -4,
+     0.5,
+     8
+    ]
+   },
+   {
+    "name": "scale4",
+    "arg": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "rotateX4",
+    "arg": 0
+   },
+   {
+    "name": "rotateX4",
+    "arg": 0.5
+   },
+   {
+    "name": "rotateX4",
+    "arg": 1
+   },
+   {
+    "name": "rotateX4",
+    "arg": 2.5
+   },
+   {
+    "name": "rotateX4",
+    "arg": -1.25
+   },
+   {
+    "name": "rotateX4",
+    "arg": 1.5707963705062866
+   },
+   {
+    "name": "rotateY4",
+    "arg": 0
+   },
+   {
+    "name": "rotateY4",
+    "arg": 0.5
+   },
+   {
+    "name": "rotateY4",
+    "arg": 1
+   },
+   {
+    "name": "rotateY4",
+    "arg": 2.5
+   },
+   {
+    "name": "rotateY4",
+    "arg": -1.25
+   },
+   {
+    "name": "rotateY4",
+    "arg": 1.5707963705062866
+   },
+   {
+    "name": "rotateZ4",
+    "arg": 0
+   },
+   {
+    "name": "rotateZ4",
+    "arg": 0.5
+   },
+   {
+    "name": "rotateZ4",
+    "arg": 1
+   },
+   {
+    "name": "rotateZ4",
+    "arg": 2.5
+   },
+   {
+    "name": "rotateZ4",
+    "arg": -1.25
+   },
+   {
+    "name": "rotateZ4",
+    "arg": 1.5707963705062866
+   }
+  ]
+ }
+}

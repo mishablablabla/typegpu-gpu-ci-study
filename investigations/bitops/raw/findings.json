@@ -1,0 +1,119 @@
+{
+ "cpuU32": [
+  {
+   "n": "u32 0x80000000 | 1",
+   "cpu": -2147483647,
+   "wgsl": 2147483649
+  },
+  {
+   "n": "u32 UINT_MAX & UINT_MAX",
+   "cpu": -1,
+   "wgsl": 4294967295
+  },
+  {
+   "n": "u32 1 ^ UINT_MAX",
+   "cpu": -2,
+   "wgsl": 4294967294
+  },
+  {
+   "n": "~u32(0)",
+   "cpu": -1,
+   "wgsl": 4294967295
+  },
+  {
+   "n": "u32 1 << 31",
+   "cpu": -2147483648,
+   "wgsl": 2147483648
+  },
+  {
+   "n": "u32 UINT_MAX >> 1 (deprecated form)",
+   "cpu": -1,
+   "wgsl": 2147483647
+  }
+ ],
+ "cpuVec": [
+  {
+   "n": "~vec3i",
+   "cpu": -1,
+   "type": "number"
+  },
+  {
+   "n": "vec3i >> vec3u",
+   "cpu": 0,
+   "type": "number"
+  },
+  {
+   "n": "vec3u >>> vec3u",
+   "cpu": 0,
+   "type": "number"
+  },
+  {
+   "n": "v & w",
+   "cpu": 0,
+   "type": "number"
+  }
+ ],
+ "clampVecScalar": {
+  "wgsl": "fn hClamp(a: vec3i, b: i32) -> vec3i { return clamp(a, b, b); } fn fClamp() -> vec3i { return hClamp(vec3i(0, 2, 9), 1i); }",
+  "dawn": "no matching call to 'clamp(vec3<i32>, i32, i32)'"
+ },
+ "invalidWgslNotThrown": {
+  "threw": false,
+  "bufferAfter": 7
+ },
+ "shlConst": {
+  "wgsl": "fn f() -> i32 { const x = 1i; return (x << 31u); }",
+  "r": {
+   "error": "Error while parsing WGSL: :7:11 error: shift left operation results in sign change"
+  }
+ },
+ "runtimeShiftLiteral33": {
+  "wgsl": "@group(0) @binding(0) var<storage, read_write> buf: u32; fn f() -> u32 { return (buf << 33u); }",
+  "r": {
+   "error": "Error while parsing WGSL: :8:11 error: shift left value must be less than the bit width of the lhs, which is 32"
+  }
+ },
+ "shiftVecConst": {
+  "viaStd": {
+   "wgsl": "fn viaStd() -> vec3u { return vec3u(2, 4, 6); }",
+   "a": [
+    2,
+    4,
+    6
+   ]
+  },
+  "viaOp": {
+   "wgsl": "fn viaOp() -> vec3u { let v = vec3u(1, 2, 3); return (v << vec3u(33)); }",
+   "b": "Error while parsing WGSL: :7:11 error: shift left value must be less than the bit width of the lhs, which is 32"
+  }
+ },
+ "clampLoGtHi": {
+  "wgsl": "fn f() -> i32 { return 0i; }",
+  "r": {
+   "value": 0
+  }
+ },
+ "literal d.u32(~0)": {
+  "cpu": 4294967295,
+  "wgsl": "fn item() -> u32 { return u32(~0); }",
+  "gpu": "Error while parsing WGSL: :6:10 error: value -1 cannot be represented as 'u32'"
+ },
+ "literal d.u32(1 << 32)": {
+  "cpu": 1,
+  "wgsl": "fn item() -> u32 { return u32((1 << 32u)); }",
+  "gpu": "Error while parsing WGSL: :6:10 error: value 4294967296 cannot be represented as 'u32'"
+ },
+ "literal d.i32(1 << 31)": {
+  "cpu": -2147483648,
+  "wgsl": "fn item() -> i32 { return i32((1 << 31u)); }",
+  "gpu": "Error while parsing WGSL: :6:10 error: value 2147483648 cannot be represented as 'i32'"
+ },
+ "intMinAbs": {
+  "scalar": "Error while parsing WGSL: :6:10 error: value cannot be represented as 'i32'",
+  "vec": [
+   -2147483648,
+   0,
+   1
+  ]
+ }
+}

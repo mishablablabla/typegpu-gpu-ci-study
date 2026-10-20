@@ -1,0 +1,99 @@
+[
+ {
+  "fn": "pack4xI8",
+  "cases": 32,
+  "gpuMismatch": 0,
+  "gpuFirst": [],
+  "cpu": {
+   "mismatch": 0,
+   "threwCases": 0,
+   "outOfRange": 0,
+   "firstBad": [],
+   "cases": []
+  }
+ },
+ {
+  "fn": "pack4xI8Clamp",
+  "cases": 32,
+  "gpuMismatch": 0,
+  "gpuFirst": [],
+  "cpu": {
+   "mismatch": 0,
+   "threwCases": 0,
+   "outOfRange": 0,
+   "firstBad": [],
+   "cases": []
+  }
+ },
+ {
+  "fn": "pack4xU8",
+  "cases": 24,
+  "gpuMismatch": 0,
+  "gpuFirst": [],
+  "cpu": {
+   "mismatch": 0,
+   "threwCases": 0,
+   "outOfRange": 0,
+   "firstBad": [],
+   "cases": []
+  }
+ },
+ {
+  "fn": "pack4xU8Clamp",
+  "cases": 24,
+  "gpuMismatch": 0,
+  "gpuFirst": [],
+  "cpu": {
+   "mismatch": 0,
+   "threwCases": 0,
+   "outOfRange": 0,
+   "firstBad": [],
+   "cases": []
+  }
+ },
+ {
+  "fn": "unpack4xI8",
+  "cases": 12,
+  "gpuMismatch": 0,
+  "gpuFirst": [],
+  "cpu": {
+   "mismatch": 0,
+   "threwCases": 0,
+   "outOfRange": 0,
+   "firstBad": [],
+   "cases": []
+  }
+ },
+ {
+  "fn": "unpack4xU8",
+  "cases": 12,
+  "gpuMismatch": 0,
+  "gpuFirst": [],
+  "cpu": {
+   "mismatch": 0,
+   "threwCases": 0,
+   "outOfRange": 0,
+   "firstBad": [],
+   "cases": []
+  }
+ },
+ {
+  "fn": "dot4U8Packed",
+  "cases": 144,
+  "gpuMismatch": 0,
+  "gpuFirst": [],
+  "cpu": "throws: CPU implementation for dot4U8Packed not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+ },
+ {
+  "fn": "dot4I8Packed",
+  "cases": 144,
+  "gpuMismatch": 0,
+  "gpuFirst": [],
+  "cpu": "throws: CPU implementation for dot4I8Packed not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues"
+ },
+ {
+  "constPath": [],
+  "constChecked": 48,
+  "constWrongOrRejected": 0
+ }
+]

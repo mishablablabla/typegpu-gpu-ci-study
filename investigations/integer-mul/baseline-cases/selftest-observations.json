@@ -1,0 +1,119 @@
+{
+ "file": "selftest-observations",
+ "groups": [],
+ "knownDivergences": [],
+ "observations": [
+  {
+   "label": "adapter",
+   "value": {
+    "vendor": "apple",
+    "architecture": "metal-3",
+    "device": "apple-m3-pro",
+    "description": "Metal driver on macOS Version 26.3 (Build 25D125)",
+    "isFallbackAdapter": false
+   }
+  },
+  {
+   "label": "adapterFeatures",
+   "value": [
+    "atomic-vec2u-min-max",
+    "bgra8unorm-storage",
+    "clip-distances",
+    "core-features-and-limits",
+    "depth-clip-control",
+    "depth32float-stencil8",
+    "dual-source-blending",
+    "float32-blendable",
+    "float32-filterable",
+    "indirect-first-instance",
+    "primitive-index",
+    "rg11b10ufloat-renderable",
+    "shader-f16",
+    "subgroup-size-control",
+    "subgroups",
+    "texture-component-swizzle",
+    "texture-compression-astc",
+    "texture-compression-astc-sliced-3d",
+    "texture-compression-bc",
+    "texture-compression-bc-sliced-3d",
+    "texture-compression-etc2",
+    "texture-compression-unaligned",
+    "texture-formats-tier1",
+    "texture-formats-tier2",
+    "timestamp-query"
+   ]
+  },
+  {
+   "label": "shader-f16",
+   "value": true
+  },
+  {
+   "label": "wgsl:std.div i32",
+   "value": [
+    "fn item_1(a: i32, b: i32) -> f32 {",
+    "return (f32(a) / f32(b));",
+    "return;"
+   ]
+  },
+  {
+   "label": "wgsl:std.mod i32",
+   "value": [
+    "fn item_1(a: i32, b: i32) -> f32 {",
+    "return (f32(a) % f32(b));",
+    "return;"
+   ]
+  },
+  {
+   "label": "wgsl:std.intdiv i32",
+   "value": [
+    "fn item_1(a: i32, b: i32) -> i32 {",
+    "return (a / b);",
+    "return;"
+   ]
+  },
+  {
+   "label": "wgsl-enables-f16-for-f32-code",
+   "value": true
+  },
+  {
+   "label": "cpu-vec2f(NaN)",
+   "value": "Cannot convert value 'NaN' to type f32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)"
+  },
+  {
+   "label": "comptime inf in shader",
+   "value": "Resolution of the following tree failed: | - computePipelineCore | - computeFn:<unnamed> | - fn:wrappedCallback | - vec2f(Infinity, 1): Value 'Infinity' (abstractFloat) cannot be resolved due to WGSL's Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption). This value might be a result of a comptime-evaluated operation."
+  },
+  {
+   "label": "gpu-read-vec2f-with-inf",
+   "value": "Cannot convert value 'Infinity' to type f32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)"
+  },
+  {
+   "label": "f32 16777216+1",
+   "value": {
+    "cpu": 16777217,
+    "gpu": 16777216
+   }
+  },
+  {
+   "label": "std.intdiv(vec2i)",
+   "value": "Resolution of the following tree failed: | - computePipelineCore | - computeFn:<unnamed> | - fn:wrappedCallback"
+  },
+  {
+   "label": "cpu vec2i INT_MAX*INT_MAX",
+   "value": {
+    "cpu": 0,
+    "wgslWrapAround": 1
+   }
+  },
+  {
+   "label": "smoothstep(const equal edges)",
+   "value": [
+    "error: smoothstep called with 'low' (0.5) equal to 'high' (0.5)"
+   ]
+  },
+  {
+   "label": "smoothstep(runtime equal edges)",
+   "value": []
+  }
+ ]
+}

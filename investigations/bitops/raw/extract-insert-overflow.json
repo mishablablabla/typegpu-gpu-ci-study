@@ -1,0 +1,58 @@
+[
+ {
+  "op": "std.extractBits",
+  "type": "i32",
+  "overflowLaneChecks": 1178,
+  "mismatchesVsSpecFormula": 0,
+  "first": []
+ },
+ {
+  "op": "std.extractBits",
+  "type": "u32",
+  "overflowLaneChecks": 874,
+  "mismatchesVsSpecFormula": 0,
+  "first": []
+ },
+ {
+  "op": "std.extractBits",
+  "type": "vec3i",
+  "overflowLaneChecks": 3534,
+  "mismatchesVsSpecFormula": 0,
+  "first": []
+ },
+ {
+  "op": "std.extractBits",
+  "type": "vec3u",
+  "overflowLaneChecks": 2622,
+  "mismatchesVsSpecFormula": 0,
+  "first": []
+ },
+ {
+  "op": "std.insertBits",
+  "type": "i32",
+  "overflowLaneChecks": 1428,
+  "mismatchesVsSpecFormula": 0,
+  "first": []
+ },
+ {
+  "op": "std.insertBits",
+  "type": "u32",
+  "overflowLaneChecks": 1428,
+  "mismatchesVsSpecFormula": 0,
+  "first": []
+ },
+ {
+  "op": "std.insertBits",
+  "type": "vec3i",
+  "overflowLaneChecks": 4284,
+  "mismatchesVsSpecFormula": 0,
+  "first": []
+ },
+ {
+  "op": "std.insertBits",
+  "type": "vec3u",
+  "overflowLaneChecks": 4284,
+  "mismatchesVsSpecFormula": 0,
+  "first": []
+ }
+]

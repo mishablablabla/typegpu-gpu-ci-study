@@ -1,0 +1,29 @@
+--- a/packages/typegpu/src/std/operators.ts
++++ b/packages/typegpu/src/std/operators.ts
+@@ -178,14 +178,26 @@
+   if (typeof lhs === 'number' && typeof rhs === 'number') {
+     return lhs * rhs; // default multiplication
+   }
++  // Integer (i32/u32) vectors must wrap modulo 2^32 like WGSL does. `a * b` is evaluated in f64 and loses
++  // the low bits once the exact product exceeds 2^53, so the element cast (`| 0` / `>>> 0`) cannot recover
++  // them; `Math.imul` multiplies exactly modulo 2^32 (the element cast then only reinterprets the sign).
+   if (typeof lhs === 'number' && (isVecInstance(rhs) || isMatInstance(rhs))) {
++    if (isInteger32VecInstance(rhs) && Number.isInteger(lhs)) {
++      return generalizeFn((e) => Math.imul(lhs, e), [rhs]); // scale (exact 32-bit)
++    }
+     return generalizeFn((e) => lhs * e, [rhs]); // scale
+   }
+   if ((isVecInstance(lhs) || isMatInstance(lhs)) && typeof rhs === 'number') {
++    if (isInteger32VecInstance(lhs) && Number.isInteger(rhs)) {
++      return generalizeFn((e) => Math.imul(e, rhs), [lhs]); // scale (exact 32-bit)
++    }
+     return generalizeFn((e) => e * rhs, [lhs]); // scale
+   }
+   if (isVecInstance(lhs) && isVecInstance(rhs)) {
+     assertEqualKinds(lhs, rhs);
++    if (isInteger32VecInstance(lhs)) {
++      return generalizeFn((a, b) => Math.imul(a, b), [lhs, rhs]); // component-wise (exact 32-bit)
++    }
+     return generalizeFn((a, b) => a * b, [lhs, rhs]); // component-wise
+   }
+   if (isFloat32VecInstance(lhs) && isMatInstance(rhs)) {

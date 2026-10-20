@@ -1,0 +1,1185 @@
+{
+ "mulMatrix": {
+  "vec2i": {
+   "lanes": 800,
+   "lanesAbove2pow53": 142,
+   "cpuMismatches": 68,
+   "gpuMismatches": 0,
+   "cpuThrew": 0,
+   "cpuMismatchesWhereF64ProductWasExact": 0,
+   "cpuMismatchesBelow2pow53": 0,
+   "cpuMismatchSamples": [
+    {
+     "type": "vec2i",
+     "lane": 0,
+     "a": 2147483647,
+     "b": 2147483647,
+     "expected": 1,
+     "cpu": 0,
+     "gpu": 1,
+     "exactProduct": "4611686014132420609"
+    },
+    {
+     "type": "vec2i",
+     "lane": 0,
+     "a": 2147483647,
+     "b": 94906265,
+     "expected": 2052577383,
+     "cpu": 2052577376,
+     "gpu": 2052577383,
+     "exactProduct": "203809652085348455"
+    },
+    {
+     "type": "vec2i",
+     "lane": 0,
+     "a": 2147483647,
+     "b": 94906266,
+     "expected": -94906266,
+     "cpu": -94906272,
+     "gpu": -94906266,
+     "exactProduct": "203809654232832102"
+    },
+    {
+     "type": "vec2i",
+     "lane": 0,
+     "a": 2147483647,
+     "b": 94906267,
+     "expected": 2052577381,
+     "cpu": 2052577376,
+     "gpu": 2052577381,
+     "exactProduct": "203809656380315749"
+    },
+    {
+     "type": "vec2i",
+     "lane": 0,
+     "a": 2147483647,
+     "b": 134217727,
+     "expected": 2013265921,
+     "cpu": 2013265920,
+     "gpu": 2013265921,
+     "exactProduct": "288230373870010369"
+    }
+   ],
+   "gpuMismatchSamples": [],
+   "cpuEqualsModelForEveryLane": true
+  },
+  "vec3i": {
+   "lanes": 1200,
+   "lanesAbove2pow53": 213,
+   "cpuMismatches": 102,
+   "gpuMismatches": 0,
+   "cpuThrew": 0,
+   "cpuMismatchesWhereF64ProductWasExact": 0,
+   "cpuMismatchesBelow2pow53": 0,
+   "cpuMismatchSamples": [
+    {
+     "type": "vec3i",
+     "lane": 0,
+     "a": 2147483647,
+     "b": 2147483647,
+     "expected": 1,
+     "cpu": 0,
+     "gpu": 1,
+     "exactProduct": "4611686014132420609"
+    },
+    {
+     "type": "vec3i",
+     "lane": 0,
+     "a": 2147483647,
+     "b": 94906265,
+     "expected": 2052577383,
+     "cpu": 2052577376,
+     "gpu": 2052577383,
+     "exactProduct": "203809652085348455"
+    },
+    {
+     "type": "vec3i",
+     "lane": 0,
+     "a": 2147483647,
+     "b": 94906266,
+     "expected": -94906266,
+     "cpu": -94906272,
+     "gpu": -94906266,
+     "exactProduct": "203809654232832102"
+    },
+    {
+     "type": "vec3i",
+     "lane": 0,
+     "a": 2147483647,
+     "b": 94906267,
+     "expected": 2052577381,
+     "cpu": 2052577376,
+     "gpu": 2052577381,
+     "exactProduct": "203809656380315749"
+    },
+    {
+     "type": "vec3i",
+     "lane": 0,
+     "a": 2147483647,
+     "b": 134217727,
+     "expected": 2013265921,
+     "cpu": 2013265920,
+     "gpu": 2013265921,
+     "exactProduct": "288230373870010369"
+    }
+   ],
+   "gpuMismatchSamples": [],
+   "cpuEqualsModelForEveryLane": true
+  },
+  "vec4i": {
+   "lanes": 1600,
+   "lanesAbove2pow53": 284,
+   "cpuMismatches": 136,
+   "gpuMismatches": 0,
+   "cpuThrew": 0,
+   "cpuMismatchesWhereF64ProductWasExact": 0,
+   "cpuMismatchesBelow2pow53": 0,
+   "cpuMismatchSamples": [
+    {
+     "type": "vec4i",
+     "lane": 0,
+     "a": 2147483647,
+     "b": 2147483647,
+     "expected": 1,
+     "cpu": 0,
+     "gpu": 1,
+     "exactProduct": "4611686014132420609"
+    },
+    {
+     "type": "vec4i",
+     "lane": 0,
+     "a": 2147483647,
+     "b": 94906265,
+     "expected": 2052577383,
+     "cpu": 2052577376,
+     "gpu": 2052577383,
+     "exactProduct": "203809652085348455"
+    },
+    {
+     "type": "vec4i",
+     "lane": 0,
+     "a": 2147483647,
+     "b": 94906266,
+     "expected": -94906266,
+     "cpu": -94906272,
+     "gpu": -94906266,
+     "exactProduct": "203809654232832102"
+    },
+    {
+     "type": "vec4i",
+     "lane": 0,
+     "a": 2147483647,
+     "b": 94906267,
+     "expected": 2052577381,
+     "cpu": 2052577376,
+     "gpu": 2052577381,
+     "exactProduct": "203809656380315749"
+    },
+    {
+     "type": "vec4i",
+     "lane": 0,
+     "a": 2147483647,
+     "b": 134217727,
+     "expected": 2013265921,
+     "cpu": 2013265920,
+     "gpu": 2013265921,
+     "exactProduct": "288230373870010369"
+    }
+   ],
+   "gpuMismatchSamples": [],
+   "cpuEqualsModelForEveryLane": true
+  },
+  "vec2u": {
+   "lanes": 800,
+   "lanesAbove2pow53": 318,
+   "cpuMismatches": 212,
+   "gpuMismatches": 0,
+   "cpuThrew": 0,
+   "cpuMismatchesWhereF64ProductWasExact": 0,
+   "cpuMismatchesBelow2pow53": 0,
+   "cpuMismatchSamples": [
+    {
+     "type": "vec2u",
+     "lane": 0,
+     "a": 4294967295,
+     "b": 4294967295,
+     "expected": 1,
+     "cpu": 0,
+     "gpu": 1,
+     "exactProduct": "18446744065119617025"
+    },
+    {
+     "type": "vec2u",
+     "lane": 0,
+     "a": 4294967295,
+     "b": 4294967294,
+     "expected": 2,
+     "cpu": 0,
+     "gpu": 2,
+     "exactProduct": "18446744060824649730"
+    },
+    {
+     "type": "vec2u",
+     "lane": 0,
+     "a": 4294967295,
+     "b": 2147483647,
+     "expected": 2147483649,
+     "cpu": 2147483648,
+     "gpu": 2147483649,
+     "exactProduct": "9223372030412324865"
+    },
+    {
+     "type": "vec2u",
+     "lane": 1,
+     "a": 2147483647,
+     "b": 4294967291,
+     "expected": 2147483653,
+     "cpu": 2147483648,
+     "gpu": 2147483653,
+     "exactProduct": "9223372021822390277"
+    },
+    {
+     "type": "vec2u",
+     "lane": 1,
+     "a": 2147483647,
+     "b": 94906265,
+     "expected": 2052577383,
+     "cpu": 2052577376,
+     "gpu": 2052577383,
+     "exactProduct": "203809652085348455"
+    }
+   ],
+   "gpuMismatchSamples": [],
+   "cpuEqualsModelForEveryLane": true
+  },
+  "vec3u": {
+   "lanes": 1200,
+   "lanesAbove2pow53": 477,
+   "cpuMismatches": 318,
+   "gpuMismatches": 0,
+   "cpuThrew": 0,
+   "cpuMismatchesWhereF64ProductWasExact": 0,
+   "cpuMismatchesBelow2pow53": 0,
+   "cpuMismatchSamples": [
+    {
+     "type": "vec3u",
+     "lane": 0,
+     "a": 4294967295,
+     "b": 4294967295,
+     "expected": 1,
+     "cpu": 0,
+     "gpu": 1,
+     "exactProduct": "18446744065119617025"
+    },
+    {
+     "type": "vec3u",
+     "lane": 0,
+     "a": 4294967295,
+     "b": 4294967294,
+     "expected": 2,
+     "cpu": 0,
+     "gpu": 2,
+     "exactProduct": "18446744060824649730"
+    },
+    {
+     "type": "vec3u",
+     "lane": 0,
+     "a": 4294967295,
+     "b": 2147483647,
+     "expected": 2147483649,
+     "cpu": 2147483648,
+     "gpu": 2147483649,
+     "exactProduct": "9223372030412324865"
+    },
+    {
+     "type": "vec3u",
+     "lane": 1,
+     "a": 2147483647,
+     "b": 4294967291,
+     "expected": 2147483653,
+     "cpu": 2147483648,
+     "gpu": 2147483653,
+     "exactProduct": "9223372021822390277"
+    },
+    {
+     "type": "vec3u",
+     "lane": 1,
+     "a": 2147483647,
+     "b": 94906265,
+     "expected": 2052577383,
+     "cpu": 2052577376,
+     "gpu": 2052577383,
+     "exactProduct": "203809652085348455"
+    }
+   ],
+   "gpuMismatchSamples": [],
+   "cpuEqualsModelForEveryLane": true
+  },
+  "vec4u": {
+   "lanes": 1600,
+   "lanesAbove2pow53": 636,
+   "cpuMismatches": 424,
+   "gpuMismatches": 0,
+   "cpuThrew": 0,
+   "cpuMismatchesWhereF64ProductWasExact": 0,
+   "cpuMismatchesBelow2pow53": 0,
+   "cpuMismatchSamples": [
+    {
+     "type": "vec4u",
+     "lane": 0,
+     "a": 4294967295,
+     "b": 4294967295,
+     "expected": 1,
+     "cpu": 0,
+     "gpu": 1,
+     "exactProduct": "18446744065119617025"
+    },
+    {
+     "type": "vec4u",
+     "lane": 0,
+     "a": 4294967295,
+     "b": 4294967294,
+     "expected": 2,
+     "cpu": 0,
+     "gpu": 2,
+     "exactProduct": "18446744060824649730"
+    },
+    {
+     "type": "vec4u",
+     "lane": 0,
+     "a": 4294967295,
+     "b": 2147483647,
+     "expected": 2147483649,
+     "cpu": 2147483648,
+     "gpu": 2147483649,
+     "exactProduct": "9223372030412324865"
+    },
+    {
+     "type": "vec4u",
+     "lane": 3,
+     "a": 4294967291,
+     "b": 3037000499,
+     "expected": 1994866689,
+     "cpu": 1994866688,
+     "gpu": 1994866689,
+     "exactProduct": "13043817805955678209"
+    },
+    {
+     "type": "vec4u",
+     "lane": 1,
+     "a": 2147483647,
+     "b": 4294967291,
+     "expected": 2147483653,
+     "cpu": 2147483648,
+     "gpu": 2147483653,
+     "exactProduct": "9223372021822390277"
+    }
+   ],
+   "gpuMismatchSamples": [],
+   "cpuEqualsModelForEveryLane": true
+  }
+ },
+ "related": {
+  "add:vec2i": {
+   "lanes": 800,
+   "lanesAbove2pow53": 0,
+   "cpuMismatches": 0,
+   "gpuMismatches": 0,
+   "cpuThrew": 0,
+   "cpuMismatchesWhereF64ProductWasExact": 0,
+   "cpuMismatchesBelow2pow53": 0
+  },
+  "add:vec3i": {
+   "lanes": 1200,
+   "lanesAbove2pow53": 0,
+   "cpuMismatches": 0,
+   "gpuMismatches": 0,
+   "cpuThrew": 0,
+   "cpuMismatchesWhereF64ProductWasExact": 0,
+   "cpuMismatchesBelow2pow53": 0
+  },
+  "add:vec4i": {
+   "lanes": 1600,
+   "lanesAbove2pow53": 0,
+   "cpuMismatches": 0,
+   "gpuMismatches": 0,
+   "cpuThrew": 0,
+   "cpuMismatchesWhereF64ProductWasExact": 0,
+   "cpuMismatchesBelow2pow53": 0
+  },
+  "add:vec2u": {
+   "lanes": 800,
+   "lanesAbove2pow53": 0,
+   "cpuMismatches": 0,
+   "gpuMismatches": 0,
+   "cpuThrew": 0,
+   "cpuMismatchesWhereF64ProductWasExact": 0,
+   "cpuMismatchesBelow2pow53": 0
+  },
+  "add:vec3u": {
+   "lanes": 1200,
+   "lanesAbove2pow53": 0,
+   "cpuMismatches": 0,
+   "gpuMismatches": 0,
+   "cpuThrew": 0,
+   "cpuMismatchesWhereF64ProductWasExact": 0,
+   "cpuMismatchesBelow2pow53": 0
+  },
+  "add:vec4u": {
+   "lanes": 1600,
+   "lanesAbove2pow53": 0,
+   "cpuMismatches": 0,
+   "gpuMismatches": 0,
+   "cpuThrew": 0,
+   "cpuMismatchesWhereF64ProductWasExact": 0,
+   "cpuMismatchesBelow2pow53": 0
+  },
+  "sub:vec2i": {
+   "lanes": 800,
+   "lanesAbove2pow53": 0,
+   "cpuMismatches": 0,
+   "gpuMismatches": 0,
+   "cpuThrew": 0,
+   "cpuMismatchesWhereF64ProductWasExact": 0,
+   "cpuMismatchesBelow2pow53": 0
+  },
+  "sub:vec3i": {
+   "lanes": 1200,
+   "lanesAbove2pow53": 0,
+   "cpuMismatches": 0,
+   "gpuMismatches": 0,
+   "cpuThrew": 0,
+   "cpuMismatchesWhereF64ProductWasExact": 0,
+   "cpuMismatchesBelow2pow53": 0
+  },
+  "sub:vec4i": {
+   "lanes": 1600,
+   "lanesAbove2pow53": 0,
+   "cpuMismatches": 0,
+   "gpuMismatches": 0,
+   "cpuThrew": 0,
+   "cpuMismatchesWhereF64ProductWasExact": 0,
+   "cpuMismatchesBelow2pow53": 0
+  },
+  "sub:vec2u": {
+   "lanes": 800,
+   "lanesAbove2pow53": 0,
+   "cpuMismatches": 0,
+   "gpuMismatches": 0,
+   "cpuThrew": 0,
+   "cpuMismatchesWhereF64ProductWasExact": 0,
+   "cpuMismatchesBelow2pow53": 0
+  },
+  "sub:vec3u": {
+   "lanes": 1200,
+   "lanesAbove2pow53": 0,
+   "cpuMismatches": 0,
+   "gpuMismatches": 0,
+   "cpuThrew": 0,
+   "cpuMismatchesWhereF64ProductWasExact": 0,
+   "cpuMismatchesBelow2pow53": 0
+  },
+  "sub:vec4u": {
+   "lanes": 1600,
+   "lanesAbove2pow53": 0,
+   "cpuMismatches": 0,
+   "gpuMismatches": 0,
+   "cpuThrew": 0,
+   "cpuMismatchesWhereF64ProductWasExact": 0,
+   "cpuMismatchesBelow2pow53": 0
+  },
+  "neg:vec2i": {
+   "rows": 20,
+   "cpuEqual": true,
+   "gpuEqual": true
+  },
+  "neg:vec3i": {
+   "rows": 20,
+   "cpuEqual": true,
+   "gpuEqual": true
+  },
+  "neg:vec4i": {
+   "rows": 20,
+   "cpuEqual": true,
+   "gpuEqual": true
+  }
+ },
+ "fractions": {
+  "i32 |a|,|b| <= 94906265": {
+   "samples": 4000,
+   "cpuWrong": 0,
+   "modelPredictsWrong": 0,
+   "percentWrong": 0
+  },
+  "u32 a,b <= 94906265": {
+   "samples": 4000,
+   "cpuWrong": 0,
+   "modelPredictsWrong": 0,
+   "percentWrong": 0
+  },
+  "i32 full-range pairs": {
+   "samples": 4000,
+   "cpuWrong": 3721,
+   "modelPredictsWrong": 3721,
+   "percentWrong": 93
+  },
+  "u32 full-range pairs": {
+   "samples": 4000,
+   "cpuWrong": 3899,
+   "modelPredictsWrong": 3899,
+   "percentWrong": 97.5
+  },
+  "u32 state * 747796405 (PCG multiplier)": {
+   "samples": 4000,
+   "cpuWrong": 3945,
+   "modelPredictsWrong": 3945,
+   "percentWrong": 98.6
+  },
+  "u32 state * 2654435761 (Knuth multiplicative hash)": {
+   "samples": 4000,
+   "cpuWrong": 3976,
+   "modelPredictsWrong": 3976,
+   "percentWrong": 99.4
+  },
+  "u32 state * 1664525 (NR LCG)": {
+   "samples": 4000,
+   "cpuWrong": 0,
+   "modelPredictsWrong": 0,
+   "percentWrong": 0
+  }
+ },
+ "named": [
+  {
+   "id": "INT_MAX*INT_MAX",
+   "type": "vec2i",
+   "a": 2147483647,
+   "b": 2147483647,
+   "exactProduct": "4611686014132420609",
+   "above2pow53": true,
+   "expected": 1,
+   "cpu": 0,
+   "gpu": 1,
+   "cpuCorrect": false,
+   "gpuCorrect": true,
+   "secondLane": {
+    "a": 7,
+    "b": -7,
+    "expected": -49,
+    "cpu": -49,
+    "gpu": -49
+   }
+  },
+  {
+   "id": "INT_MAX*INT_MIN",
+   "type": "vec2i",
+   "a": 2147483647,
+   "b": -2147483648,
+   "exactProduct": "-4611686016279904256",
+   "above2pow53": true,
+   "expected": -2147483648,
+   "cpu": -2147483648,
+   "gpu": -2147483648,
+   "cpuCorrect": true,
+   "gpuCorrect": true,
+   "secondLane": {
+    "a": 7,
+    "b": -7,
+    "expected": -49,
+    "cpu": -49,
+    "gpu": -49
+   }
+  },
+  {
+   "id": "INT_MIN*INT_MIN",
+   "type": "vec2i",
+   "a": -2147483648,
+   "b": -2147483648,
+   "exactProduct": "4611686018427387904",
+   "above2pow53": true,
+   "expected": 0,
+   "cpu": 0,
+   "gpu": 0,
+   "cpuCorrect": true,
+   "gpuCorrect": true,
+   "secondLane": {
+    "a": 7,
+    "b": -7,
+    "expected": -49,
+    "cpu": -49,
+    "gpu": -49
+   }
+  },
+  {
+   "id": "INT_MIN*-1",
+   "type": "vec2i",
+   "a": -2147483648,
+   "b": -1,
+   "exactProduct": "2147483648",
+   "above2pow53": false,
+   "expected": -2147483648,
+   "cpu": -2147483648,
+   "gpu": -2147483648,
+   "cpuCorrect": true,
+   "gpuCorrect": true,
+   "secondLane": {
+    "a": 7,
+    "b": -7,
+    "expected": -49,
+    "cpu": -49,
+    "gpu": -49
+   }
+  },
+  {
+   "id": "-1*-1",
+   "type": "vec2i",
+   "a": -1,
+   "b": -1,
+   "exactProduct": "1",
+   "above2pow53": false,
+   "expected": 1,
+   "cpu": 1,
+   "gpu": 1,
+   "cpuCorrect": true,
+   "gpuCorrect": true,
+   "secondLane": {
+    "a": 7,
+    "b": -7,
+    "expected": -49,
+    "cpu": -49,
+    "gpu": -49
+   }
+  },
+  {
+   "id": "0*INT_MAX",
+   "type": "vec2i",
+   "a": 0,
+   "b": 2147483647,
+   "exactProduct": "0",
+   "above2pow53": false,
+   "expected": 0,
+   "cpu": 0,
+   "gpu": 0,
+   "cpuCorrect": true,
+   "gpuCorrect": true,
+   "secondLane": {
+    "a": 7,
+    "b": -7,
+    "expected": -49,
+    "cpu": -49,
+    "gpu": -49
+   }
+  },
+  {
+   "id": "2*INT_MAX",
+   "type": "vec2i",
+   "a": 2,
+   "b": 2147483647,
+   "exactProduct": "4294967294",
+   "above2pow53": false,
+   "expected": -2,
+   "cpu": -2,
+   "gpu": -2,
+   "cpuCorrect": true,
+   "gpuCorrect": true,
+   "secondLane": {
+    "a": 7,
+    "b": -7,
+    "expected": -49,
+    "cpu": -49,
+    "gpu": -49
+   }
+  },
+  {
+   "id": "65536*65536",
+   "type": "vec2i",
+   "a": 65536,
+   "b": 65536,
+   "exactProduct": "4294967296",
+   "above2pow53": false,
+   "expected": 0,
+   "cpu": 0,
+   "gpu": 0,
+   "cpuCorrect": true,
+   "gpuCorrect": true,
+   "secondLane": {
+    "a": 7,
+    "b": -7,
+    "expected": -49,
+    "cpu": -49,
+    "gpu": -49
+   }
+  },
+  {
+   "id": "46341*46341",
+   "type": "vec2i",
+   "a": 46341,
+   "b": 46341,
+   "exactProduct": "2147488281",
+   "above2pow53": false,
+   "expected": -2147479015,
+   "cpu": -2147479015,
+   "gpu": -2147479015,
+   "cpuCorrect": true,
+   "gpuCorrect": true,
+   "secondLane": {
+    "a": 7,
+    "b": -7,
+    "expected": -49,
+    "cpu": -49,
+    "gpu": -49
+   }
+  },
+  {
+   "id": "94906265*94906265 (< 2^53)",
+   "type": "vec2i",
+   "a": 94906265,
+   "b": 94906265,
+   "exactProduct": "9007199136250225",
+   "above2pow53": false,
+   "expected": -118490767,
+   "cpu": -118490767,
+   "gpu": -118490767,
+   "cpuCorrect": true,
+   "gpuCorrect": true,
+   "secondLane": {
+    "a": 7,
+    "b": -7,
+    "expected": -49,
+    "cpu": -49,
+    "gpu": -49
+   }
+  },
+  {
+   "id": "94906267*94906267 (> 2^53, odd)",
+   "type": "vec2i",
+   "a": 94906267,
+   "b": 94906267,
+   "exactProduct": "9007199515875289",
+   "above2pow53": true,
+   "expected": 261134297,
+   "cpu": 261134296,
+   "gpu": 261134297,
+   "cpuCorrect": false,
+   "gpuCorrect": true,
+   "secondLane": {
+    "a": 7,
+    "b": -7,
+    "expected": -49,
+    "cpu": -49,
+    "gpu": -49
+   }
+  },
+  {
+   "id": "UMAX*UMAX",
+   "type": "vec2u",
+   "a": 4294967295,
+   "b": 4294967295,
+   "exactProduct": "18446744065119617025",
+   "above2pow53": true,
+   "expected": 1,
+   "cpu": 0,
+   "gpu": 1,
+   "cpuCorrect": false,
+   "gpuCorrect": true,
+   "secondLane": {
+    "a": 7,
+    "b": 9,
+    "expected": 63,
+    "cpu": 63,
+    "gpu": 63
+   }
+  },
+  {
+   "id": "UMAX*2",
+   "type": "vec2u",
+   "a": 4294967295,
+   "b": 2,
+   "exactProduct": "8589934590",
+   "above2pow53": false,
+   "expected": 4294967294,
+   "cpu": 4294967294,
+   "gpu": 4294967294,
+   "cpuCorrect": true,
+   "gpuCorrect": true,
+   "secondLane": {
+    "a": 7,
+    "b": 9,
+    "expected": 63,
+    "cpu": 63,
+    "gpu": 63
+   }
+  },
+  {
+   "id": "2^31*2",
+   "type": "vec2u",
+   "a": 2147483648,
+   "b": 2,
+   "exactProduct": "4294967296",
+   "above2pow53": false,
+   "expected": 0,
+   "cpu": 0,
+   "gpu": 0,
+   "cpuCorrect": true,
+   "gpuCorrect": true,
+   "secondLane": {
+    "a": 7,
+    "b": 9,
+    "expected": 63,
+    "cpu": 63,
+    "gpu": 63
+   }
+  },
+  {
+   "id": "3037000499*3037000499",
+   "type": "vec2u",
+   "a": 3037000499,
+   "b": 3037000499,
+   "exactProduct": "9223372030926249001",
+   "above2pow53": true,
+   "expected": 2661407785,
+   "cpu": 2661407744,
+   "gpu": 2661407785,
+   "cpuCorrect": false,
+   "gpuCorrect": true,
+   "secondLane": {
+    "a": 7,
+    "b": 9,
+    "expected": 63,
+    "cpu": 63,
+    "gpu": 63
+   }
+  }
+ ],
+ "negativeControls": {
+  "wrongCpuDetected": true,
+  "brokenGpuMismatches": 800,
+  "imulFixPassesRegressionCondition": true
+ },
+ "scalarAndMixed": {
+  "operatorMulVec2i": {
+   "lanes": 800,
+   "lanesAbove2pow53": 142,
+   "cpuMismatches": 68,
+   "gpuMismatches": 0,
+   "cpuThrew": 0,
+   "cpuMismatchesWhereF64ProductWasExact": 0,
+   "cpuMismatchesBelow2pow53": 0,
+   "cpuMismatchSamples": [
+    {
+     "type": "vec2i",
+     "lane": 0,
+     "a": 2147483647,
+     "b": 2147483647,
+     "expected": 1,
+     "cpu": 0,
+     "gpu": 1,
+     "exactProduct": "4611686014132420609"
+    },
+    {
+     "type": "vec2i",
+     "lane": 0,
+     "a": 2147483647,
+     "b": 94906265,
+     "expected": 2052577383,
+     "cpu": 2052577376,
+     "gpu": 2052577383,
+     "exactProduct": "203809652085348455"
+    },
+    {
+     "type": "vec2i",
+     "lane": 0,
+     "a": 2147483647,
+     "b": 94906266,
+     "expected": -94906266,
+     "cpu": -94906272,
+     "gpu": -94906266,
+     "exactProduct": "203809654232832102"
+    }
+   ]
+  },
+  "explicitCast": [
+   {
+    "type": "i32",
+    "a": 2147483647,
+    "b": 2147483647,
+    "expected": 1,
+    "cpu": 0,
+    "gpu": 1
+   },
+   {
+    "type": "u32",
+    "a": 4294967295,
+    "b": 4294967295,
+    "expected": 1,
+    "cpu": 0,
+    "gpu": 1
+   },
+   {
+    "type": "i32",
+    "a": -2147483648,
+    "b": -2147483648,
+    "expected": 0,
+    "cpu": 0,
+    "gpu": 0
+   },
+   {
+    "type": "u32",
+    "a": 2654435761,
+    "b": 747796405,
+    "expected": 2042384677,
+    "cpu": 2042384640,
+    "gpu": 2042384677
+   }
+  ],
+  "mixed": [
+   {
+    "type": "vec2i",
+    "scalar": 2147483647,
+    "vector": [
+     2147483647,
+     7
+    ],
+    "expected": [
+     1,
+     2147483641
+    ],
+    "gpu": [
+     1,
+     2147483641
+    ],
+    "cpuVectorTimesScalar": [
+     0,
+     2147483641
+    ],
+    "cpuScalarTimesVector": [
+     0,
+     2147483641
+    ]
+   },
+   {
+    "type": "vec2u",
+    "scalar": 4294967295,
+    "vector": [
+     4294967295,
+     7
+    ],
+    "expected": [
+     1,
+     4294967289
+    ],
+    "gpu": [
+     1,
+     4294967289
+    ],
+    "cpuVectorTimesScalar": [
+     0,
+     4294967289
+    ],
+    "cpuScalarTimesVector": [
+     0,
+     4294967289
+    ]
+   }
+  ]
+ },
+ "intdiv": [
+  {
+   "a": 7,
+   "b": 2,
+   "cpu": 3,
+   "gpu": 3,
+   "wgslExpected": 3,
+   "cpuMatchesDocumentedFormula": true,
+   "cpuEqualsWgsl": true
+  },
+  {
+   "a": -7,
+   "b": 2,
+   "cpu": -3,
+   "gpu": -3,
+   "wgslExpected": -3,
+   "cpuMatchesDocumentedFormula": true,
+   "cpuEqualsWgsl": true
+  },
+  {
+   "a": 2147483647,
+   "b": 1,
+   "cpu": 2147483647,
+   "gpu": 2147483647,
+   "wgslExpected": 2147483647,
+   "cpuMatchesDocumentedFormula": true,
+   "cpuEqualsWgsl": true
+  },
+  {
+   "a": -2147483648,
+   "b": 1,
+   "cpu": -2147483648,
+   "gpu": -2147483648,
+   "wgslExpected": -2147483648,
+   "cpuMatchesDocumentedFormula": true,
+   "cpuEqualsWgsl": true
+  },
+  {
+   "a": 5,
+   "b": 0,
+   "cpu": "Infinity",
+   "gpu": 5,
+   "wgslExpected": 5,
+   "cpuMatchesDocumentedFormula": true,
+   "cpuEqualsWgsl": false
+  },
+  {
+   "a": 0,
+   "b": 0,
+   "cpu": "NaN",
+   "gpu": 0,
+   "wgslExpected": 0,
+   "cpuMatchesDocumentedFormula": true,
+   "cpuEqualsWgsl": false
+  },
+  {
+   "a": -2147483648,
+   "b": -1,
+   "cpu": 2147483648,
+   "gpu": -2147483648,
+   "wgslExpected": -2147483648,
+   "cpuMatchesDocumentedFormula": true,
+   "cpuEqualsWgsl": false
+  }
+ ],
+ "divMod": {
+  "emittedWgsl": {
+   "std.div(i32,i32)": [
+    "return (f32(a) / f32(b_2));"
+   ],
+   "std.div(vec2i,vec2i)": [
+    "return (a / b_2);"
+   ],
+   "std.mod(vec2i,vec2i)": [
+    "return (a % b_2);"
+   ]
+  },
+  "div:vec2i": {
+   "lanes": 800,
+   "gpuMismatches": 0,
+   "cpuMismatchesInRowsThatDidNotThrow": 0,
+   "cpuThrewRows": 40,
+   "cpuThrewMessage": "threw: Cannot convert value 'Infinity' to type i32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+   "cpuBadSamples": []
+  },
+  "div:vec3i": {
+   "lanes": 1200,
+   "gpuMismatches": 0,
+   "cpuMismatchesInRowsThatDidNotThrow": 0,
+   "cpuThrewRows": 60,
+   "cpuThrewMessage": "threw: Cannot convert value 'Infinity' to type i32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+   "cpuBadSamples": []
+  },
+  "div:vec4i": {
+   "lanes": 1600,
+   "gpuMismatches": 0,
+   "cpuMismatchesInRowsThatDidNotThrow": 0,
+   "cpuThrewRows": 80,
+   "cpuThrewMessage": "threw: Cannot convert value 'Infinity' to type i32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+   "cpuBadSamples": []
+  },
+  "div:vec2u": {
+   "lanes": 800,
+   "gpuMismatches": 0,
+   "cpuMismatchesInRowsThatDidNotThrow": 0,
+   "cpuThrewRows": 40,
+   "cpuThrewMessage": "threw: Cannot convert value 'Infinity' to type u32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+   "cpuBadSamples": []
+  },
+  "div:vec3u": {
+   "lanes": 1200,
+   "gpuMismatches": 0,
+   "cpuMismatchesInRowsThatDidNotThrow": 0,
+   "cpuThrewRows": 60,
+   "cpuThrewMessage": "threw: Cannot convert value 'Infinity' to type u32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+   "cpuBadSamples": []
+  },
+  "div:vec4u": {
+   "lanes": 1600,
+   "gpuMismatches": 0,
+   "cpuMismatchesInRowsThatDidNotThrow": 0,
+   "cpuThrewRows": 80,
+   "cpuThrewMessage": "threw: Cannot convert value 'Infinity' to type u32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+   "cpuBadSamples": []
+  },
+  "mod:vec2i": {
+   "lanes": 800,
+   "gpuMismatches": 0,
+   "cpuMismatchesInRowsThatDidNotThrow": 0,
+   "cpuThrewRows": 40,
+   "cpuThrewMessage": "threw: Cannot convert value 'NaN' to type i32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+   "cpuBadSamples": []
+  },
+  "mod:vec3i": {
+   "lanes": 1200,
+   "gpuMismatches": 0,
+   "cpuMismatchesInRowsThatDidNotThrow": 0,
+   "cpuThrewRows": 60,
+   "cpuThrewMessage": "threw: Cannot convert value 'NaN' to type i32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+   "cpuBadSamples": []
+  },
+  "mod:vec4i": {
+   "lanes": 1600,
+   "gpuMismatches": 0,
+   "cpuMismatchesInRowsThatDidNotThrow": 0,
+   "cpuThrewRows": 80,
+   "cpuThrewMessage": "threw: Cannot convert value 'NaN' to type i32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+   "cpuBadSamples": []
+  },
+  "mod:vec2u": {
+   "lanes": 800,
+   "gpuMismatches": 0,
+   "cpuMismatchesInRowsThatDidNotThrow": 0,
+   "cpuThrewRows": 40,
+   "cpuThrewMessage": "threw: Cannot convert value 'NaN' to type u32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+   "cpuBadSamples": []
+  },
+  "mod:vec3u": {
+   "lanes": 1200,
+   "gpuMismatches": 0,
+   "cpuMismatchesInRowsThatDidNotThrow": 0,
+   "cpuThrewRows": 60,
+   "cpuThrewMessage": "threw: Cannot convert value 'NaN' to type u32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+   "cpuBadSamples": []
+  },
+  "mod:vec4u": {
+   "lanes": 1600,
+   "gpuMismatches": 0,
+   "cpuMismatchesInRowsThatDidNotThrow": 0,
+   "cpuThrewRows": 80,
+   "cpuThrewMessage": "threw: Cannot convert value 'NaN' to type u32 because of the Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption)",
+   "cpuBadSamples": []
+  }
+ },
+ "reported": {
+  "inputs": [
+   [
+    2147483647,
+    2147483647
+   ],
+   [
+    2147483647,
+    2147483647
+   ]
+  ],
+  "expected": [
+   1,
+   1
+  ],
+  "cpu": [
+   0,
+   0
+  ],
+  "gpu": [
+   1,
+   1
+  ],
+  "viaHarness": "harness.ts run()"
+ },
+ "intdiv_vectorUnsupported": "Resolution of the following tree failed: | - computePipelineCore | - computeFn:<unnamed>"
+}

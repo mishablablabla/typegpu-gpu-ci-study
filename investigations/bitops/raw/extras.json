@@ -1,0 +1,398 @@
+{
+ "cpuMissing": [
+  {
+   "name": "std.countOneBits",
+   "cls": "MissingCpuImplError",
+   "message": "CPU implementation for countOneBits not implemented yet. Please submit an issue at https:/"
+  },
+  {
+   "name": "std.reverseBits",
+   "cls": "MissingCpuImplError",
+   "message": "CPU implementation for reverseBits not implemented yet. Please submit an issue at https://"
+  },
+  {
+   "name": "std.countLeadingZeros",
+   "cls": "MissingCpuImplError",
+   "message": "CPU implementation for countLeadingZeros not implemented yet. Please submit an issue at ht"
+  },
+  {
+   "name": "std.countTrailingZeros",
+   "cls": "MissingCpuImplError",
+   "message": "CPU implementation for countTrailingZeros not implemented yet. Please submit an issue at h"
+  },
+  {
+   "name": "std.firstLeadingBit",
+   "cls": "MissingCpuImplError",
+   "message": "CPU implementation for firstLeadingBit not implemented yet. Please submit an issue at http"
+  },
+  {
+   "name": "std.firstTrailingBit",
+   "cls": "MissingCpuImplError",
+   "message": "CPU implementation for firstTrailingBit not implemented yet. Please submit an issue at htt"
+  },
+  {
+   "name": "std.extractBits",
+   "cls": "MissingCpuImplError",
+   "message": "CPU implementation for extractBits not implemented yet. Please submit an issue at https://"
+  },
+  {
+   "name": "std.insertBits",
+   "cls": "MissingCpuImplError",
+   "message": "CPU implementation for insertBits not implemented yet. Please submit an issue at https://g"
+  },
+  {
+   "name": "std.dot4U8Packed",
+   "cls": "MissingCpuImplError",
+   "message": "CPU implementation for dot4U8Packed not implemented yet. Please submit an issue at https:/"
+  },
+  {
+   "name": "std.dot4I8Packed",
+   "cls": "MissingCpuImplError",
+   "message": "CPU implementation for dot4I8Packed not implemented yet. Please submit an issue at https:/"
+  },
+  {
+   "name": "std.countOneBits(vec3u)",
+   "cls": "MissingCpuImplError",
+   "message": "CPU implementation for countOneBits not implemented yet. Please submit an issue at https:/"
+  },
+  {
+   "name": "std.extractBits(vec3i)",
+   "cls": "MissingCpuImplError",
+   "message": "CPU implementation for extractBits not implemented yet. Please submit an issue at https://"
+  }
+ ],
+ "bitcastConst": {
+  "bad": [],
+  "intMinRejected": [
+   {
+    "fe": "u32",
+    "te": "i32",
+    "x": 2147483648,
+    "want": -2147483648,
+    "err": "Error while parsing WGSL: :6:11 error: value cannot be represented as 'i32'",
+    "wgsl": "r<storage, read_write> out: i32; fn item() { out = body(); }"
+   }
+  ]
+ },
+ "bitcast": [
+  {
+   "from": "i32",
+   "to": "u32",
+   "cases": 31,
+   "gpuMismatch": 0,
+   "cpuMismatch": 0,
+   "cpuFirst": [],
+   "gpuFirst": []
+  },
+  {
+   "from": "u32",
+   "to": "i32",
+   "cases": 23,
+   "gpuMismatch": 0,
+   "cpuMismatch": 0,
+   "cpuFirst": [],
+   "gpuFirst": []
+  },
+  {
+   "from": "i32",
+   "to": "f32",
+   "cases": 24,
+   "gpuMismatch": 0,
+   "cpuMismatch": 0,
+   "cpuFirst": [],
+   "gpuFirst": []
+  },
+  {
+   "from": "u32",
+   "to": "f32",
+   "cases": 20,
+   "gpuMismatch": 0,
+   "cpuMismatch": 0,
+   "cpuFirst": [],
+   "gpuFirst": []
+  },
+  {
+   "from": "f32",
+   "to": "i32",
+   "cases": 11,
+   "gpuMismatch": 0,
+   "cpuMismatch": 0,
+   "cpuFirst": [],
+   "gpuFirst": []
+  },
+  {
+   "from": "f32",
+   "to": "u32",
+   "cases": 11,
+   "gpuMismatch": 0,
+   "cpuMismatch": 0,
+   "cpuFirst": [],
+   "gpuFirst": []
+  },
+  {
+   "from": "vec3i",
+   "to": "vec3u",
+   "cases": 31,
+   "gpuMismatch": 0,
+   "cpuMismatch": 0,
+   "cpuFirst": [],
+   "gpuFirst": []
+  },
+  {
+   "from": "vec3u",
+   "to": "vec3i",
+   "cases": 23,
+   "gpuMismatch": 0,
+   "cpuMismatch": 0,
+   "cpuFirst": [],
+   "gpuFirst": []
+  },
+  {
+   "from": "vec3i",
+   "to": "vec3f",
+   "cases": 24,
+   "gpuMismatch": 0,
+   "cpuMismatch": 0,
+   "cpuFirst": [],
+   "gpuFirst": []
+  },
+  {
+   "from": "vec3u",
+   "to": "vec3f",
+   "cases": 20,
+   "gpuMismatch": 0,
+   "cpuMismatch": 0,
+   "cpuFirst": [],
+   "gpuFirst": []
+  },
+  {
+   "from": "vec3f",
+   "to": "vec3i",
+   "cases": 11,
+   "gpuMismatch": 0,
+   "cpuMismatch": 0,
+   "cpuFirst": [],
+   "gpuFirst": []
+  },
+  {
+   "from": "vec3f",
+   "to": "vec3u",
+   "cases": 11,
+   "gpuMismatch": 0,
+   "cpuMismatch": 0,
+   "cpuFirst": [],
+   "gpuFirst": []
+  }
+ ],
+ "shiftI32": {
+  "S": [
+   -1,
+   -2,
+   -31,
+   -32,
+   -33,
+   -2147483648,
+   5,
+   33
+  ],
+  "gpu": [
+   2147483648,
+   1073741824,
+   2,
+   1,
+   2147483648,
+   1,
+   32,
+   2
+  ],
+  "cpu": [
+   -2147483648,
+   1073741824,
+   2,
+   1,
+   -2147483648,
+   1,
+   32,
+   2
+  ],
+  "want": [
+   2147483648,
+   1073741824,
+   2,
+   1,
+   2147483648,
+   1,
+   32,
+   2
+  ]
+ },
+ "shiftF32": [
+  {
+   "s": 0,
+   "gpu": 1,
+   "cpu": 1,
+   "oracle": 1,
+   "cpuEqGpu": true
+  },
+  {
+   "s": 1,
+   "gpu": 2,
+   "cpu": 2,
+   "oracle": 2,
+   "cpuEqGpu": true
+  },
+  {
+   "s": 3.700000047683716,
+   "gpu": 8,
+   "cpu": 8,
+   "oracle": 8,
+   "cpuEqGpu": true
+  },
+  {
+   "s": 31.899999618530273,
+   "gpu": -2147483648,
+   "cpu": -2147483648,
+   "oracle": -2147483648,
+   "cpuEqGpu": true
+  },
+  {
+   "s": 32,
+   "gpu": 1,
+   "cpu": 1,
+   "oracle": 1,
+   "cpuEqGpu": true
+  },
+  {
+   "s": 33.5,
+   "gpu": 2,
+   "cpu": 2,
+   "oracle": 2,
+   "cpuEqGpu": true
+  },
+  {
+   "s": -1,
+   "gpu": 1,
+   "cpu": -2147483648,
+   "oracle": 1,
+   "cpuEqGpu": false
+  },
+  {
+   "s": -1.5,
+   "gpu": 1,
+   "cpu": -2147483648,
+   "oracle": 1,
+   "cpuEqGpu": false
+  },
+  {
+   "s": -33,
+   "gpu": 1,
+   "cpu": -2147483648,
+   "oracle": 1,
+   "cpuEqGpu": false
+  },
+  {
+   "s": 10000000000,
+   "gpu": 1,
+   "cpu": 1,
+   "oracle": 1,
+   "cpuEqGpu": true
+  },
+  {
+   "s": 3000000000,
+   "gpu": 1,
+   "cpu": 1,
+   "oracle": 1,
+   "cpuEqGpu": true
+  },
+  {
+   "s": 4294967296,
+   "gpu": 1,
+   "cpu": 1,
+   "oracle": 1,
+   "cpuEqGpu": true
+  },
+  {
+   "s": 100000002004087730000,
+   "gpu": 1,
+   "cpu": 1,
+   "oracle": 1,
+   "cpuEqGpu": true
+  }
+ ],
+ "shiftF32Diff": [
+  -1,
+  -1.5,
+  -33
+ ],
+ "clz32Float": [
+  {
+   "x": 0,
+   "gpu": 32,
+   "cpu": 32,
+   "oracle": 32
+  },
+  {
+   "x": 1,
+   "gpu": 31,
+   "cpu": 31,
+   "oracle": 31
+  },
+  {
+   "x": 3.700000047683716,
+   "gpu": 30,
+   "cpu": 30,
+   "oracle": 30
+  },
+  {
+   "x": -1.5,
+   "gpu": 0,
+   "cpu": 0,
+   "oracle": 0
+  },
+  {
+   "x": 255.89999389648438,
+   "gpu": 24,
+   "cpu": 24,
+   "oracle": 24
+  },
+  {
+   "x": 2147483648,
+   "gpu": 1,
+   "cpu": 0,
+   "oracle": 1
+  },
+  {
+   "x": 3000000000,
+   "gpu": 1,
+   "cpu": 0,
+   "oracle": 1
+  },
+  {
+   "x": 5000000000,
+   "gpu": 1,
+   "cpu": 2,
+   "oracle": 1
+  },
+  {
+   "x": -5000000000,
+   "gpu": 0,
+   "cpu": 0,
+   "oracle": 0
+  },
+  {
+   "x": 4294967296,
+   "gpu": 1,
+   "cpu": 32,
+   "oracle": 1
+  }
+ ],
+ "clz32FloatDiff": [
+  2147483648,
+  3000000000,
+  5000000000,
+  4294967296
+ ],
+ "literalU32Max": {
+  "wgsl": "fn body() -> i32 { return countOneBits(4294967295i); }"
+ }
+}

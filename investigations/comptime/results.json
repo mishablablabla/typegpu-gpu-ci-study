@@ -1,0 +1,1446 @@
+{
+ "summary": [
+  {
+   "key": "std.add | vec2i",
+   "cases": 31,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.sub | vec2i",
+   "cases": 31,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.mul | vec2i",
+   "cases": 31,
+   "cpuWrong": 4,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 4,
+   "leaksSilent": 4
+  },
+  {
+   "key": "a * b | vec2i",
+   "cases": 31,
+   "cpuWrong": 4,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 4,
+   "leaksSilent": 4
+  },
+  {
+   "key": "a + b | vec2i",
+   "cases": 31,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a - b | vec2i",
+   "cases": 31,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.min | vec2i",
+   "cases": 31,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.max | vec2i",
+   "cases": 31,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a / b | vec2i",
+   "cases": 28,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a % b | vec2i",
+   "cases": 28,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a & b | vec2i",
+   "cases": 31,
+   "cpuWrong": 31,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a | b | vec2i",
+   "cases": 31,
+   "cpuWrong": 31,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a ^ b | vec2i",
+   "cases": 31,
+   "cpuWrong": 31,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a << b | vec2i",
+   "cases": 17,
+   "cpuWrong": 17,
+   "runtimeWrong": 0,
+   "constRejected": 14,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a >> b | vec2i",
+   "cases": 17,
+   "cpuWrong": 17,
+   "runtimeWrong": 0,
+   "constRejected": 14,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.bitShiftLeft | vec2i",
+   "cases": 17,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.bitShiftRight | vec2i",
+   "cases": 17,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.add | i32",
+   "cases": 31,
+   "cpuWrong": 9,
+   "runtimeWrong": 0,
+   "constRejected": 9,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.sub | i32",
+   "cases": 31,
+   "cpuWrong": 2,
+   "runtimeWrong": 0,
+   "constRejected": 2,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.mul | i32",
+   "cases": 31,
+   "cpuWrong": 14,
+   "runtimeWrong": 0,
+   "constRejected": 14,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a * b | i32",
+   "cases": 31,
+   "cpuWrong": 14,
+   "runtimeWrong": 0,
+   "constRejected": 14,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a + b | i32",
+   "cases": 31,
+   "cpuWrong": 9,
+   "runtimeWrong": 0,
+   "constRejected": 9,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a - b | i32",
+   "cases": 31,
+   "cpuWrong": 2,
+   "runtimeWrong": 0,
+   "constRejected": 2,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.min | i32",
+   "cases": 31,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 5,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.max | i32",
+   "cases": 31,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 1,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a / b | i32",
+   "cases": 29,
+   "cpuWrong": 12,
+   "runtimeWrong": 3,
+   "constRejected": 0,
+   "constSilentWrong": 3,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a % b | i32",
+   "cases": 29,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 5,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a & b | i32",
+   "cases": 31,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 5,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a | b | i32",
+   "cases": 31,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 5,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a ^ b | i32",
+   "cases": 31,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 5,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a << b | i32",
+   "cases": 17,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 7,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a >> b | i32",
+   "cases": 17,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 7,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.add | vec2u",
+   "cases": 31,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.sub | vec2u",
+   "cases": 31,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.mul | vec2u",
+   "cases": 31,
+   "cpuWrong": 9,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 9,
+   "leaksSilent": 9
+  },
+  {
+   "key": "a * b | vec2u",
+   "cases": 31,
+   "cpuWrong": 9,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 9,
+   "leaksSilent": 9
+  },
+  {
+   "key": "a + b | vec2u",
+   "cases": 31,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a - b | vec2u",
+   "cases": 31,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.min | vec2u",
+   "cases": 31,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.max | vec2u",
+   "cases": 31,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a / b | vec2u",
+   "cases": 28,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a % b | vec2u",
+   "cases": 28,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a & b | vec2u",
+   "cases": 31,
+   "cpuWrong": 31,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a | b | vec2u",
+   "cases": 31,
+   "cpuWrong": 31,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a ^ b | vec2u",
+   "cases": 31,
+   "cpuWrong": 31,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a << b | vec2u",
+   "cases": 17,
+   "cpuWrong": 17,
+   "runtimeWrong": 0,
+   "constRejected": 13,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a >> b | vec2u",
+   "cases": 17,
+   "cpuWrong": 17,
+   "runtimeWrong": 0,
+   "constRejected": 13,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.bitShiftLeft | vec2u",
+   "cases": 17,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.bitShiftRight | vec2u",
+   "cases": 17,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.add | u32",
+   "cases": 31,
+   "cpuWrong": 10,
+   "runtimeWrong": 0,
+   "constRejected": 10,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.sub | u32",
+   "cases": 31,
+   "cpuWrong": 10,
+   "runtimeWrong": 0,
+   "constRejected": 10,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.mul | u32",
+   "cases": 31,
+   "cpuWrong": 19,
+   "runtimeWrong": 0,
+   "constRejected": 19,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a * b | u32",
+   "cases": 31,
+   "cpuWrong": 19,
+   "runtimeWrong": 0,
+   "constRejected": 19,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a + b | u32",
+   "cases": 31,
+   "cpuWrong": 10,
+   "runtimeWrong": 0,
+   "constRejected": 10,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a - b | u32",
+   "cases": 31,
+   "cpuWrong": 10,
+   "runtimeWrong": 0,
+   "constRejected": 10,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.min | u32",
+   "cases": 31,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "std.max | u32",
+   "cases": 31,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a / b | u32",
+   "cases": 29,
+   "cpuWrong": 15,
+   "runtimeWrong": 4,
+   "constRejected": 0,
+   "constSilentWrong": 4,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a % b | u32",
+   "cases": 29,
+   "cpuWrong": 0,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a & b | u32",
+   "cases": 31,
+   "cpuWrong": 4,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a | b | u32",
+   "cases": 31,
+   "cpuWrong": 18,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a ^ b | u32",
+   "cases": 31,
+   "cpuWrong": 14,
+   "runtimeWrong": 0,
+   "constRejected": 0,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a << b | u32",
+   "cases": 17,
+   "cpuWrong": 5,
+   "runtimeWrong": 0,
+   "constRejected": 8,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  },
+  {
+   "key": "a >> b | u32",
+   "cases": 17,
+   "cpuWrong": 6,
+   "runtimeWrong": 0,
+   "constRejected": 6,
+   "constSilentWrong": 0,
+   "leaksSilent": 0
+  }
+ ],
+ "examples": [
+  {
+   "op": "std.mul",
+   "type": "vec2i",
+   "a": 2147483647,
+   "b": 2147483647,
+   "oracle": [
+    1,
+    1
+   ],
+   "cpu": [
+    0,
+    0
+   ],
+   "runtime": [
+    1,
+    1
+   ],
+   "const": [
+    0,
+    0
+   ],
+   "wgsl": "fn item() -> vec2i { return vec2i(); } @group(0) @binding(0) var<storage, read_write> out: vec2i; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "std.mul",
+   "type": "vec2i",
+   "a": 2147483647,
+   "b": 94906267,
+   "oracle": [
+    2052577381,
+    2052577381
+   ],
+   "cpu": [
+    2052577376,
+    2052577376
+   ],
+   "runtime": [
+    2052577381,
+    2052577381
+   ],
+   "const": [
+    2052577376,
+    2052577376
+   ],
+   "wgsl": "fn item() -> vec2i { return vec2i(2052577376); } @group(0) @binding(0) var<storage, read_write> out: vec2i; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "std.mul",
+   "type": "vec2i",
+   "a": 94906267,
+   "b": 2147483647,
+   "oracle": [
+    2052577381,
+    2052577381
+   ],
+   "cpu": [
+    2052577376,
+    2052577376
+   ],
+   "runtime": [
+    2052577381,
+    2052577381
+   ],
+   "const": [
+    2052577376,
+    2052577376
+   ],
+   "wgsl": "fn item() -> vec2i { return vec2i(2052577376); } @group(0) @binding(0) var<storage, read_write> out: vec2i; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "std.mul",
+   "type": "vec2i",
+   "a": 94906267,
+   "b": 94906267,
+   "oracle": [
+    261134297,
+    261134297
+   ],
+   "cpu": [
+    261134296,
+    261134296
+   ],
+   "runtime": [
+    261134297,
+    261134297
+   ],
+   "const": [
+    261134296,
+    261134296
+   ],
+   "wgsl": "fn item() -> vec2i { return vec2i(261134296); } @group(0) @binding(0) var<storage, read_write> out: vec2i; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "a * b",
+   "type": "vec2i",
+   "a": 2147483647,
+   "b": 2147483647,
+   "oracle": [
+    1,
+    1
+   ],
+   "cpu": [
+    0,
+    0
+   ],
+   "runtime": [
+    1,
+    1
+   ],
+   "const": [
+    0,
+    0
+   ],
+   "wgsl": "fn item() -> vec2i { return vec2i(); } @group(0) @binding(0) var<storage, read_write> out: vec2i; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "a * b",
+   "type": "vec2i",
+   "a": 2147483647,
+   "b": 94906267,
+   "oracle": [
+    2052577381,
+    2052577381
+   ],
+   "cpu": [
+    2052577376,
+    2052577376
+   ],
+   "runtime": [
+    2052577381,
+    2052577381
+   ],
+   "const": [
+    2052577376,
+    2052577376
+   ],
+   "wgsl": "fn item() -> vec2i { return vec2i(2052577376); } @group(0) @binding(0) var<storage, read_write> out: vec2i; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "a * b",
+   "type": "vec2i",
+   "a": 94906267,
+   "b": 2147483647,
+   "oracle": [
+    2052577381,
+    2052577381
+   ],
+   "cpu": [
+    2052577376,
+    2052577376
+   ],
+   "runtime": [
+    2052577381,
+    2052577381
+   ],
+   "const": [
+    2052577376,
+    2052577376
+   ],
+   "wgsl": "fn item() -> vec2i { return vec2i(2052577376); } @group(0) @binding(0) var<storage, read_write> out: vec2i; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "a * b",
+   "type": "vec2i",
+   "a": 94906267,
+   "b": 94906267,
+   "oracle": [
+    261134297,
+    261134297
+   ],
+   "cpu": [
+    261134296,
+    261134296
+   ],
+   "runtime": [
+    261134297,
+    261134297
+   ],
+   "const": [
+    261134296,
+    261134296
+   ],
+   "wgsl": "fn item() -> vec2i { return vec2i(261134296); } @group(0) @binding(0) var<storage, read_write> out: vec2i; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "a / b",
+   "type": "i32",
+   "a": 2147483647,
+   "b": 1,
+   "oracle": [
+    2147483647
+   ],
+   "cpu": [
+    2147483647
+   ],
+   "runtime": [
+    2147483520
+   ],
+   "const": [
+    2147483520
+   ],
+   "wgsl": "fn item() -> f32 { return 2147483648f; } @group(0) @binding(0) var<storage, read_write> out: i32; fn body() { out = i32(item()); }",
+   "leak": false,
+   "cpuWrong": false,
+   "runtimeWrong": true,
+   "constWrong": true
+  },
+  {
+   "op": "a / b",
+   "type": "i32",
+   "a": -2147483648,
+   "b": -7,
+   "oracle": [
+    306783378
+   ],
+   "cpu": [
+    306783378.28571427
+   ],
+   "runtime": [
+    306783392
+   ],
+   "const": [
+    306783392
+   ],
+   "wgsl": "fn item() -> f32 { return 306783378.28571427f; } @group(0) @binding(0) var<storage, read_write> out: i32; fn body() { out = i32(item()); }",
+   "leak": false,
+   "cpuWrong": true,
+   "runtimeWrong": true,
+   "constWrong": true
+  },
+  {
+   "op": "a / b",
+   "type": "i32",
+   "a": 94906267,
+   "b": 1,
+   "oracle": [
+    94906267
+   ],
+   "cpu": [
+    94906267
+   ],
+   "runtime": [
+    94906264
+   ],
+   "const": [
+    94906264
+   ],
+   "wgsl": "fn item() -> f32 { return 94906264f; } @group(0) @binding(0) var<storage, read_write> out: i32; fn body() { out = i32(item()); }",
+   "leak": false,
+   "cpuWrong": false,
+   "runtimeWrong": true,
+   "constWrong": true
+  },
+  {
+   "op": "std.mul",
+   "type": "vec2u",
+   "a": 4294967295,
+   "b": 4294967295,
+   "oracle": [
+    1,
+    1
+   ],
+   "cpu": [
+    0,
+    0
+   ],
+   "runtime": [
+    1,
+    1
+   ],
+   "const": [
+    0,
+    0
+   ],
+   "wgsl": "fn item() -> vec2u { return vec2u(); } @group(0) @binding(0) var<storage, read_write> out: vec2u; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "std.mul",
+   "type": "vec2u",
+   "a": 4294967295,
+   "b": 94906267,
+   "oracle": [
+    4200061029,
+    4200061029
+   ],
+   "cpu": [
+    4200061056,
+    4200061056
+   ],
+   "runtime": [
+    4200061029,
+    4200061029
+   ],
+   "const": [
+    4200061056,
+    4200061056
+   ],
+   "wgsl": "fn item() -> vec2u { return vec2u(4200061056); } @group(0) @binding(0) var<storage, read_write> out: vec2u; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "std.mul",
+   "type": "vec2u",
+   "a": 2147483647,
+   "b": 2147483647,
+   "oracle": [
+    1,
+    1
+   ],
+   "cpu": [
+    0,
+    0
+   ],
+   "runtime": [
+    1,
+    1
+   ],
+   "const": [
+    0,
+    0
+   ],
+   "wgsl": "fn item() -> vec2u { return vec2u(); } @group(0) @binding(0) var<storage, read_write> out: vec2u; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "std.mul",
+   "type": "vec2u",
+   "a": 2147483647,
+   "b": 2654435761,
+   "oracle": [
+    3788015183,
+    3788015183
+   ],
+   "cpu": [
+    3788015616,
+    3788015616
+   ],
+   "runtime": [
+    3788015183,
+    3788015183
+   ],
+   "const": [
+    3788015616,
+    3788015616
+   ],
+   "wgsl": "fn item() -> vec2u { return vec2u(3788015616); } @group(0) @binding(0) var<storage, read_write> out: vec2u; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "std.mul",
+   "type": "vec2u",
+   "a": 3037000500,
+   "b": 3037000500,
+   "oracle": [
+    145474192,
+    145474192
+   ],
+   "cpu": [
+    145473536,
+    145473536
+   ],
+   "runtime": [
+    145474192,
+    145474192
+   ],
+   "const": [
+    145473536,
+    145473536
+   ],
+   "wgsl": "fn item() -> vec2u { return vec2u(145473536); } @group(0) @binding(0) var<storage, read_write> out: vec2u; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "std.mul",
+   "type": "vec2u",
+   "a": 94906267,
+   "b": 4294967295,
+   "oracle": [
+    4200061029,
+    4200061029
+   ],
+   "cpu": [
+    4200061056,
+    4200061056
+   ],
+   "runtime": [
+    4200061029,
+    4200061029
+   ],
+   "const": [
+    4200061056,
+    4200061056
+   ],
+   "wgsl": "fn item() -> vec2u { return vec2u(4200061056); } @group(0) @binding(0) var<storage, read_write> out: vec2u; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "std.mul",
+   "type": "vec2u",
+   "a": 94906267,
+   "b": 94906267,
+   "oracle": [
+    261134297,
+    261134297
+   ],
+   "cpu": [
+    261134296,
+    261134296
+   ],
+   "runtime": [
+    261134297,
+    261134297
+   ],
+   "const": [
+    261134296,
+    261134296
+   ],
+   "wgsl": "fn item() -> vec2u { return vec2u(261134296); } @group(0) @binding(0) var<storage, read_write> out: vec2u; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "std.mul",
+   "type": "vec2u",
+   "a": 2654435761,
+   "b": 2147483647,
+   "oracle": [
+    3788015183,
+    3788015183
+   ],
+   "cpu": [
+    3788015616,
+    3788015616
+   ],
+   "runtime": [
+    3788015183,
+    3788015183
+   ],
+   "const": [
+    3788015616,
+    3788015616
+   ],
+   "wgsl": "fn item() -> vec2u { return vec2u(3788015616); } @group(0) @binding(0) var<storage, read_write> out: vec2u; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "std.mul",
+   "type": "vec2u",
+   "a": 2654435761,
+   "b": 2654435761,
+   "oracle": [
+    4293315681,
+    4293315681
+   ],
+   "cpu": [
+    4293315584,
+    4293315584
+   ],
+   "runtime": [
+    4293315681,
+    4293315681
+   ],
+   "const": [
+    4293315584,
+    4293315584
+   ],
+   "wgsl": "fn item() -> vec2u { return vec2u(4293315584); } @group(0) @binding(0) var<storage, read_write> out: vec2u; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "a * b",
+   "type": "vec2u",
+   "a": 4294967295,
+   "b": 4294967295,
+   "oracle": [
+    1,
+    1
+   ],
+   "cpu": [
+    0,
+    0
+   ],
+   "runtime": [
+    1,
+    1
+   ],
+   "const": [
+    0,
+    0
+   ],
+   "wgsl": "fn item() -> vec2u { return vec2u(); } @group(0) @binding(0) var<storage, read_write> out: vec2u; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "a * b",
+   "type": "vec2u",
+   "a": 4294967295,
+   "b": 94906267,
+   "oracle": [
+    4200061029,
+    4200061029
+   ],
+   "cpu": [
+    4200061056,
+    4200061056
+   ],
+   "runtime": [
+    4200061029,
+    4200061029
+   ],
+   "const": [
+    4200061056,
+    4200061056
+   ],
+   "wgsl": "fn item() -> vec2u { return vec2u(4200061056); } @group(0) @binding(0) var<storage, read_write> out: vec2u; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "a * b",
+   "type": "vec2u",
+   "a": 2147483647,
+   "b": 2147483647,
+   "oracle": [
+    1,
+    1
+   ],
+   "cpu": [
+    0,
+    0
+   ],
+   "runtime": [
+    1,
+    1
+   ],
+   "const": [
+    0,
+    0
+   ],
+   "wgsl": "fn item() -> vec2u { return vec2u(); } @group(0) @binding(0) var<storage, read_write> out: vec2u; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "a * b",
+   "type": "vec2u",
+   "a": 2147483647,
+   "b": 2654435761,
+   "oracle": [
+    3788015183,
+    3788015183
+   ],
+   "cpu": [
+    3788015616,
+    3788015616
+   ],
+   "runtime": [
+    3788015183,
+    3788015183
+   ],
+   "const": [
+    3788015616,
+    3788015616
+   ],
+   "wgsl": "fn item() -> vec2u { return vec2u(3788015616); } @group(0) @binding(0) var<storage, read_write> out: vec2u; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "a * b",
+   "type": "vec2u",
+   "a": 3037000500,
+   "b": 3037000500,
+   "oracle": [
+    145474192,
+    145474192
+   ],
+   "cpu": [
+    145473536,
+    145473536
+   ],
+   "runtime": [
+    145474192,
+    145474192
+   ],
+   "const": [
+    145473536,
+    145473536
+   ],
+   "wgsl": "fn item() -> vec2u { return vec2u(145473536); } @group(0) @binding(0) var<storage, read_write> out: vec2u; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "a * b",
+   "type": "vec2u",
+   "a": 94906267,
+   "b": 4294967295,
+   "oracle": [
+    4200061029,
+    4200061029
+   ],
+   "cpu": [
+    4200061056,
+    4200061056
+   ],
+   "runtime": [
+    4200061029,
+    4200061029
+   ],
+   "const": [
+    4200061056,
+    4200061056
+   ],
+   "wgsl": "fn item() -> vec2u { return vec2u(4200061056); } @group(0) @binding(0) var<storage, read_write> out: vec2u; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "a * b",
+   "type": "vec2u",
+   "a": 94906267,
+   "b": 94906267,
+   "oracle": [
+    261134297,
+    261134297
+   ],
+   "cpu": [
+    261134296,
+    261134296
+   ],
+   "runtime": [
+    261134297,
+    261134297
+   ],
+   "const": [
+    261134296,
+    261134296
+   ],
+   "wgsl": "fn item() -> vec2u { return vec2u(261134296); } @group(0) @binding(0) var<storage, read_write> out: vec2u; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "a * b",
+   "type": "vec2u",
+   "a": 2654435761,
+   "b": 2147483647,
+   "oracle": [
+    3788015183,
+    3788015183
+   ],
+   "cpu": [
+    3788015616,
+    3788015616
+   ],
+   "runtime": [
+    3788015183,
+    3788015183
+   ],
+   "const": [
+    3788015616,
+    3788015616
+   ],
+   "wgsl": "fn item() -> vec2u { return vec2u(3788015616); } @group(0) @binding(0) var<storage, read_write> out: vec2u; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "a * b",
+   "type": "vec2u",
+   "a": 2654435761,
+   "b": 2654435761,
+   "oracle": [
+    4293315681,
+    4293315681
+   ],
+   "cpu": [
+    4293315584,
+    4293315584
+   ],
+   "runtime": [
+    4293315681,
+    4293315681
+   ],
+   "const": [
+    4293315584,
+    4293315584
+   ],
+   "wgsl": "fn item() -> vec2u { return vec2u(4293315584); } @group(0) @binding(0) var<storage, read_write> out: vec2u; fn body() { out = item(); }",
+   "leak": true,
+   "cpuWrong": true,
+   "runtimeWrong": false,
+   "constWrong": true
+  },
+  {
+   "op": "a / b",
+   "type": "u32",
+   "a": 4294967295,
+   "b": 1,
+   "oracle": [
+    4294967295
+   ],
+   "cpu": [
+    4294967295
+   ],
+   "runtime": [
+    4294967040
+   ],
+   "const": [
+    4294967040
+   ],
+   "wgsl": "fn item() -> f32 { return 4294967296f; } @group(0) @binding(0) var<storage, read_write> out: u32; fn body() { out = u32(item()); }",
+   "leak": false,
+   "cpuWrong": false,
+   "runtimeWrong": true,
+   "constWrong": true
+  },
+  {
+   "op": "a / b",
+   "type": "u32",
+   "a": 2147483648,
+   "b": 7,
+   "oracle": [
+    306783378
+   ],
+   "cpu": [
+    306783378.28571427
+   ],
+   "runtime": [
+    306783392
+   ],
+   "const": [
+    306783392
+   ],
+   "wgsl": "fn item() -> f32 { return 306783378.28571427f; } @group(0) @binding(0) var<storage, read_write> out: u32; fn body() { out = u32(item()); }",
+   "leak": false,
+   "cpuWrong": true,
+   "runtimeWrong": true,
+   "constWrong": true
+  },
+  {
+   "op": "a / b",
+   "type": "u32",
+   "a": 2147483647,
+   "b": 65536,
+   "oracle": [
+    32767
+   ],
+   "cpu": [
+    32767.99998474121
+   ],
+   "runtime": [
+    32768
+   ],
+   "const": [
+    32768
+   ],
+   "wgsl": "fn item() -> f32 { return 32768f; } @group(0) @binding(0) var<storage, read_write> out: u32; fn body() { out = u32(item()); }",
+   "leak": false,
+   "cpuWrong": true,
+   "runtimeWrong": true,
+   "constWrong": true
+  },
+  {
+   "op": "a / b",
+   "type": "u32",
+   "a": 94906267,
+   "b": 1,
+   "oracle": [
+    94906267
+   ],
+   "cpu": [
+    94906267
+   ],
+   "runtime": [
+    94906264
+   ],
+   "const": [
+    94906264
+   ],
+   "wgsl": "fn item() -> f32 { return 94906264f; } @group(0) @binding(0) var<storage, read_write> out: u32; fn body() { out = u32(item()); }",
+   "leak": false,
+   "cpuWrong": false,
+   "runtimeWrong": true,
+   "constWrong": true
+  }
+ ],
+ "total": 1796
+}

@@ -1,0 +1,22 @@
+{
+  "tag": "v0.12.7",
+  "unpatchedSuite": {
+    "files": 192,
+    "tests": 2771,
+    "passed": 2771,
+    "failed": 0
+  },
+  "newTestsUnpatched": {
+    "tests": 19,
+    "passed": 3,
+    "failed": 16
+  },
+  "patchedSuite": {
+    "files": 194,
+    "tests": 2790,
+    "passed": 2790,
+    "failed": 0
+  },
+  "newTestsInPatchedRun": 19,
+  "testsThatPassedBeforeButNotAfter": []
+}
