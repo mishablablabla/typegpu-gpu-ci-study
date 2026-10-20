@@ -1,0 +1,632 @@
+{
+ "schema": "float-ops-audit/1",
+ "ops": [
+  {
+   "op": "add",
+   "kind": "f32",
+   "ctsFn": "additionInterval",
+   "ctsSpecFile": "binary/f32_addition",
+   "report": {
+    "rows": 10000,
+    "lanes": 25000,
+    "pass": 7259,
+    "fail": 0,
+    "investigate": 2741,
+    "types": [
+     "f32",
+     "vec2f",
+     "vec3f",
+     "vec4f"
+    ],
+    "policy": "correctly-rounded",
+    "basis": "spec"
+   },
+   "inputs": {
+    "scalarCombos": 2500,
+    "nonFiniteInput": 291,
+    "nanInput": 99,
+    "unbounded": 280,
+    "boundedPoint": 948,
+    "boundedInterval": 1173,
+    "inputOutsideDomainOrFlushToUnbounded": 0
+   }
+  },
+  {
+   "op": "add",
+   "kind": "f16",
+   "ctsFn": "additionInterval",
+   "ctsSpecFile": "binary/f16_addition",
+   "report": {
+    "rows": 507,
+    "lanes": 1183,
+    "pass": 479,
+    "fail": 0,
+    "investigate": 28,
+    "types": [
+     "f16",
+     "vec2h",
+     "vec4h"
+    ],
+    "policy": "correctly-rounded",
+    "basis": "spec"
+   },
+   "inputs": {
+    "scalarCombos": 2500,
+    "nonFiniteInput": 291,
+    "nanInput": 99,
+    "unbounded": 512,
+    "boundedPoint": 85,
+    "boundedInterval": 1804,
+    "inputOutsideDomainOrFlushToUnbounded": 0
+   }
+  },
+  {
+   "op": "sub",
+   "kind": "f32",
+   "ctsFn": "subtractionInterval",
+   "ctsSpecFile": "binary/f32_subtraction",
+   "report": {
+    "rows": 10000,
+    "lanes": 25000,
+    "pass": 7259,
+    "fail": 0,
+    "investigate": 2741,
+    "types": [
+     "f32",
+     "vec2f",
+     "vec3f",
+     "vec4f"
+    ],
+    "policy": "correctly-rounded",
+    "basis": "spec"
+   },
+   "inputs": {
+    "scalarCombos": 2500,
+    "nonFiniteInput": 291,
+    "nanInput": 99,
+    "unbounded": 280,
+    "boundedPoint": 940,
+    "boundedInterval": 1181,
+    "inputOutsideDomainOrFlushToUnbounded": 0
+   }
+  },
+  {
+   "op": "sub",
+   "kind": "f16",
+   "ctsFn": "subtractionInterval",
+   "ctsSpecFile": "binary/f16_subtraction",
+   "report": {
+    "rows": 507,
+    "lanes": 1183,
+    "pass": 479,
+    "fail": 0,
+    "investigate": 28,
+    "types": [
+     "f16",
+     "vec2h",
+     "vec4h"
+    ],
+    "policy": "correctly-rounded",
+    "basis": "spec"
+   },
+   "inputs": {
+    "scalarCombos": 2500,
+    "nonFiniteInput": 291,
+    "nanInput": 99,
+    "unbounded": 501,
+    "boundedPoint": 86,
+    "boundedInterval": 1814,
+    "inputOutsideDomainOrFlushToUnbounded": 0
+   }
+  },
+  {
+   "op": "mul",
+   "kind": "f32",
+   "ctsFn": "multiplicationInterval",
+   "ctsSpecFile": "binary/f32_multiplication",
+   "report": {
+    "rows": 10000,
+    "lanes": 25000,
+    "pass": 6494,
+    "fail": 0,
+    "investigate": 3506,
+    "types": [
+     "f32",
+     "vec2f",
+     "vec3f",
+     "vec4f"
+    ],
+    "policy": "correctly-rounded",
+    "basis": "spec"
+   },
+   "inputs": {
+    "scalarCombos": 2500,
+    "nonFiniteInput": 291,
+    "nanInput": 99,
+    "unbounded": 318,
+    "boundedPoint": 811,
+    "boundedInterval": 1272,
+    "inputOutsideDomainOrFlushToUnbounded": 0
+   }
+  },
+  {
+   "op": "mul",
+   "kind": "f16",
+   "ctsFn": "multiplicationInterval",
+   "ctsSpecFile": "binary/f16_multiplication",
+   "report": {
+    "rows": 507,
+    "lanes": 1183,
+    "pass": 365,
+    "fail": 0,
+    "investigate": 142,
+    "types": [
+     "f16",
+     "vec2h",
+     "vec4h"
+    ],
+    "policy": "correctly-rounded",
+    "basis": "spec"
+   },
+   "inputs": {
+    "scalarCombos": 2500,
+    "nonFiniteInput": 291,
+    "nanInput": 99,
+    "unbounded": 523,
+    "boundedPoint": 229,
+    "boundedInterval": 1649,
+    "inputOutsideDomainOrFlushToUnbounded": 0
+   }
+  },
+  {
+   "op": "div",
+   "kind": "f32",
+   "ctsFn": "divisionInterval",
+   "ctsSpecFile": "binary/f32_division",
+   "report": {
+    "rows": 10000,
+    "lanes": 25000,
+    "pass": 5132,
+    "fail": 0,
+    "investigate": 4868,
+    "types": [
+     "f32",
+     "vec2f",
+     "vec3f",
+     "vec4f"
+    ],
+    "policy": "div-2.5ulp",
+    "basis": "spec"
+   },
+   "inputs": {
+    "scalarCombos": 2500,
+    "nonFiniteInput": 291,
+    "nanInput": 99,
+    "unbounded": 523,
+    "boundedPoint": 0,
+    "boundedInterval": 1878,
+    "inputOutsideDomainOrFlushToUnbounded": 0
+   }
+  },
+  {
+   "op": "min",
+   "kind": "f32",
+   "ctsFn": "minInterval",
+   "ctsSpecFile": "call/builtin/min",
+   "report": {
+    "rows": 10000,
+    "lanes": 25000,
+    "pass": 7260,
+    "fail": 0,
+    "investigate": 2740,
+    "types": [
+     "f32",
+     "vec2f",
+     "vec3f",
+     "vec4f"
+    ],
+    "policy": "exact-select",
+    "basis": "spec"
+   },
+   "inputs": {
+    "scalarCombos": 2500,
+    "nonFiniteInput": 291,
+    "nanInput": 99,
+    "unbounded": 192,
+    "boundedPoint": 2091,
+    "boundedInterval": 118,
+    "inputOutsideDomainOrFlushToUnbounded": 0
+   }
+  },
+  {
+   "op": "max",
+   "kind": "f32",
+   "ctsFn": "maxInterval",
+   "ctsSpecFile": "call/builtin/max",
+   "report": {
+    "rows": 10000,
+    "lanes": 25000,
+    "pass": 7260,
+    "fail": 0,
+    "investigate": 2740,
+    "types": [
+     "f32",
+     "vec2f",
+     "vec3f",
+     "vec4f"
+    ],
+    "policy": "exact-select",
+    "basis": "spec"
+   },
+   "inputs": {
+    "scalarCombos": 2500,
+    "nonFiniteInput": 291,
+    "nanInput": 99,
+    "unbounded": 192,
+    "boundedPoint": 2131,
+    "boundedInterval": 78,
+    "inputOutsideDomainOrFlushToUnbounded": 0
+   }
+  },
+  {
+   "op": "mod",
+   "kind": "f32",
+   "ctsFn": "remainderInterval",
+   "ctsSpecFile": "binary/f32_remainder",
+   "report": {
+    "rows": 13924,
+    "lanes": 34810,
+    "pass": 8526,
+    "fail": 280,
+    "investigate": 5118,
+    "types": [
+     "f32",
+     "vec2f",
+     "vec3f",
+     "vec4f"
+    ],
+    "policy": "float-remainder-derived",
+    "basis": "derived"
+   },
+   "inputs": {
+    "scalarCombos": 3481,
+    "nonFiniteInput": 345,
+    "nanInput": 117,
+    "unbounded": 697,
+    "boundedPoint": 1949,
+    "boundedInterval": 718,
+    "inputOutsideDomainOrFlushToUnbounded": 0
+   }
+  },
+  {
+   "op": "neg",
+   "kind": "f32",
+   "ctsFn": "negationInterval",
+   "ctsSpecFile": "unary/f32_arithmetic",
+   "report": {
+    "rows": 200,
+    "lanes": 500,
+    "pass": 170,
+    "fail": 0,
+    "investigate": 30,
+    "types": [
+     "f32",
+     "vec2f",
+     "vec3f",
+     "vec4f"
+    ],
+    "policy": "exact-select",
+    "basis": "spec"
+   },
+   "inputs": {
+    "scalarCombos": 50,
+    "nonFiniteInput": 3,
+    "nanInput": 1,
+    "unbounded": 2,
+    "boundedPoint": 45,
+    "boundedInterval": 2,
+    "inputOutsideDomainOrFlushToUnbounded": 0
+   }
+  },
+  {
+   "op": "sqrt",
+   "kind": "f32",
+   "ctsFn": "sqrtInterval",
+   "ctsSpecFile": "call/builtin/sqrt",
+   "report": {
+    "rows": 216,
+    "lanes": 540,
+    "pass": 133,
+    "fail": 0,
+    "investigate": 83,
+    "types": [
+     "f32",
+     "vec2f",
+     "vec3f",
+     "vec4f"
+    ],
+    "policy": "sqrt-derived-from-inverseSqrt",
+    "basis": "derived"
+   },
+   "inputs": {
+    "scalarCombos": 54,
+    "nonFiniteInput": 3,
+    "nanInput": 1,
+    "unbounded": 11,
+    "boundedPoint": 0,
+    "boundedInterval": 42,
+    "inputOutsideDomainOrFlushToUnbounded": 0
+   }
+  },
+  {
+   "op": "inverseSqrt",
+   "kind": "f32",
+   "ctsFn": "inverseSqrtInterval",
+   "ctsSpecFile": "call/builtin/inverseSqrt",
+   "report": {
+    "rows": 208,
+    "lanes": 520,
+    "pass": 125,
+    "fail": 0,
+    "investigate": 83,
+    "types": [
+     "f32",
+     "vec2f",
+     "vec3f",
+     "vec4f"
+    ],
+    "policy": "inverseSqrt-2ulp",
+    "basis": "spec"
+   },
+   "inputs": {
+    "scalarCombos": 52,
+    "nonFiniteInput": 3,
+    "nanInput": 1,
+    "unbounded": 11,
+    "boundedPoint": 0,
+    "boundedInterval": 40,
+    "inputOutsideDomainOrFlushToUnbounded": 0
+   }
+  },
+  {
+   "op": "sin",
+   "kind": "f32",
+   "ctsFn": "sinInterval",
+   "ctsSpecFile": "call/builtin/sin",
+   "report": {
+    "rows": 168,
+    "lanes": 420,
+    "pass": 107,
+    "fail": 0,
+    "investigate": 61,
+    "types": [
+     "f32",
+     "vec2f",
+     "vec3f",
+     "vec4f"
+    ],
+    "policy": "sin-abs-2^-11",
+    "basis": "spec"
+   },
+   "inputs": {
+    "scalarCombos": 42,
+    "nonFiniteInput": 2,
+    "nanInput": 1,
+    "unbounded": 4,
+    "boundedPoint": 0,
+    "boundedInterval": 37,
+    "inputOutsideDomainOrFlushToUnbounded": 0
+   }
+  },
+  {
+   "op": "cos",
+   "kind": "f32",
+   "ctsFn": "cosInterval",
+   "ctsSpecFile": "call/builtin/cos",
+   "report": {
+    "rows": 168,
+    "lanes": 420,
+    "pass": 107,
+    "fail": 0,
+    "investigate": 61,
+    "types": [
+     "f32",
+     "vec2f",
+     "vec3f",
+     "vec4f"
+    ],
+    "policy": "cos-abs-2^-11",
+    "basis": "spec"
+   },
+   "inputs": {
+    "scalarCombos": 42,
+    "nonFiniteInput": 2,
+    "nanInput": 1,
+    "unbounded": 4,
+    "boundedPoint": 0,
+    "boundedInterval": 37,
+    "inputOutsideDomainOrFlushToUnbounded": 0
+   }
+  },
+  {
+   "op": "exp",
+   "kind": "f32",
+   "ctsFn": "expInterval",
+   "ctsSpecFile": "call/builtin/exp",
+   "report": {
+    "rows": 168,
+    "lanes": 420,
+    "pass": 134,
+    "fail": 0,
+    "investigate": 34,
+    "types": [
+     "f32",
+     "vec2f",
+     "vec3f",
+     "vec4f"
+    ],
+    "policy": "exp-3+2|x|ulp",
+    "basis": "spec"
+   },
+   "inputs": {
+    "scalarCombos": 42,
+    "nonFiniteInput": 1,
+    "nanInput": 1,
+    "unbounded": 3,
+    "boundedPoint": 0,
+    "boundedInterval": 38,
+    "inputOutsideDomainOrFlushToUnbounded": 0
+   }
+  },
+  {
+   "op": "exp2",
+   "kind": "f32",
+   "ctsFn": "exp2Interval",
+   "ctsSpecFile": "call/builtin/exp2",
+   "report": {
+    "rows": 168,
+    "lanes": 420,
+    "pass": 154,
+    "fail": 0,
+    "investigate": 14,
+    "types": [
+     "f32",
+     "vec2f",
+     "vec3f",
+     "vec4f"
+    ],
+    "policy": "exp2-3+2|x|ulp",
+    "basis": "spec"
+   },
+   "inputs": {
+    "scalarCombos": 42,
+    "nonFiniteInput": 1,
+    "nanInput": 1,
+    "unbounded": 1,
+    "boundedPoint": 0,
+    "boundedInterval": 40,
+    "inputOutsideDomainOrFlushToUnbounded": 0
+   }
+  },
+  {
+   "op": "log",
+   "kind": "f32",
+   "ctsFn": "logInterval",
+   "ctsSpecFile": "call/builtin/log",
+   "report": {
+    "rows": 208,
+    "lanes": 520,
+    "pass": 166,
+    "fail": 20,
+    "investigate": 22,
+    "types": [
+     "f32",
+     "vec2f",
+     "vec3f",
+     "vec4f"
+    ],
+    "policy": "log-abs2^-21-on-[0.5,2]-else-3ulp",
+    "basis": "spec"
+   },
+   "inputs": {
+    "scalarCombos": 52,
+    "nonFiniteInput": 2,
+    "nanInput": 1,
+    "unbounded": 5,
+    "boundedPoint": 0,
+    "boundedInterval": 46,
+    "inputOutsideDomainOrFlushToUnbounded": 0
+   }
+  },
+  {
+   "op": "log2",
+   "kind": "f32",
+   "ctsFn": "log2Interval",
+   "ctsSpecFile": "call/builtin/log2",
+   "report": {
+    "rows": 208,
+    "lanes": 520,
+    "pass": 166,
+    "fail": 20,
+    "investigate": 22,
+    "types": [
+     "f32",
+     "vec2f",
+     "vec3f",
+     "vec4f"
+    ],
+    "policy": "log-abs2^-21-on-[0.5,2]-else-3ulp",
+    "basis": "spec"
+   },
+   "inputs": {
+    "scalarCombos": 52,
+    "nonFiniteInput": 2,
+    "nanInput": 1,
+    "unbounded": 5,
+    "boundedPoint": 0,
+    "boundedInterval": 46,
+    "inputOutsideDomainOrFlushToUnbounded": 0
+   }
+  },
+  {
+   "op": "tanh",
+   "kind": "f32",
+   "ctsFn": "tanhInterval",
+   "ctsSpecFile": "call/builtin/tanh",
+   "report": {
+    "rows": 144,
+    "lanes": 360,
+    "pass": 134,
+    "fail": 0,
+    "investigate": 10,
+    "types": [
+     "f32",
+     "vec2f",
+     "vec3f",
+     "vec4f"
+    ],
+    "policy": "tanh-abs-1e-5",
+    "basis": "spec"
+   },
+   "inputs": {
+    "scalarCombos": 36,
+    "nonFiniteInput": 1,
+    "nanInput": 1,
+    "unbounded": 0,
+    "boundedPoint": 0,
+    "boundedInterval": 35,
+    "inputOutsideDomainOrFlushToUnbounded": 0
+   }
+  },
+  {
+   "op": "pow",
+   "kind": "f32",
+   "ctsFn": "powInterval",
+   "ctsSpecFile": "call/builtin/pow",
+   "report": {
+    "rows": 2304,
+    "lanes": 5760,
+    "pass": 1816,
+    "fail": 0,
+    "investigate": 488,
+    "types": [
+     "f32",
+     "vec2f",
+     "vec3f",
+     "vec4f"
+    ],
+    "policy": "pow-derived-composition",
+    "basis": "derived"
+   },
+   "inputs": {
+    "scalarCombos": 576,
+    "nonFiniteInput": 0,
+    "nanInput": 0,
+    "unbounded": 49,
+    "boundedPoint": 0,
+    "boundedInterval": 527,
+    "inputOutsideDomainOrFlushToUnbounded": 0
+   }
+  }
+ ]
+}

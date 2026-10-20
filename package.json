@@ -1,0 +1,22 @@
+{
+  "name": "poc",
+  "version": "1.0.0",
+  "description": "CPU-vs-GPU differential conformance harness for TypeGPU numeric std (PoC)",
+  "main": "index.js",
+  "scripts": {
+    "conformance": "node scripts/run.mjs",
+    "test": "vitest run",
+    "report": "node scripts/report.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "typegpu": "^0.12.7",
+    "unplugin-typegpu": "^0.12.5",
+    "vitest": "^4.1.11",
+    "webgpu": "^0.6.2"
+  },
+  "private": true
+}
