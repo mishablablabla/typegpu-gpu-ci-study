@@ -1,0 +1,13 @@
+--- a/packages/typegpu/src/core/pipeline/renderPipeline.ts
++++ b/packages/typegpu/src/core/pipeline/renderPipeline.ts
+@@ -699,8 +699,8 @@
+             ? (indexFormatOrOffset as number) * sizeOf(elementType)
+             : undefined,
+         sizeBytes:
+-          offsetBytesOrSizeElements !== undefined
+-            ? offsetBytesOrSizeElements * sizeOf(elementType)
++          sizeBytesOrUndefined !== undefined
++            ? sizeBytesOrUndefined * sizeOf(elementType)
+             : undefined,
+       },
+     }) as unknown as this & HasIndexBuffer;

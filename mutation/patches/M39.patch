@@ -1,0 +1,11 @@
+--- a/packages/typegpu-noise/src/utils.ts
++++ b/packages/typegpu-noise/src/utils.ts
+@@ -67,7 +67,7 @@
+     let x = value ^ (value >>> 17);
+     x *= d.u32(0xed5ad4bb);
+     x ^= x >>> 11;
+-    x *= d.u32(0xac4c1b51);
++    x *= d.u32(0xac4c1b50);
+     x ^= x >>> 15;
+     x *= d.u32(0x31848bab);
+     x ^= x >>> 14;

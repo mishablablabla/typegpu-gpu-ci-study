@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/std/numeric.ts
++++ b/packages/typegpu/src/std/numeric.ts
+@@ -1279,7 +1279,7 @@
+   signature: unifyRestrictedSignature(anyFloat),
+   normalImpl:
+     'CPU implementation for trunc not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues',
+-  codegenImpl: (_ctx, [value]) => stitch`trunc(${value})`,
++  codegenImpl: (_ctx, [value]) => stitch`floor(${value})`,
+   sideEffects: false,
+ });
+ 

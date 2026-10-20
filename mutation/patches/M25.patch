@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/std/numeric.ts
++++ b/packages/typegpu/src/std/numeric.ts
+@@ -518,7 +518,7 @@
+   signature: unifyRestrictedSignature(anyFloatVec),
+   normalImpl:
+     'CPU implementation for faceForward not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues',
+-  codegenImpl: (_ctx, [e1, e2, e3]) => stitch`faceForward(${e1}, ${e2}, ${e3})`,
++  codegenImpl: (_ctx, [e1, e2, e3]) => stitch`faceForward(${e1}, ${e3}, ${e2})`,
+   sideEffects: false,
+ });
+ 

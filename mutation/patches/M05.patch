@@ -1,0 +1,13 @@
+--- a/packages/typegpu/src/std/boolean.ts
++++ b/packages/typegpu/src/std/boolean.ts
+@@ -354,7 +354,9 @@
+       return stitch`(abs(f32(${lhs}) - f32(${rhs})) <= ${precision})`;
+     }
+     if (!isSnippetNumeric(lhs) && !isSnippetNumeric(rhs)) {
+-      return stitch`all(abs(${lhs} - ${rhs}) <= ${_ctx.gen.typeInstantiation(lhs.dataType as BaseData, [coerceToSnippet(precision)])})`;
++      // https://www.w3.org/TR/WGSL/#vector-multi-component:~:text=Binary%20arithmetic%20expressions%20with%20mixed%20scalar%20and%20vector%20operands
++      // (a-a)+prec creates a vector of a.length elements, all equal to prec
++      return stitch`all(abs(${lhs} - ${rhs}) <= (${lhs} - ${lhs}) + ${precision})`;
+     }
+     return 'false';
+   },

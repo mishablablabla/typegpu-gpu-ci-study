@@ -1,0 +1,21 @@
+--- a/packages/typegpu/src/core/pipeline/renderPipeline.ts
++++ b/packages/typegpu/src/core/pipeline/renderPipeline.ts
+@@ -453,6 +453,7 @@
+   public readonly [$internal]: RenderPipelineInternals;
+   public readonly [$soul]: TgpuRenderPipelineSoul;
+   public readonly resourceType = 'render-pipeline';
++  public readonly hasIndexBuffer: boolean = false;
+   [$getNameForward]: RenderPipelineCore;
+ 
+   constructor(core: RenderPipelineCore, priors: TgpuRenderPipelinePriors) {
+@@ -714,10 +715,6 @@
+     this[$internal].core.initSync();
+   }
+ 
+-  get hasIndexBuffer() {
+-    return this[$internal].priors.indexBuffer !== undefined;
+-  }
+-
+   #ownPassDescriptor(): TgpuRenderPassDescriptor {
+     const { core, priors } = this[$internal];
+     const { connectedTargets } = core.unwrap();

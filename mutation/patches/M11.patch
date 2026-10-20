@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/core/function/autoIO.ts
++++ b/packages/typegpu/src/core/function/autoIO.ts
+@@ -142,7 +142,7 @@
+     this.autoOut = new AutoStruct(
+       builtinVertexOut,
+       undefined,
+-      locations,
++      undefined,
+       /* autoInterpolateIntegers */ true,
+     );
+     setName(this.autoOut, 'VertexOut');

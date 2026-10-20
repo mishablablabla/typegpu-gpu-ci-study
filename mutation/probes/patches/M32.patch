@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/core/root/init.ts
++++ b/packages/typegpu/src/core/root/init.ts
+@@ -296,7 +296,7 @@
+       workgroupSize,
+       in: { id: builtin.globalInvocationId },
+     })`{
+-  if (any(in.id >= sizeUniform)) {
++  if (any(in.id > sizeUniform)) {
+     return;
+   }
+   wrappedCallback(in.id.x, in.id.y, in.id.z);

@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/data/numberOps.ts
++++ b/packages/typegpu/src/data/numberOps.ts
+@@ -2,7 +2,7 @@
+   if (edge0 === edge1) {
+     return 0; // WGSL spec says this is an indeterminate value
+   }
+-  const t = clampScalar((x - edge0) / (edge1 - edge0), 0.0, 1.0);
++  const t = (x - edge0) / (edge1 - edge0);
+   return t * t * (3 - 2 * t);
+ };
+ 

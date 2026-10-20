@@ -1,0 +1,11 @@
+--- a/packages/typegpu-noise/src/utils.ts
++++ b/packages/typegpu-noise/src/utils.ts
+@@ -46,7 +46,7 @@
+   [d.u32],
+   d.f32,
+ )((value) => {
+-  const mantissa = value & 0x007fffff;
++  const mantissa = value & 0x007ffffe;
+   const bits = 0x3f800000 | mantissa;
+   const f = std.bitcast(d.u32, d.f32)(bits);
+   return f - 1;

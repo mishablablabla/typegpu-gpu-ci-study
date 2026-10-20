@@ -1,0 +1,128 @@
+{
+ "name": "rerun5",
+ "generated": "2026-10-20T10:28:38.241Z",
+ "opts": {
+  "shardsPerBackend": 1,
+  "maxDetPools": 99,
+  "drop": [],
+  "only": [
+   "M07",
+   "M32",
+   "M33",
+   "M35",
+   "M42"
+  ]
+ },
+ "jobs": [
+  {
+   "backend": "lavapipe",
+   "shard": 1,
+   "estSecArm64": 589,
+   "items": [
+    {
+     "id": "M32",
+     "pools": [
+      "full"
+     ],
+     "why": "arm64 DET in full"
+    },
+    {
+     "id": "M33",
+     "pools": [
+      "inv-bitops",
+      "inv-vector-fns",
+      "inv-scalar-int",
+      "inv-integer-mul",
+      "inv-comptime",
+      "full"
+     ],
+     "why": "arm64 DET in full,inv-bitops,inv-comptime,inv-integer-mul,inv-scalar-int,inv-vector-fns"
+    },
+    {
+     "id": "M35",
+     "pools": [
+      "ex",
+      "inv-bitops",
+      "inv-vector-fns",
+      "inv-mul-paths",
+      "inv-scalar-int",
+      "inv-integer-mul",
+      "inv-comptime",
+      "full",
+      "own"
+     ],
+     "why": "arm64 text-only"
+    },
+    {
+     "id": "M42",
+     "pools": [
+      "own"
+     ],
+     "why": "arm64 DET in own"
+    },
+    {
+     "id": "M07",
+     "pools": [
+      "ex"
+     ],
+     "why": "arm64 DET in ex"
+    }
+   ]
+  },
+  {
+   "backend": "swiftshader",
+   "shard": 1,
+   "estSecArm64": 589,
+   "items": [
+    {
+     "id": "M32",
+     "pools": [
+      "full"
+     ],
+     "why": "arm64 DET in full"
+    },
+    {
+     "id": "M33",
+     "pools": [
+      "inv-bitops",
+      "inv-vector-fns",
+      "inv-scalar-int",
+      "inv-integer-mul",
+      "inv-comptime",
+      "full"
+     ],
+     "why": "arm64 DET in full,inv-bitops,inv-comptime,inv-integer-mul,inv-scalar-int,inv-vector-fns"
+    },
+    {
+     "id": "M35",
+     "pools": [
+      "ex",
+      "inv-bitops",
+      "inv-vector-fns",
+      "inv-mul-paths",
+      "inv-scalar-int",
+      "inv-integer-mul",
+      "inv-comptime",
+      "full",
+      "own"
+     ],
+     "why": "arm64 text-only"
+    },
+    {
+     "id": "M42",
+     "pools": [
+      "own"
+     ],
+     "why": "arm64 DET in own"
+    },
+    {
+     "id": "M07",
+     "pools": [
+      "ex"
+     ],
+     "why": "arm64 DET in ex"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/tgsl/forOfUtils.ts
++++ b/packages/typegpu/src/tgsl/forOfUtils.ts
+@@ -73,7 +73,7 @@
+       start: snip(start, dataType, 'constant', false),
+       end: snip(end, dataType, 'constant', false),
+       step: snip(step, dataType, 'constant', false),
+-      comparison: step < 0 ? '>' : '<',
++      comparison: (step < 0 ? '>' : '<=') as '<' | '>',
+     };
+   }
+ 

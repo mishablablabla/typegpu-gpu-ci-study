@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/std/operators.ts
++++ b/packages/typegpu/src/std/operators.ts
+@@ -260,7 +260,7 @@
+     assertKind([a, b], numericKind);
+     const cast = upCast([a, b]);
+     assertEqualKinds(...cast);
+-    return generalizeFn((a, b) => a % b, cast);
++    return generalizeFn((a, b) => ((a % b) + b) % b, cast);
+   }) as ModOverload,
+   codegenImpl: (ctx, [lhs, rhs]) => ctx.gen.emitBinaryOp(lhs, '%', rhs),
+   sideEffects: false,

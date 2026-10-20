@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/data/alignmentOf.ts
++++ b/packages/typegpu/src/data/alignmentOf.ts
+@@ -22,7 +22,7 @@
+   vec2u: 8,
+   'vec2<bool>': 8,
+   vec3f: 16,
+-  vec3h: 8,
++  vec3h: 4,
+   vec3i: 16,
+   vec3u: 16,
+   'vec3<bool>': 16,

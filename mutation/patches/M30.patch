@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/data/numeric.ts
++++ b/packages/typegpu/src/data/numeric.ts
+@@ -137,7 +137,7 @@
+     if (!Number.isFinite(v)) {
+       throw new FiniteMathAssumptionError(v, i32);
+     }
+-    return v | 0;
++    return Math.max(-2147483648, Math.min(2147483647, Math.trunc(v)));
+   },
+   codegenImpl: (ctx, [v]) => ctx.gen.typeInstantiation(i32, v ? [v] : []),
+ });

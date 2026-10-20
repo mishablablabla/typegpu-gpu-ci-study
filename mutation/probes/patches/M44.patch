@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/data/vectorImpl.ts
++++ b/packages/typegpu/src/data/vectorImpl.ts
+@@ -56,7 +56,7 @@
+           });
+           Object.defineProperty(VecBase.prototype, rgbaProp, {
+             get(this: VecBase<unknown>) {
+-              return new this._Vec3(this[e0], this[e1], this[e2]);
++              return new this._Vec3(this[e0], this[e2], this[e1]);
+             },
+           });
+         }

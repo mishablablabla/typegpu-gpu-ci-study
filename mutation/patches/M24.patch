@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/std/numeric.ts
++++ b/packages/typegpu/src/std/numeric.ts
+@@ -857,7 +857,7 @@
+     return { argTypes: uargs, returnType: uargs[0] };
+   },
+   normalImpl: cpuMix,
+-  codegenImpl: (_ctx, [e1, e2, e3]) => stitch`mix(${e1}, ${e2}, ${e3})`,
++  codegenImpl: (_ctx, [e1, e2, e3]) => stitch`mix(${e2}, ${e1}, ${e3})`,
+   sideEffects: false,
+ });
+ 

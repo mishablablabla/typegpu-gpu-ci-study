@@ -1,0 +1,11 @@
+--- a/packages/typegpu-sort/src/scan/compute/scan.ts
++++ b/packages/typegpu-sort/src/scan/compute/scan.ts
+@@ -52,8 +52,6 @@
+   if (!onlyGreatestElementSlot.$) {
+     downsweep(localIdx);
+ 
+-    std.workgroupBarrier();
+-
+     const scannedSum = workgroupMemory.$[localIdx];
+ 
+     for (let i = d.u32(0); i < 8; i++) {

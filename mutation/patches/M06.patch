@@ -1,0 +1,16 @@
+--- a/packages/typegpu/src/std/numeric.ts
++++ b/packages/typegpu/src/std/numeric.ts
+@@ -1051,7 +1051,12 @@
+ function cpuSaturate<T extends AnyFloatVecInstance>(value: T): T;
+ function cpuSaturate<T extends AnyFloatVecInstance | number>(value: T): T {
+   assertKind(value, floatKind);
+-  return generalizeFn((value) => clampScalar(value, 0, 1), [value]);
++  if (typeof value === 'number') {
++    return Math.max(0, Math.min(1, value)) as T;
++  }
++  throw new MissingCpuImplError(
++    'CPU implementation for saturate on vectors not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues',
++  );
+ }
+ 
+ export const saturate = dualImpl({

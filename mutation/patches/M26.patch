@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/std/numeric.ts
++++ b/packages/typegpu/src/std/numeric.ts
+@@ -314,7 +314,7 @@
+   signature: unifyRestrictedSignature(anyConcreteInteger),
+   normalImpl:
+     'CPU implementation for countLeadingZeros not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues',
+-  codegenImpl: (_ctx, [value]) => stitch`countLeadingZeros(${value})`,
++  codegenImpl: (_ctx, [value]) => stitch`countTrailingZeros(${value})`,
+   sideEffects: false,
+ });
+ 

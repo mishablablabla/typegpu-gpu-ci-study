@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/std/atomic.ts
++++ b/packages/typegpu/src/std/atomic.ts
+@@ -110,7 +110,7 @@
+   name: 'atomicSub',
+   normalImpl: atomicNormalError,
+   signature: atomicOpSignature,
+-  codegenImpl: (_ctx, [a, value]) => stitch`atomicSub(&${derefSnippet(a)}, ${value})`,
++  codegenImpl: (_ctx, [a, value]) => stitch`atomicAdd(&${derefSnippet(a)}, ${value})`,
+   sideEffects: true,
+ });
+ 

@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/core/root/configurableImpl.ts
++++ b/packages/typegpu/src/core/root/configurableImpl.ts
+@@ -27,6 +27,7 @@
+   }
+ 
+   pipe(transform: (cfg: Configurable) => Configurable): Configurable {
+-    return transform(this);
++    const newCfg = transform(this);
++    return new ConfigurableImpl([...this.bindings, ...newCfg.bindings]);
+   }
+ }

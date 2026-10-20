@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/core/texture/textureFormats.ts
++++ b/packages/typegpu/src/core/texture/textureFormats.ts
+@@ -186,7 +186,7 @@
+ 
+ function parseTexelSize(format: GPUTextureFormat): number | 'non-copyable' {
+   // Standard formats: channel count encoded in prefix length (r=1, rg=2, rgba/bgra=4)
+-  const [, channels, bits] = format.match(/^(rgba|bgra|rg|r)(8|16|32)/) ?? [];
++  const [, channels, bits] = format.match(/^(rgba|bgra|r)(8|16|32)/) ?? [];
+   if (channels && bits) {
+     return (channels.length * Number(bits)) / 8;
+   }

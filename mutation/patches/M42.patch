@@ -1,0 +1,11 @@
+--- a/packages/typegpu-sort/src/bitonic/bitonicSort.ts
++++ b/packages/typegpu-sort/src/bitonic/bitonicSort.ts
+@@ -142,7 +142,7 @@
+   const paddedSize = nextPowerOf2(originalSize);
+   const wasPadded = paddedSize !== originalSize;
+ 
+-  const paddingValue = options?.paddingValue ?? 0xffffffff;
++  const paddingValue = options?.paddingValue ?? 0x7fffffff;
+   const compareFunc = options?.compare ?? defaultCompare;
+ 
+   let paddingResources: {

@@ -1,0 +1,26 @@
+--- a/packages/typegpu/src/tgsl/conversion.ts
++++ b/packages/typegpu/src/tgsl/conversion.ts
+@@ -125,20 +125,14 @@
+ 
+       return { rank: rank, action: 'cast', targetType: trueDst };
+     }
+-  }
+-
+-  if ((trueSrc.type === 'u32' || trueSrc.type === 'i32') && trueDst.type === 'abstractFloat') {
+-    // When one of the types is a float (abstract or not), we don't want to cast it to a non-float type,
+-    // which would cause it to lose precision. We instead choose the common type to be f32.
+-    return { rank: 1, action: 'cast', targetType: (trueDst as AbstractFloat).concretized };
+   }
+ 
+   if (trueSrc.type === 'abstractFloat') {
+-    if (trueDst.type === 'i32') {
++    if (trueDst.type === 'u32') {
+       return { rank: 2, action: 'cast', targetType: trueDst };
+     }
+-    if (trueDst.type === 'u32') {
+-      return { rank: 3, action: 'cast', targetType: trueDst };
++    if (trueDst.type === 'i32') {
++      return { rank: 1, action: 'cast', targetType: trueDst };
+     }
+   }
+ 

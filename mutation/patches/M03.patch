@@ -1,0 +1,30 @@
+--- a/packages/typegpu/src/tgsl/wgslGenerator.ts
++++ b/packages/typegpu/src/tgsl/wgslGenerator.ts
+@@ -1853,20 +1853,22 @@
+           const knownEnd = asComptime(range.end);
+           if (!knownEnd) {
+             throw new Error('Cannot unroll loop. Length of iterable is unknown at comptime.');
++          }
++
++          const length = knownEnd.value as number;
++          if (length === 0) {
++            return { code: '', definesInNearestScope: false };
+           }
++
+           const { value } = iterableSnippet;
+ 
+           const elements = isTgpuRange(value)
+             ? value.map((i) => coerceToSnippet(i))
+             : value instanceof ArrayExpression
+               ? value.elements
+-              : Array.from({ length: knownEnd.value as number }, (_, i) =>
++              : Array.from({ length }, (_, i) =>
+                   forOfUtils.getElementSnippet(iterableSnippet, snip(i, u32, 'constant')),
+                 );
+-
+-          if (elements.length === 0) {
+-            return { code: '', definesInNearestScope: false };
+-          }
+ 
+           const firstElement = elements[0] as Snippet;
+           if (

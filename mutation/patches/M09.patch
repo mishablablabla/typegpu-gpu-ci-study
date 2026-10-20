@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/core/buffer/buffer.ts
++++ b/packages/typegpu/src/core/buffer/buffer.ts
+@@ -183,7 +183,7 @@
+  * size, so the underlying allocation gets padded up to the next multiple of 4.
+  */
+ function physicalSizeOf(schema: BaseData): number {
+-  return roundUp(sizeOf(schema), 4);
++  return sizeOf(schema);
+ }
+ 
+ export function INTERNAL_createBuffer<TData extends AnyData>(

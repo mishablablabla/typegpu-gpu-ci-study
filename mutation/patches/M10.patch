@@ -1,0 +1,57 @@
+--- a/packages/typegpu/src/data/numeric.ts
++++ b/packages/typegpu/src/data/numeric.ts
+@@ -83,9 +83,6 @@
+     if (typeof v === 'boolean') {
+       return v ? 1 : 0;
+     }
+-    if (!Number.isFinite(v)) {
+-      throw new FiniteMathAssumptionError(v, u32);
+-    }
+     if (!Number.isInteger(v)) {
+       const truncated = Math.trunc(v);
+       if (truncated < 0) {
+@@ -133,9 +130,6 @@
+     }
+     if (typeof v === 'boolean') {
+       return v ? 1 : 0;
+-    }
+-    if (!Number.isFinite(v)) {
+-      throw new FiniteMathAssumptionError(v, i32);
+     }
+     return v | 0;
+   },
+@@ -177,9 +171,6 @@
+     if (typeof v === 'boolean') {
+       return v ? 1 : 0;
+     }
+-    if (!Number.isFinite(v)) {
+-      throw new FiniteMathAssumptionError(v, f32);
+-    }
+     return Math.fround(v);
+   },
+   codegenImpl: (ctx, [v]) => ctx.gen.typeInstantiation(f32, v ? [v] : []),
+@@ -318,9 +309,6 @@
+     if (typeof v === 'boolean') {
+       return v ? 1 : 0;
+     }
+-    if (!Number.isFinite(v)) {
+-      throw new FiniteMathAssumptionError(v, f16);
+-    }
+     return roundToF16(v);
+   },
+   // TODO: make usage of f16() in GPU mode check for feature availability and throw if not available
+--- a/packages/typegpu/src/tgsl/wgslGenerator.ts
++++ b/packages/typegpu/src/tgsl/wgslGenerator.ts
+@@ -1341,12 +1341,6 @@
+   }
+ 
+   public numericLiteral(value: number, schema: wgsl.BaseData): ResolvedSnippet {
+-    if (!Number.isFinite(value)) {
+-      throw new Error(
+-        `Value '${value}' (${schema.type}) cannot be resolved due to WGSL's Finite Math Assumption (see: https://www.w3.org/TR/WGSL/#finite-math-assumption). This value might be a result of a comptime-evaluated operation.`,
+-      );
+-    }
+-
+     if (schema.type === 'abstractInt') {
+       return snip(`${value}`, schema, /* origin */ 'constant', false);
+     }

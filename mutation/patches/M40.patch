@@ -1,0 +1,11 @@
+--- a/packages/typegpu-color/src/srgb.ts
++++ b/packages/typegpu-color/src/srgb.ts
+@@ -21,7 +21,7 @@
+   'use gpu';
+   return select(
+     rgb / 12.92,
+-    pow((rgb + vec3f(0.055)) / (1 + 0.055), vec3f(2.4)),
++    pow((rgb + vec3f(0.055)) / (1 + 0.055), vec3f(2.2)),
+     gt(rgb, vec3f(0.04045)),
+   );
+ });

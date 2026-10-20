@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/data/schemaMemoryLayout.ts
++++ b/packages/typegpu/src/data/schemaMemoryLayout.ts
+@@ -124,7 +124,7 @@
+     }
+   }
+ 
+-  const trueSize = roundUp(size, alignmentOf(struct));
++  const trueSize = size;
+ 
+   return {
+     isContiguous: size === trueSize && isContiguous,

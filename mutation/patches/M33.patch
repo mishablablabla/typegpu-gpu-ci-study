@@ -1,0 +1,20 @@
+--- a/packages/typegpu/src/core/root/init.ts
++++ b/packages/typegpu/src/core/root/init.ts
+@@ -89,7 +89,7 @@
+ } from './rootTypes.ts';
+ import { vec3f, vec3u } from '../../data/vector.ts';
+ import { u32 } from '../../data/numeric.ts';
+-import { ceil } from '../../std/numeric.ts';
++import { floor } from '../../std/numeric.ts';
+ import { allEq } from '../../std/boolean.ts';
+ import { getName, setName } from '../../shared/meta.ts';
+ import { logger } from '../../tgpuLogger.ts';
+@@ -181,7 +181,7 @@
+ 
+   dispatchThreads(...threads: TArgs): void {
+     const sanitizedSize = toVec3(threads);
+-    const workgroupCount = ceil(vec3f(sanitizedSize).div(vec3f(this[$soul].workgroupSize)));
++    const workgroupCount = floor(vec3f(sanitizedSize).div(vec3f(this[$soul].workgroupSize)));
+     if (!allEq(sanitizedSize, this.#lastSize)) {
+       // Only updating the size if it has changed from the last
+       // invocation. This removes the need for flushing.

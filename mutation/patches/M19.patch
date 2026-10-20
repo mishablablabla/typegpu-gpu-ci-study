@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/data/compiledIO.ts
++++ b/packages/typegpu/src/data/compiledIO.ts
+@@ -186,7 +186,7 @@
+         throw new Error('Cannot write using a runtime-sized schema.');
+       }
+ 
+-      const elementSize = roundUp(sizeOf(node.elementType), alignmentOf(node));
++      const elementSize = sizeOf(node.elementType);
+       const totalSize = node.elementCount * elementSize;
+ 
+       const copyLen = partial

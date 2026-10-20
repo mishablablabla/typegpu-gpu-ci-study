@@ -1,0 +1,165 @@
+{
+ "name": "calib",
+ "generated": "2026-10-20T09:33:37.070Z",
+ "opts": {
+  "shardsPerBackend": 1,
+  "maxDetPools": 99,
+  "drop": [],
+  "only": [
+   "M24",
+   "M26",
+   "M03",
+   "M02",
+   "M33",
+   "M35"
+  ]
+ },
+ "jobs": [
+  {
+   "backend": "lavapipe",
+   "shard": 1,
+   "estSecArm64": 1016,
+   "items": [
+    {
+     "id": "M24",
+     "pools": [
+      "inv-vector-fns",
+      "inv-mul-paths",
+      "full"
+     ],
+     "why": "arm64 DET in full,inv-mul-paths,inv-vector-fns"
+    },
+    {
+     "id": "M26",
+     "pools": [
+      "inv-bitops",
+      "inv-scalar-int"
+     ],
+     "why": "arm64 DET in inv-bitops,inv-scalar-int"
+    },
+    {
+     "id": "M33",
+     "pools": [
+      "inv-bitops",
+      "inv-vector-fns",
+      "inv-scalar-int",
+      "inv-integer-mul",
+      "inv-comptime",
+      "full"
+     ],
+     "why": "arm64 DET in full,inv-bitops,inv-comptime,inv-integer-mul,inv-scalar-int,inv-vector-fns"
+    },
+    {
+     "id": "M35",
+     "pools": [
+      "ex",
+      "inv-bitops",
+      "inv-vector-fns",
+      "inv-mul-paths",
+      "inv-scalar-int",
+      "inv-integer-mul",
+      "inv-comptime",
+      "full",
+      "own"
+     ],
+     "why": "arm64 text-only"
+    },
+    {
+     "id": "M03",
+     "pools": [
+      "own"
+     ],
+     "why": "arm64 DET in own"
+    },
+    {
+     "id": "M02",
+     "pools": [
+      "ex",
+      "inv-bitops",
+      "inv-vector-fns",
+      "inv-mul-paths",
+      "inv-scalar-int",
+      "inv-integer-mul",
+      "inv-comptime",
+      "full",
+      "own"
+     ],
+     "why": "arm64 missed"
+    }
+   ]
+  },
+  {
+   "backend": "swiftshader",
+   "shard": 1,
+   "estSecArm64": 1016,
+   "items": [
+    {
+     "id": "M24",
+     "pools": [
+      "inv-vector-fns",
+      "inv-mul-paths",
+      "full"
+     ],
+     "why": "arm64 DET in full,inv-mul-paths,inv-vector-fns"
+    },
+    {
+     "id": "M26",
+     "pools": [
+      "inv-bitops",
+      "inv-scalar-int"
+     ],
+     "why": "arm64 DET in inv-bitops,inv-scalar-int"
+    },
+    {
+     "id": "M33",
+     "pools": [
+      "inv-bitops",
+      "inv-vector-fns",
+      "inv-scalar-int",
+      "inv-integer-mul",
+      "inv-comptime",
+      "full"
+     ],
+     "why": "arm64 DET in full,inv-bitops,inv-comptime,inv-integer-mul,inv-scalar-int,inv-vector-fns"
+    },
+    {
+     "id": "M35",
+     "pools": [
+      "ex",
+      "inv-bitops",
+      "inv-vector-fns",
+      "inv-mul-paths",
+      "inv-scalar-int",
+      "inv-integer-mul",
+      "inv-comptime",
+      "full",
+      "own"
+     ],
+     "why": "arm64 text-only"
+    },
+    {
+     "id": "M03",
+     "pools": [
+      "own"
+     ],
+     "why": "arm64 DET in own"
+    },
+    {
+     "id": "M02",
+     "pools": [
+      "ex",
+      "inv-bitops",
+      "inv-vector-fns",
+      "inv-mul-paths",
+      "inv-scalar-int",
+      "inv-integer-mul",
+      "inv-comptime",
+      "full",
+      "own"
+     ],
+     "why": "arm64 missed"
+    }
+   ]
+  }
+ ]
+}

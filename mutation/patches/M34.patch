@@ -1,0 +1,10 @@
+--- a/packages/typegpu-sort/src/scan/compute/shared.ts
++++ b/packages/typegpu-sort/src/scan/compute/shared.ts
+@@ -6,7 +6,6 @@
+ export const upsweep = tgpu.fn([d.u32])((localIdx) => {
+   let offset = d.u32(1);
+   for (let d_val = d.u32(WORKGROUP_SIZE / 2); d_val > 0; d_val >>= 1) {
+-    std.workgroupBarrier();
+     if (localIdx < d_val) {
+       const ai = offset * (2 * localIdx + 1) - 1;
+       const bi = offset * (2 * localIdx + 2) - 1;

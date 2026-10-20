@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/data/matrix.ts
++++ b/packages/typegpu/src/data/matrix.ts
+@@ -664,7 +664,7 @@
+     return { argTypes: [f32], returnType: mat4x4f };
+   },
+   codegenImpl: (_ctx, [a]) =>
+-    stitch`mat4x4f(cos(${a}), 0, -sin(${a}), 0, 0, 1, 0, 0, sin(${a}), 0, cos(${a}), 0, 0, 0, 0, 1)`,
++    stitch`mat4x4f(cos(${a}), 0, sin(${a}), 0, 0, 1, 0, 0, -sin(${a}), 0, cos(${a}), 0, 0, 0, 0, 1)`,
+   sideEffects: false,
+ });
+ 

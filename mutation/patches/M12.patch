@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/core/function/ioSchema.ts
++++ b/packages/typegpu/src/core/function/ioSchema.ts
+@@ -82,7 +82,7 @@
+         return [key, member];
+       }
+ 
+-      if (locations[key] !== undefined) {
++      if (locations[key]) {
+         // location has been determined by a previous procedure
+         return [key, location(locations[key], member)];
+       }

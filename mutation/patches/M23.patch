@@ -1,0 +1,13 @@
+--- a/packages/typegpu/src/data/compiledIO.ts
++++ b/packages/typegpu/src/data/compiledIO.ts
+@@ -247,8 +247,8 @@
+           `ArrayBuffer.isView(${valueExpr}) ? ${valueExpr}[${
+             idx
+           }] : Array.isArray(${valueExpr}) ? ${valueExpr}[${packedIndex}] : ${valueExpr}.columns[${
+-            col
+-          }].${components[row]}`,
++            row
++          }].${components[col]}`,
+         );
+       }).join('');
+     }

@@ -1,0 +1,13 @@
+--- a/packages/typegpu/src/resolutionCtx.ts
++++ b/packages/typegpu/src/resolutionCtx.ts
+@@ -492,9 +492,7 @@
+   isIdentifierTaken(name: string, scope: 'global' | 'block'): boolean {
+     return (
+       this.#namespaceInternal.takenGlobalIdentifiers.has(name) ||
+-      (scope === 'block'
+-        ? this._itemStateStack.isIdentifierTakenLocally(name)
+-        : this._itemStateStack.isIdentifierTakenInCallStack(name))
++      this._itemStateStack.isIdentifierTakenLocally(name)
+     );
+   }
+ 

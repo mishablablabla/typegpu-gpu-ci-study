@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/std/numeric.ts
++++ b/packages/typegpu/src/std/numeric.ts
+@@ -509,7 +509,7 @@
+   },
+   normalImpl:
+     'CPU implementation for extractBits not implemented yet. Please submit an issue at https://github.com/software-mansion/TypeGPU/issues',
+-  codegenImpl: (_ctx, [e, offset, count]) => stitch`extractBits(${e}, ${offset}, ${count})`,
++  codegenImpl: (_ctx, [e, offset, count]) => stitch`extractBits(${e}, ${count}, ${offset})`,
+   sideEffects: false,
+ });
+ 

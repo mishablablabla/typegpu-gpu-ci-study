@@ -1,0 +1,13 @@
+const root = process.argv[2];
+const R = {};
+const T = async (name, f) => { try { R[name] = JSON.stringify(await f()); } catch (e) { R[name] = 'THROW:' + String(e.message).slice(0, 80); } };
+const d = await import(`${root}/packages/typegpu/src/data/index.ts`);
+const num = await import(`${root}/packages/typegpu/src/data/numeric.ts`);
+const conv = await import(`${root}/packages/typegpu/src/tgsl/conversion.ts`);
+const io = await import(`${root}/packages/typegpu/src/core/function/ioSchema.ts`);
+const { getCustomLocation } = await import(`${root}/packages/typegpu/src/data/dataTypes.ts`);
+await T('M14 unify([i32, abstractFloat])', () => conv.unify([d.i32, num.abstractFloat])?.map(t => t.type));
+await T('M14 unify([u32, abstractFloat])', () => conv.unify([d.u32, num.abstractFloat])?.map(t => t.type));
+await T('M12 withLocations({a,b},{a:0,b:1}) locations', () => { const r = io.withLocations({ a: d.f32, b: d.f32 }, { a: 0, b: 1 }); return Object.fromEntries(Object.entries(r).map(([k, v]) => [k, getCustomLocation(v)])); });
+await T('M12 withLocations({a,b},{b:0}) locations', () => { const r = io.withLocations({ a: d.f32, b: d.f32 }, { b: 0 }); return Object.fromEntries(Object.entries(r).map(([k, v]) => [k, getCustomLocation(v)])); });
+console.log(JSON.stringify(R));

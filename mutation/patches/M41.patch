@@ -1,0 +1,11 @@
+--- a/packages/typegpu-sdf/src/operators.ts
++++ b/packages/typegpu-sdf/src/operators.ts
+@@ -23,7 +23,7 @@
+   d.f32,
+ )((d1, d2, k) => {
+   const h = std.max(k - std.abs(d1 - d2), 0) / k;
+-  return std.min(d1, d2) - h * h * k * (1 / 4);
++  return std.min(d1, d2) - h * k * (1 / 4);
+ });
+ 
+ /**

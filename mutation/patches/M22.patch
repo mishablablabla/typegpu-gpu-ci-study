@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/data/compiledIO.ts
++++ b/packages/typegpu/src/data/compiledIO.ts
+@@ -230,7 +230,7 @@
+       const writeFunc = primitiveToWriteFunction[primitive];
+       const matSize = wgsl.isMat2x2f(node) ? 2 : wgsl.isMat3x3f(node) ? 3 : 4;
+       const components = ['x', 'y', 'z', 'w'];
+-      const wgslElementStride = roundUp(matSize, 2);
++      const wgslElementStride = matSize;
+ 
+       return Array.from({ length: matSize * wgslElementStride }, (_, idx) => {
+         const col = Math.floor(idx / wgslElementStride);

@@ -1,0 +1,11 @@
+--- a/packages/typegpu/src/std/boolean.ts
++++ b/packages/typegpu/src/std/boolean.ts
+@@ -428,7 +428,7 @@
+   },
+   normalImpl: cpuSelect,
+   codegenImpl: (ctx, [f, t, cond]) => {
+-    const result = ctx.gen.emitCall('select', [], [f, t, cond]);
++    const result = ctx.gen.emitCall('select', [], [t, f, cond]);
+     if (
+       !validSelectBranchTypes.includes(f.dataType as AnyWgslData) ||
+       !validSelectBranchTypes.includes(t.dataType as AnyWgslData)
