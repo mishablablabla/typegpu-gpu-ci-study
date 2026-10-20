@@ -1,0 +1,13 @@
+**
+!package.json
+!package-lock.json
+!third_party/package.json
+!third_party/dawn-node-provider.js
+!third_party/adapter-probe.js
+!third_party/poc-specs
+!tools/phase2/run-cts-swiftshader.sh
+!docker/swiftshader/icd/extract-arm64/usr/lib/chromium/libvk_swiftshader.so
+!docker/swiftshader/icd/extract-arm64/usr/lib/chromium/vk_swiftshader_icd.json
+!docker/swiftshader/icd/extract-amd64/usr/lib/chromium/libvk_swiftshader.so
+!docker/swiftshader/icd/extract-amd64/usr/lib/chromium/vk_swiftshader_icd.json
+!docker/in-container

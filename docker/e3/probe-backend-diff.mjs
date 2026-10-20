@@ -1,0 +1,33 @@
+import { create, globals } from 'webgpu';
+Object.assign(globalThis, globals);
+const gpu = create([]);
+const adapter = await gpu.requestAdapter();
+const dev = await adapter.requestDevice();
+const f32 = (a) => new Float32Array(a);
+async function run(expr, inputs) {
+  const n = inputs[0].length;
+  const decl = inputs.map((_, i) => `@group(0) @binding(${i}) var<storage, read> a${i}: array<f32>;`).join('\n');
+  const args = inputs.map((_, i) => `a${i}[i]`);
+  const code = `${decl}\n@group(0) @binding(${inputs.length}) var<storage, read_write> o: array<f32>;
+@compute @workgroup_size(1) fn main(@builtin(global_invocation_id) g: vec3u) { let i = g.x; o[i] = ${expr.replace(/\$(\d)/g, (_, k) => args[k])}; }`;
+  const mod = dev.createShaderModule({ code });
+  const bufs = inputs.map((v) => { const b = dev.createBuffer({ size: v.length * 4, usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST }); dev.queue.writeBuffer(b, 0, f32(v)); return b; });
+  const out = dev.createBuffer({ size: n * 4, usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_SRC });
+  const stg = dev.createBuffer({ size: n * 4, usage: GPUBufferUsage.COPY_DST | GPUBufferUsage.MAP_READ });
+  const pl = dev.createComputePipeline({ layout: 'auto', compute: { module: mod, entryPoint: 'main' } });
+  const bg = dev.createBindGroup({ layout: pl.getBindGroupLayout(0), entries: [...bufs, out].map((b, i) => ({ binding: i, resource: { buffer: b } })) });
+  const enc = dev.createCommandEncoder(); const p = enc.beginComputePass(); p.setPipeline(pl); p.setBindGroup(0, bg); p.dispatchWorkgroups(n); p.end();
+  enc.copyBufferToBuffer(out, 0, stg, 0, n * 4); dev.queue.submit([enc.finish()]);
+  await stg.mapAsync(GPUMapMode.READ); const r = Array.from(new Float32Array(stg.getMappedRange().slice(0))); stg.unmap(); return r;
+}
+const show = (v) => v.map((x) => (Number.isFinite(x) ? x : String(x)));
+const res = { adapter: adapter.info.device };
+res.mod_2_by_0_1_and_1_and_3 = show(await run('$0 % $1', [[2, 1, 3], [0.1, 0.1, 0.1]]));
+res.manual_fused_candidates = show(await run('$0 - $1 * trunc($0 / $1)', [[2, 1, 3], [0.1, 0.1, 0.1]]));
+res.log_subnormal_inputs = show(await run('log($0)', [[9.999999350456404e-39, 9.99994610111476e-41, 1e-30]]));
+res.log2_subnormal_inputs = show(await run('log2($0)', [[9.999999350456404e-39, 9.99994610111476e-41, 1e-30]]));
+res.mul_by_subnormal = show(await run('$0 * $1', [[1, 0.5, 1], [9.99994610111476e-41, 9.99994610111476e-41, 1.5]]));
+res.div_subnormal_by_2 = show(await run('$0 / $1', [[9.99994610111476e-41, 1, 1], [2, 3, 7]]));
+res.pow_7_1 = show(await run('pow($0, $1)', [[7, 3], [1, 3]]));
+console.log(JSON.stringify(res));
+process.exit(0);

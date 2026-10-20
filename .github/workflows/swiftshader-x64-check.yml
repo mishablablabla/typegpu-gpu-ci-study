@@ -1,0 +1,66 @@
+name: swiftshader-x64-check
+on:
+  workflow_dispatch:
+    inputs:
+      repeats: { description: 'dump repeats per group (fresh containers)', type: string, default: '2' }
+      cts: { description: 'run the extended CTS (23 original spec files + PoC grid)', type: boolean, default: true }
+      perf: { description: 'interleaved Lavapipe/SwiftShader timing (builds the Lavapipe image too)', type: boolean, default: false }
+permissions:
+  contents: read
+jobs:
+  x64:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    defaults: { run: { shell: bash } }
+    env:
+      DEB_URL: https://snapshot.debian.org/archive/debian-security/20261015T173155Z/pool/updates/main/c/chromium/chromium-common_155.0.8059.79-1~deb13u1_amd64.deb
+      DEB_SHA256: 3ea439a3991cac4ebc9741484bf93f848327bdd413b78853bb025454f419f9a6
+    steps:
+      - uses: actions/checkout@v4
+      - name: Host facts (must be native x86_64) + timestamps
+        run: |
+          mkdir -p out; S=runs/phase2
+          echo "commit=$GITHUB_SHA run_id=$GITHUB_RUN_ID attempt=$GITHUB_RUN_ATTEMPT ImageVersion=${ImageVersion:-} ImageOS=${ImageOS:-}" > out/run-id.txt
+          { uname -m; uname -r; . /etc/os-release; echo "$PRETTY_NAME"; echo "nproc $(nproc)"; lscpu; free -m; df -h /; docker --version; } > out/host.txt
+          test "$(uname -m)" = x86_64 || { echo "NOT native x86_64" >&2; exit 1; }
+          date +%s > out/t_start.txt
+      - name: Acquire ICD (verify sha256, extract only)
+        run: |
+          S=runs/phase2; D=docker/swiftshader/icd; mkdir -p $D/debs $D/extract-amd64
+          t0=$(date +%s); curl -fL --retry 3 -sS -o $D/debs/c.deb "$DEB_URL"; echo "$DEB_SHA256  $D/debs/c.deb" | sha256sum -c - | tee out/deb-sha256-check.txt
+          dpkg-deb -x $D/debs/c.deb $D/extract-amd64; ls -l $D/extract-amd64/usr/lib/chromium | tee out/icd-files.txt; sha256sum $D/extract-amd64/usr/lib/chromium/libvk_swiftshader.so $D/extract-amd64/usr/lib/chromium/vk_swiftshader_icd.json | tee -a out/icd-files.txt
+          echo "acquire_seconds=$(( $(date +%s)-t0 ))" > out/timing-acquire.txt
+      - name: Build SwiftShader image + oracle dumps (A,B,C,D,L) x repeats
+        run: |
+          S=runs/phase2; t0=$(date +%s)
+          docker build --build-arg SS_ARCH=amd64 -f docker/swiftshader/Dockerfile.oracle-ext -t tgci-swiftshader-oracle-ext:amd64 . 2>&1 | tail -3
+          echo "build_seconds=$(( $(date +%s)-t0 ))" > out/timing-build.txt
+          MODE=smoke EXT_OPS=sqrt,tanh OUT=$S/smoke/swiftshader-x64-smoke docker/swiftshader/run.sh tgci-swiftshader-oracle-ext:amd64
+          cat $S/smoke/swiftshader-x64-smoke/backend-assert.txt; grep -q "RESULT: PASS" $S/smoke/swiftshader-x64-smoke/backend-assert.txt
+          grep -q "PASS: readback matches i\*2" $S/smoke/swiftshader-x64-smoke/step1.txt
+          ops_of() { case $1 in A) echo add,sub,mul,neg;; B) echo div,min,max;; C) echo inverseSqrt,exp,exp2,sin,cos;; D) echo sqrt,tanh;; L) echo mod,log,log2,pow;; esac; }
+          for r in $(seq 1 ${{ inputs.repeats }}); do for g in A B C D L; do
+            MODE=dump EXT_OPS=$(ops_of $g) OUT=$S/raw/group$g/swiftshader-x64-run$r docker/swiftshader/run.sh tgci-swiftshader-oracle-ext:amd64
+          done; done
+          MODE=dump EXT_FILE=dump-bits-ext-f16.test.ts EXT_OPS=add,sub,mul OUT=$S/raw/groupE/swiftshader-x64-run1 docker/swiftshader/run.sh tgci-swiftshader-oracle-ext:amd64 || true
+      - name: Evaluator parity on native x86_64 (self-test + frozen dumps vs frozen eval.json)
+        run: |
+          docker build --build-arg SS_ARCH=amd64 -f docker/swiftshader/Dockerfile.cts -t tgci-swiftshader-cts:amd64 . 2>&1 | tail -2
+          mkdir -p out/parity; sh ci/parity/run-parity.sh tgci-swiftshader-cts:amd64 out/parity | tee out/parity/PARITY.txt
+      - name: Extended CTS
+        if: ${{ inputs.cts }}
+        run: |
+          S=runs/phase2; OUT=$S/cts/swiftshader-x64-extended-run1 docker/swiftshader/run-cts.sh tgci-swiftshader-cts:amd64
+      - name: Interleaved timing (optional)
+        if: ${{ inputs.perf }}
+        run: |
+          docker build -f docker/oracle-ext/Dockerfile -t tgci-oracle-ext . 2>&1 | tail -2
+          S=runs/phase2; mkdir -p $S/perf; LAV=tgci-oracle-ext SS=tgci-swiftshader-oracle-ext:amd64 PAIRS=8 CPUSET=0-1 bash tools/phase2/perf-run.sh $S/perf/runs-x64.jsonl
+      - name: Collect
+        if: always()
+        run: |
+          date +%s > out/t_end.txt; cp -r runs/phase2/{smoke,raw,cts,perf} out/ 2>/dev/null || true
+          echo '{"schema":"sw-x64-ci-summary/1","runner":"github ubuntu-24.04"}' > out/summary.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: 'sw-x64-results-${{ github.run_id }}-${{ github.run_attempt }}', path: out, retention-days: 7 }

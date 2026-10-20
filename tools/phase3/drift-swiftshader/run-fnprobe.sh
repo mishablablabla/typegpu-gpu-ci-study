@@ -1,0 +1,7 @@
+#!/bin/bash
+# usage: tools/phase3/drift-swiftshader/run-fnprobe.sh <cfg>...  : one slot held for all given cfgs; each writes raw/<cfg>/fnprobe-run1/{fn-probe.json,backend-assert.txt,env.txt...}
+set -u; T="$(cd "$(dirname "$0")" && pwd)"; D="$(cd "$T/../../.." && pwd)/runs/drift-swiftshader"
+for CFG in "$@"; do OUT="$D/raw/$CFG/fnprobe-run1"; [ -e "$OUT" ] && { echo "$OUT exists"; continue; }; mkdir -p "$OUT"; N=p3-driftss-$CFG-fnprobe-$$; docker rm -f $N >/dev/null 2>&1
+  IMG=tgci-p3-driftss-$CFG-dump:arm64; echo "image $IMG $(docker image inspect --format '{{.Id}}' $IMG)" > "$OUT/host-command.txt"
+  docker run --name $N --cpus 2 --memory 2g -v "$T":/probe:ro $IMG sh -c 'mkdir -p /tmp/out; cd /work/webgpu-poc; sha256sum /opt/swiftshader/libvk_swiftshader.so > /tmp/out/env.txt; vulkaninfo --summary > /tmp/out/vulkaninfo.txt 2>/dev/null; VK_LOADER_DEBUG=driver vulkaninfo --summary >/dev/null 2>/tmp/out/loader-trace.txt; node docker/in-container/probe-strict.cjs > /tmp/out/adapter-strict.json 2>/dev/null; echo "mesa-vulkan-drivers: NOT INSTALLED" >> /tmp/out/env.txt; echo ICD-DIRS-EMPTY > /tmp/out/icd-dirs.txt; node docker/in-container/assert-backend.mjs /tmp/out >/dev/null 2>&1 || { echo ASSERT-FAIL > /tmp/out/ABORTED.txt; exit 0; }; node /probe/fn-probe.cjs' > "$OUT/container-stdout.txt" 2> "$OUT/container-stderr.txt"
+  docker cp $N:/tmp/out/. "$OUT/" 2>/dev/null; docker rm $N >/dev/null 2>&1; echo "$CFG: $(tail -1 "$OUT/backend-assert.txt") $(cat "$OUT/container-stdout.txt" | tail -1)"; done

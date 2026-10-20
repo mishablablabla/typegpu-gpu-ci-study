@@ -1,0 +1,13 @@
+# cfg	base	expect_mesa	llvm_pkg	llvm_ver	note
+noble-25.2.8	ubuntu@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac	25.2.8-0ubuntu0.24.04.4	libllvm20	1:20.1.2-0ubuntu1~24.04.3	REFERENCE = Phase-2 pin (ubuntu 24.04 noble-updates)
+noble-24.0.5	ubuntu@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac	24.0.5-1ubuntu1	libllvm17t64	1:17.0.6-9ubuntu1	noble release pocket Mesa on the same userland
+noble-kisak-26.2.5	ubuntu@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac	26.2.5~kisak1~n	libllvm21	1:21.1.8-6ubuntu1~kisak1~n	kisak-mesa fresh PPA on noble userland
+jammy-23.2.1	ubuntu@sha256:0a9887931b0e38af2e3487ed39e29436b0535c4f3f52e57745baaf79d1898956	23.2.1-1ubuntu3.1~22.04.4	libllvm15	1:15.0.7-0ubuntu0.22.04.3	ubuntu 22.04 jammy-updates
+jammy-22.0.1	ubuntu@sha256:0a9887931b0e38af2e3487ed39e29436b0535c4f3f52e57745baaf79d1898956	22.0.1-1ubuntu2	libllvm13	1:13.0.1-2ubuntu2.2	ubuntu 22.04 release pocket
+trixie-25.0.7	debian@sha256:913f6706df59a68922d1dd08f78c2476560a8d367897200a6005b00e5f67c2d5	25.0.7-2+deb13u1	libllvm19	1:19.1.7-3+b1	debian 13
+resolute-26.0.8	ubuntu@sha256:c098726dd9b9733f3e885f8de0ef375206a311b0a317eadc40d347b1115fb944	26.0.8-1ubuntu0.3	libllvm21	1:21.1.8-6ubuntu1	ubuntu 26.04 resolute-updates
+stonking-26.2.4	ubuntu@sha256:c098726dd9b9733f3e885f8de0ef375206a311b0a317eadc40d347b1115fb944	26.2.4-1ubuntu1	libllvm22	1:22.1.8-1ubuntu1	ubuntu devel (stonking, 26.10) on 26.04 base
+bookworm-22.3.6	debian@sha256:2c037a04925515fdd6ea85ea14a682d0e79931f5e9f5d07b6dbfc6ba12f9e858	22.3.6-1+deb12u2	libllvm15	1:15.0.6-4+b1	debian 12 bookworm (+updates/security)
+plucky-25.0.7	ubuntu@sha256:27771fb7b40a58237c98e8d3e6b9ecdd9289cec69a857fccfb85ff36294dac20	25.0.7-0ubuntu0.25.04.2	libllvm20	1:20.1.2-0ubuntu1	ubuntu 25.04 plucky (Mesa 25.0.7 on LLVM 20: separates Mesa from LLVM)
+bookworm-bpo-25.0.7	debian@sha256:2c037a04925515fdd6ea85ea14a682d0e79931f5e9f5d07b6dbfc6ba12f9e858	25.0.7-2~bpo12+1	libllvm15	1:15.0.6-4+b1	debian 12 + backports (Mesa 25.0.7 on LLVM 15)
+trixie-bpo-26.1.6	debian@sha256:913f6706df59a68922d1dd08f78c2476560a8d367897200a6005b00e5f67c2d5	26.1.6-1~bpo13+1	libllvm19	1:19.1.7-3+b1	debian 13 + backports (Mesa 26.1.6 on LLVM 19: bisects the 26.0.8 -> 26.2.x flush change)

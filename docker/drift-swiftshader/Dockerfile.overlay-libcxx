@@ -1,0 +1,16 @@
+#   docker build --build-arg BASE=tgci-swiftshader-oracle-ext:arm64 --build-arg CFG=m138 --build-arg ICD_SHA256=<sha256 of .so> \
+#     -f docker/drift-swiftshader/Dockerfile.overlay -t tgci-p3-driftss-m138-dump:arm64 .      (context = repo root, see .dockerignore)
+ARG BASE
+FROM ${BASE}
+ARG CFG
+ARG ACQ
+ARG ICD_SHA256
+COPY runs/drift-swiftshader/acquisition/${ACQ}/extract/usr/lib/chromium/libvk_swiftshader.so runs/drift-swiftshader/acquisition/${ACQ}/extract/usr/lib/chromium/vk_swiftshader_icd.json /opt/swiftshader/
+RUN apt-get update && apt-get install -y --no-install-recommends libc++1-18 libc++abi1-18 libunwind-18 && rm -rf /var/lib/apt/lists/*; ldconfig; dpkg-query -W -f='${Package} ${Version}\n' libc++1-18 libc++abi1-18 libunwind-18; ldd /opt/swiftshader/libvk_swiftshader.so
+RUN set -e; test -n "$ICD_SHA256"; echo "$ICD_SHA256  /opt/swiftshader/libvk_swiftshader.so" | sha256sum -c - \
+ && ! dpkg -s mesa-vulkan-drivers >/dev/null 2>&1 && ! ls /usr/share/vulkan/icd.d/lvp_icd* >/dev/null 2>&1 \
+ && [ -z "$(ls /usr/share/vulkan/icd.d /etc/vulkan/icd.d 2>/dev/null | grep -v '^$' | grep -v ':$')" ] \
+ && [ "$(uname -m)" = aarch64 ] && file -L /opt/swiftshader/libvk_swiftshader.so | grep -q 'ARM aarch64' \
+ && ls -l /opt/swiftshader && cat /opt/swiftshader/vk_swiftshader_icd.json && echo "overlay check ok: cfg=$CFG ICD sha256=$ICD_SHA256, no other ICD manifests, no mesa, aarch64"
+ENV VK_DRIVER_FILES=/opt/swiftshader/vk_swiftshader_icd.json VK_ICD_FILENAMES=/opt/swiftshader/vk_swiftshader_icd.json VK_LOADER_DRIVERS_SELECT=vk_swiftshader_icd.json
+LABEL p3.driftss.cfg=${CFG} p3.driftss.icd_sha256=${ICD_SHA256}

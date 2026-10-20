@@ -1,0 +1,83 @@
+name: ci-soak
+#   backend swiftshader: pinned Debian chromium-common .deb (sha256-verified), only libvk_swiftshader.so + ICD json extracted, VK_DRIVER_FILES -> it
+on:
+  workflow_dispatch:
+    inputs:
+      reps:      { description: 'jobs per backend (perf: number of perf jobs)', type: string, default: '2' }
+      suite:     { description: 'v1 = full(426 tests)+6 investigation suites+13 example tests | full | inv | examples | dump (bit-exact oracle dumps A,B,C,D,L) | all (v1+dump) | v2 (all-examples runner, ci/soak/run-v2.sh) | v2fast (v2 without the 8 examples that need >100 s on SwiftShader) | v2heavy (only those 8, timeout 480 s) | perf (interleaved Lavapipe/SwiftShader pairs)', type: string, default: 'v1' }
+      backends:  { description: 'comma list: lavapipe,swiftshader (ignored for perf)', type: string, default: 'lavapipe,swiftshader' }
+      perf_pairs: { description: 'perf: interleaved pairs per job', type: string, default: '6' }
+permissions:
+  contents: read
+jobs:
+  plan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    outputs:
+      matrix: ${{ steps.m.outputs.matrix }}
+    steps:
+      - id: m
+        run: |
+          reps='${{ inputs.reps }}'; suite='${{ inputs.suite }}'; backends='${{ inputs.backends }}'
+          case "$reps" in ''|*[!0-9]*) echo "bad reps"; exit 1;; esac
+          items=""
+          if [ "$suite" = perf ]; then backends=both; fi
+          for b in ${backends//,/ }; do case "$b" in lavapipe|swiftshader|both) ;; *) echo "bad backend $b"; exit 1;; esac
+            for r in $(seq 1 "$reps"); do items="$items{\"backend\":\"$b\",\"rep\":$r},"; done; done
+          echo "matrix={\"include\":[${items%,}]}" >> "$GITHUB_OUTPUT"; echo "matrix: [${items%,}]"
+  soak:
+    needs: plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    defaults: { run: { shell: bash } }
+    env:
+      SOAK_BACKEND: ${{ matrix.backend }}
+      SOAK_REP: ${{ matrix.rep }}
+      SOAK_SUITE: ${{ inputs.suite }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Job setup (suite selection, output dir)
+        run: |
+          case "$SOAK_SUITE" in v1) run=full,inv,ex;; full) run=full;; inv) run=inv;; examples) run=ex;; dump) run=dump;; all) run=full,inv,ex,dump;; v2) run=v2;; v2fast) run=v2; echo 'EX_FILTER=/^(?!(simple\/ripple-cube|rendering\/3d-fish|threejs\/attractors|threejs\/compute-particles-snow|simulation\/fluid-double-buffering|threejs\/compute-particles|simulation\/gravity|simulation\/slime-mold-3d)$)/' >> "$GITHUB_ENV";; v2heavy) run=v2; { echo 'EX_FILTER=simple/ripple-cube,rendering/3d-fish,threejs/attractors,threejs/compute-particles-snow,simulation/fluid-double-buffering,threejs/compute-particles,simulation/gravity,simulation/slime-mold-3d'; echo 'EX_TIMEOUT_MS=480000'; } >> "$GITHUB_ENV";; perf) run=perf;; *) echo "bad suite"; exit 1;; esac
+          { echo "SOAK_RUN=$run"; echo "OUT=$GITHUB_WORKSPACE/out"; } >> "$GITHUB_ENV"; mkdir -p out; date +%s > out/t_start.txt
+      - name: Host facts (native x86_64 check, runner image, CPU)
+        run: bash ci/soak/facts.sh
+      - uses: actions/setup-node@v4
+        with: { node-version: '24.21.0' }
+      - name: npm ci
+        run: source ci/soak/lib.sh; stage npm-ci npm ci --no-audit --no-fund
+      - name: Acquire Lavapipe (unpinned apt)
+        if: ${{ matrix.backend == 'lavapipe' || matrix.backend == 'both' }}
+        run: bash ci/soak/acquire-lavapipe.sh
+      - name: Acquire SwiftShader (pinned deb, sha256-verified)
+        if: ${{ matrix.backend == 'swiftshader' || matrix.backend == 'both' }}
+        run: bash ci/soak/acquire-swiftshader.sh
+      - name: Backend identity assertion
+        id: identity
+        if: ${{ matrix.backend != 'both' }}
+        run: source ci/soak/lib.sh; stage identity bash ci/soak/identity.sh
+      - name: Test suites
+        if: ${{ matrix.backend != 'both' && inputs.suite != 'perf' }}
+        run: bash ci/soak/run-suites.sh
+      - name: Perf pairs (interleaved, same runner)
+        if: ${{ matrix.backend == 'both' }}
+        run: |
+          source ci/soak/lib.sh
+          LVP_ICD=$(ls /usr/share/vulkan/icd.d/lvp_icd*.json | head -1); SS_ICD=$(ls $PWD/ss/x/usr/lib/chromium/vk_swiftshader_icd.json)
+          export LVP_ICD SS_ICD PAIRS='${{ inputs.perf_pairs }}'
+          stage perf-pairs bash ci/soak/perf-pairs.sh
+      - name: Summarize
+        if: always()
+        run: |
+          echo "${{ job.status }}" > out/job-status.txt; date +%s > out/t_end.txt
+          node ci/soak/summarize.mjs out || echo '{"schema":"soak-results/1","summarize":"FAILED"}' > out/results.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 'soak-${{ matrix.backend }}-${{ matrix.rep }}-${{ inputs.suite }}-${{ github.run_id }}-${{ github.run_attempt }}'
+          path: out
+          retention-days: 14

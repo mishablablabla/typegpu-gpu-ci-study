@@ -1,0 +1,3 @@
+// usage: node compare-pow-probe.mjs <a.json> <b.json>  -> per column: #values differing, max ULP
+import fs from 'node:fs'; const [a, b] = process.argv.slice(2).map((p) => JSON.parse(fs.readFileSync(p, 'utf8'))); const ord = (h) => { const u = parseInt(h, 16); return u & 0x80000000 ? -(u & 0x7fffffff) : u; };
+for (const c of ['p_const', 'p_rt', 'p_exp2', 'nrm']) { let d = 0, m = 0; for (let i = 0; i < a.N; i++) if (a[c][i] !== b[c][i]) { d++; m = Math.max(m, Math.abs(ord(a[c][i]) - ord(b[c][i]))); } console.log(c.padEnd(8), 'differ', d, 'of', a.N, 'maxULP', m); } console.log('adapterA', a.adapter, '| adapterB', b.adapter);

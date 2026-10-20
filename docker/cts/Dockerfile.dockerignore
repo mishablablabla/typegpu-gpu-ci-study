@@ -1,0 +1,9 @@
+**
+!package.json
+!package-lock.json
+!third_party/package.json
+!third_party/dawn-node-provider.js
+!third_party/adapter-probe.js
+!third_party/run-cts.sh
+!third_party/poc-specs/harness_grid_remainder.spec.ts
+!third_party/poc-specs/harness-mod-grid.json

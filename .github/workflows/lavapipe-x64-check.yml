@@ -1,0 +1,108 @@
+name: lavapipe-x64-check
+on:
+  workflow_dispatch:
+    inputs:
+      full:
+        description: 'Stage 3: full conformance suite'
+        type: boolean
+        default: false
+      cts:
+        description: 'Stage 4: original WebGPU CTS (pinned commit) selection'
+        type: boolean
+        default: false
+      allrows:
+        description: 'Stage 5: all-rows dump of float mod/log/log2/pow groups'
+        type: boolean
+        default: false
+      cts_extended:
+        description: 'Stage 4 option: also run the CTS spec files of all operations evaluated in the oracle extension (f32 A-D, legacy ops, f16)'
+        type: boolean
+        default: false
+      oracleext:
+        description: 'Stage 6: oracle-extension bit-exact dump (group A: add,sub,mul,neg; ops via ext_ops)'
+        type: boolean
+        default: false
+      ext_f16:
+        description: 'Stage 6 option: run the f16 dump (dump-bits-ext-f16.test.ts) instead of the f32 one'
+        type: boolean
+        default: false
+      ext_ops:
+        description: 'Stage 6 ops (comma list)'
+        type: string
+        default: 'add,sub,mul,neg'
+permissions:
+  contents: read
+jobs:
+  x64:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - name: Host facts (must be native x86_64)
+        run: |
+          mkdir -p out
+          echo "commit=$GITHUB_SHA run_id=$GITHUB_RUN_ID attempt=$GITHUB_RUN_ATTEMPT" > out/run-id.txt
+          { uname -m; . /etc/os-release; echo "$PRETTY_NAME"; uname -r; nproc; lscpu | grep -E 'Architecture|Model name|Hypervisor|Flags' | cut -c1-400; docker --version; } | tee out/host.txt
+          test "$(uname -m)" = x86_64 || { echo "NOT native x86_64" >&2; exit 1; }
+      - name: Stage 1 smoke (step1.mjs)
+        id: s1
+        run: |
+          docker build -t tgci-e1 docker/e1
+          docker run --rm tgci-e1 node step1.mjs 2>&1 | tee out/stage1.txt
+          grep -q "PASS: readback matches i\*2" out/stage1.txt
+      - name: Stage 2 subset (step2 + step3, 12 tests)
+        id: s2
+        run: |
+          docker build -f docker/e2/Dockerfile -t tgci-e2 .
+          docker run --rm -e NO_COLOR=1 tgci-e2 npx vitest run step2.test.ts step3.test.ts --reporter=verbose 2>&1 | tee out/stage2.txt
+          grep -Eq "Tests +12 passed \(12\)" out/stage2.txt
+      - name: Stage 3 full suite
+        id: s3
+        if: ${{ inputs.full }}
+        run: |
+          docker build -f docker/e3/Dockerfile -t tgci-e3 .
+          OUT=out/conformance ./docker/e3/run.sh
+      - name: Stage 4 original CTS
+        id: s4
+        if: ${{ inputs.cts }}
+        run: |
+          docker build -f docker/cts/Dockerfile -t tgci-cts .
+          CTS_EXTENDED="${{ inputs.cts_extended && '1' || '' }}" OUT=out/cts ./docker/cts/run.sh
+          for f in out/cts/*.log; do echo "== $f"; grep -A4 'Summary' "$f" | head -5 || true; done
+          if grep -q 'Failed *= *[1-9]' out/cts/*.log; then echo 'CTS failures present' >&2; exit 1; fi
+      - name: Stage 5 all-rows dump
+        id: s5
+        if: ${{ inputs.allrows }}
+        run: |
+          docker build -f docker/allrows/Dockerfile -t tgci-allrows .
+          OUT=out/allrows ./docker/allrows/run.sh
+          test "$(cat out/allrows/exit-code.txt)" = 0
+      - name: Stage 6 oracle-extension dump
+        id: s6
+        if: ${{ inputs.oracleext }}
+        run: |
+          docker build -f docker/oracle-ext/Dockerfile -t tgci-oracle-ext .
+          EXT_FILE="${{ inputs.ext_f16 && 'dump-bits-ext-f16.test.ts' || '' }}" EXT_OPS="${{ inputs.ext_ops }}" OUT=out/oracle-ext ./docker/oracle-ext/run.sh
+          test "$(cat out/oracle-ext/exit-code.txt)" = 0
+      - name: summary.json
+        if: always()
+        run: |
+          node -e '
+            const o = process.env, st = {stage1: o.S1, stage2_subset: o.S2, stage3_full: o.S3, stage4_cts: o.S4, stage5_allrows: o.S5, stage6_oracle_ext: o.S6};
+            require("fs").writeFileSync("out/summary.json", JSON.stringify({ schema: "x64-ci-summary/1", runner: "github ubuntu-24.04", commit: o.GITHUB_SHA, run_id: o.GITHUB_RUN_ID, attempt: o.GITHUB_RUN_ATTEMPT, stages: st }, null, 1));'
+        env:
+          S1: ${{ steps.s1.outcome }}
+          S2: ${{ steps.s2.outcome }}
+          S3: ${{ steps.s3.outcome }}
+          S4: ${{ steps.s4.outcome }}
+          S5: ${{ steps.s5.outcome }}
+          S6: ${{ steps.s6.outcome }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: x64-results-${{ github.run_id }}-${{ github.run_attempt }}
+          path: out/
+          retention-days: 7

@@ -1,0 +1,646 @@
+{
+ "schema": "oracle-ext-eval/1",
+ "input": "investigations/backend-diff/final/oracle-extension/groupD/lavapipe-arm64-run1/allrows-bits-ext.json",
+ "ops": [
+  "sqrt",
+  "tanh"
+ ],
+ "oldRecompute": {
+  "lanes": 900,
+  "mismatches": 0,
+  "wantMismatches": 0
+ },
+ "groups": {
+  "sqrt/f32": {
+   "rows": 54,
+   "policy": "sqrt-derived-from-inverseSqrt",
+   "rowsBefore": {
+    "investigate": 11,
+    "pass": 43
+   },
+   "gpu": {
+    "indeterminate": 12,
+    "accepted": 42
+   },
+   "cpu": {
+    "indeterminate": 12,
+    "accepted": 42
+   },
+   "cpuRecompute": {
+    "compared": 54,
+    "threw": 0,
+    "mismatches": 0
+   }
+  },
+  "sqrt/vec2f": {
+   "rows": 54,
+   "policy": "sqrt-derived-from-inverseSqrt",
+   "rowsBefore": {
+    "investigate": 18,
+    "pass": 36
+   },
+   "gpu": {
+    "indeterminate": 24,
+    "accepted": 84
+   },
+   "cpu": {
+    "unverified": 30,
+    "indeterminate": 4,
+    "accepted": 74
+   },
+   "cpuRecompute": {
+    "compared": 39,
+    "threw": 15,
+    "mismatches": 0
+   }
+  },
+  "sqrt/vec3f": {
+   "rows": 54,
+   "policy": "sqrt-derived-from-inverseSqrt",
+   "rowsBefore": {
+    "investigate": 24,
+    "pass": 30
+   },
+   "gpu": {
+    "indeterminate": 36,
+    "accepted": 126
+   },
+   "cpu": {
+    "unverified": 63,
+    "accepted": 95,
+    "indeterminate": 4
+   },
+   "cpuRecompute": {
+    "compared": 33,
+    "threw": 21,
+    "mismatches": 0
+   }
+  },
+  "sqrt/vec4f": {
+   "rows": 54,
+   "policy": "sqrt-derived-from-inverseSqrt",
+   "rowsBefore": {
+    "investigate": 30,
+    "pass": 24
+   },
+   "gpu": {
+    "indeterminate": 48,
+    "accepted": 168
+   },
+   "cpu": {
+    "unverified": 108,
+    "accepted": 104,
+    "indeterminate": 4
+   },
+   "cpuRecompute": {
+    "compared": 27,
+    "threw": 27,
+    "mismatches": 0
+   }
+  },
+  "tanh/f32": {
+   "rows": 36,
+   "policy": "tanh-abs-1e-5",
+   "rowsBefore": {
+    "pass": 35,
+    "investigate": 1
+   },
+   "gpu": {
+    "accepted": 35,
+    "indeterminate": 1
+   },
+   "cpu": {
+    "accepted": 35,
+    "indeterminate": 1
+   },
+   "cpuRecompute": {
+    "compared": 36,
+    "threw": 0,
+    "mismatches": 0
+   }
+  },
+  "tanh/vec2f": {
+   "rows": 36,
+   "policy": "tanh-abs-1e-5",
+   "rowsBefore": {
+    "pass": 34,
+    "investigate": 2
+   },
+   "gpu": {
+    "accepted": 70,
+    "indeterminate": 2
+   },
+   "cpu": {
+    "accepted": 68,
+    "unverified": 4
+   },
+   "cpuRecompute": {
+    "compared": 34,
+    "threw": 2,
+    "mismatches": 0
+   }
+  },
+  "tanh/vec3f": {
+   "rows": 36,
+   "policy": "tanh-abs-1e-5",
+   "rowsBefore": {
+    "pass": 33,
+    "investigate": 3
+   },
+   "gpu": {
+    "accepted": 105,
+    "indeterminate": 3
+   },
+   "cpu": {
+    "accepted": 99,
+    "unverified": 9
+   },
+   "cpuRecompute": {
+    "compared": 33,
+    "threw": 3,
+    "mismatches": 0
+   }
+  },
+  "tanh/vec4f": {
+   "rows": 36,
+   "policy": "tanh-abs-1e-5",
+   "rowsBefore": {
+    "pass": 32,
+    "investigate": 4
+   },
+   "gpu": {
+    "accepted": 140,
+    "indeterminate": 4
+   },
+   "cpu": {
+    "accepted": 128,
+    "unverified": 16
+   },
+   "cpuRecompute": {
+    "compared": 32,
+    "threw": 4,
+    "mismatches": 0
+   }
+  }
+ },
+ "totals": {
+  "rows": 360,
+  "lanes": 900
+ },
+ "transitions": {
+  "gpu: investigate -> indeterminate": 120,
+  "cpu: investigate -> indeterminate": 21,
+  "gpu: pass -> accepted": 770,
+  "cpu: pass -> accepted": 645,
+  "gpu: pass -> indeterminate": 10,
+  "cpu: pass -> indeterminate": 4,
+  "cpu: none -> unverified": 230
+ },
+ "reasons": {
+  "gpu: investigate -> indeterminate | unbounded interval, finite operands (overflow/flush edge)": 80,
+  "cpu: investigate -> indeterminate | unbounded interval, finite operands (overflow/flush edge)": 17,
+  "gpu: pass -> accepted | bounded interval": 770,
+  "cpu: pass -> accepted | bounded interval": 645,
+  "gpu: pass -> indeterminate | unbounded interval, finite operands (overflow/flush edge)": 10,
+  "cpu: pass -> indeterminate | unbounded interval, finite operands (overflow/flush edge)": 4,
+  "gpu: investigate -> indeterminate | NaN operand (CTS cannot build an interval)": 20,
+  "cpu: investigate -> indeterminate | NaN operand (CTS cannot build an interval)": 2,
+  "gpu: investigate -> indeterminate | unbounded interval, infinite operand": 20,
+  "cpu: investigate -> indeterminate | unbounded interval, infinite operand": 2,
+  "cpu: none -> unverified | no result (CPU threw)": 230
+ },
+ "examples": {
+  "gpu: investigate -> indeterminate | unbounded interval, finite operands (overflow/flush edge)": [
+   {
+    "id": "sqrt:f32:0",
+    "lane": 0,
+    "args": [
+     "00000000"
+    ],
+    "got": "00000000",
+    "want": 0,
+    "interval": [
+     "ff800000",
+     "7f800000"
+    ]
+   },
+   {
+    "id": "sqrt:f32:1",
+    "lane": 0,
+    "args": [
+     "80000000"
+    ],
+    "got": "80000000",
+    "want": 0,
+    "interval": [
+     "ff800000",
+     "7f800000"
+    ]
+   },
+   {
+    "id": "sqrt:f32:3",
+    "lane": 0,
+    "args": [
+     "bf800000"
+    ],
+    "got": "7fc00000",
+    "want": null,
+    "interval": [
+     "ff800000",
+     "7f800000"
+    ]
+   }
+  ],
+  "cpu: investigate -> indeterminate | unbounded interval, finite operands (overflow/flush edge)": [
+   {
+    "id": "sqrt:f32:0",
+    "lane": 0,
+    "args": [
+     "00000000"
+    ],
+    "got": "00000000",
+    "want": 0,
+    "interval": [
+     "ff800000",
+     "7f800000"
+    ]
+   },
+   {
+    "id": "sqrt:f32:1",
+    "lane": 0,
+    "args": [
+     "80000000"
+    ],
+    "got": "80000000",
+    "want": 0,
+    "interval": [
+     "ff800000",
+     "7f800000"
+    ]
+   },
+   {
+    "id": "sqrt:f32:3",
+    "lane": 0,
+    "args": [
+     "bf800000"
+    ],
+    "got": "7fc00000",
+    "want": null,
+    "interval": [
+     "ff800000",
+     "7f800000"
+    ]
+   }
+  ],
+  "gpu: pass -> accepted | bounded interval": [
+   {
+    "id": "sqrt:f32:2",
+    "lane": 0,
+    "args": [
+     "3f800000"
+    ],
+    "got": "3f800000",
+    "want": 1,
+    "interval": [
+     "3f7ffffc",
+     "3f800004"
+    ]
+   },
+   {
+    "id": "sqrt:f32:4",
+    "lane": 0,
+    "args": [
+     "3f000000"
+    ],
+    "got": "3f3504f3",
+    "want": 0.7071067811865476,
+    "interval": [
+     "3f3504ee",
+     "3f3504f8"
+    ]
+   },
+   {
+    "id": "sqrt:f32:6",
+    "lane": 0,
+    "args": [
+     "40000000"
+    ],
+    "got": "3fb504f3",
+    "want": 1.4142135623730951,
+    "interval": [
+     "3fb504ee",
+     "3fb504f8"
+    ]
+   }
+  ],
+  "cpu: pass -> accepted | bounded interval": [
+   {
+    "id": "sqrt:f32:2",
+    "lane": 0,
+    "args": [
+     "3f800000"
+    ],
+    "got": "3f800000",
+    "want": 1,
+    "interval": [
+     "3f7ffffc",
+     "3f800004"
+    ]
+   },
+   {
+    "id": "sqrt:f32:4",
+    "lane": 0,
+    "args": [
+     "3f000000"
+    ],
+    "got": "3f3504f3",
+    "want": 0.7071067811865476,
+    "interval": [
+     "3f3504ee",
+     "3f3504f8"
+    ]
+   },
+   {
+    "id": "sqrt:f32:6",
+    "lane": 0,
+    "args": [
+     "40000000"
+    ],
+    "got": "3fb504f3",
+    "want": 1.4142135623730951,
+    "interval": [
+     "3fb504ee",
+     "3fb504f8"
+    ]
+   }
+  ],
+  "gpu: pass -> indeterminate | unbounded interval, finite operands (overflow/flush edge)": [
+   {
+    "id": "sqrt:f32:20",
+    "lane": 0,
+    "args": [
+     "000116c2"
+    ],
+    "got": "1e3ce4e7",
+    "want": 9.999973050521066e-21,
+    "interval": [
+     "ff800000",
+     "7f800000"
+    ]
+   },
+   {
+    "id": "sqrt:vec2f:17",
+    "lane": 1,
+    "args": [
+     "000116c2"
+    ],
+    "got": "1e3ce4e7",
+    "want": 9.999973050521066e-21,
+    "interval": [
+     "ff800000",
+     "7f800000"
+    ]
+   },
+   {
+    "id": "sqrt:vec2f:20",
+    "lane": 0,
+    "args": [
+     "000116c2"
+    ],
+    "got": "1e3ce4e7",
+    "want": 9.999973050521066e-21,
+    "interval": [
+     "ff800000",
+     "7f800000"
+    ]
+   }
+  ],
+  "cpu: pass -> indeterminate | unbounded interval, finite operands (overflow/flush edge)": [
+   {
+    "id": "sqrt:f32:20",
+    "lane": 0,
+    "args": [
+     "000116c2"
+    ],
+    "got": "1e3ce4e7",
+    "want": 9.999973050521066e-21,
+    "interval": [
+     "ff800000",
+     "7f800000"
+    ]
+   },
+   {
+    "id": "sqrt:vec2f:17",
+    "lane": 1,
+    "args": [
+     "000116c2"
+    ],
+    "got": "1e3ce4e7",
+    "want": 9.999973050521066e-21,
+    "interval": [
+     "ff800000",
+     "7f800000"
+    ]
+   },
+   {
+    "id": "sqrt:vec3f:14",
+    "lane": 2,
+    "args": [
+     "000116c2"
+    ],
+    "got": "1e3ce4e7",
+    "want": 9.999973050521066e-21,
+    "interval": [
+     "ff800000",
+     "7f800000"
+    ]
+   }
+  ],
+  "gpu: investigate -> indeterminate | NaN operand (CTS cannot build an interval)": [
+   {
+    "id": "sqrt:f32:23",
+    "lane": 0,
+    "args": [
+     "7fc00000"
+    ],
+    "got": "7fc00000",
+    "want": null,
+    "interval": null
+   },
+   {
+    "id": "sqrt:vec2f:20",
+    "lane": 1,
+    "args": [
+     "7fc00000"
+    ],
+    "got": "7fc00000",
+    "want": null,
+    "interval": null
+   },
+   {
+    "id": "sqrt:vec2f:23",
+    "lane": 0,
+    "args": [
+     "7fc00000"
+    ],
+    "got": "7fc00000",
+    "want": null,
+    "interval": null
+   }
+  ],
+  "cpu: investigate -> indeterminate | NaN operand (CTS cannot build an interval)": [
+   {
+    "id": "sqrt:f32:23",
+    "lane": 0,
+    "args": [
+     "7fc00000"
+    ],
+    "got": "7fc00000",
+    "want": null,
+    "interval": null
+   },
+   {
+    "id": "tanh:f32:11",
+    "lane": 0,
+    "args": [
+     "7fc00000"
+    ],
+    "got": "7fc00000",
+    "want": null,
+    "interval": null
+   }
+  ],
+  "gpu: investigate -> indeterminate | unbounded interval, infinite operand": [
+   {
+    "id": "sqrt:f32:24",
+    "lane": 0,
+    "args": [
+     "7f800000"
+    ],
+    "got": "7f800000",
+    "want": null,
+    "interval": [
+     "ff800000",
+     "7f800000"
+    ]
+   },
+   {
+    "id": "sqrt:f32:25",
+    "lane": 0,
+    "args": [
+     "ff800000"
+    ],
+    "got": "7fc00000",
+    "want": null,
+    "interval": [
+     "ff800000",
+     "7f800000"
+    ]
+   },
+   {
+    "id": "sqrt:vec2f:21",
+    "lane": 1,
+    "args": [
+     "7f800000"
+    ],
+    "got": "7f800000",
+    "want": null,
+    "interval": [
+     "ff800000",
+     "7f800000"
+    ]
+   }
+  ],
+  "cpu: investigate -> indeterminate | unbounded interval, infinite operand": [
+   {
+    "id": "sqrt:f32:24",
+    "lane": 0,
+    "args": [
+     "7f800000"
+    ],
+    "got": "7f800000",
+    "want": null,
+    "interval": [
+     "ff800000",
+     "7f800000"
+    ]
+   },
+   {
+    "id": "sqrt:f32:25",
+    "lane": 0,
+    "args": [
+     "ff800000"
+    ],
+    "got": "7fc00000",
+    "want": null,
+    "interval": [
+     "ff800000",
+     "7f800000"
+    ]
+   }
+  ],
+  "cpu: none -> unverified | no result (CPU threw)": [
+   {
+    "id": "sqrt:vec2f:0",
+    "lane": 0,
+    "args": [
+     "00000000"
+    ],
+    "got": null,
+    "want": 0,
+    "interval": null
+   },
+   {
+    "id": "sqrt:vec2f:0",
+    "lane": 1,
+    "args": [
+     "bf800000"
+    ],
+    "got": null,
+    "want": null,
+    "interval": null
+   },
+   {
+    "id": "sqrt:vec2f:2",
+    "lane": 0,
+    "args": [
+     "3f800000"
+    ],
+    "got": null,
+    "want": 1,
+    "interval": null
+   }
+  ]
+ },
+ "rowsBefore": {
+  "investigate": 93,
+  "pass": 267
+ },
+ "rowsAfter": {
+  "either": {
+   "indeterminate": 25,
+   "accepted": 263,
+   "unverified": 72
+  },
+  "gpu": {
+   "indeterminate": 97,
+   "accepted": 263
+  },
+  "cpu": {
+   "indeterminate": 25,
+   "accepted": 263,
+   "unverified": 72
+  }
+ },
+ "unmatched": {
+  "cpuThrew": {
+   "lanes": 230,
+   "rows": 72
+  },
+  "nanOperandLanes": 20
+ },
+ "exactAcceptedGpu": 560,
+ "exactAcceptedCpu": 645,
+ "cpuVsGpuIdentical": 473,
+ "cpuVsGpuDiffer": 197
+}

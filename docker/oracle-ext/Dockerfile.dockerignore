@@ -1,0 +1,16 @@
+**
+!package.json
+!package-lock.json
+!vitest.config.mts
+!harness.ts
+!step1.mjs
+!lib
+!diff
+!ported
+!third_party/adapter-probe.js
+!third_party/dawn-node-provider.js
+!third_party/package.json
+!evaluator/engine-allrows.ts
+!evaluator/dump-bits-ext.test.ts
+!evaluator/vitest.config.mts
+!evaluator/dump-bits-ext-f16.test.ts

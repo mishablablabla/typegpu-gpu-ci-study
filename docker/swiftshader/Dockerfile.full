@@ -1,0 +1,8 @@
+#   docker build --build-arg SS_ARCH=arm64 -f docker/swiftshader/Dockerfile.full -t tgci-swiftshader-full:arm64 .
+ARG SS_ARCH
+FROM tgci-swiftshader-oracle-ext:${SS_ARCH}
+WORKDIR /work/webgpu-poc
+COPY step2.test.ts step3.test.ts ./
+COPY selftest ./selftest
+COPY scripts ./scripts
+COPY docker/in-container ./docker/in-container

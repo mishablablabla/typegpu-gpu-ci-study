@@ -1,0 +1,12 @@
+#   docker build --build-arg BASE=tgci-oracle-ext -f docker/swiftshader/Dockerfile.inv -t tgci-inv-lavapipe:arm64 .        (frozen Lavapipe image used as BASE, not modified)
+#   docker build --build-arg BASE=tgci-swiftshader-oracle-ext:arm64 -f docker/swiftshader/Dockerfile.inv -t tgci-inv-swiftshader:arm64 .
+ARG BASE
+FROM ${BASE}
+WORKDIR /work/webgpu-poc
+COPY investigations/bitops ./investigations/bitops
+COPY investigations/vector-fns ./investigations/vector-fns
+COPY investigations/mul-paths ./investigations/mul-paths
+COPY investigations/scalar-int ./investigations/scalar-int
+COPY investigations/integer-mul ./investigations/integer-mul
+COPY investigations/comptime ./investigations/comptime
+COPY docker/in-container ./docker/in-container

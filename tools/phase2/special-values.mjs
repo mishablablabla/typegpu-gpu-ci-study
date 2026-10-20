@@ -1,0 +1,11 @@
+// usage: node special-values.mjs <out.md> : for scalar f32 rows whose inputs are special (0, -0, +-inf, NaN) tabulate Lavapipe-arm64 vs SwiftShader-arm64 outputs (run1 dumps). Facts only.
+import fs from 'node:fs'; import path from 'node:path';
+const here = path.dirname(new URL(import.meta.url).pathname); const OE = path.resolve(here, '../../runs/phase1/oracle-extension'); const SW = path.resolve(here, '../../runs/phase2');
+const dec = (h) => { const b = Buffer.alloc(4); b.writeUInt32BE(parseInt(h, 16)); return b.readFloatBE(0); }; const f = (x) => (Object.is(x, -0) ? '-0' : Number.isNaN(x) ? 'NaN' : String(x));
+const lines = ['# Special-value behavior, SwiftShader (Chromium M155, LLVM 16, arm64) vs Lavapipe (Mesa 25.2.8, arm64), scalar f32 rows of the harness input lists', '', 'CTS category of every row below is `indeterminate` unless stated (domain/NaN/inf operands are not constrained by the CTS interval). Facts from dumps, no explanation of mechanism implied.', ''];
+const sp = (v) => Number.isNaN(v) || !Number.isFinite(v) || v === 0;
+for (const g of ['C', 'D', 'L', 'B']) { const L = JSON.parse(fs.readFileSync(`${OE}/group${g}/lavapipe-arm64-run1/allrows-bits-ext.json`)), S = JSON.parse(fs.readFileSync(`${SW}/raw/group${g}/swiftshader-arm64-run1/allrows-bits-ext.json`));
+  for (let i = 0; i < L.groups.length; i++) { const a = L.groups[i], b = S.groups[i]; if (a.type !== 'f32') continue; const seen = new Map();
+    for (let r = 0; r < a.rows.length; r++) { const args = a.rows[r].inputs.map((x) => dec(x[0])); if (!args.some(sp)) continue; const x = dec(a.rows[r].gpu[0]), y = dec(b.rows[r].gpu[0]); if (Object.is(x, y) || (Number.isNaN(x) && Number.isNaN(y))) continue; const key = `${a.op}(${args.map(f).join(', ')})`; if (!seen.has(key)) seen.set(key, `${f(x)} | ${f(y)}`); }
+    if (seen.size) { lines.push(`## ${a.op}/f32 — rows with special operands where the two backends differ (${seen.size} distinct)`, '', '| call | Lavapipe | SwiftShader |', '|---|---|---|'); for (const [k, v] of [...seen].slice(0, 40)) { const [l, s] = v.split(' | '); lines.push(`| ${k} | ${l} | ${s} |`); } lines.push(''); } } }
+fs.writeFileSync(process.argv[2], lines.join('\n')); console.log(lines.join('\n').slice(0, 6000));

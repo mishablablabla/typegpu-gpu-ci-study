@@ -1,0 +1,6 @@
+*
+!package.json
+!package-lock.json
+!vitest.config.mts
+!step2.test.ts
+!step3.test.ts

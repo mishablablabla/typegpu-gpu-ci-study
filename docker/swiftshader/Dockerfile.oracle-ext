@@ -1,0 +1,24 @@
+#   docker build --build-arg SS_ARCH=arm64 -f docker/swiftshader/Dockerfile.oracle-ext -t tgci-swiftshader-oracle-ext:arm64 .
+FROM ubuntu:24.04
+ARG NODE_VERSION=24.21.0
+ARG SS_ARCH
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates curl xz-utils libvulkan1 vulkan-tools file && rm -rf /var/lib/apt/lists/*
+RUN arch="$(dpkg --print-architecture)"; [ "$arch" = "$SS_ARCH" ] || { echo "SS_ARCH=$SS_ARCH does not match image arch $arch (emulation is not evidence)"; exit 1; }; \
+    case "$arch" in amd64) na=x64;; arm64) na=arm64;; esac; \
+    curl -fsSL "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-${na}.tar.xz" | tar -xJ -C /usr/local --strip-components=1
+COPY docker/swiftshader/icd/extract-${SS_ARCH}/usr/lib/chromium/libvk_swiftshader.so docker/swiftshader/icd/extract-${SS_ARCH}/usr/lib/chromium/vk_swiftshader_icd.json /opt/swiftshader/
+RUN ! dpkg -s mesa-vulkan-drivers >/dev/null 2>&1 && ! ls /usr/share/vulkan/icd.d/lvp_icd* >/dev/null 2>&1 \
+ && [ -z "$(ls /usr/share/vulkan/icd.d /etc/vulkan/icd.d 2>/dev/null | grep -v '^$' | grep -v ':$')" ] && echo "image check ok: no other ICD manifests"
+ENV VK_DRIVER_FILES=/opt/swiftshader/vk_swiftshader_icd.json VK_ICD_FILENAMES=/opt/swiftshader/vk_swiftshader_icd.json VK_LOADER_DRIVERS_SELECT=vk_swiftshader_icd.json
+WORKDIR /work/webgpu-poc
+COPY package.json package-lock.json ./
+RUN npm ci --no-audit --no-fund
+COPY vitest.config.mts harness.ts step1.mjs ./
+COPY lib ./lib
+COPY diff ./diff
+COPY ported ./ported
+COPY third_party/adapter-probe.js third_party/dawn-node-provider.js third_party/package.json ./third_party/
+COPY evaluator/engine-allrows.ts ./evaluator/
+COPY evaluator/dump-bits-ext.test.ts evaluator/dump-bits-ext-f16.test.ts evaluator/vitest.config.mts ./evaluator/
+COPY docker/in-container ./docker/in-container

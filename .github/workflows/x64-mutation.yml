@@ -1,0 +1,79 @@
+name: x64-mutation
+#   lavapipe   : apt mesa-vulkan-drivers (ci/soak/acquire-lavapipe.sh)      swiftshader : pinned Debian chromium-common .deb, Subzero JIT (ci/soak/acquire-swiftshader.sh)
+on:
+  workflow_dispatch:
+    inputs:
+      plan:         { description: 'plan name (mutation/plans/<plan>.json)', type: string, default: 'calib' }
+      jobs:         { description: 'optional filter, comma list backend:shard (e.g. lavapipe:1,swiftshader:1); empty = all jobs of the plan', type: string, default: '' }
+      keep_raw:     { description: '1 = keep raw fingerprints (gz) for every run (debugging; large)', type: string, default: '0' }
+      deadline_min: { description: 'do not start new mutants after this many minutes in the job', type: string, default: '320' }
+permissions:
+  contents: read
+jobs:
+  plan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    outputs:
+      matrix: ${{ steps.m.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: m
+        run: |
+          plan='${{ inputs.plan }}'; filt='${{ inputs.jobs }}'
+          case "$plan" in *[!A-Za-z0-9_-]*|'') echo "bad plan"; exit 1;; esac
+          test -f "mutation/plans/$plan.json" || { echo "no such plan"; exit 1; }
+          node -e '
+            const p=JSON.parse(require("fs").readFileSync(process.argv[1],"utf8")); const f=(process.argv[2]||"").split(",").filter(Boolean);
+            const inc=p.jobs.filter(j=>!f.length||f.includes(j.backend+":"+j.shard)).map(j=>({backend:j.backend,shard:j.shard}));
+            console.log("matrix="+JSON.stringify({include:inc}));' "mutation/plans/$plan.json" "$filt" | tee -a "$GITHUB_OUTPUT"
+  shard:
+    needs: plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 355
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    defaults: { run: { shell: bash } }
+    env:
+      SOAK_BACKEND: ${{ matrix.backend }}
+      SOAK_REP: ${{ matrix.shard }}
+      SOAK_SUITE: x64mut
+      X64_PLAN: ${{ inputs.plan }}
+      X64_SHARD: ${{ matrix.shard }}
+      DEADLINE_MIN: ${{ inputs.deadline_min }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Job setup
+        run: |
+          { echo "OUT=$GITHUB_WORKSPACE/out"; } >> "$GITHUB_ENV"; mkdir -p out; date +%s > out/t_start.txt
+          [ "${{ inputs.keep_raw }}" = 1 ] && echo "KEEP_RAW=1" >> "$GITHUB_ENV" || true
+      - name: Host facts (native x86_64 check, runner image, CPU)
+        run: bash ci/soak/facts.sh
+      - uses: actions/setup-node@v4
+        with: { node-version: '24.21.0' }
+      - name: npm ci
+        run: source ci/soak/lib.sh; stage npm-ci npm ci --no-audit --no-fund
+      - name: Acquire Lavapipe (apt)
+        if: ${{ matrix.backend == 'lavapipe' }}
+        run: bash ci/soak/acquire-lavapipe.sh
+      - name: Acquire SwiftShader (pinned deb, sha256-verified)
+        if: ${{ matrix.backend == 'swiftshader' }}
+        run: bash ci/soak/acquire-swiftshader.sh
+      - name: Backend identity assertion
+        run: |
+          source ci/soak/lib.sh; stage identity bash ci/soak/identity.sh
+          { echo "--- ICD library sha256"; for f in /usr/lib/x86_64-linux-gnu/libvulkan_lvp.so $PWD/ss/x/usr/lib/chromium/libvk_swiftshader.so; do [ -f "$f" ] && sha256sum "$f"; done; dpkg-query -W -f='${Package} ${Version}\n' mesa-vulkan-drivers libllvm20 2>/dev/null; } > out/identity/icd-sha.txt 2>&1 || true
+      - name: Mutation shard (BASE x2, then mutants)
+        run: bash ci/x64mut/run-shard.sh
+      - name: Summarize shard
+        if: always()
+        run: |
+          echo "${{ job.status }}" > out/job-status.txt; date +%s > out/t_end.txt
+          node ci/x64mut/analyze-x64.mjs --quick out || echo "quick analysis failed" > out/analysis-quick.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 'x64mut-${{ inputs.plan }}-${{ matrix.backend }}-${{ matrix.shard }}-${{ github.run_id }}-${{ github.run_attempt }}'
+          path: out
+          retention-days: 14

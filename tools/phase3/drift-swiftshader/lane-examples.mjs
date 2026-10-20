@@ -1,0 +1,9 @@
+// usage: node lane-examples.mjs <cfg> <group> <out.md> : scalar f32 rows where <cfg> differs from Phase-2 M155, sorted by ULP distance (facts only)
+import fs from 'node:fs'; import path from 'node:path';
+const here = path.dirname(new URL(import.meta.url).pathname); const D = process.env.DRIFT_SS_DIR ?? path.resolve(here, '../../../runs/drift-swiftshader'); const SW = path.resolve(here, '../../../runs/phase2');
+const [cfg, g, outP] = process.argv.slice(2); const dec = (h) => { const b = Buffer.alloc(4); b.writeUInt32BE(parseInt(h, 16)); return b.readFloatBE(0); }; const ord = (h) => { const u = parseInt(h, 16); return u & 0x80000000 ? -(u & 0x7fffffff) : u; };
+const A = JSON.parse(fs.readFileSync(`${SW}/raw/group${g}/swiftshader-arm64-run1/allrows-bits-ext.json`)), B = JSON.parse(fs.readFileSync(`${D}/raw/${cfg}/group${g}-run1/allrows-bits-ext.json`)); const lines = [`# ${cfg} vs M155, group ${g}: scalar f32 rows with differing GPU output (top by ULP distance per op)`, ''];
+for (let i = 0; i < A.groups.length; i++) { const a = A.groups[i], b = B.groups[i]; if (a.type !== 'f32') continue; const rows = [];
+  for (let r = 0; r < a.rows.length; r++) { const x = a.rows[r].gpu[0], y = b.rows[r].gpu[0]; if (x === y) continue; const fx = dec(x), fy = dec(y); if (Number.isNaN(fx) && Number.isNaN(fy)) continue; rows.push({ args: a.rows[r].inputs.map((v) => dec(v[0])), m155: fx, new: fy, want: a.rows[r].want ? Number(Buffer.from(a.rows[r].want[0], 'hex').readDoubleBE(0)) : null, ulp: Math.abs(ord(x) - ord(y)) }); }
+  if (!rows.length) continue; rows.sort((p, q) => q.ulp - p.ulp); lines.push(`## ${a.op}/f32 — ${rows.length} differing scalar rows`, '', '| args | M155 | ' + cfg + ' | exact (f64) | ULP dist |', '|---|---|---|---|---|'); for (const r of rows.slice(0, 8)) lines.push(`| ${r.args.join(', ')} | ${r.m155} | ${r.new} | ${r.want} | ${r.ulp} |`); lines.push(''); }
+fs.writeFileSync(outP, lines.join('\n')); console.log(lines.join('\n'));

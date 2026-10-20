@@ -1,0 +1,75 @@
+name: backend-compare-x64
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  x64:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    defaults: { run: { shell: bash } }
+    env:
+      DEB_URL: https://snapshot.debian.org/archive/debian-security/20261015T173155Z/pool/updates/main/c/chromium/chromium-common_155.0.8059.79-1~deb13u1_amd64.deb
+      DEB_SHA256: 3ea439a3991cac4ebc9741484bf93f848327bdd413b78853bb025454f419f9a6
+    steps:
+      - uses: actions/checkout@v4
+      - name: Host facts (must be native x86_64)
+        run: |
+          mkdir -p out; echo "commit=$GITHUB_SHA run_id=$GITHUB_RUN_ID attempt=$GITHUB_RUN_ATTEMPT ImageVersion=${ImageVersion:-} ImageOS=${ImageOS:-}" > out/run-id.txt
+          { uname -m; uname -r; . /etc/os-release; echo "$PRETTY_NAME"; echo "nproc $(nproc)"; lscpu; free -m; df -h /; docker --version; } > out/host.txt
+          test "$(uname -m)" = x86_64 || { echo "NOT native x86_64" >&2; exit 1; }; date +%s > out/t_start.txt
+      - name: Acquire SwiftShader ICD (verify sha256, extract only)
+        run: |
+          S=runs/phase2; D=docker/swiftshader/icd; mkdir -p $D/debs $D/extract-amd64
+          curl -fL --retry 3 -sS -o $D/debs/c.deb "$DEB_URL"; echo "$DEB_SHA256  $D/debs/c.deb" | sha256sum -c - | tee out/deb-sha256-check.txt
+          dpkg-deb -x $D/debs/c.deb $D/extract-amd64; sha256sum $D/extract-amd64/usr/lib/chromium/libvk_swiftshader.so $D/extract-amd64/usr/lib/chromium/vk_swiftshader_icd.json | tee out/icd-files.txt
+      - name: Build images
+        run: |
+          set -x; t0=$(date +%s)
+          docker build --build-arg SS_ARCH=amd64 -f docker/swiftshader/Dockerfile.oracle-ext -t tgci-swiftshader-oracle-ext:amd64 . 2>&1 | tail -2
+          docker build -f docker/oracle-ext/Dockerfile -t tgci-oracle-ext . 2>&1 | tail -2
+          docker build -f docker/swiftshader/Dockerfile.lavapipe-pinned -t tgci-lavapipe-pinned-oracle-ext:amd64 . > out/pinned-build.log 2>&1 && echo ok > out/pinned-build-status.txt || echo FAILED > out/pinned-build-status.txt
+          docker build --build-arg SS_ARCH=amd64 -f docker/swiftshader/Dockerfile.full -t tgci-swiftshader-full:amd64 . 2>&1 | tail -1
+          docker build -f docker/e3/Dockerfile -t tgci-e3 . 2>&1 | tail -1
+          docker build --build-arg BASE=tgci-oracle-ext -f docker/swiftshader/Dockerfile.inv -t tgci-inv-lavapipe:amd64 . 2>&1 | tail -1
+          docker build --build-arg BASE=tgci-swiftshader-oracle-ext:amd64 -f docker/swiftshader/Dockerfile.inv -t tgci-inv-swiftshader:amd64 . 2>&1 | tail -1
+          docker build --build-arg BASE=tgci-oracle-ext -f docker/swiftshader/Dockerfile.ex -t tgci-ex-lavapipe:amd64 . 2>&1 | tail -1
+          docker build --build-arg BASE=tgci-swiftshader-oracle-ext:amd64 -f docker/swiftshader/Dockerfile.ex -t tgci-ex-swiftshader:amd64 . 2>&1 | tail -1
+          echo "build_seconds=$(( $(date +%s)-t0 ))" > out/timing-build.txt; docker images --format '{{.Repository}}:{{.Tag}} {{.ID}} {{.Size}}' > out/images.txt
+      - name: Full conformance suite (Lavapipe docker/e3 vs SwiftShader)
+        run: |
+          S=runs/phase2; mkdir -p $S/conformance
+          OUT=out/lavapipe-full ./docker/e3/run.sh || true
+          OUT=$S/conformance/swiftshader-x64-full-run1 docker/swiftshader/run-full.sh tgci-swiftshader-full:amd64 || true
+      - name: Investigation suites (6) on both backends
+        run: |
+          S=runs/phase2; mkdir -p $S/investigations-suites
+          BACKEND=lavapipe OUT=$S/investigations-suites/lavapipe-x64-run1 docker/swiftshader/run-inv.sh tgci-inv-lavapipe:amd64 || true
+          BACKEND=swiftshader OUT=$S/investigations-suites/swiftshader-x64-run1 docker/swiftshader/run-inv.sh tgci-inv-swiftshader:amd64 || true
+      - name: TypeGPU docs examples on both backends (x2)
+        run: |
+          S=runs/phase2; mkdir -p $S/typegpu-example-runs
+          for r in 1 2; do
+            BACKEND=lavapipe OUT=$S/typegpu-example-runs/lavapipe-x64-run$r docker/swiftshader/run-ex.sh tgci-ex-lavapipe:amd64 || true
+            BACKEND=swiftshader OUT=$S/typegpu-example-runs/swiftshader-x64-run$r docker/swiftshader/run-ex.sh tgci-ex-swiftshader:amd64 || true
+          done
+      - name: Pinned vs unpinned Lavapipe (versions + group D/C/A dumps)
+        run: |
+          S=runs/phase2; mkdir -p $S/pinned-lavapipe
+          if [ "$(cat out/pinned-build-status.txt)" = ok ]; then
+            docker run --rm tgci-lavapipe-pinned-oracle-ext:amd64 cat /pinned-package-versions.txt > out/pinned-versions-amd64.txt
+            docker run --rm tgci-oracle-ext sh -c 'dpkg-query -W -f="\${Package} \${Version}\n" mesa-vulkan-drivers libllvm20 libvulkan1 libdrm2 libstdc++6 libc6' > out/unpinned-versions-amd64.txt
+            diff out/pinned-versions-amd64.txt out/unpinned-versions-amd64.txt > out/versions.diff && echo "versions identical" > out/versions-result.txt || echo "versions DIFFER" > out/versions-result.txt
+            for g in D C A; do ops=$(case $g in A) echo add,sub,mul,neg;; C) echo inverseSqrt,exp,exp2,sin,cos;; D) echo sqrt,tanh;; esac)
+              EXT_OPS=$ops OUT=$S/pinned-lavapipe/group$g/lavapipe-pinned-x64 docker/oracle-ext/run.sh tgci-lavapipe-pinned-oracle-ext:amd64 >/dev/null || true
+              EXT_OPS=$ops OUT=$S/pinned-lavapipe/group$g/lavapipe-unpinned-x64 docker/oracle-ext/run.sh tgci-oracle-ext >/dev/null || true
+              cmp $S/pinned-lavapipe/group$g/lavapipe-pinned-x64/allrows-bits-ext.json $S/pinned-lavapipe/group$g/lavapipe-unpinned-x64/allrows-bits-ext.json && echo "group$g dumps byte-identical" >> out/pinned-dump-result.txt || echo "group$g dumps DIFFER" >> out/pinned-dump-result.txt
+            done
+          fi
+      - name: Collect
+        if: always()
+        run: |
+          date +%s > out/t_end.txt; S=runs/phase2; for d in conformance investigations-suites typegpu-example-runs pinned-lavapipe; do [ -d $S/$d ] && cp -r $S/$d out/ ; done; true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: 'cmp-x64-results-${{ github.run_id }}-${{ github.run_attempt }}', path: out, retention-days: 7 }

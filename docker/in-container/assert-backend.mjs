@@ -1,0 +1,21 @@
+import fs from 'node:fs';
+const D = process.argv[2]; const rd = (f) => { try { return fs.readFileSync(`${D}/${f}`, 'utf8'); } catch { return ''; } };
+const vk = rd('vulkaninfo.txt'), trace = rd('loader-trace.txt'), icd = rd('icd-dirs.txt'), env = rd('env.txt');
+let probe = {}; try { probe = JSON.parse(rd('adapter-strict.json')); } catch {}
+const res = []; const chk = (name, ok, detail = '') => res.push({ name, ok: !!ok, detail });
+chk('vulkaninfo lists exactly one GPU', (vk.match(/^GPU\d+:/gm) || []).length === 1, (vk.match(/^GPU\d+:/gm) || []).join(','));
+chk('vendorID 0x1ae0', /vendorID\s*=\s*0x1ae0/i.test(vk)); chk('deviceID 0xc0de', /deviceID\s*=\s*0xc0de/i.test(vk));
+chk('deviceType CPU', /deviceType\s*=\s*PHYSICAL_DEVICE_TYPE_CPU/.test(vk)); chk('deviceName SwiftShader Device', /deviceName\s*=\s*SwiftShader Device/.test(vk));
+chk('driverID SwiftShader', /driverID\s*=\s*DRIVER_ID_GOOGLE_SWIFTSHADER/.test(vk));
+chk('no other ICD manifests in standard dirs', icd.includes('ICD-DIRS-EMPTY'), icd.trim().slice(0, 200));
+chk('mesa-vulkan-drivers not installed', /mesa-vulkan-drivers: NOT INSTALLED/.test(env));
+chk('loader trace mentions swiftshader', /swiftshader/i.test(trace)); chk('loader trace has no lvp/llvmpipe/mesa', !/lvp|llvmpipe|mesa/i.test(trace + vk));
+chk('strict adapter (forceFallbackAdapter) non-null', probe.strictAdapterNull === false);
+chk('strict == plain adapter', probe.sameAdapterStrictVsPlain === true);
+chk('adapter vendor google / architecture swiftshader', probe.plain?.vendor === 'google' && probe.plain?.architecture === 'swiftshader', `${probe.plain?.vendor}/${probe.plain?.architecture}/${probe.plain?.device}`);
+chk('no mesa/llvmpipe/apple/nvidia/amd/intel in adapter strings', !/mesa|llvmpipe|apple|metal|nvidia|amd|intel/i.test(JSON.stringify(probe.plain || {})));
+chk('requestDevice (default) ok', probe.defaultDevice === 'ok', String(probe.defaultDevice));
+const info = { shaderF16: probe.shaderF16, ctsStyleDevice: probe.ctsStyleDevice, features: (probe.features || []).length };
+const ok = res.every((r) => r.ok);
+fs.writeFileSync(`${D}/backend-assert.txt`, res.map((r) => `${r.ok ? 'PASS' : 'FAIL'}  ${r.name}${r.detail ? '  [' + r.detail + ']' : ''}`).join('\n') + `\ninfo: ${JSON.stringify(info)}\nRESULT: ${ok ? 'PASS' : 'FAIL'}\n`);
+console.log(fs.readFileSync(`${D}/backend-assert.txt`, 'utf8')); process.exit(ok ? 0 : 3);

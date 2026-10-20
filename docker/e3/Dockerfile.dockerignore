@@ -1,0 +1,13 @@
+*
+!package.json
+!package-lock.json
+!vitest.config.mts
+!harness.ts
+!step1.mjs
+!step2.test.ts
+!step3.test.ts
+!lib
+!diff
+!ported
+!selftest
+!scripts

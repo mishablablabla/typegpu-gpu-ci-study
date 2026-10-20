@@ -1,0 +1,5 @@
+**
+!typegpu-examples
+!docker/in-container
+typegpu-examples/out-local
+typegpu-examples/results

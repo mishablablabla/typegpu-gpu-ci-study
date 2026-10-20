@@ -1,0 +1,19 @@
+const { create } = require('/work/webgpu-poc/third_party/dawn-node-provider.js'); const fs = require('node:fs');
+const inputs = []; const f32 = new Float32Array(1), u32 = new Uint32Array(f32.buffer);
+for (let i = 0; i <= 4000; i++) inputs.push(-100 + i * 0.05);
+for (let i = 0; i < 2000; i++) inputs.push(100 + i * 0.5);
+for (let i = 0; i < 1000; i++) inputs.push(Math.pow(10, -3 + i * 0.009));
+for (let i = 0; i < 1000; i++) inputs.push((i + 1) / 1001);
+inputs.push(0, -0, 1, -1, 0.5, 3.14159274, 1.5707964, 1e-30, 1e30, 65504); const N = inputs.length;
+const fns = { sin: 'sin(x)', cos: 'cos(x)', tan: 'tan(x)', asin: 'asin(clamp(x, -1.0, 1.0))', acos: 'acos(clamp(x, -1.0, 1.0))', atan: 'atan(x)', sinh: 'sinh(clamp(x, -80.0, 80.0))', cosh: 'cosh(clamp(x, -80.0, 80.0))', tanh: 'tanh(x)', exp: 'exp(clamp(x, -100.0, 80.0))', exp2: 'exp2(clamp(x, -120.0, 120.0))', log: 'log(abs(x))', log2: 'log2(abs(x))', sqrt: 'sqrt(abs(x))', inverseSqrt: 'inverseSqrt(abs(x) + 1e-30)', powx15: 'pow(abs(x), 1.5)', powxm07: 'pow(abs(x) + 1e-3, -0.7)',
+  fractCos136: 'fract(cos(x) * 136.8168)', fractCos534: 'fract(cos(x) * 534.7645)', madProbe: 'x * 1.0000001 + 1.0e-7', normalizeX: 'normalize(vec3f(x, x * 0.37, 1.0)).x', lengthV3: 'length(vec3f(x, x * 0.37, 1.0))', dotV3: 'dot(vec3f(x, 0.37, 1.7), vec3f(0.3, x, 0.11))', mix: 'mix(x, 1.0 - x, 0.3)', smoothstep: 'smoothstep(-50.0, 50.0, x)', atan2: 'atan2(x, 1.7)', floorX: 'floor(x * 3.3)', round: 'round(x * 2.5)', trunc: 'trunc(x * 2.5)', ceil: 'ceil(x * 0.7)', sign: 'sign(x)', radians: 'radians(x)', degrees: 'degrees(x)' };
+(async () => { globalThis.__gpu = create([]); const adapter = await globalThis.__gpu.requestAdapter({ forceFallbackAdapter: true }); const device = await adapter.requestDevice(); const out = { N, adapter: adapter.info.device, fns: {} };
+  const inBuf = device.createBuffer({ size: N * 4, usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST }); device.queue.writeBuffer(inBuf, 0, new Float32Array(inputs));
+  out.inputBits = inputs.map((v) => { f32[0] = v; return u32[0].toString(16).padStart(8, '0'); });
+  for (const [name, expr] of Object.entries(fns)) { try {
+    device.pushErrorScope('validation'); const mod = device.createShaderModule({ code: `@group(0) @binding(0) var<storage, read> inp: array<f32>;\n@group(0) @binding(1) var<storage, read_write> o: array<f32>;\n@compute @workgroup_size(64) fn main(@builtin(global_invocation_id) id: vec3u) { if (id.x < ${N}u) { let x = inp[id.x]; o[id.x] = ${expr}; } }` });
+    const pipe = device.createComputePipeline({ layout: 'auto', compute: { module: mod, entryPoint: 'main' } }); const ob = device.createBuffer({ size: N * 4, usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_SRC }); const rb = device.createBuffer({ size: N * 4, usage: GPUBufferUsage.MAP_READ | GPUBufferUsage.COPY_DST });
+    const bg = device.createBindGroup({ layout: pipe.getBindGroupLayout(0), entries: [{ binding: 0, resource: { buffer: inBuf } }, { binding: 1, resource: { buffer: ob } }] }); const enc = device.createCommandEncoder(); const p = enc.beginComputePass(); p.setPipeline(pipe); p.setBindGroup(0, bg); p.dispatchWorkgroups(Math.ceil(N / 64)); p.end(); enc.copyBufferToBuffer(ob, 0, rb, 0, N * 4); device.queue.submit([enc.finish()]); await rb.mapAsync(GPUMapMode.READ);
+    const r = new Uint32Array(rb.getMappedRange().slice(0)); rb.unmap(); const err = await device.popErrorScope(); out.fns[name] = err ? { error: String(err.message).slice(0, 200) } : { bits: Array.from(r, (v) => v.toString(16).padStart(8, '0')) };
+  } catch (e) { out.fns[name] = { error: String(e && e.message || e).slice(0, 200) }; } }
+  fs.mkdirSync('/tmp/out', { recursive: true }); fs.writeFileSync('/tmp/out/fn-probe.json', JSON.stringify(out)); console.log('probe done', Object.keys(out.fns).length, 'fns', N, 'inputs'); process.exit(0); })().catch((e) => { console.error(e); process.exit(1); });

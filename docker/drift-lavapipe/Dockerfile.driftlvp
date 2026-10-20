@@ -1,0 +1,60 @@
+#   docker build -f docker/drift-lavapipe/Dockerfile.driftlvp \
+#     --build-arg CFG=noble-25.2.8 --build-arg BASE=ubuntu@sha256:... --build-arg EXPECT_MESA=... --build-arg EXPECT_LLVM_PKG=libllvm20 --build-arg EXPECT_LLVM_VER=... -t tgci-p3-driftlvp-noble-25.2.8 .
+ARG BASE
+FROM ${BASE}
+ARG CFG
+ARG EXPECT_MESA
+ARG EXPECT_LLVM_PKG
+ARG EXPECT_LLVM_VER
+ARG NODE_VERSION=24.21.0
+ARG CTS_COMMIT=e325d0bcc2cb785c4eab1d908339019215bd9462
+ENV DEBIAN_FRONTEND=noninteractive DRIFT_CFG=${CFG}
+COPY docker/drift-lavapipe/setup.sh /setup.sh
+COPY docker/drift-lavapipe/cfg/${CFG}/ /cfg/
+RUN sh /setup.sh
+RUN dpkg-query -W -f='${Package} ${Version}\n' mesa-vulkan-drivers "${EXPECT_LLVM_PKG}" libvulkan1 vulkan-tools libdrm2 libc6 libstdc++6 > /pinned-package-versions.txt \
+ && cat /pinned-package-versions.txt \
+ && test "$(dpkg-query -W -f='${Version}' mesa-vulkan-drivers)" = "${EXPECT_MESA}" \
+ && test "$(dpkg-query -W -f='${Version}' ${EXPECT_LLVM_PKG})" = "${EXPECT_LLVM_VER}" \
+ && echo "ASSERT ok: mesa-vulkan-drivers=${EXPECT_MESA} ${EXPECT_LLVM_PKG}=${EXPECT_LLVM_VER}"
+RUN ! dpkg -l | grep -i swiftshader && [ -z "$(find / -xdev \( -iname '*swiftshader*' -o -iname 'vk_swiftshader*' \) 2>/dev/null)" ] && echo "ASSERT ok: no SwiftShader file in the image (before npm)" \
+ && ls -A /usr/share/vulkan/icd.d /etc/vulkan/icd.d 2>/dev/null | tee /build-icd-list.txt \
+ && (vulkaninfo --summary > /build-vulkaninfo.txt 2>&1 || vulkaninfo > /build-vulkaninfo.txt 2>&1; true) \
+ && grep -Ei 'deviceName|driverName|driverInfo|apiVersion|deviceType' /build-vulkaninfo.txt | head -12 \
+ && [ "$(grep -cE '^[[:space:]]*deviceName' /build-vulkaninfo.txt)" = "1" ] && grep -E 'deviceName' /build-vulkaninfo.txt | grep -qi llvmpipe && ! grep -qi swiftshader /build-vulkaninfo.txt \
+ && echo "ASSERT ok: vulkaninfo shows exactly one device and it is llvmpipe"
+RUN arch="$(dpkg --print-architecture)"; case "$arch" in amd64) na=x64;; arm64) na=arm64;; esac; \
+    curl -fsSL "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-${na}.tar.xz" | tar -xJ -C /usr/local --strip-components=1
+WORKDIR /work/webgpu-poc
+COPY package.json package-lock.json ./
+RUN npm ci --no-audit --no-fund
+RUN [ -z "$(find / -xdev -iname '*swiftshader*' -not -path '/proc/*' 2>/dev/null | grep -v '^/work/webgpu-poc/node_modules/.*/swiftshader.*\.md$')" ] && echo "ASSERT ok: no SwiftShader file after npm ci" || { find / -xdev -iname '*swiftshader*' 2>/dev/null | head; exit 1; }
+COPY vitest.config.mts harness.ts step1.mjs step2.test.ts step3.test.ts ./
+COPY lib ./lib
+COPY diff ./diff
+COPY ported ./ported
+COPY selftest ./selftest
+COPY scripts ./scripts
+COPY third_party/adapter-probe.js third_party/dawn-node-provider.js third_party/package.json ./third_party/
+COPY evaluator/engine-allrows.ts ./evaluator/
+COPY evaluator/dump-bits-ext.test.ts evaluator/dump-bits-ext-f16.test.ts evaluator/vitest.config.mts ./evaluator/
+COPY investigations/bitops ./investigations/bitops
+COPY investigations/vector-fns ./investigations/vector-fns
+COPY investigations/mul-paths ./investigations/mul-paths
+COPY investigations/scalar-int ./investigations/scalar-int
+COPY investigations/integer-mul ./investigations/integer-mul
+COPY investigations/comptime ./investigations/comptime
+COPY typegpu-examples ./typegpu-examples
+RUN node third_party/adapter-probe.js | tee /build-adapter.json && grep -q '"vendor": "mesa"' /build-adapter.json && grep -qi llvmpipe /build-adapter.json && echo "ASSERT ok: dawn.node adapter is mesa/llvmpipe"
+WORKDIR /work/webgpu-poc/third_party
+RUN git clone --filter=blob:none https://github.com/gpuweb/cts.git cts \
+ && git -C cts checkout --detach "$CTS_COMMIT" \
+ && test "$(git -C cts rev-parse HEAD)" = "$CTS_COMMIT" \
+ && cd cts && npm ci --ignore-scripts --no-audit --no-fund && npm run node
+COPY third_party/poc-specs/harness_grid_remainder.spec.ts /work/webgpu-poc/third_party/cts/src/webgpu/shader/execution/expression/binary/
+COPY third_party/poc-specs/harness-mod-grid.json /work/webgpu-poc/third_party/poc-specs/harness-mod-grid.json
+ENV HARNESS_GRID=/work/webgpu-poc/third_party/poc-specs/harness-mod-grid.json
+COPY third_party/run-cts.sh ./
+RUN cd cts && ./tools/run_node --list 'webgpu:shader,execution,expression,binary,harness_grid_remainder:*' | head -3
+WORKDIR /work/webgpu-poc
+COPY tools/phase3/drift-lavapipe/in-container ./drift-tools
