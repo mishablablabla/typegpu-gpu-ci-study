@@ -31,6 +31,8 @@ Full decision, scorecard and caveats: [docs/FINAL_DECISION.md](docs/FINAL_DECISI
 | `docs/`, `results/` | reports and summary data per workstream (`results/<workstream>/{RESULTS.md,results.json}`) |
 | `runs/` | git-ignored output of every script (nothing is written elsewhere) |
 
+Report (PDF): [docs/REPORT.pdf](docs/REPORT.pdf).
+
 History reports: [Phase 1 baseline](docs/phase1/BASELINE.md), [Phase 2 comparison](docs/phase2/COMPARISON_REPORT.md), [Phase 2 final report](docs/phase2/FINAL_REPORT.md).
 
 ## Prerequisites
