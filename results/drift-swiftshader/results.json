@@ -1,0 +1,5199 @@
+{
+ "schema": "drift-swiftshader-results/1",
+ "generated": "2026-10-19T22:09:39.824Z",
+ "baseline": "m155 = Phase-2 Debian chromium-common 155.0.8059.79-1~deb13u1 arm64 (ICD sha256 fa5d1251299c...); Phase-2 raw dirs used as the comparison reference",
+ "builds": {
+  "m100el": {
+   "acquisitionDir": "m100el",
+   "source": [
+    "downloaded 2026-10-19T17:10:27Z",
+    "url https://github.com/electron/electron/releases/download/v18.3.15/electron-v18.3.15-linux-arm64.zip",
+    "size_bytes 89036692",
+    "sha256 8fc93d852acc6722d6c4f62a74bc62d56abacb27c2b4ab644415b73e45c2e6b5"
+   ],
+   "icdSha256": "21b3041a52b2b57ff10caf46219918cf82535c6935dce222437c4421639e8486",
+   "icdBytes": 17078312,
+   "deviceName": "SwiftShader Device (LLVM 10.0.0)",
+   "vulkanApi": "1.2.0",
+   "dawnDevice": "swiftshader-device-llvm-10-0-0-",
+   "dawnDescription": "SwiftShader driver 5.0.0",
+   "features": 17,
+   "shaderF16": false,
+   "subgroups": false,
+   "subgroupSize": "4-4",
+   "ctsStyleDevice": "ok"
+  },
+  "m108el": {
+   "acquisitionDir": "m108el",
+   "source": [
+    "downloaded 2026-10-19T17:10:21Z",
+    "url https://github.com/electron/electron/releases/download/v22.3.27/electron-v22.3.27-linux-arm64.zip",
+    "size_bytes 93933615",
+    "sha256 60279395a5ce4eaf3c08f1e717771b203830902d3fe3a7c311bc37deb1a0e15e"
+   ],
+   "icdSha256": "9ed46866704f6d78974162046e5de6ed581980723464d807d04c575d9e2c4836",
+   "icdBytes": 17590648,
+   "deviceName": "SwiftShader Device (LLVM 10.0.0)",
+   "vulkanApi": "1.3.0",
+   "dawnDevice": "swiftshader-device-llvm-10-0-0-",
+   "dawnDescription": "SwiftShader driver 5.0.0",
+   "features": 19,
+   "shaderF16": false,
+   "subgroups": true,
+   "subgroupSize": "4-4",
+   "ctsStyleDevice": "ok"
+  },
+  "m120el": {
+   "acquisitionDir": "m120el",
+   "source": [
+    "downloaded 2026-10-19T17:10:16Z",
+    "url https://github.com/electron/electron/releases/download/v28.3.3/electron-v28.3.3-linux-arm64.zip",
+    "size_bytes 102388169",
+    "sha256 f77107266581a6b9880757876518df1c4bf6eeff5c193bb5de0a8f6c9902bd1f"
+   ],
+   "icdSha256": "2225bbb7d92486c7dd24e3eb9614e33055a9c6d117f87d6767d45f3f35483e68",
+   "icdBytes": 17422464,
+   "deviceName": "SwiftShader Device (LLVM 10.0.0)",
+   "vulkanApi": "1.3.0",
+   "dawnDevice": "swiftshader-device-llvm-10-0-0-",
+   "dawnDescription": "SwiftShader driver 5.0.0",
+   "features": 19,
+   "shaderF16": false,
+   "subgroups": true,
+   "subgroupSize": "4-4",
+   "ctsStyleDevice": "ok"
+  },
+  "m128lc": {
+   "acquisitionDir": "m128",
+   "source": [
+    "downloaded 2026-10-19T17:08:47Z",
+    "url https://snapshot.debian.org/archive/debian-security/20240913T131730Z/pool/updates/main/c/chromium/chromium-common_128.0.6613.137-1~deb12u1_arm64.deb",
+    "package chromium-common version 128.0.6613.137-1~deb12u1 arch arm64",
+    "snapshot-sha1 2ff0bde95be97d027e4d463c72bc4e0bc6f5125f (== downloaded)",
+    "size_bytes 13531516",
+    "sha256 e0d26b08e8a1f87b2d69db007f75ee27eed603bdf90fe6ff11fddf14e318dd6b"
+   ],
+   "icdSha256": "28b696dd789b38f290514fbdb86adf1894b0ddf8f206cb37bcfb5011222e9ec7",
+   "icdBytes": 19632440,
+   "deviceName": "SwiftShader Device (LLVM 10.0.0)",
+   "vulkanApi": "1.3.0",
+   "dawnDevice": "swiftshader-device-llvm-10-0-0-",
+   "dawnDescription": "SwiftShader driver 5.0.0",
+   "features": 19,
+   "shaderF16": false,
+   "subgroups": true,
+   "subgroupSize": "4-4",
+   "ctsStyleDevice": "ok"
+  },
+  "m129lc": {
+   "acquisitionDir": "m129",
+   "source": [
+    "downloaded 2026-10-19T17:08:49Z",
+    "url https://snapshot.debian.org/archive/debian-security/20241009T171748Z/pool/updates/main/c/chromium/chromium-common_129.0.6668.100-1~deb12u1_arm64.deb",
+    "package chromium-common version 129.0.6668.100-1~deb12u1 arch arm64",
+    "snapshot-sha1 fa735d70771aede5b19fb682a83c6adb311d6684 (== downloaded)",
+    "size_bytes 13410264",
+    "sha256 3cd773e11214f95ff25dceca0e4c26f89f234951df2e3003e365f940e7112a9b"
+   ],
+   "icdSha256": "fdf02b2419515be6a3836937079a576000b90327e80855645e807f3a070c7147",
+   "icdBytes": 19632440,
+   "deviceName": "SwiftShader Device (LLVM 10.0.0)",
+   "vulkanApi": "1.3.0",
+   "dawnDevice": "swiftshader-device-llvm-10-0-0-",
+   "dawnDescription": "SwiftShader driver 5.0.0",
+   "features": 19,
+   "shaderF16": false,
+   "subgroups": true,
+   "subgroupSize": "4-4",
+   "ctsStyleDevice": "ok"
+  },
+  "m130lc": {
+   "acquisitionDir": "m130",
+   "source": [
+    "downloaded 2026-10-19T17:07:31Z",
+    "url https://snapshot.debian.org/archive/debian-security/20241113T135737Z/pool/updates/main/c/chromium/chromium-common_130.0.6723.116-1~deb12u1_arm64.deb",
+    "package chromium-common version 130.0.6723.116-1~deb12u1 arch arm64",
+    "snapshot-sha1 8e264eddd2b074f22aebb6c697af9bb1a9e4f583 (== downloaded)",
+    "size_bytes 13440292",
+    "sha256 6aa9aca210518a3f475857da8eb4b55d6512667beb275e0bad161d949453878d"
+   ],
+   "icdSha256": "bb1fea10e71450592c80a9243a922a1def87c808cbb5f9c765705a02a4ef52a3",
+   "icdBytes": 19632360,
+   "deviceName": "SwiftShader Device (LLVM 10.0.0)",
+   "vulkanApi": "1.3.0",
+   "dawnDevice": "swiftshader-device-llvm-10-0-0-",
+   "dawnDescription": "SwiftShader driver 5.0.0",
+   "features": 19,
+   "shaderF16": false,
+   "subgroups": true,
+   "subgroupSize": "4-4",
+   "ctsStyleDevice": "ok"
+  },
+  "m138": {
+   "acquisitionDir": "m138",
+   "source": [
+    "downloaded 2026-10-19T17:07:28Z",
+    "url https://snapshot.debian.org/archive/debian-security/20250802T041458Z/pool/updates/main/c/chromium/chromium-common_138.0.7204.183-1~deb12u1_arm64.deb",
+    "package chromium-common version 138.0.7204.183-1~deb12u1 arch arm64",
+    "snapshot-sha1 1ca2be98425164a309ba54e6326e40232def5a02 (== downloaded)",
+    "size_bytes 27197188",
+    "sha256 c587370f727b9169e18560b0e8df1775d32504b08a7da23a025744b510ddf0e1"
+   ],
+   "icdSha256": "fdc8f0afa44d071fd5a368394d7c73cdfbb0d8ec7f4d4e7dfa54a13101e15ece",
+   "icdBytes": 27458096,
+   "deviceName": "SwiftShader Device (LLVM 16.0.0)",
+   "vulkanApi": "1.3.0",
+   "dawnDevice": "swiftshader-device-llvm-16-0-0-",
+   "dawnDescription": "SwiftShader driver 5.0.0",
+   "features": 19,
+   "shaderF16": false,
+   "subgroups": true,
+   "subgroupSize": "4-4",
+   "ctsStyleDevice": "ok"
+  },
+  "m146": {
+   "acquisitionDir": "m146",
+   "source": [
+    "downloaded 2026-10-19T17:07:26Z",
+    "url https://snapshot.debian.org/archive/debian-security/20260403T003836Z/pool/updates/main/c/chromium/chromium-common_146.0.7680.177-1~deb13u1_arm64.deb",
+    "package chromium-common version 146.0.7680.177-1~deb13u1 arch arm64",
+    "snapshot-sha1 21c6d00fd2ab356f15ed79d5b8f4be470d589681 (== downloaded)",
+    "size_bytes 33874252",
+    "sha256 e22f75f6dfa6bb3b75be20584f8fa529517746b31e64b00142f811f415027a20"
+   ],
+   "icdSha256": "c06f7b4ac188c2d25bb65bb8784ea9842810921757e2f3c02f0a64c016c222a2",
+   "icdBytes": 27150704,
+   "deviceName": "SwiftShader Device (LLVM 16.0.0)",
+   "vulkanApi": "1.3.0",
+   "dawnDevice": "swiftshader-device-llvm-16-0-0-",
+   "dawnDescription": "SwiftShader driver 5.0.0",
+   "features": 19,
+   "shaderF16": false,
+   "subgroups": true,
+   "subgroupSize": "4-4",
+   "ctsStyleDevice": "ok"
+  },
+  "m150": {
+   "acquisitionDir": "m150",
+   "source": [
+    "downloaded 2026-10-19T17:07:22Z",
+    "url https://snapshot.debian.org/archive/debian-security/20260723T011607Z/pool/updates/main/c/chromium/chromium-common_150.0.7871.181-1~deb13u1_arm64.deb",
+    "package chromium-common version 150.0.7871.181-1~deb13u1 arch arm64",
+    "snapshot-sha1 95811219f30d4202f85a34efdab98b45577e570b (== downloaded)",
+    "size_bytes 31210528",
+    "sha256 295771412ad06034a7b4ea2de24b5a49ab0642c1d12dd72f0855b8a1a06d7a4f"
+   ],
+   "icdSha256": "507102fb531f2ad5f01b515197f5618323770ee2a7f1e22084293ebf2656c34e",
+   "icdBytes": 27335200,
+   "deviceName": "SwiftShader Device (LLVM 16.0.0)",
+   "vulkanApi": "1.3.0",
+   "dawnDevice": "swiftshader-device-llvm-16-0-0-",
+   "dawnDescription": "SwiftShader driver 5.0.0",
+   "features": 19,
+   "shaderF16": false,
+   "subgroups": true,
+   "subgroupSize": "4-4",
+   "ctsStyleDevice": "ok"
+  },
+  "m154": {
+   "acquisitionDir": "m154",
+   "source": [
+    "downloaded 2026-10-19T17:07:15Z",
+    "url https://snapshot.debian.org/archive/debian-security/20261002T020501Z/pool/updates/main/c/chromium/chromium-common_154.0.8037.92-1~deb13u1_arm64.deb",
+    "package chromium-common version 154.0.8037.92-1~deb13u1 arch arm64",
+    "snapshot-sha1 f7203359f5d478aecbfd9aca873f63b891b86685 (== downloaded)",
+    "size_bytes 35586904",
+    "sha256 c635385e9a7dd059f003b703046a1937baa34d381b8989345a412414847f3b6f"
+   ],
+   "icdSha256": "cf6949b287c052c5a746b7a237c0b6f4c9a34973541ceb2fc8080844bf5a1a56",
+   "icdBytes": 27333560,
+   "deviceName": "SwiftShader Device (LLVM 16.0.0)",
+   "vulkanApi": "1.3.0",
+   "dawnDevice": "swiftshader-device-llvm-16-0-0-",
+   "dawnDescription": "SwiftShader driver 5.0.0",
+   "features": 19,
+   "shaderF16": false,
+   "subgroups": true,
+   "subgroupSize": "4-4",
+   "ctsStyleDevice": "ok"
+  },
+  "m155": {
+   "acquisitionDir": "m155",
+   "source": [
+    "url https://snapshot.debian.org/archive/debian-security/20261015T173155Z/pool/updates/main/c/chromium/chromium-common_155.0.8059.79-1~deb13u1_arm64.deb",
+    "size_bytes 36302732",
+    "sha256 2f8d97e652adc2afa8cc96f79141ffdff0ca4f11c3a35671e7b61f60d10eb2b5"
+   ],
+   "icdSha256": "fa5d1251299c825296073f62e2e847699d0f23b39307b5f33298ebb7e4f9931a",
+   "icdBytes": 27342112,
+   "deviceName": "SwiftShader Device (LLVM 16.0.0)",
+   "vulkanApi": "1.3.0",
+   "dawnDevice": "swiftshader-device-llvm-16-0-0-",
+   "dawnDescription": "SwiftShader driver 5.0.0",
+   "features": 19,
+   "shaderF16": false,
+   "subgroups": true,
+   "subgroupSize": "4-4",
+   "ctsStyleDevice": "ok"
+  },
+  "m155cft": {
+   "acquisitionDir": "m155cft",
+   "source": [
+    "downloaded 2026-10-19T17:09:44Z",
+    "url https://storage.googleapis.com/chrome-for-testing-public/155.0.8059.84/linux-arm64/chrome-linux-arm64.zip",
+    "size_bytes 198807353",
+    "sha256 1692a407908867de88eb1f1b2a93ca47c348d8fb2e3c04752d966e0f2e0344b4"
+   ],
+   "icdSha256": "a65d421d6e21c2f39f7ac1ceb085785cbe502ec0d320a0dcb9d9525ec14e42b0",
+   "icdBytes": 17120992,
+   "deviceName": "SwiftShader Device (LLVM 10.0.0)",
+   "vulkanApi": "1.3.0",
+   "dawnDevice": "swiftshader-device-llvm-10-0-0-",
+   "dawnDescription": "SwiftShader driver 5.0.0",
+   "features": 19,
+   "shaderF16": false,
+   "subgroups": true,
+   "subgroupSize": "4-4",
+   "ctsStyleDevice": "ok"
+  },
+  "m157beta": {
+   "acquisitionDir": "m157beta",
+   "source": [
+    "downloaded 2026-10-19T17:09:11Z",
+    "url https://storage.googleapis.com/chrome-for-testing-public/157.0.8103.6/linux-arm64/chrome-linux-arm64.zip",
+    "size_bytes 202935857",
+    "sha256 df8d2377f2fc7b6ad9593b14f013ebd7ee7b444343c067e7c0836a8f74cc3faa"
+   ],
+   "icdSha256": "92052388e097eb718cbc4205e1f890a9195d5380379f0d73ba0c634c9cf3ec6d",
+   "icdBytes": 17027688,
+   "deviceName": "SwiftShader Device (LLVM 10.0.0)",
+   "vulkanApi": "1.3.0",
+   "dawnDevice": "swiftshader-device-llvm-10-0-0-",
+   "dawnDescription": "SwiftShader driver 5.0.0",
+   "features": 19,
+   "shaderF16": false,
+   "subgroups": true,
+   "subgroupSize": "4-4",
+   "ctsStyleDevice": "ok"
+  },
+  "m158canary": {
+   "acquisitionDir": "m158canary",
+   "source": [
+    "downloaded 2026-10-19T17:09:19Z",
+    "url https://storage.googleapis.com/chrome-for-testing-public/158.0.8110.0/linux-arm64/chrome-linux-arm64.zip",
+    "size_bytes 203776738",
+    "sha256 e4a3989cbcab2c2406937dd4241a95e31477c51b93161fa3c24a7c43ebdc2eb7"
+   ],
+   "icdSha256": "f930878bc7fc3efcdeac1e0118595637af2ea80d63a9e549cc6ea2f5b14720fa",
+   "icdBytes": 17041072,
+   "deviceName": "SwiftShader Device (LLVM 10.0.0)",
+   "vulkanApi": "1.3.0",
+   "dawnDevice": "swiftshader-device-llvm-10-0-0-",
+   "dawnDescription": "SwiftShader driver 5.0.0",
+   "features": 19,
+   "shaderF16": false,
+   "subgroups": true,
+   "subgroupSize": "4-4",
+   "ctsStyleDevice": "ok"
+  },
+  "src-1e80438d": {
+   "acquisitionDir": "src-1e80438d",
+   "source": [
+    "built from source 2026-10-19 (tools/ssbuild-run.sh LLVM, docker image webgpu-poc-p3-driftss-ssbuild:arm64: Ubuntu 24.04, clang, cmake, ninja; Release; REACTOR_BACKEND=LLVM (in-tree LLVM 16); tests/EGL/GLES/WSI/PVR/cppdap OFF; -j2 in a 2-CPU/2-GB slot)",
+    "url https://swiftshader.googlesource.com/SwiftShader commit 1e80438d2b93ef36a7c05f8d2b81233bac0e3d16 (Dawn's SwiftShader pin for webgpu 0.6.2 / Dawn 77f9a9aa; submodules shallow-fetched as listed in ssbuild/llvm-1e80438d/submodules.txt)",
+    "wall 896 s (clone+submodules 34 s, cmake 2 s, ninja 860 s, 1216 steps)",
+    "sha256 1ec5cecde4287c97c7da32d8e531fcac07205d76c2bb6f52f907081f6b365a6d (libvk_swiftshader.so)",
+    "NOTE: not bit-reproducible by construction (toolchain not pinned beyond ubuntu:24.04 apt state); SHA of this artifact is what is pinned."
+   ],
+   "icdSha256": "1ec5cecde4287c97c7da32d8e531fcac07205d76c2bb6f52f907081f6b365a6d",
+   "icdBytes": 27633336,
+   "deviceName": "SwiftShader Device (LLVM 10.0.0)",
+   "vulkanApi": "1.3.0",
+   "dawnDevice": "swiftshader-device-llvm-10-0-0-",
+   "dawnDescription": "SwiftShader driver 5.0.0",
+   "features": 19,
+   "shaderF16": false,
+   "subgroups": true,
+   "subgroupSize": "4-4",
+   "ctsStyleDevice": "ok"
+  },
+  "src-5b0479bd": {
+   "acquisitionDir": "src-5b0479bd",
+   "source": [
+    "built from source 2026-10-19 with the same toolchain/recipe as src-1e80438d (tools/ssbuild-run.sh LLVM <out> 5b0479bd...): commit 5b0479bd2d15058aaa9eb490e364f920ff824a8c = the SwiftShader revision that Chromium 154.0.8037.92 .. 155.0.8059.84 vendor (chromium DEPS swiftshader_revision; commit date 2026-06-08 'Revert \"Default to use llvm16\"').",
+    "wall 779 s",
+    "sha256 9c55461062d949f8591ee9e784af1b00c223a8c5be9fc90d294fd2202a1e6ffe (libvk_swiftshader.so)"
+   ],
+   "icdSha256": "9c55461062d949f8591ee9e784af1b00c223a8c5be9fc90d294fd2202a1e6ffe",
+   "icdBytes": 27633048,
+   "deviceName": "SwiftShader Device (LLVM 10.0.0)",
+   "vulkanApi": "1.3.0",
+   "dawnDevice": "swiftshader-device-llvm-10-0-0-",
+   "dawnDescription": "SwiftShader driver 5.0.0",
+   "features": 19,
+   "shaderF16": false,
+   "subgroups": true,
+   "subgroupSize": "4-4",
+   "ctsStyleDevice": "ok"
+  }
+ },
+ "dumps": {
+  "m100el": {
+   "A": {
+    "status": "ok",
+    "lanes": 75500,
+    "gpuCats": {
+     "accepted": 63720,
+     "rejected": 0,
+     "indeterminate": 11780,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 49242,
+     "rejected": 0,
+     "indeterminate": 2744,
+     "unverified": 23514
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "21b3041a52b2b57ff10caf46219918cf82535c6935dce222437c4421639e8486",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "B": {
+    "status": "ok",
+    "lanes": 75000,
+    "gpuCats": {
+     "accepted": 62960,
+     "rejected": 0,
+     "indeterminate": 12040,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 46924,
+     "rejected": 0,
+     "indeterminate": 2343,
+     "unverified": 25733
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "21b3041a52b2b57ff10caf46219918cf82535c6935dce222437c4421639e8486",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "C": {
+    "status": "ok",
+    "lanes": 2200,
+    "gpuCats": {
+     "accepted": 1920,
+     "rejected": 0,
+     "indeterminate": 280,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 1476,
+     "rejected": 0,
+     "indeterminate": 82,
+     "unverified": 642
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "21b3041a52b2b57ff10caf46219918cf82535c6935dce222437c4421639e8486",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 80,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 80,
+     "byKind": {
+      "normal finite": 80
+     },
+     "byOperandClass": {
+      "normal/zero operands": 80
+     },
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {
+      "1": 30,
+      "2": 20,
+      "5-16": 30
+     },
+     "worstUlp": 7,
+     "kindsDetailed": {
+      "normal finite": 80
+     },
+     "opsChanged": [
+      [
+       "sin/f32",
+       8
+      ],
+      [
+       "sin/vec2f",
+       16
+      ],
+      [
+       "sin/vec3f",
+       24
+      ],
+      [
+       "sin/vec4f",
+       32
+      ]
+     ]
+    }
+   },
+   "D": {
+    "status": "ok",
+    "lanes": 900,
+    "gpuCats": {
+     "accepted": 770,
+     "rejected": 0,
+     "indeterminate": 130,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 645,
+     "rejected": 0,
+     "indeterminate": 25,
+     "unverified": 230
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "21b3041a52b2b57ff10caf46219918cf82535c6935dce222437c4421639e8486",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "L": {
+    "status": "ok",
+    "lanes": 41610,
+    "gpuCats": {
+     "accepted": 32860,
+     "rejected": 0,
+     "indeterminate": 8750,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 25574,
+     "rejected": 0,
+     "indeterminate": 2840,
+     "unverified": 13196
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "21b3041a52b2b57ff10caf46219918cf82535c6935dce222437c4421639e8486",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 340,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 340,
+     "byKind": {
+      "normal finite": 340
+     },
+     "byOperandClass": {
+      "normal/zero operands": 340
+     },
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {
+      "1": 80,
+      "2": 70,
+      ">256": 20,
+      "3-4": 120,
+      "5-16": 50
+     },
+     "worstUlp": 8388608,
+     "kindsDetailed": {
+      "normal finite": 340
+     },
+     "opsChanged": [
+      [
+       "log/f32",
+       7
+      ],
+      [
+       "log/vec2f",
+       14
+      ],
+      [
+       "log/vec3f",
+       21
+      ],
+      [
+       "log/vec4f",
+       28
+      ],
+      [
+       "log2/f32",
+       7
+      ],
+      [
+       "log2/vec2f",
+       14
+      ],
+      [
+       "log2/vec3f",
+       21
+      ],
+      [
+       "log2/vec4f",
+       28
+      ],
+      [
+       "pow/f32",
+       20
+      ],
+      [
+       "pow/vec2f",
+       40
+      ],
+      [
+       "pow/vec3f",
+       60
+      ],
+      [
+       "pow/vec4f",
+       80
+      ]
+     ]
+    }
+   },
+   "classSig": "04889f98256a"
+  },
+  "m108el": {
+   "A": {
+    "status": "ok",
+    "lanes": 75500,
+    "gpuCats": {
+     "accepted": 63720,
+     "rejected": 0,
+     "indeterminate": 11780,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 49242,
+     "rejected": 0,
+     "indeterminate": 2744,
+     "unverified": 23514
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "9ed46866704f6d78974162046e5de6ed581980723464d807d04c575d9e2c4836",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "B": {
+    "status": "ok",
+    "lanes": 75000,
+    "gpuCats": {
+     "accepted": 62960,
+     "rejected": 0,
+     "indeterminate": 12040,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 46924,
+     "rejected": 0,
+     "indeterminate": 2343,
+     "unverified": 25733
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "9ed46866704f6d78974162046e5de6ed581980723464d807d04c575d9e2c4836",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "C": {
+    "status": "ok",
+    "lanes": 2200,
+    "gpuCats": {
+     "accepted": 1920,
+     "rejected": 0,
+     "indeterminate": 280,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 1476,
+     "rejected": 0,
+     "indeterminate": 82,
+     "unverified": 642
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "9ed46866704f6d78974162046e5de6ed581980723464d807d04c575d9e2c4836",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "D": {
+    "status": "ok",
+    "lanes": 900,
+    "gpuCats": {
+     "accepted": 770,
+     "rejected": 0,
+     "indeterminate": 130,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 645,
+     "rejected": 0,
+     "indeterminate": 25,
+     "unverified": 230
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "9ed46866704f6d78974162046e5de6ed581980723464d807d04c575d9e2c4836",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "L": {
+    "status": "ok",
+    "lanes": 41610,
+    "gpuCats": {
+     "accepted": 32860,
+     "rejected": 0,
+     "indeterminate": 8750,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 25574,
+     "rejected": 0,
+     "indeterminate": 2840,
+     "unverified": 13196
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "9ed46866704f6d78974162046e5de6ed581980723464d807d04c575d9e2c4836",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "classSig": "b5ac05c53de6"
+  },
+  "m120el": {
+   "A": {
+    "status": "ok",
+    "lanes": 75500,
+    "gpuCats": {
+     "accepted": 63720,
+     "rejected": 0,
+     "indeterminate": 11780,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 49242,
+     "rejected": 0,
+     "indeterminate": 2744,
+     "unverified": 23514
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "2225bbb7d92486c7dd24e3eb9614e33055a9c6d117f87d6767d45f3f35483e68",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "B": {
+    "status": "ok",
+    "lanes": 75000,
+    "gpuCats": {
+     "accepted": 62960,
+     "rejected": 0,
+     "indeterminate": 12040,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 46924,
+     "rejected": 0,
+     "indeterminate": 2343,
+     "unverified": 25733
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "2225bbb7d92486c7dd24e3eb9614e33055a9c6d117f87d6767d45f3f35483e68",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "C": {
+    "status": "ok",
+    "lanes": 2200,
+    "gpuCats": {
+     "accepted": 1920,
+     "rejected": 0,
+     "indeterminate": 280,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 1476,
+     "rejected": 0,
+     "indeterminate": 82,
+     "unverified": 642
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "2225bbb7d92486c7dd24e3eb9614e33055a9c6d117f87d6767d45f3f35483e68",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "D": {
+    "status": "ok",
+    "lanes": 900,
+    "gpuCats": {
+     "accepted": 770,
+     "rejected": 0,
+     "indeterminate": 130,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 645,
+     "rejected": 0,
+     "indeterminate": 25,
+     "unverified": 230
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "2225bbb7d92486c7dd24e3eb9614e33055a9c6d117f87d6767d45f3f35483e68",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "L": {
+    "status": "ok",
+    "lanes": 41610,
+    "gpuCats": {
+     "accepted": 32860,
+     "rejected": 0,
+     "indeterminate": 8750,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 25574,
+     "rejected": 0,
+     "indeterminate": 2840,
+     "unverified": 13196
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "2225bbb7d92486c7dd24e3eb9614e33055a9c6d117f87d6767d45f3f35483e68",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "classSig": "b5ac05c53de6"
+  },
+  "m128lc": {
+   "A": {
+    "status": "ok",
+    "lanes": 75500,
+    "gpuCats": {
+     "accepted": 63720,
+     "rejected": 0,
+     "indeterminate": 11780,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 49242,
+     "rejected": 0,
+     "indeterminate": 2744,
+     "unverified": 23514
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "28b696dd789b38f290514fbdb86adf1894b0ddf8f206cb37bcfb5011222e9ec7",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "B": {
+    "status": "ok",
+    "lanes": 75000,
+    "gpuCats": {
+     "accepted": 62960,
+     "rejected": 0,
+     "indeterminate": 12040,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 46924,
+     "rejected": 0,
+     "indeterminate": 2343,
+     "unverified": 25733
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "28b696dd789b38f290514fbdb86adf1894b0ddf8f206cb37bcfb5011222e9ec7",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "C": {
+    "status": "ok",
+    "lanes": 2200,
+    "gpuCats": {
+     "accepted": 1920,
+     "rejected": 0,
+     "indeterminate": 280,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 1476,
+     "rejected": 0,
+     "indeterminate": 82,
+     "unverified": 642
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "28b696dd789b38f290514fbdb86adf1894b0ddf8f206cb37bcfb5011222e9ec7",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "D": {
+    "status": "ok",
+    "lanes": 900,
+    "gpuCats": {
+     "accepted": 770,
+     "rejected": 0,
+     "indeterminate": 130,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 645,
+     "rejected": 0,
+     "indeterminate": 25,
+     "unverified": 230
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "28b696dd789b38f290514fbdb86adf1894b0ddf8f206cb37bcfb5011222e9ec7",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "L": {
+    "status": "ok",
+    "lanes": 41610,
+    "gpuCats": {
+     "accepted": 32860,
+     "rejected": 0,
+     "indeterminate": 8750,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 25574,
+     "rejected": 0,
+     "indeterminate": 2840,
+     "unverified": 13196
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "28b696dd789b38f290514fbdb86adf1894b0ddf8f206cb37bcfb5011222e9ec7",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "classSig": "b5ac05c53de6"
+  },
+  "m129lc": {
+   "A": {
+    "status": "ok",
+    "lanes": 75500,
+    "gpuCats": {
+     "accepted": 63720,
+     "rejected": 0,
+     "indeterminate": 11780,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 49242,
+     "rejected": 0,
+     "indeterminate": 2744,
+     "unverified": 23514
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "fdf02b2419515be6a3836937079a576000b90327e80855645e807f3a070c7147",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "B": {
+    "status": "ok",
+    "lanes": 75000,
+    "gpuCats": {
+     "accepted": 62960,
+     "rejected": 0,
+     "indeterminate": 12040,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 46924,
+     "rejected": 0,
+     "indeterminate": 2343,
+     "unverified": 25733
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "fdf02b2419515be6a3836937079a576000b90327e80855645e807f3a070c7147",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "C": {
+    "status": "ok",
+    "lanes": 2200,
+    "gpuCats": {
+     "accepted": 1920,
+     "rejected": 0,
+     "indeterminate": 280,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 1476,
+     "rejected": 0,
+     "indeterminate": 82,
+     "unverified": 642
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "fdf02b2419515be6a3836937079a576000b90327e80855645e807f3a070c7147",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "D": {
+    "status": "ok",
+    "lanes": 900,
+    "gpuCats": {
+     "accepted": 770,
+     "rejected": 0,
+     "indeterminate": 130,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 645,
+     "rejected": 0,
+     "indeterminate": 25,
+     "unverified": 230
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "fdf02b2419515be6a3836937079a576000b90327e80855645e807f3a070c7147",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "L": {
+    "status": "ok",
+    "lanes": 41610,
+    "gpuCats": {
+     "accepted": 32860,
+     "rejected": 0,
+     "indeterminate": 8750,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 25574,
+     "rejected": 0,
+     "indeterminate": 2840,
+     "unverified": 13196
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "fdf02b2419515be6a3836937079a576000b90327e80855645e807f3a070c7147",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "classSig": "b5ac05c53de6"
+  },
+  "m130lc": {
+   "A": {
+    "status": "ok",
+    "lanes": 75500,
+    "gpuCats": {
+     "accepted": 63720,
+     "rejected": 0,
+     "indeterminate": 11780,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 49242,
+     "rejected": 0,
+     "indeterminate": 2744,
+     "unverified": 23514
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "bb1fea10e71450592c80a9243a922a1def87c808cbb5f9c765705a02a4ef52a3",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "B": {
+    "status": "ok",
+    "lanes": 75000,
+    "gpuCats": {
+     "accepted": 62960,
+     "rejected": 0,
+     "indeterminate": 12040,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 46924,
+     "rejected": 0,
+     "indeterminate": 2343,
+     "unverified": 25733
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "bb1fea10e71450592c80a9243a922a1def87c808cbb5f9c765705a02a4ef52a3",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "C": {
+    "status": "ok",
+    "lanes": 2200,
+    "gpuCats": {
+     "accepted": 1920,
+     "rejected": 0,
+     "indeterminate": 280,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 1476,
+     "rejected": 0,
+     "indeterminate": 82,
+     "unverified": 642
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "bb1fea10e71450592c80a9243a922a1def87c808cbb5f9c765705a02a4ef52a3",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "D": {
+    "status": "ok",
+    "lanes": 900,
+    "gpuCats": {
+     "accepted": 770,
+     "rejected": 0,
+     "indeterminate": 130,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 645,
+     "rejected": 0,
+     "indeterminate": 25,
+     "unverified": 230
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "bb1fea10e71450592c80a9243a922a1def87c808cbb5f9c765705a02a4ef52a3",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "L": {
+    "status": "ok",
+    "lanes": 41610,
+    "gpuCats": {
+     "accepted": 32860,
+     "rejected": 0,
+     "indeterminate": 8750,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 25574,
+     "rejected": 0,
+     "indeterminate": 2840,
+     "unverified": 13196
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "bb1fea10e71450592c80a9243a922a1def87c808cbb5f9c765705a02a4ef52a3",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "classSig": "b5ac05c53de6"
+  },
+  "m138": {
+   "A": {
+    "status": "ok",
+    "lanes": 75500,
+    "gpuCats": {
+     "accepted": 63720,
+     "rejected": 0,
+     "indeterminate": 11780,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 49242,
+     "rejected": 0,
+     "indeterminate": 2744,
+     "unverified": 23514
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "fdc8f0afa44d071fd5a368394d7c73cdfbb0d8ec7f4d4e7dfa54a13101e15ece",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "B": {
+    "status": "ok",
+    "lanes": 75000,
+    "gpuCats": {
+     "accepted": 62960,
+     "rejected": 0,
+     "indeterminate": 12040,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 46924,
+     "rejected": 0,
+     "indeterminate": 2343,
+     "unverified": 25733
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "fdc8f0afa44d071fd5a368394d7c73cdfbb0d8ec7f4d4e7dfa54a13101e15ece",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "C": {
+    "status": "ok",
+    "lanes": 2200,
+    "gpuCats": {
+     "accepted": 1920,
+     "rejected": 0,
+     "indeterminate": 280,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 1476,
+     "rejected": 0,
+     "indeterminate": 82,
+     "unverified": 642
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "fdc8f0afa44d071fd5a368394d7c73cdfbb0d8ec7f4d4e7dfa54a13101e15ece",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "D": {
+    "status": "ok",
+    "lanes": 900,
+    "gpuCats": {
+     "accepted": 770,
+     "rejected": 0,
+     "indeterminate": 130,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 645,
+     "rejected": 0,
+     "indeterminate": 25,
+     "unverified": 230
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "fdc8f0afa44d071fd5a368394d7c73cdfbb0d8ec7f4d4e7dfa54a13101e15ece",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "L": {
+    "status": "ok",
+    "lanes": 41610,
+    "gpuCats": {
+     "accepted": 32860,
+     "rejected": 0,
+     "indeterminate": 8750,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 25574,
+     "rejected": 0,
+     "indeterminate": 2840,
+     "unverified": 13196
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "fdc8f0afa44d071fd5a368394d7c73cdfbb0d8ec7f4d4e7dfa54a13101e15ece",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "classSig": "b5ac05c53de6"
+  },
+  "m146": {
+   "A": {
+    "status": "ok",
+    "lanes": 75500,
+    "gpuCats": {
+     "accepted": 63720,
+     "rejected": 0,
+     "indeterminate": 11780,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 49242,
+     "rejected": 0,
+     "indeterminate": 2744,
+     "unverified": 23514
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "c06f7b4ac188c2d25bb65bb8784ea9842810921757e2f3c02f0a64c016c222a2",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "B": {
+    "status": "ok",
+    "lanes": 75000,
+    "gpuCats": {
+     "accepted": 62960,
+     "rejected": 0,
+     "indeterminate": 12040,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 46924,
+     "rejected": 0,
+     "indeterminate": 2343,
+     "unverified": 25733
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "c06f7b4ac188c2d25bb65bb8784ea9842810921757e2f3c02f0a64c016c222a2",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "C": {
+    "status": "ok",
+    "lanes": 2200,
+    "gpuCats": {
+     "accepted": 1920,
+     "rejected": 0,
+     "indeterminate": 280,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 1476,
+     "rejected": 0,
+     "indeterminate": 82,
+     "unverified": 642
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "c06f7b4ac188c2d25bb65bb8784ea9842810921757e2f3c02f0a64c016c222a2",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "D": {
+    "status": "ok",
+    "lanes": 900,
+    "gpuCats": {
+     "accepted": 770,
+     "rejected": 0,
+     "indeterminate": 130,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 645,
+     "rejected": 0,
+     "indeterminate": 25,
+     "unverified": 230
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "c06f7b4ac188c2d25bb65bb8784ea9842810921757e2f3c02f0a64c016c222a2",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "L": {
+    "status": "ok",
+    "lanes": 41610,
+    "gpuCats": {
+     "accepted": 32860,
+     "rejected": 0,
+     "indeterminate": 8750,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 25574,
+     "rejected": 0,
+     "indeterminate": 2840,
+     "unverified": 13196
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "c06f7b4ac188c2d25bb65bb8784ea9842810921757e2f3c02f0a64c016c222a2",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "classSig": "b5ac05c53de6"
+  },
+  "m150": {
+   "A": {
+    "status": "ok",
+    "lanes": 75500,
+    "gpuCats": {
+     "accepted": 63720,
+     "rejected": 0,
+     "indeterminate": 11780,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 49242,
+     "rejected": 0,
+     "indeterminate": 2744,
+     "unverified": 23514
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "507102fb531f2ad5f01b515197f5618323770ee2a7f1e22084293ebf2656c34e",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "B": {
+    "status": "ok",
+    "lanes": 75000,
+    "gpuCats": {
+     "accepted": 62960,
+     "rejected": 0,
+     "indeterminate": 12040,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 46924,
+     "rejected": 0,
+     "indeterminate": 2343,
+     "unverified": 25733
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "507102fb531f2ad5f01b515197f5618323770ee2a7f1e22084293ebf2656c34e",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "C": {
+    "status": "ok",
+    "lanes": 2200,
+    "gpuCats": {
+     "accepted": 1920,
+     "rejected": 0,
+     "indeterminate": 280,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 1476,
+     "rejected": 0,
+     "indeterminate": 82,
+     "unverified": 642
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "507102fb531f2ad5f01b515197f5618323770ee2a7f1e22084293ebf2656c34e",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "D": {
+    "status": "ok",
+    "lanes": 900,
+    "gpuCats": {
+     "accepted": 770,
+     "rejected": 0,
+     "indeterminate": 130,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 645,
+     "rejected": 0,
+     "indeterminate": 25,
+     "unverified": 230
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "507102fb531f2ad5f01b515197f5618323770ee2a7f1e22084293ebf2656c34e",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "L": {
+    "status": "ok",
+    "lanes": 41610,
+    "gpuCats": {
+     "accepted": 32860,
+     "rejected": 0,
+     "indeterminate": 8750,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 25574,
+     "rejected": 0,
+     "indeterminate": 2840,
+     "unverified": 13196
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "507102fb531f2ad5f01b515197f5618323770ee2a7f1e22084293ebf2656c34e",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "classSig": "b5ac05c53de6"
+  },
+  "m154": {
+   "A": {
+    "status": "ok",
+    "lanes": 75500,
+    "gpuCats": {
+     "accepted": 63720,
+     "rejected": 0,
+     "indeterminate": 11780,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 49242,
+     "rejected": 0,
+     "indeterminate": 2744,
+     "unverified": 23514
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "cf6949b287c052c5a746b7a237c0b6f4c9a34973541ceb2fc8080844bf5a1a56",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "B": {
+    "status": "ok",
+    "lanes": 75000,
+    "gpuCats": {
+     "accepted": 62960,
+     "rejected": 0,
+     "indeterminate": 12040,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 46924,
+     "rejected": 0,
+     "indeterminate": 2343,
+     "unverified": 25733
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "cf6949b287c052c5a746b7a237c0b6f4c9a34973541ceb2fc8080844bf5a1a56",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "C": {
+    "status": "ok",
+    "lanes": 2200,
+    "gpuCats": {
+     "accepted": 1920,
+     "rejected": 0,
+     "indeterminate": 280,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 1476,
+     "rejected": 0,
+     "indeterminate": 82,
+     "unverified": 642
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "cf6949b287c052c5a746b7a237c0b6f4c9a34973541ceb2fc8080844bf5a1a56",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "D": {
+    "status": "ok",
+    "lanes": 900,
+    "gpuCats": {
+     "accepted": 770,
+     "rejected": 0,
+     "indeterminate": 130,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 645,
+     "rejected": 0,
+     "indeterminate": 25,
+     "unverified": 230
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "cf6949b287c052c5a746b7a237c0b6f4c9a34973541ceb2fc8080844bf5a1a56",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "L": {
+    "status": "ok",
+    "lanes": 41610,
+    "gpuCats": {
+     "accepted": 32860,
+     "rejected": 0,
+     "indeterminate": 8750,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 25574,
+     "rejected": 0,
+     "indeterminate": 2840,
+     "unverified": 13196
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "cf6949b287c052c5a746b7a237c0b6f4c9a34973541ceb2fc8080844bf5a1a56",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "classSig": "b5ac05c53de6"
+  },
+  "m155": {
+   "A": {
+    "status": "ok",
+    "lanes": 75500,
+    "gpuCats": {
+     "accepted": 63720,
+     "rejected": 0,
+     "indeterminate": 11780,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 49242,
+     "rejected": 0,
+     "indeterminate": 2744,
+     "unverified": 23514
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "fa5d1251299c825296073f62e2e847699d0f23b39307b5f33298ebb7e4f9931a",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "B": {
+    "status": "ok",
+    "lanes": 75000,
+    "gpuCats": {
+     "accepted": 62960,
+     "rejected": 0,
+     "indeterminate": 12040,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 46924,
+     "rejected": 0,
+     "indeterminate": 2343,
+     "unverified": 25733
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "fa5d1251299c825296073f62e2e847699d0f23b39307b5f33298ebb7e4f9931a",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "C": {
+    "status": "ok",
+    "lanes": 2200,
+    "gpuCats": {
+     "accepted": 1920,
+     "rejected": 0,
+     "indeterminate": 280,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 1476,
+     "rejected": 0,
+     "indeterminate": 82,
+     "unverified": 642
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "fa5d1251299c825296073f62e2e847699d0f23b39307b5f33298ebb7e4f9931a",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "D": {
+    "status": "ok",
+    "lanes": 900,
+    "gpuCats": {
+     "accepted": 770,
+     "rejected": 0,
+     "indeterminate": 130,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 645,
+     "rejected": 0,
+     "indeterminate": 25,
+     "unverified": 230
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "fa5d1251299c825296073f62e2e847699d0f23b39307b5f33298ebb7e4f9931a",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "L": {
+    "status": "ok",
+    "lanes": 41610,
+    "gpuCats": {
+     "accepted": 32860,
+     "rejected": 0,
+     "indeterminate": 8750,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 25574,
+     "rejected": 0,
+     "indeterminate": 2840,
+     "unverified": 13196
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "fa5d1251299c825296073f62e2e847699d0f23b39307b5f33298ebb7e4f9931a",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "classSig": "b5ac05c53de6"
+  },
+  "m155cft": {
+   "A": {
+    "status": "ok",
+    "lanes": 75500,
+    "gpuCats": {
+     "accepted": 63720,
+     "rejected": 0,
+     "indeterminate": 11780,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 49242,
+     "rejected": 0,
+     "indeterminate": 2744,
+     "unverified": 23514
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "a65d421d6e21c2f39f7ac1ceb085785cbe502ec0d320a0dcb9d9525ec14e42b0",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "B": {
+    "status": "ok",
+    "lanes": 75000,
+    "gpuCats": {
+     "accepted": 62960,
+     "rejected": 0,
+     "indeterminate": 12040,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 46924,
+     "rejected": 0,
+     "indeterminate": 2343,
+     "unverified": 25733
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "a65d421d6e21c2f39f7ac1ceb085785cbe502ec0d320a0dcb9d9525ec14e42b0",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "C": {
+    "status": "ok",
+    "lanes": 2200,
+    "gpuCats": {
+     "accepted": 1920,
+     "rejected": 0,
+     "indeterminate": 280,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 1476,
+     "rejected": 0,
+     "indeterminate": 82,
+     "unverified": 642
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "a65d421d6e21c2f39f7ac1ceb085785cbe502ec0d320a0dcb9d9525ec14e42b0",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "D": {
+    "status": "ok",
+    "lanes": 900,
+    "gpuCats": {
+     "accepted": 770,
+     "rejected": 0,
+     "indeterminate": 130,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 645,
+     "rejected": 0,
+     "indeterminate": 25,
+     "unverified": 230
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "a65d421d6e21c2f39f7ac1ceb085785cbe502ec0d320a0dcb9d9525ec14e42b0",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "L": {
+    "status": "ok",
+    "lanes": 41610,
+    "gpuCats": {
+     "accepted": 32860,
+     "rejected": 0,
+     "indeterminate": 8750,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 25574,
+     "rejected": 0,
+     "indeterminate": 2840,
+     "unverified": 13196
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "a65d421d6e21c2f39f7ac1ceb085785cbe502ec0d320a0dcb9d9525ec14e42b0",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "classSig": "b5ac05c53de6"
+  },
+  "m157beta": {
+   "A": {
+    "status": "ok",
+    "lanes": 75500,
+    "gpuCats": {
+     "accepted": 63720,
+     "rejected": 0,
+     "indeterminate": 11780,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 49242,
+     "rejected": 0,
+     "indeterminate": 2744,
+     "unverified": 23514
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "92052388e097eb718cbc4205e1f890a9195d5380379f0d73ba0c634c9cf3ec6d",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "B": {
+    "status": "ok",
+    "lanes": 75000,
+    "gpuCats": {
+     "accepted": 62960,
+     "rejected": 0,
+     "indeterminate": 12040,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 46924,
+     "rejected": 0,
+     "indeterminate": 2343,
+     "unverified": 25733
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "92052388e097eb718cbc4205e1f890a9195d5380379f0d73ba0c634c9cf3ec6d",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "C": {
+    "status": "ok",
+    "lanes": 2200,
+    "gpuCats": {
+     "accepted": 1920,
+     "rejected": 0,
+     "indeterminate": 280,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 1476,
+     "rejected": 0,
+     "indeterminate": 82,
+     "unverified": 642
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "92052388e097eb718cbc4205e1f890a9195d5380379f0d73ba0c634c9cf3ec6d",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "D": {
+    "status": "ok",
+    "lanes": 900,
+    "gpuCats": {
+     "accepted": 770,
+     "rejected": 0,
+     "indeterminate": 130,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 645,
+     "rejected": 0,
+     "indeterminate": 25,
+     "unverified": 230
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "92052388e097eb718cbc4205e1f890a9195d5380379f0d73ba0c634c9cf3ec6d",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "L": {
+    "status": "ok",
+    "lanes": 41610,
+    "gpuCats": {
+     "accepted": 32860,
+     "rejected": 0,
+     "indeterminate": 8750,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 25574,
+     "rejected": 0,
+     "indeterminate": 2840,
+     "unverified": 13196
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "92052388e097eb718cbc4205e1f890a9195d5380379f0d73ba0c634c9cf3ec6d",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "classSig": "b5ac05c53de6"
+  },
+  "m158canary": {
+   "A": {
+    "status": "ok",
+    "lanes": 75500,
+    "gpuCats": {
+     "accepted": 63720,
+     "rejected": 0,
+     "indeterminate": 11780,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 49242,
+     "rejected": 0,
+     "indeterminate": 2744,
+     "unverified": 23514
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "f930878bc7fc3efcdeac1e0118595637af2ea80d63a9e549cc6ea2f5b14720fa",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "B": {
+    "status": "ok",
+    "lanes": 75000,
+    "gpuCats": {
+     "accepted": 62960,
+     "rejected": 0,
+     "indeterminate": 12040,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 46924,
+     "rejected": 0,
+     "indeterminate": 2343,
+     "unverified": 25733
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "f930878bc7fc3efcdeac1e0118595637af2ea80d63a9e549cc6ea2f5b14720fa",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "C": {
+    "status": "ok",
+    "lanes": 2200,
+    "gpuCats": {
+     "accepted": 1920,
+     "rejected": 0,
+     "indeterminate": 280,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 1476,
+     "rejected": 0,
+     "indeterminate": 82,
+     "unverified": 642
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "f930878bc7fc3efcdeac1e0118595637af2ea80d63a9e549cc6ea2f5b14720fa",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "D": {
+    "status": "ok",
+    "lanes": 900,
+    "gpuCats": {
+     "accepted": 770,
+     "rejected": 0,
+     "indeterminate": 130,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 645,
+     "rejected": 0,
+     "indeterminate": 25,
+     "unverified": 230
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "f930878bc7fc3efcdeac1e0118595637af2ea80d63a9e549cc6ea2f5b14720fa",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "L": {
+    "status": "ok",
+    "lanes": 41610,
+    "gpuCats": {
+     "accepted": 32860,
+     "rejected": 0,
+     "indeterminate": 8750,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 25574,
+     "rejected": 0,
+     "indeterminate": 2840,
+     "unverified": 13196
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "f930878bc7fc3efcdeac1e0118595637af2ea80d63a9e549cc6ea2f5b14720fa",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "classSig": "b5ac05c53de6"
+  },
+  "src-1e80438d": {
+   "A": {
+    "status": "ok",
+    "lanes": 75500,
+    "gpuCats": {
+     "accepted": 63720,
+     "rejected": 0,
+     "indeterminate": 11780,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 49242,
+     "rejected": 0,
+     "indeterminate": 2744,
+     "unverified": 23514
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "1ec5cecde4287c97c7da32d8e531fcac07205d76c2bb6f52f907081f6b365a6d",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "B": {
+    "status": "ok",
+    "lanes": 75000,
+    "gpuCats": {
+     "accepted": 62960,
+     "rejected": 0,
+     "indeterminate": 12040,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 46924,
+     "rejected": 0,
+     "indeterminate": 2343,
+     "unverified": 25733
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "1ec5cecde4287c97c7da32d8e531fcac07205d76c2bb6f52f907081f6b365a6d",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "C": {
+    "status": "ok",
+    "lanes": 2200,
+    "gpuCats": {
+     "accepted": 1920,
+     "rejected": 0,
+     "indeterminate": 280,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 1476,
+     "rejected": 0,
+     "indeterminate": 82,
+     "unverified": 642
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "1ec5cecde4287c97c7da32d8e531fcac07205d76c2bb6f52f907081f6b365a6d",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 490,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 490,
+     "byKind": {
+      "normal finite": 450,
+      "zero/subnormal involved": 40
+     },
+     "byOperandClass": {
+      "normal/zero operands": 490
+     },
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {
+      "1": 140,
+      "2": 100,
+      "17-256": 30,
+      "3-4": 130,
+      "5-16": 50
+     },
+     "worstUlp": 29,
+     "kindsDetailed": {
+      "normal finite": 450,
+      "FTZ: new subnormal -> base zero": 40,
+      "zero/subnormal involved": 40
+     },
+     "opsChanged": [
+      [
+       "exp/f32",
+       29
+      ],
+      [
+       "exp/vec2f",
+       58
+      ],
+      [
+       "exp/vec3f",
+       87
+      ],
+      [
+       "exp/vec4f",
+       116
+      ],
+      [
+       "exp2/f32",
+       20
+      ],
+      [
+       "exp2/vec2f",
+       40
+      ],
+      [
+       "exp2/vec3f",
+       60
+      ],
+      [
+       "exp2/vec4f",
+       80
+      ]
+     ]
+    }
+   },
+   "D": {
+    "status": "ok",
+    "lanes": 900,
+    "gpuCats": {
+     "accepted": 770,
+     "rejected": 0,
+     "indeterminate": 130,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 645,
+     "rejected": 0,
+     "indeterminate": 25,
+     "unverified": 230
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "1ec5cecde4287c97c7da32d8e531fcac07205d76c2bb6f52f907081f6b365a6d",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 100,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 100,
+     "byKind": {
+      "normal finite": 80,
+      "zero/subnormal involved": 20
+     },
+     "byOperandClass": {
+      "normal/zero operands": 100
+     },
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {
+      "1": 40,
+      "2": 20,
+      "3-4": 20
+     },
+     "worstUlp": 3,
+     "kindsDetailed": {
+      "normal finite": 80,
+      "zero/subnormal involved": 20
+     },
+     "opsChanged": [
+      [
+       "tanh/f32",
+       10
+      ],
+      [
+       "tanh/vec2f",
+       20
+      ],
+      [
+       "tanh/vec3f",
+       30
+      ],
+      [
+       "tanh/vec4f",
+       40
+      ]
+     ]
+    }
+   },
+   "L": {
+    "status": "ok",
+    "lanes": 41610,
+    "gpuCats": {
+     "accepted": 32860,
+     "rejected": 0,
+     "indeterminate": 8750,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 25574,
+     "rejected": 0,
+     "indeterminate": 2840,
+     "unverified": 13196
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "1ec5cecde4287c97c7da32d8e531fcac07205d76c2bb6f52f907081f6b365a6d",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 4150,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 4150,
+     "byKind": {
+      "normal finite": 3830,
+      "zero/subnormal involved": 200,
+      "inf vs finite": 120
+     },
+     "byOperandClass": {
+      "normal/zero operands": 4150
+     },
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {
+      "1": 1720,
+      "2": 840,
+      "17-256": 120,
+      ">256": 40,
+      "3-4": 570,
+      "5-16": 540
+     },
+     "worstUlp": 706174219,
+     "kindsDetailed": {
+      "normal finite": 3830,
+      "zero/subnormal involved": 200,
+      "FTZ: new subnormal -> base zero": 90,
+      "inf vs finite": 120
+     },
+     "opsChanged": [
+      [
+       "log/f32",
+       15
+      ],
+      [
+       "log/vec2f",
+       30
+      ],
+      [
+       "log/vec3f",
+       45
+      ],
+      [
+       "log/vec4f",
+       60
+      ],
+      [
+       "log2/f32",
+       17
+      ],
+      [
+       "log2/vec2f",
+       34
+      ],
+      [
+       "log2/vec3f",
+       51
+      ],
+      [
+       "log2/vec4f",
+       68
+      ],
+      [
+       "pow/f32",
+       383
+      ],
+      [
+       "pow/vec2f",
+       766
+      ],
+      [
+       "pow/vec3f",
+       1149
+      ],
+      [
+       "pow/vec4f",
+       1532
+      ]
+     ]
+    }
+   },
+   "classSig": "a3471290f97b"
+  },
+  "src-5b0479bd": {
+   "A": {
+    "status": "ok",
+    "lanes": 75500,
+    "gpuCats": {
+     "accepted": 63720,
+     "rejected": 0,
+     "indeterminate": 11780,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 49242,
+     "rejected": 0,
+     "indeterminate": 2744,
+     "unverified": 23514
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "9c55461062d949f8591ee9e784af1b00c223a8c5be9fc90d294fd2202a1e6ffe",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "B": {
+    "status": "ok",
+    "lanes": 75000,
+    "gpuCats": {
+     "accepted": 62960,
+     "rejected": 0,
+     "indeterminate": 12040,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 46924,
+     "rejected": 0,
+     "indeterminate": 2343,
+     "unverified": 25733
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "9c55461062d949f8591ee9e784af1b00c223a8c5be9fc90d294fd2202a1e6ffe",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 0,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 0,
+     "byKind": {},
+     "byOperandClass": {},
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {},
+     "worstUlp": 0,
+     "kindsDetailed": {},
+     "opsChanged": []
+    }
+   },
+   "C": {
+    "status": "ok",
+    "lanes": 2200,
+    "gpuCats": {
+     "accepted": 1920,
+     "rejected": 0,
+     "indeterminate": 280,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 1476,
+     "rejected": 0,
+     "indeterminate": 82,
+     "unverified": 642
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "9c55461062d949f8591ee9e784af1b00c223a8c5be9fc90d294fd2202a1e6ffe",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 490,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 490,
+     "byKind": {
+      "normal finite": 450,
+      "zero/subnormal involved": 40
+     },
+     "byOperandClass": {
+      "normal/zero operands": 490
+     },
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {
+      "1": 140,
+      "2": 100,
+      "17-256": 30,
+      "3-4": 130,
+      "5-16": 50
+     },
+     "worstUlp": 29,
+     "kindsDetailed": {
+      "normal finite": 450,
+      "FTZ: new subnormal -> base zero": 40,
+      "zero/subnormal involved": 40
+     },
+     "opsChanged": [
+      [
+       "exp/f32",
+       29
+      ],
+      [
+       "exp/vec2f",
+       58
+      ],
+      [
+       "exp/vec3f",
+       87
+      ],
+      [
+       "exp/vec4f",
+       116
+      ],
+      [
+       "exp2/f32",
+       20
+      ],
+      [
+       "exp2/vec2f",
+       40
+      ],
+      [
+       "exp2/vec3f",
+       60
+      ],
+      [
+       "exp2/vec4f",
+       80
+      ]
+     ]
+    }
+   },
+   "D": {
+    "status": "ok",
+    "lanes": 900,
+    "gpuCats": {
+     "accepted": 770,
+     "rejected": 0,
+     "indeterminate": 130,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 645,
+     "rejected": 0,
+     "indeterminate": 25,
+     "unverified": 230
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "9c55461062d949f8591ee9e784af1b00c223a8c5be9fc90d294fd2202a1e6ffe",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 100,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 100,
+     "byKind": {
+      "normal finite": 80,
+      "zero/subnormal involved": 20
+     },
+     "byOperandClass": {
+      "normal/zero operands": 100
+     },
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {
+      "1": 40,
+      "2": 20,
+      "3-4": 20
+     },
+     "worstUlp": 3,
+     "kindsDetailed": {
+      "normal finite": 80,
+      "zero/subnormal involved": 20
+     },
+     "opsChanged": [
+      [
+       "tanh/f32",
+       10
+      ],
+      [
+       "tanh/vec2f",
+       20
+      ],
+      [
+       "tanh/vec3f",
+       30
+      ],
+      [
+       "tanh/vec4f",
+       40
+      ]
+     ]
+    }
+   },
+   "L": {
+    "status": "ok",
+    "lanes": 41610,
+    "gpuCats": {
+     "accepted": 32860,
+     "rejected": 0,
+     "indeterminate": 8750,
+     "unverified": 0
+    },
+    "cpuCats": {
+     "accepted": 25574,
+     "rejected": 0,
+     "indeterminate": 2840,
+     "unverified": 13196
+    },
+    "backendAssertPass": true,
+    "inputIdentityPass": true,
+    "icdSha256": "9c55461062d949f8591ee9e784af1b00c223a8c5be9fc90d294fd2202a1e6ffe",
+    "vsM155": {
+     "gpuLanesBitsDiffer": 4150,
+     "gpuNaNSignOnly": 0,
+     "gpuLanesValueDiffer": 4150,
+     "byKind": {
+      "normal finite": 3830,
+      "zero/subnormal involved": 200,
+      "inf vs finite": 120
+     },
+     "byOperandClass": {
+      "normal/zero operands": 4150
+     },
+     "categoryChanges": {},
+     "cpuBitsDiffer": 0,
+     "rowsStatusDiffer": 0,
+     "ulpBuckets": {
+      "1": 1720,
+      "2": 840,
+      "17-256": 120,
+      ">256": 40,
+      "3-4": 570,
+      "5-16": 540
+     },
+     "worstUlp": 706174219,
+     "kindsDetailed": {
+      "normal finite": 3830,
+      "zero/subnormal involved": 200,
+      "FTZ: new subnormal -> base zero": 90,
+      "inf vs finite": 120
+     },
+     "opsChanged": [
+      [
+       "log/f32",
+       15
+      ],
+      [
+       "log/vec2f",
+       30
+      ],
+      [
+       "log/vec3f",
+       45
+      ],
+      [
+       "log/vec4f",
+       60
+      ],
+      [
+       "log2/f32",
+       17
+      ],
+      [
+       "log2/vec2f",
+       34
+      ],
+      [
+       "log2/vec3f",
+       51
+      ],
+      [
+       "log2/vec4f",
+       68
+      ],
+      [
+       "pow/f32",
+       383
+      ],
+      [
+       "pow/vec2f",
+       766
+      ],
+      [
+       "pow/vec3f",
+       1149
+      ],
+      [
+       "pow/vec4f",
+       1532
+      ]
+     ]
+    }
+   },
+   "classSig": "a3471290f97b"
+  }
+ },
+ "full": {
+  "m100el": {
+   "total": 426,
+   "passed": 371,
+   "failed": 22,
+   "skipped": 33,
+   "onlyInOne": 0,
+   "statusChanges": [],
+   "groupsChanged": 0,
+   "backendAssertPass": true,
+   "exit": "1"
+  },
+  "m108el": {
+   "total": 426,
+   "passed": 371,
+   "failed": 22,
+   "skipped": 33,
+   "onlyInOne": 0,
+   "statusChanges": [],
+   "groupsChanged": 0,
+   "backendAssertPass": true,
+   "exit": "1"
+  },
+  "m120el": {
+   "total": 426,
+   "passed": 371,
+   "failed": 22,
+   "skipped": 33,
+   "onlyInOne": 0,
+   "statusChanges": [],
+   "groupsChanged": 0,
+   "backendAssertPass": true,
+   "exit": "1"
+  },
+  "m128lc": {
+   "total": 426,
+   "passed": 369,
+   "failed": 22,
+   "skipped": 33,
+   "onlyInOne": 0,
+   "statusChanges": [
+    {
+     "test": "step2.test.ts :: TypeGPU on a real device (dawn.node) increments a u32 (guarded pipeline, no threads)",
+     "from": "passed",
+     "to": "pending"
+    },
+    {
+     "test": "step2.test.ts :: TypeGPU on a real device (dawn.node) writes x*2 into 64 u32 (64 threads)",
+     "from": "passed",
+     "to": "pending"
+    }
+   ],
+   "groupsChanged": 0,
+   "backendAssertPass": true,
+   "exit": "1"
+  },
+  "m129lc": {
+   "total": 426,
+   "passed": 371,
+   "failed": 22,
+   "skipped": 33,
+   "onlyInOne": 0,
+   "statusChanges": [],
+   "groupsChanged": 0,
+   "backendAssertPass": true,
+   "exit": "1"
+  },
+  "m130lc": {
+   "total": 426,
+   "passed": 371,
+   "failed": 22,
+   "skipped": 33,
+   "onlyInOne": 0,
+   "statusChanges": [],
+   "groupsChanged": 0,
+   "backendAssertPass": true,
+   "exit": "1"
+  },
+  "m138": {
+   "total": 426,
+   "passed": 371,
+   "failed": 22,
+   "skipped": 33,
+   "onlyInOne": 0,
+   "statusChanges": [],
+   "groupsChanged": 0,
+   "backendAssertPass": true,
+   "exit": "1"
+  },
+  "m146": {
+   "total": 426,
+   "passed": 371,
+   "failed": 22,
+   "skipped": 33,
+   "onlyInOne": 0,
+   "statusChanges": [],
+   "groupsChanged": 0,
+   "backendAssertPass": true,
+   "exit": "1"
+  },
+  "m150": {
+   "total": 426,
+   "passed": 369,
+   "failed": 22,
+   "skipped": 33,
+   "onlyInOne": 0,
+   "statusChanges": [
+    {
+     "test": "step2.test.ts :: TypeGPU on a real device (dawn.node) increments a u32 (guarded pipeline, no threads)",
+     "from": "passed",
+     "to": "pending"
+    },
+    {
+     "test": "step2.test.ts :: TypeGPU on a real device (dawn.node) writes x*2 into 64 u32 (64 threads)",
+     "from": "passed",
+     "to": "pending"
+    }
+   ],
+   "groupsChanged": 0,
+   "backendAssertPass": true,
+   "exit": "1"
+  },
+  "m154": {
+   "total": 426,
+   "passed": 371,
+   "failed": 22,
+   "skipped": 33,
+   "onlyInOne": 0,
+   "statusChanges": [],
+   "groupsChanged": 0,
+   "backendAssertPass": true,
+   "exit": "1"
+  },
+  "m155": {
+   "total": 426,
+   "passed": 371,
+   "failed": 22,
+   "skipped": 33,
+   "onlyInOne": 0,
+   "statusChanges": [],
+   "groupsChanged": 0,
+   "backendAssertPass": true,
+   "exit": "1"
+  },
+  "m155cft": {
+   "total": 426,
+   "passed": 371,
+   "failed": 22,
+   "skipped": 33,
+   "onlyInOne": 0,
+   "statusChanges": [],
+   "groupsChanged": 0,
+   "backendAssertPass": true,
+   "exit": "1"
+  },
+  "m157beta": {
+   "total": 426,
+   "passed": 371,
+   "failed": 22,
+   "skipped": 33,
+   "onlyInOne": 0,
+   "statusChanges": [],
+   "groupsChanged": 0,
+   "backendAssertPass": true,
+   "exit": "1"
+  },
+  "m158canary": {
+   "total": 426,
+   "passed": 371,
+   "failed": 22,
+   "skipped": 33,
+   "onlyInOne": 0,
+   "statusChanges": [],
+   "groupsChanged": 0,
+   "backendAssertPass": true,
+   "exit": "1"
+  },
+  "src-1e80438d": {
+   "total": 426,
+   "passed": 371,
+   "failed": 22,
+   "skipped": 33,
+   "onlyInOne": 0,
+   "statusChanges": [],
+   "groupsChanged": 0,
+   "backendAssertPass": true,
+   "exit": "1"
+  },
+  "src-5b0479bd": {
+   "status": "not-run"
+  }
+ },
+ "inv": {
+  "m100el": {
+   "totals": {
+    "total": 1433,
+    "passed": 1412,
+    "failed": 21
+   },
+   "perSuite": {
+    "bitops": {
+     "total": 451,
+     "passed": 450,
+     "failed": 1
+    },
+    "vector-fns": {
+     "total": 318,
+     "passed": 301,
+     "failed": 17
+    },
+    "mul-paths": {
+     "total": 358,
+     "passed": 358
+    },
+    "scalar-int": {
+     "total": 164,
+     "passed": 161,
+     "failed": 3
+    },
+    "integer-mul": {
+     "total": 73,
+     "passed": 73
+    },
+    "comptime": {
+     "total": 69,
+     "passed": 69
+    }
+   },
+   "statusChanges": [],
+   "backendAssertPass": true
+  },
+  "m108el": {
+   "totals": {
+    "total": 1433,
+    "passed": 1412,
+    "failed": 21
+   },
+   "perSuite": {
+    "bitops": {
+     "total": 451,
+     "passed": 450,
+     "failed": 1
+    },
+    "vector-fns": {
+     "total": 318,
+     "passed": 301,
+     "failed": 17
+    },
+    "mul-paths": {
+     "total": 358,
+     "passed": 358
+    },
+    "scalar-int": {
+     "total": 164,
+     "passed": 161,
+     "failed": 3
+    },
+    "integer-mul": {
+     "total": 73,
+     "passed": 73
+    },
+    "comptime": {
+     "total": 69,
+     "passed": 69
+    }
+   },
+   "statusChanges": [],
+   "backendAssertPass": true
+  },
+  "m120el": {
+   "totals": {
+    "total": 1433,
+    "passed": 1412,
+    "failed": 21
+   },
+   "perSuite": {
+    "bitops": {
+     "total": 451,
+     "passed": 450,
+     "failed": 1
+    },
+    "vector-fns": {
+     "total": 318,
+     "passed": 301,
+     "failed": 17
+    },
+    "mul-paths": {
+     "total": 358,
+     "passed": 358
+    },
+    "scalar-int": {
+     "total": 164,
+     "passed": 161,
+     "failed": 3
+    },
+    "integer-mul": {
+     "total": 73,
+     "passed": 73
+    },
+    "comptime": {
+     "total": 69,
+     "passed": 69
+    }
+   },
+   "statusChanges": [],
+   "backendAssertPass": true
+  },
+  "m128lc": {
+   "totals": {
+    "total": 1433,
+    "passed": 1412,
+    "failed": 21
+   },
+   "perSuite": {
+    "bitops": {
+     "total": 451,
+     "passed": 450,
+     "failed": 1
+    },
+    "vector-fns": {
+     "total": 318,
+     "passed": 301,
+     "failed": 17
+    },
+    "mul-paths": {
+     "total": 358,
+     "passed": 358
+    },
+    "scalar-int": {
+     "total": 164,
+     "passed": 161,
+     "failed": 3
+    },
+    "integer-mul": {
+     "total": 73,
+     "passed": 73
+    },
+    "comptime": {
+     "total": 69,
+     "passed": 69
+    }
+   },
+   "statusChanges": [],
+   "backendAssertPass": true
+  },
+  "m129lc": {
+   "totals": {
+    "total": 1433,
+    "passed": 1412,
+    "failed": 21
+   },
+   "perSuite": {
+    "bitops": {
+     "total": 451,
+     "passed": 450,
+     "failed": 1
+    },
+    "vector-fns": {
+     "total": 318,
+     "passed": 301,
+     "failed": 17
+    },
+    "mul-paths": {
+     "total": 358,
+     "passed": 358
+    },
+    "scalar-int": {
+     "total": 164,
+     "passed": 161,
+     "failed": 3
+    },
+    "integer-mul": {
+     "total": 73,
+     "passed": 73
+    },
+    "comptime": {
+     "total": 69,
+     "passed": 69
+    }
+   },
+   "statusChanges": [],
+   "backendAssertPass": true
+  },
+  "m130lc": {
+   "totals": {
+    "total": 1433,
+    "passed": 1412,
+    "failed": 21
+   },
+   "perSuite": {
+    "bitops": {
+     "total": 451,
+     "passed": 450,
+     "failed": 1
+    },
+    "vector-fns": {
+     "total": 318,
+     "passed": 301,
+     "failed": 17
+    },
+    "mul-paths": {
+     "total": 358,
+     "passed": 358
+    },
+    "scalar-int": {
+     "total": 164,
+     "passed": 161,
+     "failed": 3
+    },
+    "integer-mul": {
+     "total": 73,
+     "passed": 73
+    },
+    "comptime": {
+     "total": 69,
+     "passed": 69
+    }
+   },
+   "statusChanges": [],
+   "backendAssertPass": true
+  },
+  "m138": {
+   "totals": {
+    "total": 1433,
+    "passed": 1412,
+    "failed": 21
+   },
+   "perSuite": {
+    "bitops": {
+     "total": 451,
+     "passed": 450,
+     "failed": 1
+    },
+    "vector-fns": {
+     "total": 318,
+     "passed": 301,
+     "failed": 17
+    },
+    "mul-paths": {
+     "total": 358,
+     "passed": 358
+    },
+    "scalar-int": {
+     "total": 164,
+     "passed": 161,
+     "failed": 3
+    },
+    "integer-mul": {
+     "total": 73,
+     "passed": 73
+    },
+    "comptime": {
+     "total": 69,
+     "passed": 69
+    }
+   },
+   "statusChanges": [],
+   "backendAssertPass": true
+  },
+  "m146": {
+   "totals": {
+    "total": 1433,
+    "passed": 1412,
+    "failed": 21
+   },
+   "perSuite": {
+    "bitops": {
+     "total": 451,
+     "passed": 450,
+     "failed": 1
+    },
+    "vector-fns": {
+     "total": 318,
+     "passed": 301,
+     "failed": 17
+    },
+    "mul-paths": {
+     "total": 358,
+     "passed": 358
+    },
+    "scalar-int": {
+     "total": 164,
+     "passed": 161,
+     "failed": 3
+    },
+    "integer-mul": {
+     "total": 73,
+     "passed": 73
+    },
+    "comptime": {
+     "total": 69,
+     "passed": 69
+    }
+   },
+   "statusChanges": [],
+   "backendAssertPass": true
+  },
+  "m150": {
+   "totals": {
+    "total": 1433,
+    "passed": 1412,
+    "failed": 21
+   },
+   "perSuite": {
+    "bitops": {
+     "total": 451,
+     "passed": 450,
+     "failed": 1
+    },
+    "vector-fns": {
+     "total": 318,
+     "passed": 301,
+     "failed": 17
+    },
+    "mul-paths": {
+     "total": 358,
+     "passed": 358
+    },
+    "scalar-int": {
+     "total": 164,
+     "passed": 161,
+     "failed": 3
+    },
+    "integer-mul": {
+     "total": 73,
+     "passed": 73
+    },
+    "comptime": {
+     "total": 69,
+     "passed": 69
+    }
+   },
+   "statusChanges": [],
+   "backendAssertPass": true
+  },
+  "m154": {
+   "totals": {
+    "total": 1433,
+    "passed": 1412,
+    "failed": 21
+   },
+   "perSuite": {
+    "bitops": {
+     "total": 451,
+     "passed": 450,
+     "failed": 1
+    },
+    "vector-fns": {
+     "total": 318,
+     "passed": 301,
+     "failed": 17
+    },
+    "mul-paths": {
+     "total": 358,
+     "passed": 358
+    },
+    "scalar-int": {
+     "total": 164,
+     "passed": 161,
+     "failed": 3
+    },
+    "integer-mul": {
+     "total": 73,
+     "passed": 73
+    },
+    "comptime": {
+     "total": 69,
+     "passed": 69
+    }
+   },
+   "statusChanges": [],
+   "backendAssertPass": true
+  },
+  "m155": {
+   "totals": {
+    "total": 1433,
+    "passed": 1412,
+    "failed": 21
+   },
+   "perSuite": {
+    "bitops": {
+     "total": 451,
+     "passed": 450,
+     "failed": 1
+    },
+    "vector-fns": {
+     "total": 318,
+     "passed": 301,
+     "failed": 17
+    },
+    "mul-paths": {
+     "total": 358,
+     "passed": 358
+    },
+    "scalar-int": {
+     "total": 164,
+     "passed": 161,
+     "failed": 3
+    },
+    "integer-mul": {
+     "total": 73,
+     "passed": 73
+    },
+    "comptime": {
+     "total": 69,
+     "passed": 69
+    }
+   },
+   "statusChanges": [],
+   "backendAssertPass": true
+  },
+  "m155cft": {
+   "totals": {
+    "total": 1433,
+    "passed": 1412,
+    "failed": 21
+   },
+   "perSuite": {
+    "bitops": {
+     "total": 451,
+     "passed": 450,
+     "failed": 1
+    },
+    "vector-fns": {
+     "total": 318,
+     "passed": 301,
+     "failed": 17
+    },
+    "mul-paths": {
+     "total": 358,
+     "passed": 358
+    },
+    "scalar-int": {
+     "total": 164,
+     "passed": 161,
+     "failed": 3
+    },
+    "integer-mul": {
+     "total": 73,
+     "passed": 73
+    },
+    "comptime": {
+     "total": 69,
+     "passed": 69
+    }
+   },
+   "statusChanges": [],
+   "backendAssertPass": true
+  },
+  "m157beta": {
+   "totals": {
+    "total": 1433,
+    "passed": 1412,
+    "failed": 21
+   },
+   "perSuite": {
+    "bitops": {
+     "total": 451,
+     "passed": 450,
+     "failed": 1
+    },
+    "vector-fns": {
+     "total": 318,
+     "passed": 301,
+     "failed": 17
+    },
+    "mul-paths": {
+     "total": 358,
+     "passed": 358
+    },
+    "scalar-int": {
+     "total": 164,
+     "passed": 161,
+     "failed": 3
+    },
+    "integer-mul": {
+     "total": 73,
+     "passed": 73
+    },
+    "comptime": {
+     "total": 69,
+     "passed": 69
+    }
+   },
+   "statusChanges": [],
+   "backendAssertPass": true
+  },
+  "m158canary": {
+   "totals": {
+    "total": 1433,
+    "passed": 1412,
+    "failed": 21
+   },
+   "perSuite": {
+    "bitops": {
+     "total": 451,
+     "passed": 450,
+     "failed": 1
+    },
+    "vector-fns": {
+     "total": 318,
+     "passed": 301,
+     "failed": 17
+    },
+    "mul-paths": {
+     "total": 358,
+     "passed": 358
+    },
+    "scalar-int": {
+     "total": 164,
+     "passed": 161,
+     "failed": 3
+    },
+    "integer-mul": {
+     "total": 73,
+     "passed": 73
+    },
+    "comptime": {
+     "total": 69,
+     "passed": 69
+    }
+   },
+   "statusChanges": [],
+   "backendAssertPass": true
+  },
+  "src-1e80438d": {
+   "totals": {
+    "total": 1433,
+    "passed": 1412,
+    "failed": 21
+   },
+   "perSuite": {
+    "bitops": {
+     "total": 451,
+     "passed": 450,
+     "failed": 1
+    },
+    "vector-fns": {
+     "total": 318,
+     "passed": 301,
+     "failed": 17
+    },
+    "mul-paths": {
+     "total": 358,
+     "passed": 358
+    },
+    "scalar-int": {
+     "total": 164,
+     "passed": 161,
+     "failed": 3
+    },
+    "integer-mul": {
+     "total": 73,
+     "passed": 73
+    },
+    "comptime": {
+     "total": 69,
+     "passed": 69
+    }
+   },
+   "statusChanges": [],
+   "backendAssertPass": true
+  },
+  "src-5b0479bd": {
+   "status": "not-run"
+  }
+ },
+ "ex": {
+  "m100el": {
+   "tests": {
+    "default/bitonic-sort": "IDENTICAL",
+    "default/concurrent-chart": "IDENTICAL",
+    "default/dispatch": "IDENTICAL",
+    "default/increment": "IDENTICAL",
+    "default/jump-flood-voronoi": "IDENTICAL",
+    "default/log-test": "IDENTICAL",
+    "default/matrix-multiplication": "IDENTICAL",
+    "default/matrix-next": "IDENTICAL",
+    "default/mnist-inference": {
+     "differs": {
+      "default": {
+       "argmaxA": 1,
+       "argmaxB": 1,
+       "maxAbsLogitDiff": 0,
+       "bitsEqual": true
+      }
+     }
+    },
+    "default/prefix-scan": "IDENTICAL (timing field only)",
+    "default/prng-cpu-gpu": "IDENTICAL",
+    "default/probability": {
+     "differs": {
+      "inUnitSphere": {
+       "values": 3000,
+       "differ": 1582,
+       "maxUlp": 4143,
+       "nanMismatch": 0
+      },
+      "onUnitSphere": {
+       "values": 3000,
+       "differ": 306,
+       "maxUlp": 101,
+       "nanMismatch": 0
+      },
+      "inUnitCircle": {
+       "values": 3000,
+       "differ": 300,
+       "maxUlp": 84,
+       "nanMismatch": 0
+      },
+      "onUnitCircle": {
+       "values": 3000,
+       "differ": 331,
+       "maxUlp": 100,
+       "nanMismatch": 0
+      },
+      "inHemisphere": {
+       "values": 3000,
+       "differ": 1582,
+       "maxUlp": 4143,
+       "nanMismatch": 0
+      },
+      "onHemisphere": {
+       "values": 3000,
+       "differ": 306,
+       "maxUlp": 101,
+       "nanMismatch": 0
+      },
+      "exponential": {
+       "values": 3000,
+       "differ": 810,
+       "maxUlp": 355,
+       "nanMismatch": 0
+      },
+      "normal": {
+       "values": 3000,
+       "differ": 1218,
+       "maxUlp": 365,
+       "nanMismatch": 0
+      },
+      "cauchy": {
+       "values": 3000,
+       "differ": 768,
+       "maxUlp": 8,
+       "nanMismatch": 0
+      }
+     }
+    },
+    "default/tgsl-parsing-test": "IDENTICAL",
+    "nof16/jump-flood-voronoi": "IDENTICAL",
+    "nof16/log-test": "IDENTICAL",
+    "nof16/mnist-inference": {
+     "differs": {
+      "default": {
+       "argmaxA": 1,
+       "argmaxB": 1,
+       "maxAbsLogitDiff": 0,
+       "bitsEqual": true
+      }
+     }
+    }
+   },
+   "vitest": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0
+   },
+   "backendAssertPass": true
+  },
+  "m108el": {
+   "tests": {
+    "default/bitonic-sort": "IDENTICAL",
+    "default/concurrent-chart": "IDENTICAL",
+    "default/dispatch": "IDENTICAL",
+    "default/increment": "IDENTICAL",
+    "default/jump-flood-voronoi": "IDENTICAL",
+    "default/log-test": "IDENTICAL",
+    "default/matrix-multiplication": "IDENTICAL",
+    "default/matrix-next": "IDENTICAL",
+    "default/mnist-inference": "IDENTICAL",
+    "default/prefix-scan": "IDENTICAL (timing field only)",
+    "default/prng-cpu-gpu": "IDENTICAL",
+    "default/probability": {
+     "differs": {
+      "inUnitSphere": {
+       "values": 3000,
+       "differ": 1211,
+       "maxUlp": 25,
+       "nanMismatch": 0
+      },
+      "onUnitSphere": {
+       "values": 3000,
+       "differ": 316,
+       "maxUlp": 23,
+       "nanMismatch": 0
+      },
+      "inHemisphere": {
+       "values": 3000,
+       "differ": 1211,
+       "maxUlp": 25,
+       "nanMismatch": 0
+      },
+      "onHemisphere": {
+       "values": 3000,
+       "differ": 316,
+       "maxUlp": 23,
+       "nanMismatch": 0
+      },
+      "exponential": {
+       "values": 3000,
+       "differ": 666,
+       "maxUlp": 14,
+       "nanMismatch": 0
+      },
+      "normal": {
+       "values": 3000,
+       "differ": 921,
+       "maxUlp": 28,
+       "nanMismatch": 0
+      },
+      "cauchy": {
+       "values": 3000,
+       "differ": 1782,
+       "maxUlp": 803,
+       "nanMismatch": 0
+      }
+     }
+    },
+    "default/tgsl-parsing-test": "IDENTICAL",
+    "nof16/jump-flood-voronoi": "IDENTICAL",
+    "nof16/log-test": "IDENTICAL",
+    "nof16/mnist-inference": "IDENTICAL"
+   },
+   "vitest": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0
+   },
+   "backendAssertPass": true
+  },
+  "m120el": {
+   "tests": {
+    "default/bitonic-sort": "IDENTICAL",
+    "default/concurrent-chart": "IDENTICAL",
+    "default/dispatch": "IDENTICAL",
+    "default/increment": "IDENTICAL",
+    "default/jump-flood-voronoi": "IDENTICAL",
+    "default/log-test": "IDENTICAL",
+    "default/matrix-multiplication": "IDENTICAL",
+    "default/matrix-next": "IDENTICAL",
+    "default/mnist-inference": "IDENTICAL",
+    "default/prefix-scan": "IDENTICAL (timing field only)",
+    "default/prng-cpu-gpu": "IDENTICAL",
+    "default/probability": {
+     "differs": {
+      "inUnitSphere": {
+       "values": 3000,
+       "differ": 1211,
+       "maxUlp": 25,
+       "nanMismatch": 0
+      },
+      "onUnitSphere": {
+       "values": 3000,
+       "differ": 316,
+       "maxUlp": 23,
+       "nanMismatch": 0
+      },
+      "inHemisphere": {
+       "values": 3000,
+       "differ": 1211,
+       "maxUlp": 25,
+       "nanMismatch": 0
+      },
+      "onHemisphere": {
+       "values": 3000,
+       "differ": 316,
+       "maxUlp": 23,
+       "nanMismatch": 0
+      },
+      "exponential": {
+       "values": 3000,
+       "differ": 666,
+       "maxUlp": 14,
+       "nanMismatch": 0
+      },
+      "normal": {
+       "values": 3000,
+       "differ": 921,
+       "maxUlp": 28,
+       "nanMismatch": 0
+      },
+      "cauchy": {
+       "values": 3000,
+       "differ": 1782,
+       "maxUlp": 803,
+       "nanMismatch": 0
+      }
+     }
+    },
+    "default/tgsl-parsing-test": "IDENTICAL",
+    "nof16/jump-flood-voronoi": "IDENTICAL",
+    "nof16/log-test": "IDENTICAL",
+    "nof16/mnist-inference": "IDENTICAL"
+   },
+   "vitest": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0
+   },
+   "backendAssertPass": true
+  },
+  "m128lc": {
+   "tests": {
+    "default/bitonic-sort": "IDENTICAL",
+    "default/concurrent-chart": "IDENTICAL",
+    "default/dispatch": "IDENTICAL",
+    "default/increment": "IDENTICAL",
+    "default/jump-flood-voronoi": "IDENTICAL",
+    "default/log-test": "IDENTICAL",
+    "default/matrix-multiplication": "IDENTICAL",
+    "default/matrix-next": "IDENTICAL",
+    "default/mnist-inference": "IDENTICAL",
+    "default/prefix-scan": "IDENTICAL (timing field only)",
+    "default/prng-cpu-gpu": "IDENTICAL",
+    "default/probability": {
+     "differs": {
+      "inUnitSphere": {
+       "values": 3000,
+       "differ": 1211,
+       "maxUlp": 25,
+       "nanMismatch": 0
+      },
+      "onUnitSphere": {
+       "values": 3000,
+       "differ": 316,
+       "maxUlp": 23,
+       "nanMismatch": 0
+      },
+      "inHemisphere": {
+       "values": 3000,
+       "differ": 1211,
+       "maxUlp": 25,
+       "nanMismatch": 0
+      },
+      "onHemisphere": {
+       "values": 3000,
+       "differ": 316,
+       "maxUlp": 23,
+       "nanMismatch": 0
+      },
+      "exponential": {
+       "values": 3000,
+       "differ": 666,
+       "maxUlp": 14,
+       "nanMismatch": 0
+      },
+      "normal": {
+       "values": 3000,
+       "differ": 921,
+       "maxUlp": 28,
+       "nanMismatch": 0
+      },
+      "cauchy": {
+       "values": 3000,
+       "differ": 1782,
+       "maxUlp": 803,
+       "nanMismatch": 0
+      }
+     }
+    },
+    "default/tgsl-parsing-test": "IDENTICAL",
+    "nof16/jump-flood-voronoi": "IDENTICAL",
+    "nof16/log-test": "IDENTICAL",
+    "nof16/mnist-inference": "IDENTICAL"
+   },
+   "vitest": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0
+   },
+   "backendAssertPass": true
+  },
+  "m129lc": {
+   "tests": {
+    "default/bitonic-sort": "IDENTICAL",
+    "default/concurrent-chart": "IDENTICAL",
+    "default/dispatch": "IDENTICAL",
+    "default/increment": "IDENTICAL",
+    "default/jump-flood-voronoi": "IDENTICAL",
+    "default/log-test": "IDENTICAL",
+    "default/matrix-multiplication": "IDENTICAL",
+    "default/matrix-next": "IDENTICAL",
+    "default/mnist-inference": "IDENTICAL",
+    "default/prefix-scan": "IDENTICAL (timing field only)",
+    "default/prng-cpu-gpu": "IDENTICAL",
+    "default/probability": {
+     "differs": {
+      "inUnitSphere": {
+       "values": 3000,
+       "differ": 1211,
+       "maxUlp": 25,
+       "nanMismatch": 0
+      },
+      "onUnitSphere": {
+       "values": 3000,
+       "differ": 316,
+       "maxUlp": 23,
+       "nanMismatch": 0
+      },
+      "inHemisphere": {
+       "values": 3000,
+       "differ": 1211,
+       "maxUlp": 25,
+       "nanMismatch": 0
+      },
+      "onHemisphere": {
+       "values": 3000,
+       "differ": 316,
+       "maxUlp": 23,
+       "nanMismatch": 0
+      },
+      "exponential": {
+       "values": 3000,
+       "differ": 666,
+       "maxUlp": 14,
+       "nanMismatch": 0
+      },
+      "normal": {
+       "values": 3000,
+       "differ": 921,
+       "maxUlp": 28,
+       "nanMismatch": 0
+      },
+      "cauchy": {
+       "values": 3000,
+       "differ": 1782,
+       "maxUlp": 803,
+       "nanMismatch": 0
+      }
+     }
+    },
+    "default/tgsl-parsing-test": "IDENTICAL",
+    "nof16/jump-flood-voronoi": "IDENTICAL",
+    "nof16/log-test": "IDENTICAL",
+    "nof16/mnist-inference": "IDENTICAL"
+   },
+   "vitest": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0
+   },
+   "backendAssertPass": true
+  },
+  "m130lc": {
+   "tests": {
+    "default/bitonic-sort": "IDENTICAL",
+    "default/concurrent-chart": "IDENTICAL",
+    "default/dispatch": "IDENTICAL",
+    "default/increment": "IDENTICAL",
+    "default/jump-flood-voronoi": "IDENTICAL",
+    "default/log-test": "IDENTICAL",
+    "default/matrix-multiplication": "IDENTICAL",
+    "default/matrix-next": "IDENTICAL",
+    "default/mnist-inference": "IDENTICAL",
+    "default/prefix-scan": "IDENTICAL (timing field only)",
+    "default/prng-cpu-gpu": "IDENTICAL",
+    "default/probability": {
+     "differs": {
+      "inUnitSphere": {
+       "values": 3000,
+       "differ": 1211,
+       "maxUlp": 25,
+       "nanMismatch": 0
+      },
+      "onUnitSphere": {
+       "values": 3000,
+       "differ": 316,
+       "maxUlp": 23,
+       "nanMismatch": 0
+      },
+      "inHemisphere": {
+       "values": 3000,
+       "differ": 1211,
+       "maxUlp": 25,
+       "nanMismatch": 0
+      },
+      "onHemisphere": {
+       "values": 3000,
+       "differ": 316,
+       "maxUlp": 23,
+       "nanMismatch": 0
+      },
+      "exponential": {
+       "values": 3000,
+       "differ": 666,
+       "maxUlp": 14,
+       "nanMismatch": 0
+      },
+      "normal": {
+       "values": 3000,
+       "differ": 921,
+       "maxUlp": 28,
+       "nanMismatch": 0
+      },
+      "cauchy": {
+       "values": 3000,
+       "differ": 1782,
+       "maxUlp": 803,
+       "nanMismatch": 0
+      }
+     }
+    },
+    "default/tgsl-parsing-test": "IDENTICAL",
+    "nof16/jump-flood-voronoi": "IDENTICAL",
+    "nof16/log-test": "IDENTICAL",
+    "nof16/mnist-inference": "IDENTICAL"
+   },
+   "vitest": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0
+   },
+   "backendAssertPass": true
+  },
+  "m138": {
+   "tests": {
+    "default/bitonic-sort": "IDENTICAL",
+    "default/concurrent-chart": "IDENTICAL",
+    "default/dispatch": "IDENTICAL",
+    "default/increment": "IDENTICAL",
+    "default/jump-flood-voronoi": "IDENTICAL",
+    "default/log-test": "IDENTICAL",
+    "default/matrix-multiplication": "IDENTICAL",
+    "default/matrix-next": "IDENTICAL",
+    "default/mnist-inference": "IDENTICAL",
+    "default/prefix-scan": "IDENTICAL (timing field only)",
+    "default/prng-cpu-gpu": "IDENTICAL",
+    "default/probability": {
+     "differs": {
+      "inUnitSphere": {
+       "values": 3000,
+       "differ": 1211,
+       "maxUlp": 25,
+       "nanMismatch": 0
+      },
+      "onUnitSphere": {
+       "values": 3000,
+       "differ": 316,
+       "maxUlp": 23,
+       "nanMismatch": 0
+      },
+      "inHemisphere": {
+       "values": 3000,
+       "differ": 1211,
+       "maxUlp": 25,
+       "nanMismatch": 0
+      },
+      "onHemisphere": {
+       "values": 3000,
+       "differ": 316,
+       "maxUlp": 23,
+       "nanMismatch": 0
+      },
+      "exponential": {
+       "values": 3000,
+       "differ": 666,
+       "maxUlp": 14,
+       "nanMismatch": 0
+      },
+      "normal": {
+       "values": 3000,
+       "differ": 921,
+       "maxUlp": 28,
+       "nanMismatch": 0
+      },
+      "cauchy": {
+       "values": 3000,
+       "differ": 1782,
+       "maxUlp": 803,
+       "nanMismatch": 0
+      }
+     }
+    },
+    "default/tgsl-parsing-test": "IDENTICAL",
+    "nof16/jump-flood-voronoi": "IDENTICAL",
+    "nof16/log-test": "IDENTICAL",
+    "nof16/mnist-inference": "IDENTICAL"
+   },
+   "vitest": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0
+   },
+   "backendAssertPass": true
+  },
+  "m146": {
+   "tests": {
+    "default/bitonic-sort": "IDENTICAL",
+    "default/concurrent-chart": "IDENTICAL",
+    "default/dispatch": "IDENTICAL",
+    "default/increment": "IDENTICAL",
+    "default/jump-flood-voronoi": "IDENTICAL",
+    "default/log-test": "IDENTICAL",
+    "default/matrix-multiplication": "IDENTICAL",
+    "default/matrix-next": "IDENTICAL",
+    "default/mnist-inference": "IDENTICAL",
+    "default/prefix-scan": "IDENTICAL (timing field only)",
+    "default/prng-cpu-gpu": "IDENTICAL",
+    "default/probability": "IDENTICAL",
+    "default/tgsl-parsing-test": "IDENTICAL",
+    "nof16/jump-flood-voronoi": "IDENTICAL",
+    "nof16/log-test": "IDENTICAL",
+    "nof16/mnist-inference": "IDENTICAL"
+   },
+   "vitest": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0
+   },
+   "backendAssertPass": true
+  },
+  "m150": {
+   "tests": {
+    "default/bitonic-sort": "IDENTICAL",
+    "default/concurrent-chart": "IDENTICAL",
+    "default/dispatch": "IDENTICAL",
+    "default/increment": "IDENTICAL",
+    "default/jump-flood-voronoi": "IDENTICAL",
+    "default/log-test": "IDENTICAL",
+    "default/matrix-multiplication": "IDENTICAL",
+    "default/matrix-next": "IDENTICAL",
+    "default/mnist-inference": "IDENTICAL",
+    "default/prefix-scan": "IDENTICAL (timing field only)",
+    "default/prng-cpu-gpu": "IDENTICAL",
+    "default/probability": "IDENTICAL",
+    "default/tgsl-parsing-test": "IDENTICAL",
+    "nof16/jump-flood-voronoi": "IDENTICAL",
+    "nof16/log-test": "IDENTICAL",
+    "nof16/mnist-inference": "IDENTICAL"
+   },
+   "vitest": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0
+   },
+   "backendAssertPass": true
+  },
+  "m154": {
+   "tests": {
+    "default/bitonic-sort": "IDENTICAL",
+    "default/concurrent-chart": "IDENTICAL",
+    "default/dispatch": "IDENTICAL",
+    "default/increment": "IDENTICAL",
+    "default/jump-flood-voronoi": "IDENTICAL",
+    "default/log-test": "IDENTICAL",
+    "default/matrix-multiplication": "IDENTICAL",
+    "default/matrix-next": "IDENTICAL",
+    "default/mnist-inference": "IDENTICAL",
+    "default/prefix-scan": "IDENTICAL (timing field only)",
+    "default/prng-cpu-gpu": "IDENTICAL",
+    "default/probability": "IDENTICAL",
+    "default/tgsl-parsing-test": "IDENTICAL",
+    "nof16/jump-flood-voronoi": "IDENTICAL",
+    "nof16/log-test": "IDENTICAL",
+    "nof16/mnist-inference": "IDENTICAL"
+   },
+   "vitest": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0
+   },
+   "backendAssertPass": true
+  },
+  "m155": {
+   "tests": {
+    "default/bitonic-sort": "IDENTICAL",
+    "default/concurrent-chart": "IDENTICAL",
+    "default/dispatch": "IDENTICAL",
+    "default/increment": "IDENTICAL",
+    "default/jump-flood-voronoi": "IDENTICAL",
+    "default/log-test": "IDENTICAL",
+    "default/matrix-multiplication": "IDENTICAL",
+    "default/matrix-next": "IDENTICAL",
+    "default/mnist-inference": "IDENTICAL",
+    "default/prefix-scan": "IDENTICAL (timing field only)",
+    "default/prng-cpu-gpu": "IDENTICAL",
+    "default/probability": "IDENTICAL",
+    "default/tgsl-parsing-test": "IDENTICAL",
+    "nof16/jump-flood-voronoi": "IDENTICAL",
+    "nof16/log-test": "IDENTICAL",
+    "nof16/mnist-inference": "IDENTICAL"
+   },
+   "vitest": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0
+   },
+   "backendAssertPass": true
+  },
+  "m155cft": {
+   "tests": {
+    "default/bitonic-sort": "IDENTICAL",
+    "default/concurrent-chart": "IDENTICAL",
+    "default/dispatch": "IDENTICAL",
+    "default/increment": "IDENTICAL",
+    "default/jump-flood-voronoi": "IDENTICAL",
+    "default/log-test": "IDENTICAL",
+    "default/matrix-multiplication": "IDENTICAL",
+    "default/matrix-next": "IDENTICAL",
+    "default/mnist-inference": "IDENTICAL",
+    "default/prefix-scan": "IDENTICAL (timing field only)",
+    "default/prng-cpu-gpu": "IDENTICAL",
+    "default/probability": "IDENTICAL",
+    "default/tgsl-parsing-test": "IDENTICAL",
+    "nof16/jump-flood-voronoi": "IDENTICAL",
+    "nof16/log-test": "IDENTICAL",
+    "nof16/mnist-inference": "IDENTICAL"
+   },
+   "vitest": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0
+   },
+   "backendAssertPass": true
+  },
+  "m157beta": {
+   "tests": {
+    "default/bitonic-sort": "IDENTICAL",
+    "default/concurrent-chart": "IDENTICAL",
+    "default/dispatch": "IDENTICAL",
+    "default/increment": "IDENTICAL",
+    "default/jump-flood-voronoi": "IDENTICAL",
+    "default/log-test": "IDENTICAL",
+    "default/matrix-multiplication": "IDENTICAL",
+    "default/matrix-next": "IDENTICAL",
+    "default/mnist-inference": "IDENTICAL",
+    "default/prefix-scan": "IDENTICAL (timing field only)",
+    "default/prng-cpu-gpu": "IDENTICAL",
+    "default/probability": "IDENTICAL",
+    "default/tgsl-parsing-test": "IDENTICAL",
+    "nof16/jump-flood-voronoi": "IDENTICAL",
+    "nof16/log-test": "IDENTICAL",
+    "nof16/mnist-inference": "IDENTICAL"
+   },
+   "vitest": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0
+   },
+   "backendAssertPass": true
+  },
+  "m158canary": {
+   "tests": {
+    "default/bitonic-sort": "IDENTICAL",
+    "default/concurrent-chart": "IDENTICAL",
+    "default/dispatch": "IDENTICAL",
+    "default/increment": "IDENTICAL",
+    "default/jump-flood-voronoi": "IDENTICAL",
+    "default/log-test": "IDENTICAL",
+    "default/matrix-multiplication": "IDENTICAL",
+    "default/matrix-next": "IDENTICAL",
+    "default/mnist-inference": "IDENTICAL",
+    "default/prefix-scan": "IDENTICAL (timing field only)",
+    "default/prng-cpu-gpu": "IDENTICAL",
+    "default/probability": "IDENTICAL",
+    "default/tgsl-parsing-test": "IDENTICAL",
+    "nof16/jump-flood-voronoi": "IDENTICAL",
+    "nof16/log-test": "IDENTICAL",
+    "nof16/mnist-inference": "IDENTICAL"
+   },
+   "vitest": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0
+   },
+   "backendAssertPass": true
+  },
+  "src-1e80438d": {
+   "tests": {
+    "default/bitonic-sort": "IDENTICAL",
+    "default/concurrent-chart": "IDENTICAL",
+    "default/dispatch": "IDENTICAL",
+    "default/increment": "IDENTICAL",
+    "default/jump-flood-voronoi": "IDENTICAL",
+    "default/log-test": "IDENTICAL",
+    "default/matrix-multiplication": "IDENTICAL",
+    "default/matrix-next": "IDENTICAL",
+    "default/mnist-inference": "IDENTICAL",
+    "default/prefix-scan": "IDENTICAL (timing field only)",
+    "default/prng-cpu-gpu": "IDENTICAL",
+    "default/probability": {
+     "differs": {
+      "inUnitSphere": {
+       "values": 3000,
+       "differ": 1829,
+       "maxUlp": 1432,
+       "nanMismatch": 0
+      },
+      "inHemisphere": {
+       "values": 3000,
+       "differ": 1829,
+       "maxUlp": 1432,
+       "nanMismatch": 0
+      },
+      "exponential": {
+       "values": 3000,
+       "differ": 1590,
+       "maxUlp": 357,
+       "nanMismatch": 0
+      },
+      "normal": {
+       "values": 3000,
+       "differ": 993,
+       "maxUlp": 897,
+       "nanMismatch": 0
+      }
+     }
+    },
+    "default/tgsl-parsing-test": "IDENTICAL",
+    "nof16/jump-flood-voronoi": "IDENTICAL",
+    "nof16/log-test": "IDENTICAL",
+    "nof16/mnist-inference": "IDENTICAL"
+   },
+   "vitest": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0
+   },
+   "backendAssertPass": true
+  },
+  "src-5b0479bd": {
+   "tests": {
+    "default/bitonic-sort": "IDENTICAL",
+    "default/concurrent-chart": "IDENTICAL",
+    "default/dispatch": "IDENTICAL",
+    "default/increment": "IDENTICAL",
+    "default/jump-flood-voronoi": "IDENTICAL",
+    "default/log-test": "IDENTICAL",
+    "default/matrix-multiplication": "IDENTICAL",
+    "default/matrix-next": "IDENTICAL",
+    "default/mnist-inference": "IDENTICAL",
+    "default/prefix-scan": "IDENTICAL (timing field only)",
+    "default/prng-cpu-gpu": "IDENTICAL",
+    "default/probability": {
+     "differs": {
+      "inUnitSphere": {
+       "values": 3000,
+       "differ": 1829,
+       "maxUlp": 1432,
+       "nanMismatch": 0
+      },
+      "inHemisphere": {
+       "values": 3000,
+       "differ": 1829,
+       "maxUlp": 1432,
+       "nanMismatch": 0
+      },
+      "exponential": {
+       "values": 3000,
+       "differ": 1590,
+       "maxUlp": 357,
+       "nanMismatch": 0
+      },
+      "normal": {
+       "values": 3000,
+       "differ": 993,
+       "maxUlp": 897,
+       "nanMismatch": 0
+      }
+     }
+    },
+    "default/tgsl-parsing-test": "IDENTICAL",
+    "nof16/jump-flood-voronoi": "IDENTICAL",
+    "nof16/log-test": "IDENTICAL",
+    "nof16/mnist-inference": "IDENTICAL"
+   },
+   "vitest": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0
+   },
+   "backendAssertPass": true
+  }
+ },
+ "cts": {
+  "m100el": {
+   "cases": 1162,
+   "pass": 686,
+   "skip": 476,
+   "fail": 0,
+   "warn": 0,
+   "statusChangesVsM155": 0,
+   "changes": [],
+   "unparseable": [],
+   "wallSeconds": 155,
+   "backendAssertPass": true
+  },
+  "m108el": {
+   "cases": 1162,
+   "pass": 686,
+   "skip": 476,
+   "fail": 0,
+   "warn": 0,
+   "statusChangesVsM155": 0,
+   "changes": [],
+   "unparseable": [],
+   "wallSeconds": 93,
+   "backendAssertPass": true
+  },
+  "m120el": {
+   "cases": 1162,
+   "pass": 686,
+   "skip": 476,
+   "fail": 0,
+   "warn": 0,
+   "statusChangesVsM155": 0,
+   "changes": [],
+   "unparseable": [],
+   "wallSeconds": 108,
+   "backendAssertPass": true
+  },
+  "m128lc": {
+   "cases": 1162,
+   "pass": 686,
+   "skip": 476,
+   "fail": 0,
+   "warn": 0,
+   "statusChangesVsM155": 0,
+   "changes": [],
+   "unparseable": [],
+   "wallSeconds": 94,
+   "backendAssertPass": true
+  },
+  "m129lc": {
+   "cases": 1162,
+   "pass": 686,
+   "skip": 476,
+   "fail": 0,
+   "warn": 0,
+   "statusChangesVsM155": 0,
+   "changes": [],
+   "unparseable": [],
+   "wallSeconds": 91,
+   "backendAssertPass": true
+  },
+  "m130lc": {
+   "cases": 1162,
+   "pass": 686,
+   "skip": 476,
+   "fail": 0,
+   "warn": 0,
+   "statusChangesVsM155": 0,
+   "changes": [],
+   "unparseable": [],
+   "wallSeconds": 105,
+   "backendAssertPass": true
+  },
+  "m138": {
+   "cases": 1162,
+   "pass": 686,
+   "skip": 476,
+   "fail": 0,
+   "warn": 0,
+   "statusChangesVsM155": 0,
+   "changes": [],
+   "unparseable": [],
+   "wallSeconds": 101,
+   "backendAssertPass": true
+  },
+  "m146": {
+   "cases": 1162,
+   "pass": 686,
+   "skip": 476,
+   "fail": 0,
+   "warn": 0,
+   "statusChangesVsM155": 0,
+   "changes": [],
+   "unparseable": [],
+   "wallSeconds": 87,
+   "backendAssertPass": true
+  },
+  "m150": {
+   "cases": 1162,
+   "pass": 686,
+   "skip": 476,
+   "fail": 0,
+   "warn": 0,
+   "statusChangesVsM155": 0,
+   "changes": [],
+   "unparseable": [],
+   "wallSeconds": 86,
+   "backendAssertPass": true
+  },
+  "m154": {
+   "cases": 1162,
+   "pass": 686,
+   "skip": 476,
+   "fail": 0,
+   "warn": 0,
+   "statusChangesVsM155": 0,
+   "changes": [],
+   "unparseable": [],
+   "wallSeconds": 147,
+   "backendAssertPass": true
+  },
+  "m155": {
+   "cases": 1162,
+   "pass": 686,
+   "skip": 476,
+   "fail": 0,
+   "warn": 0,
+   "statusChangesVsM155": 0,
+   "changes": [],
+   "unparseable": [],
+   "wallSeconds": 157,
+   "backendAssertPass": true
+  },
+  "m155cft": {
+   "cases": 1162,
+   "pass": 686,
+   "skip": 476,
+   "fail": 0,
+   "warn": 0,
+   "statusChangesVsM155": 0,
+   "changes": [],
+   "unparseable": [],
+   "wallSeconds": 114,
+   "backendAssertPass": true
+  },
+  "m157beta": {
+   "cases": 1162,
+   "pass": 686,
+   "skip": 476,
+   "fail": 0,
+   "warn": 0,
+   "statusChangesVsM155": 0,
+   "changes": [],
+   "unparseable": [],
+   "wallSeconds": 113,
+   "backendAssertPass": true
+  },
+  "m158canary": {
+   "cases": 1162,
+   "pass": 686,
+   "skip": 476,
+   "fail": 0,
+   "warn": 0,
+   "statusChangesVsM155": 0,
+   "changes": [],
+   "unparseable": [],
+   "wallSeconds": 148,
+   "backendAssertPass": true
+  },
+  "src-1e80438d": {
+   "cases": 1162,
+   "pass": 686,
+   "skip": 476,
+   "fail": 0,
+   "warn": 0,
+   "statusChangesVsM155": 0,
+   "changes": [],
+   "unparseable": [],
+   "wallSeconds": 96,
+   "backendAssertPass": true
+  },
+  "src-5b0479bd": {
+   "status": "not-run"
+  }
+ },
+ "classes": {
+  "04889f98256a": [
+   "m100el"
+  ],
+  "b5ac05c53de6": [
+   "m108el",
+   "m120el",
+   "m128lc",
+   "m129lc",
+   "m130lc",
+   "m138",
+   "m146",
+   "m150",
+   "m154",
+   "m155",
+   "m155cft",
+   "m157beta",
+   "m158canary"
+  ],
+  "a3471290f97b": [
+   "src-1e80438d",
+   "src-5b0479bd"
+  ]
+ }
+}

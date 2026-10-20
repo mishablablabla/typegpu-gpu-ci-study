@@ -1,0 +1,15 @@
+> Paths in this document refer to the original working tree. See [docs/INDEX.md](../INDEX.md) for the mapping to this repository.
+
+# WS-EX report
+TypeGPU HEAD e893ad11, 97 examples, 2 repeats/backend, checkpoints cp3 (primary) and cp30 (less trustworthy: synthetic interaction fires async handlers un-awaited).
+Result: all three backends (Metal, Lavapipe arm64, SwiftShader arm64): 87 ran-clean, 10 needs-unavailable-API (5 camera/video, 3 WebGL, probability via morphcharts WebGL, threejs/compute-cloth offline fetch). 0 validation errors/threw/hung/crashed/feature-skipped. C3: 87/97 complete, 85/97 (87.6%) checkable non-zero readback; false reds vs Metal 0; exclusive failures 0.
+C5/f16: 3 examples touch shader-f16 (mnist-inference, monocular-light-injection, log-test), all optional; SwiftShader takes f32 path; 0/97 fail without f16; with f16 hidden WGSL is identical on all backends for all 87; mnist differs <=4.6e-4 relative.
+Determinism: Metal 1 example differs between repeats, Lavapipe 1, SwiftShader 2 (cp3/async effects).
+Cross-backend at cp3 (bit-identical/tiny/small/moderate/large): Metal-Lavapipe 16/27/15/16/6; Metal-SwiftShader 13/17/27/17/8; Lavapipe-SwiftShader 15/14/25/17/11. Lavapipe closer to Metal (43 vs 30 identical-or-tiny). Triple analysis: all agree 34, SwiftShader lone outlier 16 (14 only "small"), Lavapipe lone outlier 1 (bitonic-sort, sizes from adapter limits), all differ 36.
+Root causes: F32_MAX into r16float storage texture -> Metal/Lavapipe 0x7bff, SwiftShader NaN 0x7fff (jump-flood-distance visibly different, suika-sdf distance texture); integer PRNGs identical everywhere, BPETER fract(cos()) differs; -(+0) = -0 on Metal/Lavapipe, +0 on SwiftShader.
+game-of-life Metal mismatch explained: naive = dead border, tiled/bitpacked = wrap; each matches a CPU model bit-exact on all three backends (Phase-2 mismatch likely compared naive vs others).
+Backend-independent TypeGPU findings: rendering/disco "Test Resolution" emits WGSL with undeclared aspectCorrected (5 compile errors); dawn.node 0.6.2 doesn't handle Float16Array (writeTexture 0 bytes, writeBuffer zeros; area-light affected); deprecation warnings (>>= on u32 in prefix-scan, implicit i32->f32 in genetic-racing, lines-combinations).
+Runtime (194 processes): Metal 15.6 min; Lavapipe arm64 2-CPU 26 min; SwiftShader arm64 2-CPU 46 min (needs EX_TIMEOUT_MS>=450000: attractors 345-400 s, particles-snow 170-200 s).
+Hypotheses: H1 large diffs (3d-fish, attractors, compute-particles, fluid-double-buffering, slime-mold) = chaotic amplification of last-bit differences; H2 small/moderate canvas diffs = rasteriser/transcendental/sampling; H3 jelly cp3 repeat differences = async races.
+Unresolved: why Lavapipe differs from Metal and SwiftShader in clouds, pom, compute-particles at cp3; x86_64 not covered here (SOAK v2 covers class stability).
+Limits: camera/WebGL/2D-canvas/network unavailable (10 unrunnable, 7 run degraded: mnist-inference, jelly-slider, jelly-switch, suika-sdf, texture-mipmaps, texture-write-3d, probability); 256x256 canvases, 30 frames; one Mesa and one SwiftShader build. TESTING_MAP.md not updated (TypeGPU read-only).

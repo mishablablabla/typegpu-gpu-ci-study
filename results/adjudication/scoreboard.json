@@ -1,0 +1,2524 @@
+{
+ "schema": "adj-scoreboard/1",
+ "generatedBy": "tools/build-scoreboard.mjs",
+ "categories": "accepted/rejected/indeterminate/unverified keep their Phase-1 meaning; strict outcome uses authoritative oracles only (spec rule, real CTS interval); lean = non-authoritative reference (IEEE value, Metal, f64 error)",
+ "groups": [
+  {
+   "id": "G01",
+   "title": "Subnormal operands flushed to zero: add/sub/mul/div/sqrt/inverseSqrt (+ downstream inf/NaN, length underflow)",
+   "laneStats": {
+    "lanes": {
+     "ssA": 0,
+     "ssX": 3670
+    },
+    "cat": {
+     "ssA": {},
+     "ssX": {
+      "accepted/accepted": 3150,
+      "indeterminate/indeterminate": 520
+     }
+    },
+    "metal": {
+     "ssA": {
+      "withLav": 0,
+      "withSS": 0,
+      "withBoth": 0,
+      "withNeither": 0
+     },
+     "ssX": {
+      "withLav": 0,
+      "withSS": 3670,
+      "withBoth": 0,
+      "withNeither": 0
+     }
+    },
+    "closer": {
+     "ssA": {
+      "lavCloser": 0,
+      "ssCloser": 0,
+      "tie": 0
+     },
+     "ssX": {
+      "lavCloser": 3530,
+      "ssCloser": 0,
+      "tie": 140
+     }
+    },
+    "ieee": {
+     "ssA": {
+      "n": 0,
+      "lav": 0,
+      "ss": 0,
+      "metal": 0
+     },
+     "ssX": {
+      "n": 3670,
+      "lav": 3670,
+      "ss": 0,
+      "metal": 0
+     }
+    }
+   },
+   "tests": {
+    "suites": 2,
+    "full": 0
+   },
+   "testPatterns": {
+    "suites:PFFFP": 2
+   },
+   "relevance": {
+    "score": 1,
+    "functions": {
+     "add": {
+      "examples": 8,
+      "libs": 1
+     },
+     "sub": {
+      "examples": 11,
+      "libs": 0
+     },
+     "mul": {
+      "examples": 18,
+      "libs": 1
+     },
+     "div": {
+      "examples": 1,
+      "libs": 0
+     },
+     "sqrt": {
+      "examples": 8,
+      "libs": 4
+     },
+     "inverseSqrt": {
+      "examples": 3,
+      "libs": 0
+     },
+     "length": {
+      "examples": 31,
+      "libs": 3
+     },
+     "normalize": {
+      "examples": 38,
+      "libs": 2
+     }
+    },
+    "rationale": "functions are everywhere, but the behaviour (subnormal operands, only SwiftShader-x64) is not something examples/libs rely on"
+   },
+   "affected": "A add/sub/mul, B div, C inverseSqrt, D sqrt lanes; suites const-fold + edge-cases length/normalize tests",
+   "verdict": {
+    "lavapipe": "accepted (CTS interval) / indeterminate lanes identical to SS; keeps subnormals",
+    "ssArm64": "identical to Lavapipe (0 differing lanes)",
+    "ssX64": "accepted (CTS) on every decidable lane; flushes subnormal operands (WGSL 15.7: inputs and outputs of listed ops may be flushed)"
+   },
+   "oracle": "spec rule (flush permitted) + real CTS interval (rejected = 0 on all four backends)",
+   "strict": "both-fine",
+   "lean": "mixed/none: Metal sides with SS-x64 (flushes), exact value sides with Lavapipe/SS-arm64; flush is spec-permitted",
+   "confidence": "high",
+   "note": "Phase-2 claim \"same pattern as Metal\" holds for arithmetic (Metal agrees with SS-x64 on all differing lanes) but NOT for min/max/neg (see G02).",
+   "proximity": "vs SS-x64 (3670 lanes): Lavapipe closer to f64 reference on 3530, SS on 0, tie 140; Metal = Lavapipe on 0, = SS on 3670, neither 0; IEEE/f64 value hit: Lavapipe 3670, SS 0, Metal 0 of 3670",
+   "leanClass": "mixed/none"
+  },
+  {
+   "id": "G02",
+   "title": "Subnormal flush in min/max/neg (SS-x64 only) - fails the harness \"exact-select\" policy",
+   "laneStats": {
+    "lanes": {
+     "ssA": 0,
+     "ssX": 1980
+    },
+    "cat": {
+     "ssA": {},
+     "ssX": {
+      "accepted/accepted": 1900,
+      "indeterminate/indeterminate": 80
+     }
+    },
+    "metal": {
+     "ssA": {
+      "withLav": 0,
+      "withSS": 0,
+      "withBoth": 0,
+      "withNeither": 0
+     },
+     "ssX": {
+      "withLav": 1920,
+      "withSS": 40,
+      "withBoth": 0,
+      "withNeither": 20
+     }
+    },
+    "closer": {
+     "ssA": {
+      "lavCloser": 0,
+      "ssCloser": 0,
+      "tie": 0
+     },
+     "ssX": {
+      "lavCloser": 1980,
+      "ssCloser": 0,
+      "tie": 0
+     }
+    },
+    "ieee": {
+     "ssA": {
+      "n": 0,
+      "lav": 0,
+      "ss": 0,
+      "metal": 0
+     },
+     "ssX": {
+      "n": 1980,
+      "lav": 1980,
+      "ss": 0,
+      "metal": 1920
+     }
+    }
+   },
+   "tests": {
+    "suites": 0,
+    "full": 12
+   },
+   "testPatterns": {
+    "full:PPPPF": 12
+   },
+   "relevance": {
+    "score": 1,
+    "functions": {
+     "min": {
+      "examples": 27,
+      "libs": 3
+     },
+     "max": {
+      "examples": 43,
+      "libs": 4
+     },
+     "neg": {
+      "examples": 6,
+      "libs": 1
+     },
+     "clamp": {
+      "examples": 32,
+      "libs": 3
+     }
+    },
+    "rationale": "min/max/clamp are everywhere; only subnormal operands differ (x64 only); no example depends on it. Hits the PoC harness policy, not product code"
+   },
+   "affected": "B min/max, A neg lanes; 12 full-suite tests (diff/float min/max/neg x4 types) fail on SS-x64 only",
+   "verdict": {
+    "lavapipe": "accepted (CTS); returns an operand exactly",
+    "ssArm64": "identical to Lavapipe",
+    "ssX64": "accepted (CTS) on every lane although harness policy \"must return an operand exactly\" fails 1 820+20 lanes (fail -> accepted in eval.json)"
+   },
+   "oracle": "spec rule (flush may apply to outputs) + real CTS interval; harness policy is stricter than WGSL",
+   "strict": "both-fine",
+   "lean": "ss-leaning-off: Metal agrees with Lavapipe (does not flush min/max/neg) on ~97% of the differing min/max subnormal lanes",
+   "confidence": "high",
+   "note": "The 12 red tests are a harness-policy artefact (policy asks for exact operand), not a WGSL violation: CTS accepts the flushed value.",
+   "proximity": "vs SS-x64 (1980 lanes): Lavapipe closer to f64 reference on 1980, SS on 0, tie 0; Metal = Lavapipe on 1920, = SS on 40, neither 20; IEEE/f64 value hit: Lavapipe 1980, SS 0, Metal 1920 of 1980",
+   "leanClass": "ss-leaning-off"
+  },
+  {
+   "id": "G03",
+   "title": "Sign of zero (sin(-0), tanh(-0), mod(-0,y), min/max of +-0)",
+   "laneStats": {
+    "lanes": {
+     "ssA": 920,
+     "ssX": 940
+    },
+    "cat": {
+     "ssA": {
+      "accepted/accepted": 730,
+      "indeterminate/indeterminate": 190
+     },
+     "ssX": {
+      "accepted/accepted": 750,
+      "indeterminate/indeterminate": 190
+     }
+    },
+    "metal": {
+     "ssA": {
+      "withLav": 850,
+      "withSS": 10,
+      "withBoth": 0,
+      "withNeither": 60
+     },
+     "ssX": {
+      "withLav": 850,
+      "withSS": 10,
+      "withBoth": 0,
+      "withNeither": 80
+     }
+    },
+    "closer": {
+     "ssA": {
+      "lavCloser": 0,
+      "ssCloser": 0,
+      "tie": 920
+     },
+     "ssX": {
+      "lavCloser": 0,
+      "ssCloser": 0,
+      "tie": 940
+     }
+    },
+    "ieee": {
+     "ssA": {
+      "n": 920,
+      "lav": 920,
+      "ss": 920,
+      "metal": 860
+     },
+     "ssX": {
+      "n": 940,
+      "lav": 940,
+      "ss": 940,
+      "metal": 860
+     }
+    }
+   },
+   "tests": {
+    "suites": 0,
+    "full": 0
+   },
+   "testPatterns": {},
+   "relevance": {
+    "score": 1,
+    "functions": {
+     "sin": {
+      "examples": 34,
+      "libs": 4
+     },
+     "tanh": {
+      "examples": 9,
+      "libs": 0
+     },
+     "mod": {
+      "examples": 2,
+      "libs": 0
+     },
+     "min": {
+      "examples": 27,
+      "libs": 3
+     },
+     "max": {
+      "examples": 43,
+      "libs": 4
+     },
+     "sign": {
+      "examples": 7,
+      "libs": 4
+     }
+    },
+    "rationale": "sign of zero is explicitly unspecified by WGSL; rarely observable (1/x, atan2)"
+   },
+   "affected": "C sin 10 lanes, D tanh 10, B min/max 20, L mod 900 (identical on SS-arm64 and SS-x64)",
+   "verdict": {
+    "lavapipe": "accepted/indeterminate (same category as SS)",
+    "ssArm64": "same",
+    "ssX64": "same"
+   },
+   "oracle": "WGSL text: \"Implementations may ignore the sign field of a floating point zero\"",
+   "strict": "both-fine",
+   "lean": "mixed (Metal agrees with Lavapipe on sin/mod, with SS on tanh)",
+   "confidence": "high",
+   "note": "No test fails because of it.",
+   "proximity": "vs SS-arm64 (920 lanes): Lavapipe closer to f64 reference on 0, SS on 0, tie 920; Metal = Lavapipe on 850, = SS on 10, neither 60; IEEE/f64 value hit: Lavapipe 920, SS 920, Metal 860 of 920",
+   "leanClass": "mixed/none"
+  },
+  {
+   "id": "G04",
+   "title": "sin/cos accuracy: SwiftShader (both arch) far less accurate than Lavapipe/Metal, still inside the CTS interval",
+   "laneStats": {
+    "lanes": {
+     "ssA": 700,
+     "ssX": 700
+    },
+    "cat": {
+     "ssA": {
+      "accepted/accepted": 640,
+      "indeterminate/indeterminate": 60
+     },
+     "ssX": {
+      "accepted/accepted": 640,
+      "indeterminate/indeterminate": 60
+     }
+    },
+    "metal": {
+     "ssA": {
+      "withLav": 390,
+      "withSS": 0,
+      "withBoth": 0,
+      "withNeither": 310
+     },
+     "ssX": {
+      "withLav": 390,
+      "withSS": 0,
+      "withBoth": 0,
+      "withNeither": 310
+     }
+    },
+    "closer": {
+     "ssA": {
+      "lavCloser": 700,
+      "ssCloser": 0,
+      "tie": 0
+     },
+     "ssX": {
+      "lavCloser": 700,
+      "ssCloser": 0,
+      "tie": 0
+     }
+    },
+    "ieee": {
+     "ssA": {
+      "n": 700,
+      "lav": 580,
+      "ss": 0,
+      "metal": 460
+     },
+     "ssX": {
+      "n": 700,
+      "lav": 580,
+      "ss": 0,
+      "metal": 460
+     }
+    }
+   },
+   "tests": {
+    "suites": 0,
+    "full": 0
+   },
+   "testPatterns": {},
+   "relevance": {
+    "score": 3,
+    "functions": {
+     "sin": {
+      "examples": 34,
+      "libs": 4
+     },
+     "cos": {
+      "examples": 32,
+      "libs": 4
+     }
+    },
+    "rationale": "sin/cos used by 34/32 docs examples and 4 libs (noise, sdf, radiance-cascades); visible in the real `probability` example output"
+   },
+   "affected": "C sin 370 + cos 330 lanes; real example `probability` (onUnitCircle/onUnitSphere/onHemisphere)",
+   "verdict": {
+    "lavapipe": "accepted (CTS); max abs error 5.0e-8 (<= 0.0% of interval half-width)",
+    "ssArm64": "accepted (CTS); max abs error 1.88e-4, uses up to 38.6% of the interval half-width (CTS bound 2^-11)",
+    "ssX64": "same bits as SS-arm64"
+   },
+   "oracle": "real CTS interval (accepted/accepted); secondary: f64 reference error and |v|-1 invariant of the real `probability` example",
+   "strict": "both-fine",
+   "lean": "ss-outlier vs Metal and vs exact: |v|-1 on unit-circle samples max 1.9e-4 (SS) vs 5.5e-8 (Lavapipe) / 1.1e-7 (Metal)",
+   "confidence": "high (lane + example evidence)",
+   "note": "Probability example differs SS-vs-Metal by ~3150-3310 ULP on sin/cos distributions while Lavapipe-vs-Metal is 2-22 ULP. Acceptable by spec, but any TypeGPU assertion tighter than ~2e-4 on sin/cos output is backend-specific.",
+   "proximity": "vs SS-arm64 (700 lanes): Lavapipe closer to f64 reference on 700, SS on 0, tie 0; Metal = Lavapipe on 390, = SS on 0, neither 310; IEEE/f64 value hit: Lavapipe 580, SS 0, Metal 460 of 700",
+   "leanClass": "ss-leaning-off"
+  },
+  {
+   "id": "G05",
+   "title": "exp/exp2/tanh/log/log2/pow in the normal domain: few-ULP differences (incl. Lavapipe pow(7,1)=7.0000005)",
+   "laneStats": {
+    "lanes": {
+     "ssA": 2050,
+     "ssX": 2270
+    },
+    "cat": {
+     "ssA": {
+      "accepted/accepted": 2050
+     },
+     "ssX": {
+      "accepted/accepted": 2270
+     }
+    },
+    "metal": {
+     "ssA": {
+      "withLav": 700,
+      "withSS": 610,
+      "withBoth": 0,
+      "withNeither": 740
+     },
+     "ssX": {
+      "withLav": 810,
+      "withSS": 590,
+      "withBoth": 0,
+      "withNeither": 870
+     }
+    },
+    "closer": {
+     "ssA": {
+      "lavCloser": 1120,
+      "ssCloser": 930,
+      "tie": 0
+     },
+     "ssX": {
+      "lavCloser": 1280,
+      "ssCloser": 990,
+      "tie": 0
+     }
+    },
+    "ieee": {
+     "ssA": {
+      "n": 2050,
+      "lav": 440,
+      "ss": 500,
+      "metal": 710
+     },
+     "ssX": {
+      "n": 2270,
+      "lav": 500,
+      "ss": 530,
+      "metal": 780
+     }
+    }
+   },
+   "tests": {
+    "suites": 0,
+    "full": 2
+   },
+   "testPatterns": {
+    "full:PFPFP": 1,
+    "full:PFSFS": 1
+   },
+   "relevance": {
+    "score": 2,
+    "functions": {
+     "pow": {
+      "examples": 26,
+      "libs": 2
+     },
+     "exp": {
+      "examples": 15,
+      "libs": 1
+     },
+     "tanh": {
+      "examples": 9,
+      "libs": 0
+     },
+     "log": {
+      "examples": 4,
+      "libs": 1
+     },
+     "exp2": {
+      "examples": 0,
+      "libs": 0
+     }
+    },
+    "rationale": "widely used, but differences are a few ULP; matters only for exact-equality asserts (TypeGPU std tests do use some)"
+   },
+   "affected": "C exp/exp2, D tanh, L log/log2/pow lanes; full-suite ported pow tests (exponent one, f16 vec: Lavapipe only)",
+   "verdict": {
+    "lavapipe": "accepted (CTS) on all lanes; pow(7,1) = 7.000000476837158 inside [6.99999, 7.00001]",
+    "ssArm64": "accepted (CTS) on all lanes",
+    "ssX64": "accepted (CTS); a few more last-bit differences vs arm64"
+   },
+   "oracle": "real CTS interval (accepted/accepted); experiments.json E3, E4",
+   "strict": "both-fine",
+   "lean": "mixed/none (see proximity: closer-to-exact counts are split; Metal agrees with each side on a minority of lanes)",
+   "confidence": "high",
+   "note": "The two Lavapipe-only red ported tests (pow exponent one, f16 pow vec) are exact-equality asserts that a CTS-accepted result does not meet; SS happens to be exact on those inputs.",
+   "proximity": "vs SS-arm64 (2050 lanes): Lavapipe closer to f64 reference on 1120, SS on 930, tie 0; Metal = Lavapipe on 700, = SS on 610, neither 740; IEEE/f64 value hit: Lavapipe 440, SS 500, Metal 710 of 2050",
+   "leanClass": "mixed/none"
+  },
+  {
+   "id": "G06",
+   "title": "Transcendental special inputs: exp(NaN), log(0), log(NaN), log(<0), log2(0)...",
+   "laneStats": {
+    "lanes": {
+     "ssA": 80,
+     "ssX": 80
+    },
+    "cat": {
+     "ssA": {
+      "indeterminate/indeterminate": 80
+     },
+     "ssX": {
+      "indeterminate/indeterminate": 80
+     }
+    },
+    "metal": {
+     "ssA": {
+      "withLav": 80,
+      "withSS": 0,
+      "withBoth": 0,
+      "withNeither": 0
+     },
+     "ssX": {
+      "withLav": 80,
+      "withSS": 0,
+      "withBoth": 0,
+      "withNeither": 0
+     }
+    },
+    "closer": {
+     "ssA": {
+      "lavCloser": 0,
+      "ssCloser": 0,
+      "tie": 80
+     },
+     "ssX": {
+      "lavCloser": 0,
+      "ssCloser": 0,
+      "tie": 80
+     }
+    },
+    "ieee": {
+     "ssA": {
+      "n": 80,
+      "lav": 80,
+      "ss": 0,
+      "metal": 80
+     },
+     "ssX": {
+      "n": 80,
+      "lav": 80,
+      "ss": 0,
+      "metal": 80
+     }
+    }
+   },
+   "tests": {
+    "suites": 0,
+    "full": 2
+   },
+   "testPatterns": {
+    "full:PPFPF": 2
+   },
+   "relevance": {
+    "score": 1,
+    "functions": {
+     "log": {
+      "examples": 4,
+      "libs": 1
+     },
+     "exp": {
+      "examples": 15,
+      "libs": 1
+     },
+     "exp2": {
+      "examples": 0,
+      "libs": 0
+     }
+    },
+    "rationale": "log(0)/NaN inputs are domain edges; only TypeGPU unit tests (ported log/log2 edge cases) assert them; no example does"
+   },
+   "affected": "C exp/exp2 NaN lanes, L log/log2 domain lanes; ported log/log2 edge-case tests (2 tests red on SS only)",
+   "verdict": {
+    "lavapipe": "indeterminate (CTS cannot judge); = IEEE-754 (log(0)=-inf, NaN in -> NaN) and = Metal on all 80 lanes",
+    "ssArm64": "indeterminate; returns finite/inf values: log(0)=-88.03, log2(0)=-127, log(NaN)=89.13, exp(NaN)=+inf",
+    "ssX64": "same as SS-arm64"
+   },
+   "oracle": "WGSL says indeterminate (finite-math assumption; CTS interval unbounded) -> falls to IEEE-754 value + Metal as non-authoritative reference",
+   "strict": "indeterminate",
+   "lean": "ss-outlier (Lavapipe = IEEE = Metal on every lane; SS differs on every lane)",
+   "confidence": "high for the observation; the \"outlier\" label is a reference-lean only",
+   "note": "TypeGPU own ported tests assert log(0) = -inf; SS fails them. The test file itself notes WGSL leaves it unspecified.",
+   "proximity": "vs SS-arm64 (80 lanes): Lavapipe closer to f64 reference on 0, SS on 0, tie 80; Metal = Lavapipe on 80, = SS on 0, neither 0; IEEE/f64 value hit: Lavapipe 80, SS 0, Metal 80 of 80",
+   "leanClass": "ss-leaning-off"
+  },
+  {
+   "id": "G07",
+   "title": "pow special inputs: pow(0,y), pow(neg,y), pow(x,0)",
+   "laneStats": {
+    "lanes": {
+     "ssA": 400,
+     "ssX": 400
+    },
+    "cat": {
+     "ssA": {
+      "indeterminate/indeterminate": 400
+     },
+     "ssX": {
+      "indeterminate/indeterminate": 400
+     }
+    },
+    "metal": {
+     "ssA": {
+      "withLav": 260,
+      "withSS": 90,
+      "withBoth": 0,
+      "withNeither": 50
+     },
+     "ssX": {
+      "withLav": 260,
+      "withSS": 90,
+      "withBoth": 0,
+      "withNeither": 50
+     }
+    },
+    "closer": {
+     "ssA": {
+      "lavCloser": 20,
+      "ssCloser": 90,
+      "tie": 290
+     },
+     "ssX": {
+      "lavCloser": 20,
+      "ssCloser": 90,
+      "tie": 290
+     }
+    },
+    "ieee": {
+     "ssA": {
+      "n": 400,
+      "lav": 180,
+      "ss": 150,
+      "metal": 310
+     },
+     "ssX": {
+      "n": 400,
+      "lav": 180,
+      "ss": 150,
+      "metal": 310
+     }
+    }
+   },
+   "tests": {
+    "suites": 0,
+    "full": 0
+   },
+   "testPatterns": {},
+   "relevance": {
+    "score": 1,
+    "functions": {
+     "pow": {
+      "examples": 26,
+      "libs": 2
+     }
+    },
+    "rationale": "pow(0,y)/negative base are domain edges; 26 examples use pow but with positive operands in practice (not verified per call site)"
+   },
+   "affected": "L pow 400 lanes (domain-edge 70, inf-vs-finite 90, NaN-vs-number 240)",
+   "verdict": {
+    "lavapipe": "indeterminate; pow(0,0)=0 and pow(0,-y)=0 (IEEE: 1 and +inf), NaN for negative bases (= Metal)",
+    "ssArm64": "indeterminate; IEEE-correct for pow(0,0), pow(0,-2), negative base with integer exponent; tiny/huge garbage for pow(0,0.5)=7.7e-20, pow(0,-1)=1.7e38",
+    "ssX64": "same as SS-arm64"
+   },
+   "oracle": "WGSL pow inherits exp2(y*log2(x)) (undefined for x<=0) -> IEEE-754 value + Metal reference",
+   "strict": "indeterminate",
+   "lean": "mixed (IEEE match: Lavapipe 180/400, SS 150/400, Metal 310/400; each backend off in different lanes)",
+   "confidence": "medium (lane counts exact; leaning is reference-based)",
+   "note": "Metal is closest to IEEE here; neither software backend is.",
+   "proximity": "vs SS-arm64 (400 lanes): Lavapipe closer to f64 reference on 20, SS on 90, tie 290; Metal = Lavapipe on 260, = SS on 90, neither 50; IEEE/f64 value hit: Lavapipe 180, SS 150, Metal 310 of 400",
+   "leanClass": "mixed/none"
+  },
+  {
+   "id": "G08",
+   "title": "mod / % in the normal domain: Lavapipe approximate, SwiftShader exact",
+   "laneStats": {
+    "lanes": {
+     "ssA": 4980,
+     "ssX": 4980
+    },
+    "cat": {
+     "ssA": {
+      "accepted/accepted": 4420,
+      "indeterminate/indeterminate": 560
+     },
+     "ssX": {
+      "accepted/accepted": 4420,
+      "indeterminate/indeterminate": 560
+     }
+    },
+    "metal": {
+     "ssA": {
+      "withLav": 0,
+      "withSS": 3480,
+      "withBoth": 0,
+      "withNeither": 1500
+     },
+     "ssX": {
+      "withLav": 0,
+      "withSS": 3480,
+      "withBoth": 0,
+      "withNeither": 1500
+     }
+    },
+    "closer": {
+     "ssA": {
+      "lavCloser": 0,
+      "ssCloser": 4980,
+      "tie": 0
+     },
+     "ssX": {
+      "lavCloser": 0,
+      "ssCloser": 4980,
+      "tie": 0
+     }
+    },
+    "ieee": {
+     "ssA": {
+      "n": 4980,
+      "lav": 0,
+      "ss": 4980,
+      "metal": 3480
+     },
+     "ssX": {
+      "n": 4980,
+      "lav": 0,
+      "ss": 4980,
+      "metal": 3480
+     }
+    }
+   },
+   "tests": {
+    "suites": 1,
+    "full": 4
+   },
+   "testPatterns": {
+    "suites:PPFPF": 1,
+    "full:PFPFP": 4
+   },
+   "relevance": {
+    "score": 1,
+    "functions": {
+     "mod": {
+      "examples": 2,
+      "libs": 0
+     }
+    },
+    "rationale": "std.mod used by 2 examples, 0 libs; differs in normal domain only for large quotients; also feeds the scalar-int silent-leak story"
+   },
+   "affected": "L mod 4 980 lanes differ; full-suite diff mod x4 tests (red on Lavapipe only); scalar-const leaking-set test (SS differs)",
+   "verdict": {
+    "lavapipe": "accepted (CTS) on all lanes; 4 420 lanes differ from the exact remainder (max abs error 10.3); harness \"derived\" policy fails 280 lanes",
+    "ssArm64": "accepted (CTS); equals fround(want) on all lanes",
+    "ssX64": "same as SS-arm64"
+   },
+   "oracle": "real CTS interval (remainderInterval, inherited x - y*trunc(x/y))",
+   "strict": "both-fine",
+   "lean": "lavapipe-leaning-off: SS exact on every differing lane; Metal agrees with SS on 70% of them, with neither on the rest",
+   "confidence": "high",
+   "note": "Phase-2: \"Lavapipe mod approximate\" is confirmed, but inside the spec interval - not a spec violation.",
+   "proximity": "vs SS-arm64 (4980 lanes): Lavapipe closer to f64 reference on 0, SS on 4980, tie 0; Metal = Lavapipe on 0, = SS on 3480, neither 1500; IEEE/f64 value hit: Lavapipe 0, SS 4980, Metal 3480 of 4980",
+   "leanClass": "lavapipe-leaning-off"
+  },
+  {
+   "id": "G09",
+   "title": "mod special inputs: infinity operand, subnormal divisor",
+   "laneStats": {
+    "lanes": {
+     "ssA": 2690,
+     "ssX": 2690
+    },
+    "cat": {
+     "ssA": {
+      "indeterminate/indeterminate": 2690
+     },
+     "ssX": {
+      "indeterminate/indeterminate": 2690
+     }
+    },
+    "metal": {
+     "ssA": {
+      "withLav": 1630,
+      "withSS": 0,
+      "withBoth": 0,
+      "withNeither": 1060
+     },
+     "ssX": {
+      "withLav": 1630,
+      "withSS": 0,
+      "withBoth": 0,
+      "withNeither": 1060
+     }
+    },
+    "closer": {
+     "ssA": {
+      "lavCloser": 0,
+      "ssCloser": 2690,
+      "tie": 0
+     },
+     "ssX": {
+      "lavCloser": 0,
+      "ssCloser": 2690,
+      "tie": 0
+     }
+    },
+    "ieee": {
+     "ssA": {
+      "n": 2690,
+      "lav": 0,
+      "ss": 2690,
+      "metal": 0
+     },
+     "ssX": {
+      "n": 2690,
+      "lav": 0,
+      "ss": 2690,
+      "metal": 0
+     }
+    }
+   },
+   "tests": {
+    "suites": 0,
+    "full": 0
+   },
+   "testPatterns": {},
+   "relevance": {
+    "score": 0,
+    "functions": {
+     "mod": {
+      "examples": 2,
+      "libs": 0
+     }
+    },
+    "rationale": "mod by infinity/subnormal divisor: no known use"
+   },
+   "affected": "L mod 2 690 lanes (inf-operand 1 120, inf-vs-finite 1 550, subnormal 20)",
+   "verdict": {
+    "lavapipe": "indeterminate; NaN or +-inf where the finite IEEE result exists (e.g. mod(1, 1e-40) = -inf)",
+    "ssArm64": "indeterminate; = IEEE fmod on every lane",
+    "ssX64": "same as SS-arm64"
+   },
+   "oracle": "divisor flush / infinite operands -> CTS unbounded; IEEE fmod + Metal reference",
+   "strict": "indeterminate",
+   "lean": "mixed/none: SS = IEEE fmod on 2 690/2 690, Lavapipe 0; but Metal returns NaN like Lavapipe on 1 120 lanes and agrees with neither on the rest",
+   "confidence": "medium",
+   "note": "No example uses mod with such inputs.",
+   "proximity": "vs SS-arm64 (2690 lanes): Lavapipe closer to f64 reference on 0, SS on 2690, tie 0; Metal = Lavapipe on 1630, = SS on 0, neither 1060; IEEE/f64 value hit: Lavapipe 0, SS 2690, Metal 0 of 2690",
+   "leanClass": "mixed/none"
+  },
+  {
+   "id": "G10",
+   "title": "shader-f16 missing on SwiftShader (capability gap, silent zeros in unguarded mixed tests)",
+   "laneStats": null,
+   "tests": {
+    "suites": 1,
+    "full": 26
+   },
+   "testPatterns": {
+    "suites:PPFPF": 1,
+    "full:PPSPS": 15,
+    "full:PPFPF": 11
+   },
+   "relevance": {
+    "score": 3,
+    "functions": {},
+    "rationale": "shader-f16: 24 files in packages/typegpu, 3 docs examples (mnist-inference, monocular-light-injection, log-test) and 45 of 194 TypeGPU unit-test files mention f16/vecNh; SwiftShader cannot run any of it"
+   },
+   "affected": "CTS: 476/1 162 cases skipped (all `shader-f16`); full suite +16 skips (arm64: 15 pass->skip +1 fail->skip), 11 pass->fail where an unguarded test emits f16 and the dispatch returns zeros; group E (f16 add/sub/mul) not runnable; bitops api-matrix f16-arg test; example mnist-inference default (f16) path",
+   "verdict": {
+    "lavapipe": "runs f16; sampled f16 values accepted by CTS (E3 pow(3,3)=26.984375 inside [26.66,27.45])",
+    "ssArm64": "not runnable -> no verdict (UNVERIFIED); silent zero output where tests do not guard on hasF16",
+    "ssX64": "same"
+   },
+   "oracle": "none possible for SS (feature absent); Lavapipe f16 lanes were CTS-accepted in Phase 1",
+   "strict": "capability-gap",
+   "lean": "n/a",
+   "confidence": "high",
+   "note": "Cost is accounted in C5 (WS-F16); listed here because 26 red/skipped tests and 1 example path change status because of it.",
+   "leanClass": "n/a"
+  },
+  {
+   "id": "G11",
+   "title": "asin/acos: Lavapipe errors up to ~2.1e-4 exceed the harness bound but are inside the CTS/spec interval",
+   "laneStats": {
+    "lanes": {
+     "ssA": 0,
+     "ssX": 0
+    },
+    "cat": {
+     "ssA": {},
+     "ssX": {}
+    },
+    "metal": {
+     "ssA": {},
+     "ssX": {}
+    },
+    "closer": {
+     "ssA": {},
+     "ssX": {}
+    },
+    "ieee": {
+     "ssA": {
+      "n": 0,
+      "lav": 0,
+      "ss": 0,
+      "metal": 0
+     },
+     "ssX": {
+      "n": 0,
+      "lav": 0,
+      "ss": 0,
+      "metal": 0
+     }
+    }
+   },
+   "tests": {
+    "suites": 8,
+    "full": 0
+   },
+   "testPatterns": {
+    "suites:PFPFP": 8
+   },
+   "relevance": {
+    "score": 1,
+    "functions": {
+     "asin": {
+      "examples": 1,
+      "libs": 0
+     },
+     "acos": {
+      "examples": 1,
+      "libs": 1
+     }
+    },
+    "rationale": "asin/acos used by 1 example each and 1 lib; error is < spec bound anyway"
+   },
+   "affected": "8 vector-fns runtime-matrix tests (asin/acos x f32,vec2,3,4) red on Lavapipe (arm64 + x64) only",
+   "verdict": {
+    "lavapipe": "accepted by the CTS interval on every sampled lane (144 asin, 123 acos lanes; +29 out-of-domain lanes indeterminate); harness abs bound 6.81e-5 exceeded; uses up to 93% of the interval half-width (asin) / 50% (acos)",
+    "ssArm64": "accepted (0% - 17% of half-width)",
+    "ssX64": "same pass pattern as arm64"
+   },
+   "oracle": "real CTS asinInterval/acosInterval = span(atan2-inherited interval, abs 6.8e-5) = WGSL \"the worse of\"; sampled lanes only (full lane set not stored)",
+   "strict": "both-fine",
+   "lean": "lavapipe-leaning-off: Metal and SS within 1-3 ULP of exact in the sample; Lavapipe 1 200-3 600 ULP",
+   "confidence": "medium (sample: 144 asin / 123 acos Lavapipe lanes, 0 rejected; 41% of asin sample above 80% of the interval)",
+   "note": "Harness bound was stricter than the spec (\"exceeding is inconclusive\" in the test itself). A full-lane re-dump on Lavapipe would settle whether any lane is outside.",
+   "proximity": "vs SS-x64 (0 lanes): Lavapipe closer to f64 reference on 0, SS on 0, tie 0; Metal = Lavapipe on 0, = SS on 0, neither 0; IEEE/f64 value hit: Lavapipe 0, SS 0, Metal 0 of 0",
+   "leanClass": "lavapipe-leaning-off"
+  },
+  {
+   "id": "G12",
+   "title": "fract of tiny negatives: Lavapipe/Metal 1.0, SwiftShader 0.99999994",
+   "laneStats": {
+    "lanes": {
+     "ssA": 0,
+     "ssX": 0
+    },
+    "cat": {
+     "ssA": {},
+     "ssX": {}
+    },
+    "metal": {
+     "ssA": {},
+     "ssX": {}
+    },
+    "closer": {
+     "ssA": {},
+     "ssX": {}
+    },
+    "ieee": {
+     "ssA": {
+      "n": 0,
+      "lav": 0,
+      "ss": 0,
+      "metal": 0
+     },
+     "ssX": {
+      "n": 0,
+      "lav": 0,
+      "ss": 0,
+      "metal": 0
+     }
+    }
+   },
+   "tests": {
+    "suites": 5,
+    "full": 0
+   },
+   "testPatterns": {
+    "suites:PPFPF": 5
+   },
+   "relevance": {
+    "score": 1,
+    "functions": {
+     "fract": {
+      "examples": 16,
+      "libs": 1
+     }
+    },
+    "rationale": "fract used by 16 examples; differs only for |x| < ~1e-8 negative inputs (1.0 vs 0.99999994)"
+   },
+   "affected": "5 suite tests red on SS (edge-cases fract + runtime-matrix fract x4)",
+   "verdict": {
+    "lavapipe": "accepted (CTS interval [0.99999994, 1] for both probe inputs)",
+    "ssArm64": "accepted (same interval)",
+    "ssX64": "same"
+   },
+   "oracle": "real CTS fractInterval (E1)",
+   "strict": "both-fine",
+   "lean": "ss-leaning-off: SS returns the lower neighbour; Lavapipe = Metal = round-to-nearest",
+   "confidence": "high",
+   "note": "Test comment already says 1.0 is \"allowed by the spec note\"; the lower neighbour is allowed too.",
+   "proximity": "vs SS-x64 (0 lanes): Lavapipe closer to f64 reference on 0, SS on 0, tie 0; Metal = Lavapipe on 0, = SS on 0, neither 0; IEEE/f64 value hit: Lavapipe 0, SS 0, Metal 0 of 0",
+   "leanClass": "ss-leaning-off"
+  },
+  {
+   "id": "G13",
+   "title": "mix formula: SwiftShader x+(y-x)*t vs spec x*(1-t)+y*t",
+   "laneStats": {
+    "lanes": {
+     "ssA": 0,
+     "ssX": 0
+    },
+    "cat": {
+     "ssA": {},
+     "ssX": {}
+    },
+    "metal": {
+     "ssA": {},
+     "ssX": {}
+    },
+    "closer": {
+     "ssA": {},
+     "ssX": {}
+    },
+    "ieee": {
+     "ssA": {
+      "n": 0,
+      "lav": 0,
+      "ss": 0,
+      "metal": 0
+     },
+     "ssX": {
+      "n": 0,
+      "lav": 0,
+      "ss": 0,
+      "metal": 0
+     }
+    }
+   },
+   "tests": {
+    "suites": 8,
+    "full": 0
+   },
+   "testPatterns": {
+    "suites:PPFPF": 8
+   },
+   "relevance": {
+    "score": 2,
+    "functions": {
+     "mix": {
+      "examples": 41,
+      "libs": 3
+     }
+    },
+    "rationale": "mix used by 41 examples and 3 libs; SwiftShader uses x+(y-x)*t, differs by 1 ULP at t=1 and overflows for |x|,|y| ~3e38"
+   },
+   "affected": "8 suite tests red on SS (edge-cases mix + runtime-matrix mix f32/vec2-4, mix_s vec2-4); overflow case mix(-3e38,3e38,0.5)",
+   "verdict": {
+    "lavapipe": "accepted (CTS precise formula); = Metal",
+    "ssArm64": "accepted via the CTS mixImprecise formula (E2: mix(1,0.49999997,1)=0.5, mix(1,1e-9,1)=0); overflow case (y-x overflows -> inf) only inside an unbounded interval = indeterminate",
+    "ssX64": "same as arm64"
+   },
+   "oracle": "real CTS mixIntervals = [imprecise, precise] (E2); sample of 248 SS \"mix\" + 262 \"mix_s\" lanes: 0 rejected",
+   "strict": "both-fine",
+   "lean": "ss-leaning-off: Lavapipe = Metal = spec formula",
+   "confidence": "medium-high (sample-based for lanes, exact for the probe inputs)",
+   "note": "Both CTS formulas are accepted, so the red tests assert the precise formula only.",
+   "proximity": "vs SS-x64 (0 lanes): Lavapipe closer to f64 reference on 0, SS on 0, tie 0; Metal = Lavapipe on 0, = SS on 0, neither 0; IEEE/f64 value hit: Lavapipe 0, SS 0, Metal 0 of 0",
+   "leanClass": "ss-leaning-off"
+  },
+  {
+   "id": "G14",
+   "title": "int -> f32 conversion: SwiftShader not always round-to-nearest (96 u32 rows)",
+   "laneStats": {
+    "lanes": {
+     "ssA": 0,
+     "ssX": 0
+    },
+    "cat": {
+     "ssA": {},
+     "ssX": {}
+    },
+    "metal": {
+     "ssA": {},
+     "ssX": {}
+    },
+    "closer": {
+     "ssA": {},
+     "ssX": {}
+    },
+    "ieee": {
+     "ssA": {
+      "n": 0,
+      "lav": 0,
+      "ss": 0,
+      "metal": 0
+     },
+     "ssX": {
+      "n": 0,
+      "lav": 0,
+      "ss": 0,
+      "metal": 0
+     }
+    }
+   },
+   "tests": {
+    "suites": 1,
+    "full": 0
+   },
+   "testPatterns": {
+    "suites:PPFPF": 1
+   },
+   "relevance": {
+    "score": 1,
+    "functions": {},
+    "rationale": "d.f32(u32) of values > 2^24 only; rare"
+   },
+   "affected": "1 suite test (scalar-conv d.f32(u32)) red on SS",
+   "verdict": {
+    "lavapipe": "round-to-nearest (= spec-allowed)",
+    "ssArm64": "one of the two adjacent f32 values on all 96 rows (the test checks this first) = spec-allowed",
+    "ssX64": "same pattern (test red on both)"
+   },
+   "oracle": "WGSL 15.7.6 numeric scalar conversion: \"XOut is one of those two values... WGSL does not specify which\"",
+   "strict": "both-fine",
+   "lean": "ss-leaning-off: Lavapipe = Metal = round-to-nearest",
+   "confidence": "high",
+   "note": "The test then also asserts round-to-nearest as a Metal observation.",
+   "proximity": "vs SS-x64 (0 lanes): Lavapipe closer to f64 reference on 0, SS on 0, tie 0; Metal = Lavapipe on 0, = SS on 0, neither 0; IEEE/f64 value hit: Lavapipe 0, SS 0, Metal 0 of 0",
+   "leanClass": "ss-leaning-off"
+  },
+  {
+   "id": "G15",
+   "title": "atan2(0,0): Lavapipe 3pi/4, SwiftShader 0, Metal NaN",
+   "laneStats": {
+    "lanes": {
+     "ssA": 0,
+     "ssX": 0
+    },
+    "cat": {
+     "ssA": {},
+     "ssX": {}
+    },
+    "metal": {
+     "ssA": {},
+     "ssX": {}
+    },
+    "closer": {
+     "ssA": {},
+     "ssX": {}
+    },
+    "ieee": {
+     "ssA": {
+      "n": 0,
+      "lav": 0,
+      "ss": 0,
+      "metal": 0
+     },
+     "ssX": {
+      "n": 0,
+      "lav": 0,
+      "ss": 0,
+      "metal": 0
+     }
+    }
+   },
+   "tests": {
+    "suites": 0,
+    "full": 0
+   },
+   "testPatterns": {},
+   "relevance": {
+    "score": 1,
+    "functions": {
+     "atan2": {
+      "examples": 8,
+      "libs": 0
+     }
+    },
+    "rationale": "atan2 used by 8 examples; atan2(0,0) is a domain edge"
+   },
+   "affected": "const-fold atan2 test (red on all non-Metal backends; for atan2(1,-0) Lavapipe = SS = +pi/2 and Metal -pi/2 is the odd one out - listed under shared)",
+   "verdict": {
+    "lavapipe": "indeterminate (origin outside domain); 2.3561911582946777",
+    "ssArm64": "indeterminate; 0 (= IEEE-754 atan2(0,0))",
+    "ssX64": "same as SS-arm64"
+   },
+   "oracle": "CTS interval unbounded (E6) -> IEEE-754 value + Metal",
+   "strict": "indeterminate",
+   "lean": "lavapipe-leaning-off: SS = IEEE value 0; Lavapipe 3pi/4 arbitrary; Metal NaN (neutral)",
+   "confidence": "medium",
+   "note": "Metal NaN is itself a spec-permitted result.",
+   "proximity": "vs SS-x64 (0 lanes): Lavapipe closer to f64 reference on 0, SS on 0, tie 0; Metal = Lavapipe on 0, = SS on 0, neither 0; IEEE/f64 value hit: Lavapipe 0, SS 0, Metal 0 of 0",
+   "leanClass": "lavapipe-leaning-off"
+  },
+  {
+   "id": "G16",
+   "title": "Intermediate overflow results (dot/distance/fma/mix/N8): inf vs NaN vs finite differ between all backends",
+   "laneStats": {
+    "lanes": {
+     "ssA": 0,
+     "ssX": 0
+    },
+    "cat": {
+     "ssA": {},
+     "ssX": {}
+    },
+    "metal": {
+     "ssA": {},
+     "ssX": {}
+    },
+    "closer": {
+     "ssA": {},
+     "ssX": {}
+    },
+    "ieee": {
+     "ssA": {
+      "n": 0,
+      "lav": 0,
+      "ss": 0,
+      "metal": 0
+     },
+     "ssX": {
+      "n": 0,
+      "lav": 0,
+      "ss": 0,
+      "metal": 0
+     }
+    }
+   },
+   "tests": {
+    "suites": 2,
+    "full": 0
+   },
+   "testPatterns": {
+    "suites:PFFFF": 1,
+    "suites:PFPFP": 1
+   },
+   "relevance": {
+    "score": 1,
+    "functions": {
+     "dot": {
+      "examples": 26,
+      "libs": 3
+     },
+     "length": {
+      "examples": 31,
+      "libs": 3
+     },
+     "mix": {
+      "examples": 41,
+      "libs": 3
+     }
+    },
+    "rationale": "intermediate overflow is indeterminate by spec; examples do not rely on it"
+   },
+   "affected": "edge-cases dot/distance/fma test (red on all non-Metal), mul-paths N8 test (red on Lavapipe only)",
+   "verdict": {
+    "lavapipe": "indeterminate (overflow -> WGSL indeterminate; CTS interval unbounded E9); dot cancellation gives NaN, N8 first component inf/NaN",
+    "ssArm64": "indeterminate; inf or finite (N8 finite)",
+    "ssX64": "dot cancellation NaN like Lavapipe; mix overflow inf like arm64"
+   },
+   "oracle": "WGSL finite-math assumption + CTS unbounded interval",
+   "strict": "indeterminate",
+   "lean": "none (all four backends differ pairwise)",
+   "confidence": "high",
+   "note": "These tests assert Metal-observed behaviour.",
+   "proximity": "vs SS-x64 (0 lanes): Lavapipe closer to f64 reference on 0, SS on 0, tie 0; Metal = Lavapipe on 0, = SS on 0, neither 0; IEEE/f64 value hit: Lavapipe 0, SS 0, Metal 0 of 0",
+   "leanClass": "mixed/none"
+  }
+ ],
+ "shared": [
+  {
+   "id": "S1",
+   "title": "scalar-int silent wrong integer quotient (T(a/b), std.mod through the f32 path)",
+   "evidence": "Metal: 375 wrong quotients on exact multiples (a,b in 1..2048); Lavapipe, SS-arm64, SS-x64: 0 (suites scalar-int results.json)",
+   "verdict": "Lavapipe = SwiftShader (correctly rounded division); Metal is the outlier (still inside WGSL division accuracy 2.5 ULP, so a TypeGPU emission issue, not a backend defect); neither software backend can reproduce it",
+   "tests": {
+    "suites": 1,
+    "full": 0
+   }
+  },
+  {
+   "id": "S2",
+   "title": "atan2(1, -0): Metal -pi/2, Lavapipe = SS = +pi/2 (IEEE)",
+   "evidence": "experiments.json E6",
+   "verdict": "CTS unbounded (indeterminate); Metal deviates from IEEE; Lavapipe = SS",
+   "tests": {
+    "suites": 1,
+    "full": 0
+   }
+  },
+  {
+   "id": "S3",
+   "title": "normalize(vec3f(-1,4,-1)).x one-ULP difference",
+   "evidence": "E5: Metal -0.2357022613286972 vs Lavapipe = SS -0.2357022762298584; all inside the CTS interval",
+   "verdict": "accepted for all three; the ported TypeGPU test asserts Metal-exact bits",
+   "tests": {
+    "suites": 0,
+    "full": 1
+   }
+  },
+  {
+   "id": "S4",
+   "title": "log/log2 of subnormal inputs (8 diff tests red on Lavapipe and SS, not Metal)",
+   "evidence": "dump group L: Lavapipe = SS-arm64 = SS-x64 bit-identical (-87.414, -126.11 ...), Metal flushes the input -> -inf",
+   "verdict": "CTS indeterminate (input flush allowed); Lavapipe = SS; Metal differs",
+   "tests": {
+    "suites": 0,
+    "full": 8
+   }
+  }
+ ],
+ "examples": [
+  {
+   "test": "default/bitonic-sort",
+   "equal": {
+    "lav-vs-ssArm64": true,
+    "lav-vs-ssX64-7763": true,
+    "lav-vs-ssX64-9V45": true,
+    "metal-vs-lav": true,
+    "metal-vs-ssArm64": true
+   },
+   "group": "none (identical)"
+  },
+  {
+   "test": "default/concurrent-chart",
+   "equal": {
+    "lav-vs-ssArm64": true,
+    "lav-vs-ssX64-7763": true,
+    "lav-vs-ssX64-9V45": true,
+    "metal-vs-lav": true,
+    "metal-vs-ssArm64": true
+   },
+   "group": "none (identical)"
+  },
+  {
+   "test": "default/dispatch",
+   "equal": {
+    "lav-vs-ssArm64": true,
+    "lav-vs-ssX64-7763": true,
+    "lav-vs-ssX64-9V45": true,
+    "metal-vs-lav": true,
+    "metal-vs-ssArm64": true
+   },
+   "group": "none (identical)"
+  },
+  {
+   "test": "default/increment",
+   "equal": {
+    "lav-vs-ssArm64": true,
+    "lav-vs-ssX64-7763": true,
+    "lav-vs-ssX64-9V45": true,
+    "metal-vs-lav": true,
+    "metal-vs-ssArm64": true
+   },
+   "group": "none (identical)"
+  },
+  {
+   "test": "default/jump-flood-voronoi",
+   "equal": {
+    "lav-vs-ssArm64": true,
+    "lav-vs-ssX64-7763": true,
+    "lav-vs-ssX64-9V45": true,
+    "metal-vs-lav": true,
+    "metal-vs-ssArm64": true
+   },
+   "group": "none (identical)"
+  },
+  {
+   "test": "default/log-test",
+   "equal": {
+    "lav-vs-ssArm64": true,
+    "lav-vs-ssX64-7763": true,
+    "lav-vs-ssX64-9V45": true,
+    "metal-vs-lav": true,
+    "metal-vs-ssArm64": true
+   },
+   "group": "none (identical)"
+  },
+  {
+   "test": "default/matrix-multiplication",
+   "equal": {
+    "lav-vs-ssArm64": true,
+    "lav-vs-ssX64-7763": true,
+    "lav-vs-ssX64-9V45": true,
+    "metal-vs-lav": true,
+    "metal-vs-ssArm64": true
+   },
+   "group": "none (identical)"
+  },
+  {
+   "test": "default/matrix-next",
+   "equal": {
+    "lav-vs-ssArm64": true,
+    "lav-vs-ssX64-7763": true,
+    "lav-vs-ssX64-9V45": true,
+    "metal-vs-lav": true,
+    "metal-vs-ssArm64": true
+   },
+   "group": "none (identical)"
+  },
+  {
+   "test": "default/mnist-inference",
+   "equal": {
+    "lav-vs-ssArm64": false,
+    "lav-vs-ssX64-7763": false,
+    "lav-vs-ssX64-9V45": false,
+    "metal-vs-lav": false,
+    "metal-vs-ssArm64": false
+   },
+   "group": "G10",
+   "detail": {
+    "lav-vs-ssArm64": {
+     "default": 0.019494056701660156,
+     "argmaxEqual": true,
+     "f16Flags": {
+      "A": {
+       "f16": true,
+       "subgroups": true
+      },
+      "B": {
+       "f16": false,
+       "subgroups": true
+      }
+     }
+    },
+    "lav-vs-ssX64-7763": {
+     "default": 0.01949310302734375,
+     "argmaxEqual": true,
+     "f16Flags": {
+      "A": {
+       "f16": true,
+       "subgroups": true
+      },
+      "B": {
+       "f16": false,
+       "subgroups": true
+      }
+     }
+    },
+    "lav-vs-ssX64-9V45": {
+     "default": 0.01949310302734375,
+     "argmaxEqual": true,
+     "f16Flags": {
+      "A": {
+       "f16": true,
+       "subgroups": true
+      },
+      "B": {
+       "f16": false,
+       "subgroups": true
+      }
+     }
+    },
+    "metal-vs-lav": {
+     "default": 0.015625,
+     "argmaxEqual": true,
+     "f16Flags": {
+      "A": {
+       "f16": true,
+       "subgroups": true
+      },
+      "B": {
+       "f16": true,
+       "subgroups": true
+      }
+     }
+    },
+    "metal-vs-ssArm64": {
+     "default": 0.019494056701660156,
+     "argmaxEqual": true,
+     "f16Flags": {
+      "A": {
+       "f16": true,
+       "subgroups": true
+      },
+      "B": {
+       "f16": false,
+       "subgroups": true
+      }
+     }
+    }
+   }
+  },
+  {
+   "test": "default/prefix-scan",
+   "equal": {
+    "lav-vs-ssArm64": false,
+    "lav-vs-ssX64-7763": false,
+    "lav-vs-ssX64-9V45": false,
+    "metal-vs-lav": false,
+    "metal-vs-ssArm64": false
+   },
+   "group": "timing-only",
+   "detail": "result \"Tests succeeded.\" on all backends; only the ms timing field differs"
+  },
+  {
+   "test": "default/prng-cpu-gpu",
+   "equal": {
+    "lav-vs-ssArm64": true,
+    "lav-vs-ssX64-7763": true,
+    "lav-vs-ssX64-9V45": true,
+    "metal-vs-lav": true,
+    "metal-vs-ssArm64": true
+   },
+   "group": "none (identical)"
+  },
+  {
+   "test": "default/probability",
+   "equal": {
+    "lav-vs-ssArm64": false,
+    "lav-vs-ssX64-7763": false,
+    "lav-vs-ssX64-9V45": false,
+    "metal-vs-lav": false,
+    "metal-vs-ssArm64": false
+   },
+   "group": "G04",
+   "detail": {
+    "lav-vs-ssArm64": {
+     "inUnitSphere": "2995/3480ulp",
+     "onUnitSphere": "1999/3173ulp",
+     "inUnitCircle": "1997/3149ulp",
+     "onUnitCircle": "1999/3311ulp",
+     "inHemisphere": "2995/3480ulp",
+     "onHemisphere": "1999/3173ulp",
+     "exponential": "1287/337ulp",
+     "normal": "2997/3158ulp",
+     "cauchy": "2994/1921ulp"
+    },
+    "lav-vs-ssX64-7763": {
+     "inUnitSphere": "2996/5231ulp",
+     "onUnitSphere": "1999/3173ulp",
+     "inUnitCircle": "1997/3149ulp",
+     "onUnitCircle": "1999/3311ulp",
+     "inHemisphere": "2996/5231ulp",
+     "onHemisphere": "1999/3173ulp",
+     "exponential": "1302/273ulp",
+     "normal": "2997/3158ulp",
+     "cauchy": "2994/1921ulp"
+    },
+    "lav-vs-ssX64-9V45": {
+     "inUnitSphere": "2996/5231ulp",
+     "onUnitSphere": "1999/3173ulp",
+     "inUnitCircle": "1997/3149ulp",
+     "onUnitCircle": "1999/3311ulp",
+     "inHemisphere": "2996/5231ulp",
+     "onHemisphere": "1999/3173ulp",
+     "exponential": "1302/273ulp",
+     "normal": "2997/3158ulp",
+     "cauchy": "2994/1921ulp"
+    },
+    "metal-vs-lav": {
+     "inUnitSphere": "2445/2124ulp",
+     "onUnitSphere": "1118/22ulp",
+     "inUnitCircle": "990/5ulp",
+     "onUnitCircle": "916/2ulp",
+     "inHemisphere": "2445/2124ulp",
+     "onHemisphere": "1118/22ulp",
+     "exponential": "2001/249ulp",
+     "normal": "2121/1491ulp",
+     "cauchy": "2394/1101ulp"
+    },
+    "metal-vs-ssArm64": {
+     "inUnitSphere": "2997/3478ulp",
+     "onUnitSphere": "1999/3173ulp",
+     "inUnitCircle": "1999/3150ulp",
+     "onUnitCircle": "2000/3310ulp",
+     "inHemisphere": "2997/3478ulp",
+     "onHemisphere": "1999/3173ulp",
+     "exponential": "1992/177ulp",
+     "normal": "3000/3813ulp",
+     "cauchy": "3000/2596ulp"
+    }
+   },
+   "invariant": {
+    "metal": {
+     "onUnitCircle": {
+      "n": 1000,
+      "maxAbsDev": 1.1316678572015348e-7,
+      "meanAbsDev": 3.039483085187644e-8
+     },
+     "onUnitSphere": {
+      "n": 1000,
+      "maxAbsDev": 1.678611329936075e-7,
+      "meanAbsDev": 2.9641942498437325e-8
+     },
+     "onHemisphere": {
+      "n": 1000,
+      "maxAbsDev": 1.678611329936075e-7,
+      "meanAbsDev": 2.9641942498437325e-8
+     }
+    },
+    "lavapipeArm64": {
+     "onUnitCircle": {
+      "n": 1000,
+      "maxAbsDev": 5.5316754066225826e-8,
+      "meanAbsDev": 1.519593938292818e-8
+     },
+     "onUnitSphere": {
+      "n": 1000,
+      "maxAbsDev": 8.282579488927411e-8,
+      "meanAbsDev": 1.9509235428261107e-8
+     },
+     "onHemisphere": {
+      "n": 1000,
+      "maxAbsDev": 8.282579488927411e-8,
+      "meanAbsDev": 1.9509235428261107e-8
+     }
+    },
+    "swiftshaderArm64": {
+     "onUnitCircle": {
+      "n": 1000,
+      "maxAbsDev": 0.00018998516647450447,
+      "meanAbsDev": 0.0000963469466357697
+     },
+     "onUnitSphere": {
+      "n": 1000,
+      "maxAbsDev": 0.00018972187793298012,
+      "meanAbsDev": 0.00005965652614703398
+     },
+     "onHemisphere": {
+      "n": 1000,
+      "maxAbsDev": 0.00018972187793298012,
+      "meanAbsDev": 0.00005965652614703398
+     }
+    },
+    "lavapipeX64": {
+     "onUnitCircle": {
+      "n": 1000,
+      "maxAbsDev": 5.5316754066225826e-8,
+      "meanAbsDev": 1.519593938292818e-8
+     },
+     "onUnitSphere": {
+      "n": 1000,
+      "maxAbsDev": 8.282579488927411e-8,
+      "meanAbsDev": 1.9509235428261107e-8
+     },
+     "onHemisphere": {
+      "n": 1000,
+      "maxAbsDev": 8.282579488927411e-8,
+      "meanAbsDev": 1.9509235428261107e-8
+     }
+    },
+    "swiftshaderX64": {
+     "onUnitCircle": {
+      "n": 1000,
+      "maxAbsDev": 0.00018998516647450447,
+      "meanAbsDev": 0.0000963483040154508
+     },
+     "onUnitSphere": {
+      "n": 1000,
+      "maxAbsDev": 0.00018972187793298012,
+      "meanAbsDev": 0.00005965747543433964
+     },
+     "onHemisphere": {
+      "n": 1000,
+      "maxAbsDev": 0.00018972187793298012,
+      "meanAbsDev": 0.00005965747543433964
+     }
+    }
+   }
+  },
+  {
+   "test": "default/tgsl-parsing-test",
+   "equal": {
+    "lav-vs-ssArm64": true,
+    "lav-vs-ssX64-7763": true,
+    "lav-vs-ssX64-9V45": true,
+    "metal-vs-lav": true,
+    "metal-vs-ssArm64": true
+   },
+   "group": "none (identical)"
+  },
+  {
+   "test": "nof16/jump-flood-voronoi",
+   "equal": {
+    "lav-vs-ssArm64": true,
+    "lav-vs-ssX64-7763": true,
+    "lav-vs-ssX64-9V45": true,
+    "metal-vs-lav": true,
+    "metal-vs-ssArm64": true
+   },
+   "group": "none (identical)"
+  },
+  {
+   "test": "nof16/log-test",
+   "equal": {
+    "lav-vs-ssArm64": true,
+    "lav-vs-ssX64-7763": true,
+    "lav-vs-ssX64-9V45": true,
+    "metal-vs-lav": true,
+    "metal-vs-ssArm64": true
+   },
+   "group": "none (identical)"
+  },
+  {
+   "test": "nof16/mnist-inference",
+   "equal": {
+    "lav-vs-ssArm64": false,
+    "lav-vs-ssX64-7763": false,
+    "lav-vs-ssX64-9V45": false,
+    "metal-vs-lav": false,
+    "metal-vs-ssArm64": false
+   },
+   "group": "G05",
+   "detail": {
+    "lav-vs-ssArm64": {
+     "default": 0.0000019073486328125,
+     "argmaxEqual": true,
+     "f16Flags": {
+      "A": {
+       "f16": false,
+       "subgroups": true
+      },
+      "B": {
+       "f16": false,
+       "subgroups": true
+      }
+     }
+    },
+    "lav-vs-ssX64-7763": {
+     "default": 0,
+     "argmaxEqual": true,
+     "f16Flags": {
+      "A": {
+       "f16": false,
+       "subgroups": true
+      },
+      "B": {
+       "f16": false,
+       "subgroups": true
+      }
+     }
+    },
+    "lav-vs-ssX64-9V45": {
+     "default": 0,
+     "argmaxEqual": true,
+     "f16Flags": {
+      "A": {
+       "f16": false,
+       "subgroups": true
+      },
+      "B": {
+       "f16": false,
+       "subgroups": true
+      }
+     }
+    },
+    "metal-vs-lav": {
+     "default": 0.0000019073486328125,
+     "argmaxEqual": true,
+     "f16Flags": {
+      "A": {
+       "f16": false,
+       "subgroups": true
+      },
+      "B": {
+       "f16": false,
+       "subgroups": true
+      }
+     }
+    },
+    "metal-vs-ssArm64": {
+     "default": 0,
+     "argmaxEqual": true,
+     "f16Flags": {
+      "A": {
+       "f16": false,
+       "subgroups": true
+      },
+      "B": {
+       "f16": false,
+       "subgroups": true
+      }
+     }
+    }
+   }
+  }
+ ],
+ "appendixExamples": {
+  "source": "phase3/examples/results.json (WS-EX, DONE), RESULTS.md, REPORT.md; recomputed three-way analysis in examples-triple.json",
+  "totals": {
+   "examplesAllThree": 87,
+   "compared": 87,
+   "cp3": {
+    "all_agree": 34,
+    "ss_lone": 16,
+    "lav_lone": 1,
+    "metal_lone": 0,
+    "all_differ": 36,
+    "other": 0
+   },
+   "notComparable": 10,
+   "byClass": {
+    "X1": 2,
+    "X2": 2,
+    "X6": 12,
+    "X3": 1,
+    "X8": 27,
+    "X5": 4,
+    "X7": 3,
+    "X4": 2
+   },
+   "specViolationsEstablished": 0,
+   "falseReds": 0,
+   "exclusiveFailures": 0
+  },
+  "classes": {
+   "X1": {
+    "title": "F32_MAX written into a 16-bit float storage texture (jump-flood-distance; per WS-EX also the suika-sdf distance texture): Metal/Lavapipe store 0x7bff (65504), SwiftShader NaN 0x7fff, then saturate(NaN)=0 turns the whole canvas navy vs cream",
+    "kind": "spec-indeterminate behaviour relied on by the example (backend-numerics difference in an unconstrained domain)",
+    "oracle": "WGSL 17.2 texel formats: write value of a 16float channel is quantizeToF16(T); quantizeToF16 (17.5.47): \"If e is outside the finite range of binary16 ... the result is an indeterminate value\" (shader-creation error only for const-expressions)",
+    "strict": "indeterminate",
+    "correctnessVsSpec": false,
+    "note": "Neither 65504 nor NaN is spec-violating; the example is non-portable. Local material is the WGSL spec only: a WebGPU-level clamp/inf rule for texture stores was not available here -> UNVERIFIED beyond WGSL. suika-sdf: the example dir has no F32_MAX literal (value may come from a library); cause taken from WS-EX, not re-verified."
+   },
+   "X2": {
+    "title": "shader-f16 optional feature: Metal and Lavapipe take the f16 path, SwiftShader falls back to f32 (mnist-inference, monocular-light-injection; also log-test lines)",
+    "kind": "capability difference (feature absent), not numerics",
+    "oracle": "none needed; WS-EX: with f16 hidden WGSL is identical on all backends for all 87 examples and mnist logits differ <= 4.6e-4 relative",
+    "strict": "capability-gap",
+    "correctnessVsSpec": false,
+    "note": "Same root cause as G10."
+   },
+   "X3": {
+    "title": "bitonic-sort: Lavapipe is the lone outlier (workload size derived from adapter limits)",
+    "kind": "example/environment dependence (limits-dependent workload), not numerics",
+    "oracle": "none (integer example; Phase-2 15-example run had it identical on all backends at the fixed test size)",
+    "strict": "indeterminate",
+    "correctnessVsSpec": false,
+    "note": "Per WS-EX the sizes come from the adapter limits; not re-verified here (hypothesis H7)."
+   },
+   "X4": {
+    "title": "prng-cpu-gpu / uniformity: BPETER PRNG = fract(cos(a)*136.8168): differs between ALL pairs (also Metal vs Lavapipe, 99.6% of words differ)",
+    "kind": "relies on an unconstrained domain: cos accuracy is defined only on [-pi, pi]; the factor 136.8 plus fract amplifies any cos difference (even in-domain, CTS allows +-5e-4 -> +-0.07 in the fract input)",
+    "oracle": "real CTS cosInterval: bounded only inside [-pi, pi], unbounded (indeterminate) for 100.123 and 12345.678 (E11)",
+    "strict": "indeterminate",
+    "correctnessVsSpec": false,
+    "note": "Integer PRNGs (xoroshiro, LCG) are bit-identical everywhere; the argument magnitude of BPETER in the example was not instrumented (hypothesis H8). uniformity: cause not isolated by WS-EX (sign-of-zero ruled out)."
+   },
+   "X5": {
+    "title": "chaotic amplification of last-bit differences in iterated simulations (3d-fish, attractors, compute-particles, slime-mold)",
+    "kind": "backend-numerics difference amplified by the example (hypothesis, WS-EX H1)",
+    "oracle": "none directly (no per-step reference); Metal~Lavapipe is already \"large\" for 3d-fish/attractors/compute-particles",
+    "strict": "indeterminate",
+    "correctnessVsSpec": false,
+    "note": "Would be settled by running 1-3 steps and comparing against an f64 model."
+   },
+   "X6": {
+    "title": "SwiftShader lone outlier, small differences (tiny Metal~Lavapipe, small SS): react/confetti, react/spinning-triangle, cubemap-reflection, phong-reflection, ray-marching, stencil, vaporrave, boids, simulation/confetti, wind-map, sdf-docs-examples, threejs/varyings",
+    "kind": "backend-numerics difference inside spec (hypothesis: SwiftShader sin/cos/pow error G04, plus rasteriser/sampler differences for the 3-4 examples with no direct transcendental call)",
+    "oracle": "signature matches G04 (SwiftShader sin/cos error ~2e-4, Lavapipe = Metal) but no per-example oracle; static std usage: 9 of 12 call sin/cos/pow/exp/atan2 directly",
+    "strict": "both-fine (hypothesis, unverified per example)",
+    "correctnessVsSpec": false,
+    "note": "All have <1% of pixels differing by >2/255 (severity s) or tiny."
+   },
+   "X7": {
+    "title": "repeat-to-repeat nondeterminism at cp3 on at least one backend: jelly-slider (SwiftShader), jelly-switch (Lavapipe, SwiftShader), compute-particles-snow (Metal) - async races/timers or chaotic state",
+    "kind": "example/test nondeterminism - cross-backend differences for these cannot be attributed to backends",
+    "oracle": "WS-EX determinism check (run1 vs run2 readbacks): see per-example flags",
+    "strict": "indeterminate",
+    "correctnessVsSpec": false,
+    "note": "WS-EX H3."
+   },
+   "X8": {
+    "title": "remaining all-differ examples with small/moderate canvas/texture differences on every pair (rasterisation, transcendental and sampler last-bit differences)",
+    "kind": "backend-numerics difference (unattributed, hypothesis WS-EX H2)",
+    "oracle": "none per example",
+    "strict": "indeterminate",
+    "correctnessVsSpec": false,
+    "note": ""
+   }
+  },
+  "rows": [
+   {
+    "ex": "algorithms/jump-flood-distance",
+    "triple": "ss_lone",
+    "sev": "=LL (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X1"
+   },
+   {
+    "ex": "algorithms/mnist-inference",
+    "triple": "ss_lone",
+    "sev": "0ss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,false,false",
+    "cls": "X2"
+   },
+   {
+    "ex": "image-processing/monocular-light-injection",
+    "triple": "ss_lone",
+    "sev": "0ss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X2"
+   },
+   {
+    "ex": "react/confetti",
+    "triple": "ss_lone",
+    "sev": "tss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X6"
+   },
+   {
+    "ex": "react/spinning-triangle",
+    "triple": "ss_lone",
+    "sev": "tss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X6"
+   },
+   {
+    "ex": "rendering/cubemap-reflection",
+    "triple": "ss_lone",
+    "sev": "tss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X6"
+   },
+   {
+    "ex": "rendering/phong-reflection",
+    "triple": "ss_lone",
+    "sev": "tss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X6"
+   },
+   {
+    "ex": "rendering/ray-marching",
+    "triple": "ss_lone",
+    "sev": "tss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X6"
+   },
+   {
+    "ex": "rendering/suika-sdf",
+    "triple": "ss_lone",
+    "sev": "tLL (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X1"
+   },
+   {
+    "ex": "simple/stencil",
+    "triple": "ss_lone",
+    "sev": "tss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X6"
+   },
+   {
+    "ex": "simple/vaporrave",
+    "triple": "ss_lone",
+    "sev": "tss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X6"
+   },
+   {
+    "ex": "simulation/boids",
+    "triple": "ss_lone",
+    "sev": "tss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X6"
+   },
+   {
+    "ex": "simulation/confetti",
+    "triple": "ss_lone",
+    "sev": "tss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X6"
+   },
+   {
+    "ex": "simulation/wind-map",
+    "triple": "ss_lone",
+    "sev": "tss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X6"
+   },
+   {
+    "ex": "tests/sdf-docs-examples",
+    "triple": "ss_lone",
+    "sev": "=ss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X6"
+   },
+   {
+    "ex": "threejs/varyings",
+    "triple": "ss_lone",
+    "sev": "tss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X6"
+   },
+   {
+    "ex": "algorithms/bitonic-sort",
+    "triple": "lav_lone",
+    "sev": "L=L (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X3"
+   },
+   {
+    "ex": "algorithms/genetic-racing",
+    "triple": "all_differ",
+    "sev": "mmm (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "geometry/circles",
+    "triple": "all_differ",
+    "sev": "smm (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "geometry/lines-combinations",
+    "triple": "all_differ",
+    "sev": "sss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "rendering/3d-fish",
+    "triple": "all_differ",
+    "sev": "mLL (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X5"
+   },
+   {
+    "ex": "rendering/area-light",
+    "triple": "all_differ",
+    "sev": "mmm (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "rendering/caustics",
+    "triple": "all_differ",
+    "sev": "smm (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "rendering/clouds",
+    "triple": "all_differ",
+    "sev": "LmL (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "rendering/function-visualizer",
+    "triple": "all_differ",
+    "sev": "sss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "rendering/global-illumination",
+    "triple": "all_differ",
+    "sev": "mmm (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "rendering/jelly-slider",
+    "triple": "all_differ",
+    "sev": "mLL (M~L,M~S,L~S)",
+    "determinism": "identical / identical / differs@cp3",
+    "wgslSame": "true,true,true",
+    "cls": "X7"
+   },
+   {
+    "ex": "rendering/jelly-switch",
+    "triple": "all_differ",
+    "sev": "mLm (M~L,M~S,L~S)",
+    "determinism": "identical / differs@cp3 / differs@cp3,30",
+    "wgslSame": "true,true,true",
+    "cls": "X7"
+   },
+   {
+    "ex": "rendering/os-awards",
+    "triple": "all_differ",
+    "sev": "mmm (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "rendering/point-light-shadow",
+    "triple": "all_differ",
+    "sev": "sss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "rendering/pom",
+    "triple": "all_differ",
+    "sev": "LmL (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "rendering/radiance-cascades",
+    "triple": "all_differ",
+    "sev": "mmm (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "rendering/render-bundles",
+    "triple": "all_differ",
+    "sev": "sss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "rendering/render-bundles-with",
+    "triple": "all_differ",
+    "sev": "sss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "rendering/simple-shadow",
+    "triple": "all_differ",
+    "sev": "sss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "rendering/smoky-triangle",
+    "triple": "all_differ",
+    "sev": "mmm (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "rendering/triplanar-mapping",
+    "triple": "all_differ",
+    "sev": "mmm (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "rendering/trippy-raymarching",
+    "triple": "all_differ",
+    "sev": "smm (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "rendering/two-boxes",
+    "triple": "all_differ",
+    "sev": "sss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "simple/liquid-glass",
+    "triple": "all_differ",
+    "sev": "msm (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "simple/mesh-skinning",
+    "triple": "all_differ",
+    "sev": "sss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "simple/ripple-cube",
+    "triple": "all_differ",
+    "sev": "mmm (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "simulation/gravity",
+    "triple": "all_differ",
+    "sev": "ssm (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "simulation/slime-mold",
+    "triple": "all_differ",
+    "sev": "mmm (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X5"
+   },
+   {
+    "ex": "simulation/slime-mold-3d",
+    "triple": "all_differ",
+    "sev": "sss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "tests/prng-cpu-gpu",
+    "triple": "all_differ",
+    "sev": "LLL (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X4"
+   },
+   {
+    "ex": "tests/uniformity",
+    "triple": "all_differ",
+    "sev": "sss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X4"
+   },
+   {
+    "ex": "threejs/attractors",
+    "triple": "all_differ",
+    "sev": "mLL (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X5"
+   },
+   {
+    "ex": "threejs/compute-geometry",
+    "triple": "all_differ",
+    "sev": "mmm (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "threejs/compute-particles",
+    "triple": "all_differ",
+    "sev": "LLL (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X5"
+   },
+   {
+    "ex": "threejs/compute-particles-snow",
+    "triple": "all_differ",
+    "sev": "LmL (M~L,M~S,L~S)",
+    "determinism": "differs@cp3,30 / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X7"
+   },
+   {
+    "ex": "threejs/simple",
+    "triple": "all_differ",
+    "sev": "sss (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   },
+   {
+    "ex": "threejs/texture-access",
+    "triple": "all_differ",
+    "sev": "mmm (M~L,M~S,L~S)",
+    "determinism": "identical / identical / identical",
+    "wgslSame": "true,true,true",
+    "cls": "X8"
+   }
+  ]
+ },
+ "totals": {
+  "strict": {
+   "unweighted": {
+    "lavapipe-outlier": 0,
+    "ss-outlier": 0,
+    "both-fine": 10,
+    "both-off": 0,
+    "indeterminate": 5,
+    "capability-gap": 1
+   },
+   "weighted": {
+    "lavapipe-outlier": 0,
+    "ss-outlier": 0,
+    "both-fine": 14,
+    "both-off": 0,
+    "indeterminate": 4,
+    "capability-gap": 3
+   },
+   "groups": 16
+  },
+  "lean": {
+   "unweighted": {
+    "mixed/none": 6,
+    "ss-leaning-off": 6,
+    "lavapipe-leaning-off": 3,
+    "n/a": 1
+   },
+   "weighted": {
+    "mixed/none": 6,
+    "ss-leaning-off": 9,
+    "lavapipe-leaning-off": 3,
+    "n/a": 3
+   }
+  }
+ },
+ "checks": [
+  {
+   "name": "G06 Lavapipe = IEEE on all lanes",
+   "ok": true
+  },
+  {
+   "name": "G06 Metal = IEEE on all lanes",
+   "ok": true
+  },
+  {
+   "name": "G06 SS = IEEE on none",
+   "ok": true
+  },
+  {
+   "name": "G06 80 lanes",
+   "ok": true
+  },
+  {
+   "name": "G07 IEEE hits 180/150/310 of 400",
+   "ok": true
+  },
+  {
+   "name": "G09 SS = IEEE on all 2690, Lavapipe on none, Metal on none",
+   "ok": true
+  },
+  {
+   "name": "G01 Metal = SS-x64 on every differing lane",
+   "ok": true
+  },
+  {
+   "name": "G01 only accepted/accepted or indeterminate/indeterminate",
+   "ok": true
+  },
+  {
+   "name": "G01 ssA: CTS category identical for Lavapipe and SS on every differing lane",
+   "ok": true
+  },
+  {
+   "name": "G01 ssX: CTS category identical for Lavapipe and SS on every differing lane",
+   "ok": true
+  },
+  {
+   "name": "G02 ssA: CTS category identical for Lavapipe and SS on every differing lane",
+   "ok": true
+  },
+  {
+   "name": "G02 ssX: CTS category identical for Lavapipe and SS on every differing lane",
+   "ok": true
+  },
+  {
+   "name": "G03 ssA: CTS category identical for Lavapipe and SS on every differing lane",
+   "ok": true
+  },
+  {
+   "name": "G03 ssX: CTS category identical for Lavapipe and SS on every differing lane",
+   "ok": true
+  },
+  {
+   "name": "G04 ssA: CTS category identical for Lavapipe and SS on every differing lane",
+   "ok": true
+  },
+  {
+   "name": "G04 ssX: CTS category identical for Lavapipe and SS on every differing lane",
+   "ok": true
+  },
+  {
+   "name": "G05 ssA: CTS category identical for Lavapipe and SS on every differing lane",
+   "ok": true
+  },
+  {
+   "name": "G05 ssX: CTS category identical for Lavapipe and SS on every differing lane",
+   "ok": true
+  },
+  {
+   "name": "G06 ssA: CTS category identical for Lavapipe and SS on every differing lane",
+   "ok": true
+  },
+  {
+   "name": "G06 ssX: CTS category identical for Lavapipe and SS on every differing lane",
+   "ok": true
+  },
+  {
+   "name": "G07 ssA: CTS category identical for Lavapipe and SS on every differing lane",
+   "ok": true
+  },
+  {
+   "name": "G07 ssX: CTS category identical for Lavapipe and SS on every differing lane",
+   "ok": true
+  },
+  {
+   "name": "G08 ssA: CTS category identical for Lavapipe and SS on every differing lane",
+   "ok": true
+  },
+  {
+   "name": "G08 ssX: CTS category identical for Lavapipe and SS on every differing lane",
+   "ok": true
+  },
+  {
+   "name": "G09 ssA: CTS category identical for Lavapipe and SS on every differing lane",
+   "ok": true
+  },
+  {
+   "name": "G09 ssX: CTS category identical for Lavapipe and SS on every differing lane",
+   "ok": true
+  },
+  {
+   "name": "rejected = 0 for every backend and group (lane level)",
+   "ok": true
+  },
+  {
+   "name": "no rejected lane in sampled suite examples",
+   "ok": true
+  },
+  {
+   "name": "G08 SS exact on all",
+   "ok": true
+  },
+  {
+   "name": "G04 SS max abs err 1.88e-4",
+   "ok": true
+  },
+  {
+   "name": "G02 12 full tests SS-x64 only",
+   "ok": true
+  },
+  {
+   "name": "S4 8 tests: Lavapipe and SS fail, Metal passes",
+   "ok": true
+  },
+  {
+   "name": "experiments E1,E2,E3,E4,E5 accepted for all backends where bounded",
+   "ok": true
+  }
+ ],
+ "inputs": {
+  "lanes": "lane-adjudication.json",
+  "tests": "tests-inventory.json",
+  "experiments": "experiments.json",
+  "suiteExamples": "suite-examples-oracle.json",
+  "usage": "typegpu-usage.json"
+ }
+}

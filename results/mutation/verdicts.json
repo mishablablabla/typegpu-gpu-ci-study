@@ -1,0 +1,1081 @@
+{
+ "generated_from": "mutation/results.json (4 MB, kept in the original working tree)",
+ "mutants": {
+  "M01": {
+   "title": "f32->f16 bit conversion rounds half-up and double-rounds subnormals",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "not-run(f16)",
+     "detected_pools": []
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M02": {
+   "title": "Perlin dynamic cache never clears its dirty flag",
+   "backends": {
+    "lavapipe": {
+     "verdict": "missed",
+     "detected_pools": []
+    },
+    "swiftshader": {
+     "verdict": "missed",
+     "detected_pools": []
+    },
+    "metal": {
+     "verdict": "missed",
+     "detected_pools": []
+    }
+   }
+  },
+  "M03": {
+   "title": "tgpu.unroll over a range ending at 0 is dropped",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    }
+   }
+  },
+  "M04": {
+   "title": "withIndexBuffer ignores the element-count size argument",
+   "backends": {
+    "lavapipe": {
+     "verdict": "missed",
+     "detected_pools": []
+    },
+    "swiftshader": {
+     "verdict": "missed",
+     "detected_pools": []
+    },
+    "metal": {
+     "verdict": "missed",
+     "detected_pools": []
+    }
+   }
+  },
+  "M05": {
+   "title": "isCloseTo for vectors emits \"(lhs - lhs) + precision\" (lhs evaluated twice)",
+   "backends": {
+    "lavapipe": {
+     "verdict": "missed",
+     "detected_pools": []
+    },
+    "swiftshader": {
+     "verdict": "missed",
+     "detected_pools": []
+    },
+    "metal": {
+     "verdict": "missed",
+     "detected_pools": []
+    }
+   }
+  },
+  "M06": {
+   "title": "CPU std.saturate throws for float vectors",
+   "backends": {
+    "lavapipe": {
+     "verdict": "text-only",
+     "detected_pools": []
+    },
+    "swiftshader": {
+     "verdict": "text-only",
+     "detected_pools": []
+    },
+    "metal": {
+     "verdict": "text-only",
+     "detected_pools": []
+    }
+   }
+  },
+  "M07": {
+   "title": "Integer-valued literals >= 2^63 typed as abstractInt (FLT_MAX in oklab)",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M08": {
+   "title": "Compiled writer leaves mat3x3f column padding unwritten",
+   "backends": {
+    "lavapipe": {
+     "verdict": "missed",
+     "detected_pools": []
+    },
+    "swiftshader": {
+     "verdict": "missed",
+     "detected_pools": []
+    },
+    "metal": {
+     "verdict": "missed",
+     "detected_pools": []
+    }
+   }
+  },
+  "M09": {
+   "title": "Buffer allocations/transfers no longer padded to a multiple of 4 bytes",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M10": {
+   "title": "Non-finite comptime values are no longer rejected (Finite Math Assumption)",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M11": {
+   "title": "Auto vertex output does not receive fragment-determined varying locations",
+   "backends": {
+    "lavapipe": {
+     "verdict": "missed",
+     "detected_pools": []
+    },
+    "swiftshader": {
+     "verdict": "missed",
+     "detected_pools": []
+    },
+    "metal": {
+     "verdict": "missed",
+     "detected_pools": []
+    }
+   }
+  },
+  "M12": {
+   "title": "withLocations treats location 0 as \"no location\"",
+   "backends": {
+    "lavapipe": {
+     "verdict": "text-only",
+     "detected_pools": []
+    },
+    "swiftshader": {
+     "verdict": "text-only",
+     "detected_pools": []
+    },
+    "metal": {
+     "verdict": "text-only",
+     "detected_pools": []
+    }
+   }
+  },
+  "M13": {
+   "title": "Global identifier resolved inside a nested call can capture a caller-local name",
+   "backends": {
+    "lavapipe": {
+     "verdict": "text-only",
+     "detected_pools": []
+    },
+    "swiftshader": {
+     "verdict": "text-only",
+     "detected_pools": []
+    },
+    "metal": {
+     "verdict": "text-only",
+     "detected_pools": []
+    }
+   }
+  },
+  "M14": {
+   "title": "Implicit conversion i32/u32 <-> abstractFloat picks i32/u32 (truncates the float)",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M15": {
+   "title": "hasIndexBuffer is a constant false field",
+   "backends": {
+    "lavapipe": {
+     "verdict": "missed",
+     "detected_pools": []
+    },
+    "swiftshader": {
+     "verdict": "missed",
+     "detected_pools": []
+    },
+    "metal": {
+     "verdict": "missed",
+     "detected_pools": []
+    }
+   }
+  },
+  "M16": {
+   "title": "Piping a configuration duplicates its bindings",
+   "backends": {
+    "lavapipe": {
+     "verdict": "missed",
+     "detected_pools": []
+    },
+    "swiftshader": {
+     "verdict": "missed",
+     "detected_pools": []
+    },
+    "metal": {
+     "verdict": "missed",
+     "detected_pools": []
+    }
+   }
+  },
+  "M17": {
+   "title": "Generated identifiers may shadow WGSL template enumerants (read, write, uniform, rgba8unorm...)",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    }
+   }
+  },
+  "M18": {
+   "title": "Unary minus on u32 no longer rejected by TypeGPU",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M19": {
+   "title": "Compiled writer uses unpadded element stride for arrays of vec3",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    }
+   }
+  },
+  "M20": {
+   "title": "Struct size loses trailing padding",
+   "backends": {
+    "lavapipe": {
+     "verdict": "missed",
+     "detected_pools": []
+    },
+    "swiftshader": {
+     "verdict": "missed",
+     "detected_pools": []
+    },
+    "metal": {
+     "verdict": "missed",
+     "detected_pools": [
+      "ex97"
+     ]
+    }
+   }
+  },
+  "M21": {
+   "title": "vec3<f16> alignment 4 instead of 8",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "not-run(f16)",
+     "detected_pools": []
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    }
+   }
+  },
+  "M22": {
+   "title": "mat3x3f columns written packed (36 bytes) by the compiled writer",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M23": {
+   "title": "Compiled writer transposes matrices given as mat objects",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M24": {
+   "title": "std.mix emits mix(b, a, t)",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1",
+      "ex97"
+     ]
+    }
+   }
+  },
+  "M25": {
+   "title": "std.faceForward emits faceForward(e1, e3, e2)",
+   "backends": {
+    "lavapipe": {
+     "verdict": "text-only",
+     "detected_pools": []
+    },
+    "swiftshader": {
+     "verdict": "text-only",
+     "detected_pools": []
+    },
+    "metal": {
+     "verdict": "text-only",
+     "detected_pools": []
+    }
+   }
+  },
+  "M26": {
+   "title": "std.countLeadingZeros emits countTrailingZeros",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M27": {
+   "title": "std.extractBits emits (offset, count) swapped",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M28": {
+   "title": "CPU/comptime smoothstep has no clamp",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M29": {
+   "title": "CPU/comptime mod uses floored modulo",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M30": {
+   "title": "i32() cast saturates instead of wrapping",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M31": {
+   "title": "for-of over std.range runs one extra iteration",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    }
+   }
+  },
+  "M32": {
+   "title": "Guarded compute pipeline guard uses \">\" instead of \">=\"",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "text-only",
+     "detected_pools": [
+      "ex97"
+     ]
+    }
+   }
+  },
+  "M33": {
+   "title": "dispatchThreads computes workgroup count with floor instead of ceil",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M34": {
+   "title": "Workgroup barrier removed from the prefix-scan up-sweep",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M35": {
+   "title": "Workgroup barrier removed between down-sweep and the final read",
+   "backends": {
+    "lavapipe": {
+     "verdict": "text-only",
+     "detected_pools": []
+    },
+    "swiftshader": {
+     "verdict": "text-only",
+     "detected_pools": []
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M36": {
+   "title": "std.atomicSub emits atomicAdd",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    }
+   }
+  },
+  "M37": {
+   "title": "rg* texture formats get the wrong bytes-per-texel (default 4)",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    }
+   }
+  },
+  "M38": {
+   "title": "u32To01F32 drops the lowest mantissa bit",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1",
+      "ex97"
+     ]
+    }
+   }
+  },
+  "M39": {
+   "title": "GPU-side hash multiplier differs from the CPU one by one bit",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M40": {
+   "title": "srgbToLinear uses gamma 2.2 instead of 2.4",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    }
+   }
+  },
+  "M41": {
+   "title": "opSmoothUnion blend term loses a factor h",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    }
+   }
+  },
+  "M42": {
+   "title": "Bitonic sort default paddingValue 0x7fffffff instead of 0xffffffff",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own"
+     ]
+    }
+   }
+  },
+  "M43": {
+   "title": "std.select emits select(t, f, cond)",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own",
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own",
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own",
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M44": {
+   "title": "CPU .rgb swizzle returns (r, b, g)",
+   "backends": {
+    "lavapipe": {
+     "verdict": "missed",
+     "detected_pools": []
+    },
+    "swiftshader": {
+     "verdict": "missed",
+     "detected_pools": []
+    },
+    "metal": {
+     "verdict": "missed",
+     "detected_pools": [
+      "ex97"
+     ]
+    }
+   }
+  },
+  "M45": {
+   "title": "rotationY4 WGSL sign error",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own",
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own",
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "own",
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M46": {
+   "title": "std.insertBits emits the base value and the inserted bits swapped",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M47": {
+   "title": "std.firstLeadingBit emits firstTrailingBit",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M48": {
+   "title": "std.countTrailingZeros emits firstTrailingBit",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M49": {
+   "title": "std.dot4U8Packed emits dot4I8Packed",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  },
+  "M50": {
+   "title": "std.trunc emits floor",
+   "backends": {
+    "lavapipe": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "swiftshader": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    },
+    "metal": {
+     "verdict": "DETECTED-value",
+     "detected_pools": [
+      "pool1"
+     ]
+    }
+   }
+  }
+ }
+}

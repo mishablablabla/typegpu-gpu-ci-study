@@ -1,0 +1,2948 @@
+{
+ "M01": {
+  "status": "CAUGHT-assertion",
+  "notes": "",
+  "tier": 1,
+  "title": "f32->f16 bit conversion rounds half-up and double-rounds subnormals",
+  "mock_catchable_guess": "likely",
+  "reach_class": "host-only",
+  "files": [
+   "packages/typegpu/src/data/numeric.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/internal/halfBits.test.ts",
+    "name": "toHalfBits matches the native Float16Array conversion across a range",
+    "kind": "assertion"
+   }
+  ],
+  "wall_s": 230,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M01-r1",
+    "status": "CAUGHT-assertion",
+    "failed": 1,
+    "wall_s": 230
+   }
+  ]
+ },
+ "M02": {
+  "status": "MISSED",
+  "notes": "",
+  "tier": 1,
+  "title": "Perlin dynamic cache never clears its dirty flag",
+  "mock_catchable_guess": "unlikely",
+  "reach_class": "host-only",
+  "files": [
+   "packages/typegpu-noise/src/perlin-2d/dynamic-cache.ts",
+   "packages/typegpu-noise/src/perlin-3d/dynamic-cache.ts"
+  ],
+  "failing_tests": [],
+  "wall_s": 96,
+  "tsc": {
+   "packages/typegpu-noise": 0
+  },
+  "attempts": [
+   {
+    "run": "M02-r1",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 145
+   },
+   {
+    "run": "M02-r2",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 96
+   }
+  ],
+  "attest_run": {
+   "run": "M02-t1",
+   "failed": 0,
+   "non_timeout_failures": [],
+   "timeout_failures_(baseline-flaky under attest)": [],
+   "wall_s": 253
+  }
+ },
+ "M03": {
+  "status": "CAUGHT-assertion",
+  "notes": "",
+  "tier": 2,
+  "title": "tgpu.unroll over a range ending at 0 is dropped",
+  "mock_catchable_guess": "likely",
+  "reach_class": "none",
+  "files": [
+   "packages/typegpu/src/tgsl/wgslGenerator.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/tgsl/wgslGenerator.test.ts",
+    "name": "WgslGenerator unrolls a descending range ending at zero",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/tgsl/wgslGenerator.test.ts",
+    "name": "WgslGenerator unrolls an empty range with a nonzero endpoint",
+    "kind": "error"
+   }
+  ],
+  "wall_s": 110,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M03-r1",
+    "status": "CAUGHT-assertion",
+    "failed": 2,
+    "wall_s": 110
+   }
+  ]
+ },
+ "M04": {
+  "status": "CAUGHT-assertion",
+  "notes": "",
+  "tier": 2,
+  "title": "withIndexBuffer ignores the element-count size argument",
+  "mock_catchable_guess": "likely",
+  "reach_class": "none",
+  "files": [
+   "packages/typegpu/src/core/pipeline/renderPipeline.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/renderPipeline.test.ts",
+    "name": "render pipeline behavior converts typed index buffer offset and size from elements to bytes",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/renderPipeline.test.ts",
+    "name": "render pipeline behavior converts typed index buffer offset and size from elements to bytes for u16",
+    "kind": "assertion"
+   }
+  ],
+  "wall_s": 130,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M04-r1",
+    "status": "CAUGHT-assertion",
+    "failed": 2,
+    "wall_s": 130
+   }
+  ]
+ },
+ "M05": {
+  "status": "CAUGHT-snapshot-only",
+  "notes": "",
+  "tier": 1,
+  "title": "isCloseTo for vectors emits \"(lhs - lhs) + precision\" (lhs evaluated twice)",
+  "mock_catchable_guess": "likely",
+  "reach_class": "host-only",
+  "files": [
+   "packages/typegpu/src/std/boolean.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/std/boolean/isCloseTo.test.ts",
+    "name": "isCloseTo does not duplicate any of its sides",
+    "kind": "snapshot"
+   }
+  ],
+  "wall_s": 112,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M05-r1",
+    "status": "CAUGHT-snapshot-only",
+    "failed": 1,
+    "wall_s": 112
+   }
+  ]
+ },
+ "M06": {
+  "status": "CAUGHT-assertion",
+  "notes": "",
+  "tier": 1,
+  "title": "CPU std.saturate throws for float vectors",
+  "mock_catchable_guess": "likely",
+  "reach_class": "host-only",
+  "files": [
+   "packages/typegpu/src/std/numeric.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/std/numeric/clamp.test.ts",
+    "name": "saturate saturates vectors component-wise",
+    "kind": "error"
+   }
+  ],
+  "wall_s": 146,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M06-r1",
+    "status": "CAUGHT-assertion",
+    "failed": 1,
+    "wall_s": 146
+   }
+  ]
+ },
+ "M07": {
+  "status": "CAUGHT-snapshot-only",
+  "notes": "",
+  "tier": 2,
+  "title": "Integer-valued literals >= 2^63 typed as abstractInt (FLT_MAX in oklab)",
+  "mock_catchable_guess": "unknown",
+  "reach_class": "docs-only",
+  "files": [
+   "packages/typegpu/src/tgsl/generationHelpers.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/jump-flood-voronoi.test.ts",
+    "name": "jump flood (voronoi) example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/oklab.test.ts",
+    "name": "oklab example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/shifting-gradient.test.ts",
+    "name": "react/shifting-gradient example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/spinning-triangle.test.ts",
+    "name": "react/spinning-triangle example should produce valid code",
+    "kind": "snapshot"
+   }
+  ],
+  "wall_s": 101,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M07-r1",
+    "status": "CAUGHT-snapshot-only",
+    "failed": 4,
+    "wall_s": 101
+   }
+  ]
+ },
+ "M08": {
+  "status": "CAUGHT-assertion",
+  "notes": "",
+  "tier": 1,
+  "title": "Compiled writer leaves mat3x3f column padding unwritten",
+  "mock_catchable_guess": "likely",
+  "reach_class": "host-only",
+  "files": [
+   "packages/typegpu/src/data/compiledIO.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/arrayBufferIO.test.ts",
+    "name": "arrayBufferIO write overrides all values when handling mat3x3f",
+    "kind": "assertion"
+   }
+  ],
+  "wall_s": 166,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M08-r1",
+    "status": "CAUGHT-assertion",
+    "failed": 1,
+    "wall_s": 166
+   }
+  ]
+ },
+ "M09": {
+  "status": "CAUGHT-assertion",
+  "notes": "",
+  "tier": 1,
+  "title": "Buffer allocations/transfers no longer padded to a multiple of 4 bytes",
+  "mock_catchable_guess": "likely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu/src/core/buffer/buffer.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/buffer.test.ts",
+    "name": "TgpuBuffer should allow for partial writes with loose data",
+    "kind": "error"
+   },
+   {
+    "file": "packages/typegpu/tests/buffer.test.ts",
+    "name": "TgpuBuffer schemas with a size that is not a multiple of 4 pads the GPU buffer to a multiple of 4",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/buffer.test.ts",
+    "name": "TgpuBuffer schemas with a size that is not a multiple of 4 pads full writes to a multiple of 4",
+    "kind": "error"
+   },
+   {
+    "file": "packages/typegpu/tests/buffer.test.ts",
+    "name": "TgpuBuffer schemas with a size that is not a multiple of 4 does not pad writes that end before the last element",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/buffer.test.ts",
+    "name": "TgpuBuffer schemas with a size that is not a multiple of 4 pads copies to a multiple of 4",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/buffer.test.ts",
+    "name": "TgpuBuffer schemas with a size that is not a multiple of 4 pads the staging buffer used for reading",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/buffer.test.ts",
+    "name": "TgpuBuffer schemas with a size that is not a multiple of 4 pads patches that reach the end of the schema",
+    "kind": "error"
+   },
+   {
+    "file": "packages/typegpu/tests/buffer.test.ts",
+    "name": "TgpuBuffer schemas with a size that is not a multiple of 4 throws a clear error for unaligned SoA writes, without applying any part of them",
+    "kind": "assertion"
+   }
+  ],
+  "wall_s": 164,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M09-r1",
+    "status": "CAUGHT-assertion",
+    "failed": 8,
+    "wall_s": 164
+   }
+  ]
+ },
+ "M10": {
+  "status": "CAUGHT-assertion",
+  "notes": "",
+  "tier": 1,
+  "title": "Non-finite comptime values are no longer rejected (Finite Math Assumption)",
+  "mock_catchable_guess": "likely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu/src/tgsl/wgslGenerator.ts",
+   "packages/typegpu/src/data/numeric.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/numeric.test.ts",
+    "name": "Edge cases throws when called on +Infinity",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/numeric.test.ts",
+    "name": "Edge cases throws when called on -Infinity",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/numeric.test.ts",
+    "name": "Edge cases throws when called on NaN",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/std/bitcast.test.ts",
+    "name": "bitcast bitcast U32 to F32 specials",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/tgsl/wgslGenerator.test.ts",
+    "name": "WgslGenerator throws a readable error when encountering NaN or Infinity",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/std/numeric/div.test.ts",
+    "name": "div forbids division by 0",
+    "kind": "snapshot"
+   }
+  ],
+  "wall_s": 110,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M10-r1",
+    "status": "CAUGHT-assertion",
+    "failed": 6,
+    "wall_s": 110
+   }
+  ]
+ },
+ "M11": {
+  "status": "CAUGHT-snapshot-only",
+  "notes": "",
+  "tier": 1,
+  "title": "Auto vertex output does not receive fragment-determined varying locations",
+  "mock_catchable_guess": "likely",
+  "reach_class": "docs-only",
+  "files": [
+   "packages/typegpu/src/core/function/autoIO.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/internal/renderPipeline.test.ts",
+    "name": "locations both IO structs use matched locations (shellless/shelled)",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/renderPipeline.test.ts",
+    "name": "locations both IO structs use matched locations (shellless/shelled, location 0)",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/renderPipeline.test.ts",
+    "name": "locations both IO structs use matched locations (shellless/shelled, different key order)",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/renderPipeline.test.ts",
+    "name": "locations does not use locations in shellless vertex in",
+    "kind": "snapshot"
+   }
+  ],
+  "wall_s": 173,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M11-r1",
+    "status": "CAUGHT-snapshot-only",
+    "failed": 4,
+    "wall_s": 173
+   }
+  ]
+ },
+ "M12": {
+  "status": "CAUGHT-assertion",
+  "notes": "",
+  "tier": 2,
+  "title": "withLocations treats location 0 as \"no location\"",
+  "mock_catchable_guess": "likely",
+  "reach_class": "docs-only",
+  "files": [
+   "packages/typegpu/src/core/function/ioSchema.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/pipeline-resolution.test.ts",
+    "name": "resolve can resolve a render pipeline",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/renderPipeline.test.ts",
+    "name": "render pipeline behavior resolve keeps explicit interpolation of integer varyings in shells",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/renderPipeline.test.ts",
+    "name": "render pipeline behavior resolve keeps explicit interpolation when a vertex shell is paired with a shellless fragment",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/renderPipeline.test.ts",
+    "name": "root.createRenderPipeline generates a struct that matches the access pattern for shell-less fragments (only builtins)",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/renderPipeline.test.ts",
+    "name": "root.createRenderPipeline generates a struct that matches the access pattern for shell-less fragments",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/renderPipeline.test.ts",
+    "name": "root.createRenderPipeline generates a struct that matches a shell-less fragment return value",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/struct.test.ts",
+    "name": "struct resolves struct casts for entry IO",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/ioSchema.test.ts",
+    "name": "withLocations does not ignore given location 0",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/renderPipeline.test.ts",
+    "name": "locations both IO structs use matched locations (shelled/shellless)",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/renderPipeline.test.ts",
+    "name": "locations both IO structs use matched locations (shellless/shelled)",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/renderPipeline.test.ts",
+    "name": "locations both IO structs use matched locations (shellless/shelled, location 0)",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/renderPipeline.test.ts",
+    "name": "locations both IO structs use matched locations (shellless/shelled, different key order)",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/renderPipeline.test.ts",
+    "name": "locations throws when vertex out and fragment in mix up locations",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/renderPipeline.test.ts",
+    "name": "locations throws when fragment in duplicates locations",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/3d-fish.test.ts",
+    "name": "3d fish example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/ascii-filter.test.ts",
+    "name": "ascii filter example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/bitonic-sort.test.ts",
+    "name": "bitonic sort example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/blur.test.ts",
+    "name": "blur example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/boids.test.ts",
+    "name": "boids example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/camera-thresholding.test.ts",
+    "name": "camera thresholding example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/caustics.test.ts",
+    "name": "caustics example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/chroma-keying.test.ts",
+    "name": "chroma keying example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/circles.test.ts",
+    "name": "circles example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/clouds.test.ts",
+    "name": "clouds example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/cubemap-reflection.test.ts",
+    "name": "cubemap reflection example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/disco.test.ts",
+    "name": "disco example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/fluid-double-buffering.test.ts",
+    "name": "fluid double buffering example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/fluid-with-atomics.test.ts",
+    "name": "fluid with atomics example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/game-of-life.test.ts",
+    "name": "game of life example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/global-wind-map.test.ts",
+    "name": "global wind map example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/gradient-tiles.test.ts",
+    "name": "gradient tiles example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/gravity.test.ts",
+    "name": "gravity example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/image-tuning.test.ts",
+    "name": "image tuning example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/jelly-slider.test.ts",
+    "name": "jelly-slider example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/jelly-switch.test.ts",
+    "name": "jelly switch example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/jump-flood-distance.test.ts",
+    "name": "jump flood (distance) example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/jump-flood-voronoi.test.ts",
+    "name": "jump flood (voronoi) example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/lines-combinations.test.ts",
+    "name": "lines combinations example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/liquid-glass.test.ts",
+    "name": "liquid-glass example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/oklab.test.ts",
+    "name": "oklab example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/perlin-noise.test.ts",
+    "name": "perlin noise example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/phong-reflection.test.ts",
+    "name": "phong reflection example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/point-light-shadow.test.ts",
+    "name": "point light shadow example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/ray-marching.test.ts",
+    "name": "ray-marching example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/ripple-cube.test.ts",
+    "name": "ripple-cube example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/shifting-gradient.test.ts",
+    "name": "react/shifting-gradient example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/simple-shadow.test.ts",
+    "name": "simple shadow example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/slime-mold-3d.test.ts",
+    "name": "slime mold 3d example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/slime-mold.test.ts",
+    "name": "slime mold example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/square.test.ts",
+    "name": "square example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/stable-fluid.test.ts",
+    "name": "stable-fluid example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/stencil.test.ts",
+    "name": "stencil example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/two-boxes.test.ts",
+    "name": "two boxes example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/uniformity.test.ts",
+    "name": "uniformity test example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/vaporrave.test.ts",
+    "name": "vaporrave example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/xor-dev-centrifuge-2.test.ts",
+    "name": "xor dev centrifuge example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/xor-dev-runner.test.ts",
+    "name": "xor dev runner example should produce valid code",
+    "kind": "snapshot"
+   }
+  ],
+  "wall_s": 87,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M12-r1",
+    "status": "CAUGHT-assertion",
+    "failed": 57,
+    "wall_s": 87
+   }
+  ]
+ },
+ "M13": {
+  "status": "CAUGHT-snapshot-only",
+  "notes": "",
+  "tier": 1,
+  "title": "Global identifier resolved inside a nested call can capture a caller-local name",
+  "mock_catchable_guess": "likely",
+  "reach_class": "docs-only",
+  "files": [
+   "packages/typegpu/src/resolutionCtx.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/tgsl/nameClashes.test.ts",
+    "name": "should give different names to global declaration accessed inside nested function and argument of wrapping function",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/tgsl/nameClashes.test.ts",
+    "name": "should give different names to global declaration accessed inside nested function and local variable of wrapping function",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/fluid-double-buffering.test.ts",
+    "name": "fluid double buffering example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/uniformity.test.ts",
+    "name": "uniformity test example should produce valid code",
+    "kind": "snapshot"
+   }
+  ],
+  "wall_s": 153,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M13-r1",
+    "status": "CAUGHT-snapshot-only",
+    "failed": 4,
+    "wall_s": 153
+   }
+  ]
+ },
+ "M14": {
+  "status": "CAUGHT-assertion",
+  "notes": "",
+  "tier": 1,
+  "title": "Implicit conversion i32/u32 <-> abstractFloat picks i32/u32 (truncates the float)",
+  "mock_catchable_guess": "likely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu/src/tgsl/conversion.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu-gl/tests/glslGenerator.test.ts",
+    "name": "GlslGenerator - operator translates % with floating-point arguments to a call to the `remainder` helper function",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/tgsl/conversion.test.ts",
+    "name": "convertToCommonType chooses abstractFloat over i32",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/tgsl/multiplication.test.ts",
+    "name": "multiplying i32 with a float literal should implicitly convert to an f32",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/tgsl/multiplication.test.ts",
+    "name": "multiplying u32 with a float literal should implicitly convert to an f32",
+    "kind": "snapshot"
+   }
+  ],
+  "wall_s": 118,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M14-r1",
+    "status": "CAUGHT-assertion",
+    "failed": 4,
+    "wall_s": 118
+   }
+  ]
+ },
+ "M15": {
+  "status": "CAUGHT-assertion",
+  "notes": "",
+  "tier": 2,
+  "title": "hasIndexBuffer is a constant false field",
+  "mock_catchable_guess": "likely",
+  "reach_class": "host-only",
+  "files": [
+   "packages/typegpu/src/core/pipeline/renderPipeline.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/renderPipeline.test.ts",
+    "name": "render pipeline behavior should set hasIndexBuffer to true when index buffer is provided",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/renderPipeline.test.ts",
+    "name": "render pipeline behavior should retain hasIndexBuffer after another .with",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/renderPipeline.test.ts",
+    "name": "pipe applies a transform that binds vertex and index buffers",
+    "kind": "assertion"
+   }
+  ],
+  "wall_s": 95,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M15-r1",
+    "status": "CAUGHT-assertion",
+    "failed": 3,
+    "wall_s": 95
+   }
+  ]
+ },
+ "M16": {
+  "status": "CAUGHT-assertion",
+  "notes": "",
+  "tier": 2,
+  "title": "Piping a configuration duplicates its bindings",
+  "mock_catchable_guess": "likely",
+  "reach_class": "host-only",
+  "files": [
+   "packages/typegpu/src/core/root/configurableImpl.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/resolve.test.ts",
+    "name": "tgpu resolveWithContext pipes a configuration without repeating its bindings",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/resolve.test.ts",
+    "name": "tgpu resolveWithContext pipes without creating an extra configuration",
+    "kind": "assertion"
+   }
+  ],
+  "wall_s": 90,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M16-r1",
+    "status": "CAUGHT-assertion",
+    "failed": 2,
+    "wall_s": 90
+   }
+  ]
+ },
+ "M17": {
+  "status": "CAUGHT-snapshot-only",
+  "notes": "",
+  "tier": 2,
+  "title": "Generated identifiers may shadow WGSL template enumerants (read, write, uniform, rgba8unorm...)",
+  "mock_catchable_guess": "likely",
+  "reach_class": "docs-only",
+  "files": [
+   "packages/typegpu/src/core/resolve/namespace.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/namespace.test.ts",
+    "name": "tgpu.namespace does not name a declaration after a template enumerant",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/namespace.test.ts",
+    "name": "tgpu.namespace does not name an immediate after its own address space",
+    "kind": "snapshot"
+   }
+  ],
+  "wall_s": 89,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M17-r1",
+    "status": "CAUGHT-snapshot-only",
+    "failed": 2,
+    "wall_s": 89
+   }
+  ]
+ },
+ "M18": {
+  "status": "CAUGHT-snapshot-only",
+  "notes": "",
+  "tier": 1,
+  "title": "Unary minus on u32 no longer rejected by TypeGPU",
+  "mock_catchable_guess": "likely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu/src/std/operators.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/tgsl/wgslGenerator.test.ts",
+    "name": "WgslGenerator handles unary operator - throws on unsigned integer operands",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/tgsl/wgslGenerator.test.ts",
+    "name": "WgslGenerator handles unary operator - throws on unsigned integer vector operands passed to std.neg",
+    "kind": "snapshot"
+   }
+  ],
+  "wall_s": 110,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M18-r1",
+    "status": "CAUGHT-snapshot-only",
+    "failed": 2,
+    "wall_s": 110
+   }
+  ]
+ },
+ "M19": {
+  "status": "CAUGHT-assertion",
+  "notes": "",
+  "tier": 1,
+  "title": "Compiled writer uses unpadded element stride for arrays of vec3",
+  "mock_catchable_guess": "likely",
+  "reach_class": "docs-only",
+  "files": [
+   "packages/typegpu/src/data/compiledIO.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/array.test.ts",
+    "name": "array aligns array elements when writing",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/array.test.ts",
+    "name": "array encodes and decodes arrays properly",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/buffer.test.ts",
+    "name": "TgpuBuffer should write a padded array chunk from startOffset through the end when endOffset is omitted",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/disarray.test.ts",
+    "name": "disarray aligns array elements when writing with custom aligned elements",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/struct.test.ts",
+    "name": "struct supports and properly aligns with vectors of f16",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "buildWriter should compile a writer for a struct with an array",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "buildWriter should compile a writer for an array",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "buildWriter (partial mode) should compile a partial writer for a struct with an array",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "createCompileInstructions should compile a writer for a struct with an array",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "createCompileInstructions should compile a writer for an array",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "createCompileInstructions should compile a writer for a nested array with element type which size is not equal to its alignment",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "createCompileInstructions should stop writing elements at the given endOffset",
+    "kind": "error"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "createCompileInstructions should write a padded array chunk from the beginning offset through the end when endOffset is omitted",
+    "kind": "error"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "createCompileInstructions should compile a writer for an array of vec3h with 2-byte component offsets",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "createCompileInstructions should write an array of vec3f from plain tuples",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "createCompileInstructions should write an array of vec3f from a padded Float32Array (raw bytes, 16-byte stride)",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "createCompileInstructions should write an array of vec3f where each element is its own Float32Array",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "createCompileInstructions should write an arrayOf(vec3h) from plain tuples with stride-corrected 2-byte offsets",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "createCompileInstructions should write a nested struct with TypedArray array fields interleaved with normal fields",
+    "kind": "assertion"
+   }
+  ],
+  "wall_s": 103,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M19-r1",
+    "status": "CAUGHT-assertion",
+    "failed": 19,
+    "wall_s": 103
+   }
+  ]
+ },
+ "M20": {
+  "status": "CAUGHT-assertion",
+  "notes": "",
+  "tier": 1,
+  "title": "Struct size loses trailing padding",
+  "mock_catchable_guess": "likely",
+  "reach_class": "docs-only",
+  "files": [
+   "packages/typegpu/src/data/schemaMemoryLayout.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/align.test.ts",
+    "name": "d.align changes size of a struct containing aligned member",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/immediates.test.ts",
+    "name": "tgpu.immediateVar compute pipelines includes struct member padding in immediateSize",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/isContiguous.test.ts",
+    "name": "d.isContiguous structs",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/isContiguous.test.ts",
+    "name": "d.isContiguous complex - structs and arrays as fields",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/isContiguous.test.ts",
+    "name": "d.isContiguous complex - structs with decorated fields",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/offsetUtils.test.ts",
+    "name": "d.memoryLayoutOf (nested layouts) tracks offsets inside a later struct run",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/serial.test.ts",
+    "name": "resource snapshot protocol round-trips immediate variables and pipeline-held immediate data",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/struct.test.ts",
+    "name": "struct aligns struct properties when measuring",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/struct.test.ts",
+    "name": "struct aligns struct properties when writing",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/struct.test.ts",
+    "name": "struct supports and properly aligns with vectors of f16",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "buildWriter should compile a writer for a struct with nested structs",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "createCompileInstructions should compile a writer for a struct with nested structs",
+    "kind": "error"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "createCompileInstructions should compile a writer for struct with align attribute",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/partialIo.test.ts",
+    "name": "offsetsForProps should return correct offsets for deeply nested structs",
+    "kind": "assertion"
+   }
+  ],
+  "wall_s": 104,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M20-r1",
+    "status": "CAUGHT-assertion",
+    "failed": 14,
+    "wall_s": 104
+   }
+  ]
+ },
+ "M21": {
+  "status": "CAUGHT-assertion",
+  "notes": "",
+  "tier": 2,
+  "title": "vec3<f16> alignment 4 instead of 8",
+  "mock_catchable_guess": "likely",
+  "reach_class": "none",
+  "files": [
+   "packages/typegpu/src/data/alignmentOf.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/struct.test.ts",
+    "name": "struct supports and properly aligns with vectors of f16",
+    "kind": "assertion"
+   }
+  ],
+  "wall_s": 86,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M21-r1",
+    "status": "CAUGHT-assertion",
+    "failed": 1,
+    "wall_s": 86
+   }
+  ]
+ },
+ "M22": {
+  "status": "CAUGHT-assertion",
+  "notes": "",
+  "tier": 1,
+  "title": "mat3x3f columns written packed (36 bytes) by the compiled writer",
+  "mock_catchable_guess": "likely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu/src/data/compiledIO.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/arrayBufferIO.test.ts",
+    "name": "arrayBufferIO write handles mat3x3f",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/arrayBufferIO.test.ts",
+    "name": "arrayBufferIO write overrides all values when handling mat3x3f",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/buffer.test.ts",
+    "name": "TgpuBuffer (.patch() with flexible inputs) should patch a mat3x3f struct field from a packed number[]",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/buffer.test.ts",
+    "name": "TgpuBuffer (.patch() with flexible inputs) should patch a mat3x3f struct field from a padded Float32Array",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/matrix.test.ts",
+    "name": "mat3x3f encodes identity matrix properly",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/matrix.test.ts",
+    "name": "mat3x3f encodes a matrix properly",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "createCompileInstructions should compile a writer for a mat3x3f",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "createCompileInstructions should write a mat3x3f from a packed number[]",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "createCompileInstructions should write a mat3x3f from a padded Float32Array",
+    "kind": "assertion"
+   }
+  ],
+  "wall_s": 107,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M22-r1",
+    "status": "CAUGHT-assertion",
+    "failed": 9,
+    "wall_s": 107
+   }
+  ]
+ },
+ "M23": {
+  "status": "CAUGHT-assertion",
+  "notes": "",
+  "tier": 1,
+  "title": "Compiled writer transposes matrices given as mat objects",
+  "mock_catchable_guess": "likely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu/src/data/compiledIO.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/matrix.test.ts",
+    "name": "mat2x2f encodes a matrix properly",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/matrix.test.ts",
+    "name": "mat3x3f encodes a matrix properly",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/matrix.test.ts",
+    "name": "mat4x4f encodes a matrix properly",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "createCompileInstructions should compile a writer for a mat4x4f",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "createCompileInstructions should compile a writer for a mat3x3f",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/compiledIO.test.ts",
+    "name": "createCompileInstructions should compile a writer for a mat2x2f",
+    "kind": "assertion"
+   }
+  ],
+  "wall_s": 115,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M23-r1",
+    "status": "CAUGHT-assertion",
+    "failed": 6,
+    "wall_s": 115
+   }
+  ]
+ },
+ "M24": {
+  "status": "CAUGHT-snapshot-only",
+  "notes": "",
+  "tier": 1,
+  "title": "std.mix emits mix(b, a, t)",
+  "mock_catchable_guess": "likely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu/src/std/numeric.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/tgsl/typeInference.test.ts",
+    "name": "wgsl generator js type inference is generic over number of arguments",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/3d-fish.test.ts",
+    "name": "3d fish example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/caustics.test.ts",
+    "name": "caustics example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/circles.test.ts",
+    "name": "circles example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/clouds.test.ts",
+    "name": "clouds example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/cubemap-reflection.test.ts",
+    "name": "cubemap reflection example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/fluid-double-buffering.test.ts",
+    "name": "fluid double buffering example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/game-of-life.test.ts",
+    "name": "game of life example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/global-wind-map.test.ts",
+    "name": "global wind map example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/image-tuning.test.ts",
+    "name": "image tuning example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/jelly-slider.test.ts",
+    "name": "jelly-slider example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/jelly-switch.test.ts",
+    "name": "jelly switch example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/jump-flood-distance.test.ts",
+    "name": "jump flood (distance) example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/lines-combinations.test.ts",
+    "name": "lines combinations example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/liquid-glass.test.ts",
+    "name": "liquid-glass example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/oklab.test.ts",
+    "name": "oklab example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/perlin-noise.test.ts",
+    "name": "perlin noise example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/ray-marching.test.ts",
+    "name": "ray-marching example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/ripple-cube.test.ts",
+    "name": "ripple-cube example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/shifting-gradient.test.ts",
+    "name": "react/shifting-gradient example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/smoky-triangle.test.ts",
+    "name": "smoky triangle should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/spinning-triangle.test.ts",
+    "name": "react/spinning-triangle example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/triangle.test.ts",
+    "name": "triangle example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/vaporrave.test.ts",
+    "name": "vaporrave example should produce valid code",
+    "kind": "snapshot"
+   }
+  ],
+  "wall_s": 109,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M24-r1",
+    "status": "CAUGHT-snapshot-only",
+    "failed": 24,
+    "wall_s": 109
+   }
+  ]
+ },
+ "M25": {
+  "status": "MISSED",
+  "notes": "",
+  "tier": 1,
+  "title": "std.faceForward emits faceForward(e1, e3, e2)",
+  "mock_catchable_guess": "unlikely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu/src/std/numeric.ts"
+  ],
+  "failing_tests": [],
+  "wall_s": 95,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M25-r1",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 105
+   },
+   {
+    "run": "M25-r2",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 95
+   }
+  ],
+  "attest_run": {
+   "run": "M25-t1",
+   "failed": 1,
+   "non_timeout_failures": [],
+   "timeout_failures_(baseline-flaky under attest)": [
+    "probability.test.ts"
+   ],
+   "wall_s": 262
+  }
+ },
+ "M26": {
+  "status": "MISSED",
+  "notes": "",
+  "tier": 1,
+  "title": "std.countLeadingZeros emits countTrailingZeros",
+  "mock_catchable_guess": "unlikely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu/src/std/numeric.ts"
+  ],
+  "failing_tests": [],
+  "wall_s": 143,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M26-r1",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 106
+   },
+   {
+    "run": "M26-r2",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 143
+   }
+  ],
+  "attest_run": {
+   "run": "M26-t1",
+   "failed": 1,
+   "non_timeout_failures": [],
+   "timeout_failures_(baseline-flaky under attest)": [
+    "probability.test.ts"
+   ],
+   "wall_s": 242
+  }
+ },
+ "M27": {
+  "status": "MISSED",
+  "notes": "",
+  "tier": 1,
+  "title": "std.extractBits emits (offset, count) swapped",
+  "mock_catchable_guess": "unlikely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu/src/std/numeric.ts"
+  ],
+  "failing_tests": [],
+  "wall_s": 116,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M27-r1",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 116
+   },
+   {
+    "run": "M27-r2",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 116
+   }
+  ],
+  "attest_run": {
+   "run": "M27-t1",
+   "failed": 1,
+   "non_timeout_failures": [],
+   "timeout_failures_(baseline-flaky under attest)": [
+    "probability.test.ts"
+   ],
+   "wall_s": 229
+  }
+ },
+ "M28": {
+  "status": "CAUGHT-assertion",
+  "notes": "",
+  "tier": 1,
+  "title": "CPU/comptime smoothstep has no clamp",
+  "mock_catchable_guess": "likely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu/src/data/numberOps.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/std/numeric/smoothstep.test.ts",
+    "name": "smoothstep returns 0 when x is less than or equal to edge0",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/std/numeric/smoothstep.test.ts",
+    "name": "smoothstep returns 1 when x is greater than or equal to edge1",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/std/numeric/smoothstep.test.ts",
+    "name": "smoothstep works with vec2f",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/std/numeric/smoothstep.test.ts",
+    "name": "smoothstep works with vector edges with same values for all components",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/std/numeric/smoothstep.test.ts",
+    "name": "smoothstep handles negative values correctly",
+    "kind": "assertion"
+   }
+  ],
+  "wall_s": 118,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M28-r1",
+    "status": "CAUGHT-assertion",
+    "failed": 5,
+    "wall_s": 118
+   }
+  ]
+ },
+ "M29": {
+  "status": "CAUGHT-assertion",
+  "notes": "",
+  "tier": 1,
+  "title": "CPU/comptime mod uses floored modulo",
+  "mock_catchable_guess": "likely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu/src/std/operators.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/std/numeric/mod.test.ts",
+    "name": "mod computes modulo of a number and a number",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/std/numeric/mod.test.ts",
+    "name": "mod computes component-wise modulo of vec2i vectors",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/std/numeric/mod.test.ts",
+    "name": "mod computes component-wise modulo of vec3i vectors",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/std/numeric/mod.test.ts",
+    "name": "mod computes component-wise modulo of vec4i vectors",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/std/numeric/mod.test.ts",
+    "name": "modnd scalar computes modulo of vec2i and a scalar",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/std/numeric/mod.test.ts",
+    "name": "VectorOps.modMixed scalar and vec computes modulo of a scalar and vec2i",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/std/numeric/mod.test.ts",
+    "name": "VectorOps.modMixed scalar and vec computes modulo of a scalar and vec3i",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/std/numeric/mod.test.ts",
+    "name": "VectorOps.modMixed scalar and vec computes modulo of a scalar and vec4i",
+    "kind": "assertion"
+   }
+  ],
+  "wall_s": 105,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M29-r1",
+    "status": "CAUGHT-assertion",
+    "failed": 8,
+    "wall_s": 105
+   }
+  ]
+ },
+ "M30": {
+  "status": "CAUGHT-assertion",
+  "notes": "",
+  "tier": 1,
+  "title": "i32() cast saturates instead of wrapping",
+  "mock_catchable_guess": "likely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu/src/data/numeric.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/primitiveCast.test.ts",
+    "name": "i32 casts a number to i32",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/std/numeric/bitShift.test.ts",
+    "name": "std.bitShift computes values that match WGSL behavior",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/std/numeric/div.test.ts",
+    "name": "div computes quotient of vecNi and a number",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/std/numeric/mod.test.ts",
+    "name": "mod computes component-wise modulo of vec3i vectors",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/std/numeric/mod.test.ts",
+    "name": "mod computes component-wise modulo of vec4i vectors",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/std/numeric/mod.test.ts",
+    "name": "VectorOps.modMixed scalar and vec computes modulo of a scalar and vec3i",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/std/numeric/mod.test.ts",
+    "name": "VectorOps.modMixed scalar and vec computes modulo of a scalar and vec4i",
+    "kind": "assertion"
+   }
+  ],
+  "wall_s": 102,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M30-r1",
+    "status": "CAUGHT-assertion",
+    "failed": 7,
+    "wall_s": 102
+   }
+  ]
+ },
+ "M31": {
+  "status": "CAUGHT-snapshot-only",
+  "notes": "",
+  "tier": 2,
+  "title": "for-of over std.range runs one extra iteration",
+  "mock_catchable_guess": "likely",
+  "reach_class": "docs-only",
+  "files": [
+   "packages/typegpu/src/tgsl/forOfUtils.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/mutabilityTracking.test.ts",
+    "name": "mutability tracking resolves modified to var resolves for loops",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/std/range.test.ts",
+    "name": "on the GPU std.range - valid for of iterable",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/tgsl/wgslGenerator.test.ts",
+    "name": "WgslGenerator handles \"for ... of ...\" over `std.range`",
+    "kind": "snapshot"
+   }
+  ],
+  "wall_s": 90,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M31-r1",
+    "status": "CAUGHT-snapshot-only",
+    "failed": 3,
+    "wall_s": 90
+   }
+  ]
+ },
+ "M32": {
+  "status": "CAUGHT-snapshot-only",
+  "notes": "",
+  "tier": 1,
+  "title": "Guarded compute pipeline guard uses \">\" instead of \">=\"",
+  "mock_catchable_guess": "likely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu/src/core/root/init.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/pipeline-resolution.test.ts",
+    "name": "resolve can resolve a guarded compute pipeline",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/pipelineInit.test.ts",
+    "name": "pipeline initialization guarded compute pipeline initSync resolves and creates a pipeline",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/pipelineInit.test.ts",
+    "name": "pipeline initialization guarded compute pipeline initAsync resolves and creates a pipeline",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/tgpuGenericFn.test.ts",
+    "name": "TgpuGenericFn - shellless callback wrapper can be passed into .createGuardedComputePipeline",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/tgsl/consoleLog.test.ts",
+    "name": "WgslGenerator with console.log works with implicit pointers",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/tgsl/consoleLog.test.ts",
+    "name": "WgslGenerator with console.log works with detached methods",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/3d-fish.test.ts",
+    "name": "3d fish example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/boids.test.ts",
+    "name": "boids example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/clouds.test.ts",
+    "name": "clouds example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/confetti.test.ts",
+    "name": "confetti example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/dispatch.test.ts",
+    "name": "tgsl parsing test example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/fluid-double-buffering.test.ts",
+    "name": "fluid double buffering example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/fluid-with-atomics.test.ts",
+    "name": "fluid with atomics example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/function-visualizer.test.ts",
+    "name": "function visualizer example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/game-of-life.test.ts",
+    "name": "game of life example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/increment.test.ts",
+    "name": "increment example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/jelly-slider.test.ts",
+    "name": "jelly-slider example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/jump-flood-distance.test.ts",
+    "name": "jump flood (distance) example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/jump-flood-voronoi.test.ts",
+    "name": "jump flood (voronoi) example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/log-test.test.ts",
+    "name": "console log example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/perlin-noise.test.ts",
+    "name": "perlin noise example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/react-confetti.test.ts",
+    "name": "react/confetti example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/ripple-cube.test.ts",
+    "name": "ripple-cube example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/slime-mold-3d.test.ts",
+    "name": "slime mold 3d example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/slime-mold.test.ts",
+    "name": "slime mold example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/smoky-triangle.test.ts",
+    "name": "smoky triangle should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/uniformity.test.ts",
+    "name": "uniformity test example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/vaporrave.test.ts",
+    "name": "vaporrave example should produce valid code",
+    "kind": "snapshot"
+   }
+  ],
+  "wall_s": 111,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M32-r1",
+    "status": "CAUGHT-snapshot-only",
+    "failed": 28,
+    "wall_s": 111
+   }
+  ]
+ },
+ "M33": {
+  "status": "MISSED",
+  "notes": "",
+  "tier": 1,
+  "title": "dispatchThreads computes workgroup count with floor instead of ceil",
+  "mock_catchable_guess": "likely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu/src/core/root/init.ts"
+  ],
+  "failing_tests": [],
+  "wall_s": 118,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M33-r1",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 119
+   },
+   {
+    "run": "M33-r2",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 118
+   }
+  ],
+  "attest_run": {
+   "run": "M33-t1",
+   "failed": 1,
+   "non_timeout_failures": [],
+   "timeout_failures_(baseline-flaky under attest)": [
+    "probability.test.ts"
+   ],
+   "wall_s": 277
+  }
+ },
+ "M34": {
+  "status": "MISSED",
+  "notes": "",
+  "tier": 1,
+  "title": "Workgroup barrier removed from the prefix-scan up-sweep",
+  "mock_catchable_guess": "unlikely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu-sort/src/scan/compute/shared.ts"
+  ],
+  "failing_tests": [],
+  "wall_s": 155,
+  "tsc": {
+   "packages/typegpu-sort": 0
+  },
+  "attempts": [
+   {
+    "run": "M34-r1",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 96
+   },
+   {
+    "run": "M34-r2",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 155
+   }
+  ],
+  "attest_run": {
+   "run": "M34-t1",
+   "failed": 1,
+   "non_timeout_failures": [],
+   "timeout_failures_(baseline-flaky under attest)": [
+    "probability.test.ts"
+   ],
+   "wall_s": 287
+  }
+ },
+ "M35": {
+  "status": "MISSED",
+  "notes": "",
+  "tier": 1,
+  "title": "Workgroup barrier removed between down-sweep and the final read",
+  "mock_catchable_guess": "unlikely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu-sort/src/scan/compute/scan.ts"
+  ],
+  "failing_tests": [],
+  "wall_s": 150,
+  "tsc": {
+   "packages/typegpu-sort": 0
+  },
+  "attempts": [
+   {
+    "run": "M35-r1",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 113
+   },
+   {
+    "run": "M35-r2",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 150
+   }
+  ],
+  "attest_run": {
+   "run": "M35-t1",
+   "failed": 0,
+   "non_timeout_failures": [],
+   "timeout_failures_(baseline-flaky under attest)": [],
+   "wall_s": 233
+  }
+ },
+ "M36": {
+  "status": "CAUGHT-snapshot-only",
+  "notes": "",
+  "tier": 2,
+  "title": "std.atomicSub emits atomicAdd",
+  "mock_catchable_guess": "likely",
+  "reach_class": "docs-only",
+  "files": [
+   "packages/typegpu/src/std/atomic.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/fluid-with-atomics.test.ts",
+    "name": "fluid with atomics example should produce valid code",
+    "kind": "snapshot"
+   }
+  ],
+  "wall_s": 117,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M36-r1",
+    "status": "CAUGHT-snapshot-only",
+    "failed": 1,
+    "wall_s": 117
+   }
+  ]
+ },
+ "M37": {
+  "status": "CAUGHT-assertion",
+  "notes": "",
+  "tier": 1,
+  "title": "rg* texture formats get the wrong bytes-per-texel (default 4)",
+  "mock_catchable_guess": "likely",
+  "reach_class": "docs-only",
+  "files": [
+   "packages/typegpu/src/core/texture/textureFormats.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/internal/textureFormats.test.ts",
+    "name": "getTextureFormatInfo 8-bit formats rg8unorm has texelSize=2, channelType=f32, canRenderAttachment=vec4f",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/textureFormats.test.ts",
+    "name": "getTextureFormatInfo 8-bit formats rg8snorm has texelSize=2, channelType=f32, canRenderAttachment=vec4f",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/textureFormats.test.ts",
+    "name": "getTextureFormatInfo 8-bit formats rg8uint has texelSize=2, channelType=u32, canRenderAttachment=vec4u",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/textureFormats.test.ts",
+    "name": "getTextureFormatInfo 8-bit formats rg8sint has texelSize=2, channelType=i32, canRenderAttachment=vec4i",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/textureFormats.test.ts",
+    "name": "getTextureFormatInfo 32-bit formats rg32uint has texelSize=8, channelType=u32, canRenderAttachment=vec4u",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/textureFormats.test.ts",
+    "name": "getTextureFormatInfo 32-bit formats rg32sint has texelSize=8, channelType=i32, canRenderAttachment=vec4i",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/internal/textureFormats.test.ts",
+    "name": "getTextureFormatInfo 32-bit formats rg32float has texelSize=8, channelType=f32, canRenderAttachment=vec4f",
+    "kind": "assertion"
+   }
+  ],
+  "wall_s": 192,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M37-r1",
+    "status": "CAUGHT-assertion",
+    "failed": 7,
+    "wall_s": 192
+   }
+  ]
+ },
+ "M38": {
+  "status": "CAUGHT-snapshot-only",
+  "notes": "",
+  "tier": 1,
+  "title": "u32To01F32 drops the lowest mantissa bit",
+  "mock_catchable_guess": "likely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu-noise/src/utils.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/3d-fish.test.ts",
+    "name": "3d fish example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/caustics.test.ts",
+    "name": "caustics example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/clouds.test.ts",
+    "name": "clouds example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/fluid-double-buffering.test.ts",
+    "name": "fluid double buffering example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/game-of-life.test.ts",
+    "name": "game of life example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/jelly-slider.test.ts",
+    "name": "jelly-slider example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/jump-flood-voronoi.test.ts",
+    "name": "jump flood (voronoi) example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/perlin-noise.test.ts",
+    "name": "perlin noise example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/probability.test.ts",
+    "name": "probability distribution plot example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/ripple-cube.test.ts",
+    "name": "ripple-cube example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/slime-mold-3d.test.ts",
+    "name": "slime mold 3d example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/slime-mold.test.ts",
+    "name": "slime mold example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/smoky-triangle.test.ts",
+    "name": "smoky triangle should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/uniformity.test.ts",
+    "name": "uniformity test example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/vaporrave.test.ts",
+    "name": "vaporrave example should produce valid code",
+    "kind": "snapshot"
+   }
+  ],
+  "wall_s": 104,
+  "tsc": {
+   "packages/typegpu-noise": 0
+  },
+  "attempts": [
+   {
+    "run": "M38-r1",
+    "status": "CAUGHT-snapshot-only",
+    "failed": 15,
+    "wall_s": 104
+   }
+  ]
+ },
+ "M39": {
+  "status": "CAUGHT-snapshot-only",
+  "notes": "",
+  "tier": 1,
+  "title": "GPU-side hash multiplier differs from the CPU one by one bit",
+  "mock_catchable_guess": "likely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu-noise/src/utils.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/3d-fish.test.ts",
+    "name": "3d fish example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/caustics.test.ts",
+    "name": "caustics example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/clouds.test.ts",
+    "name": "clouds example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/fluid-double-buffering.test.ts",
+    "name": "fluid double buffering example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/game-of-life.test.ts",
+    "name": "game of life example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/jelly-slider.test.ts",
+    "name": "jelly-slider example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/jelly-switch.test.ts",
+    "name": "jelly switch example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/jump-flood-voronoi.test.ts",
+    "name": "jump flood (voronoi) example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/perlin-noise.test.ts",
+    "name": "perlin noise example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/probability.test.ts",
+    "name": "probability distribution plot example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/ripple-cube.test.ts",
+    "name": "ripple-cube example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/slime-mold-3d.test.ts",
+    "name": "slime mold 3d example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/slime-mold.test.ts",
+    "name": "slime mold example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/smoky-triangle.test.ts",
+    "name": "smoky triangle should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/uniformity.test.ts",
+    "name": "uniformity test example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/vaporrave.test.ts",
+    "name": "vaporrave example should produce valid code",
+    "kind": "snapshot"
+   }
+  ],
+  "wall_s": 96,
+  "tsc": {
+   "packages/typegpu-noise": 0
+  },
+  "attempts": [
+   {
+    "run": "M39-r1",
+    "status": "CAUGHT-snapshot-only",
+    "failed": 16,
+    "wall_s": 96
+   }
+  ]
+ },
+ "M40": {
+  "status": "CAUGHT-snapshot-only",
+  "notes": "",
+  "tier": 1,
+  "title": "srgbToLinear uses gamma 2.2 instead of 2.4",
+  "mock_catchable_guess": "unlikely",
+  "reach_class": "docs-only",
+  "files": [
+   "packages/typegpu-color/src/srgb.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/spinning-triangle.test.ts",
+    "name": "react/spinning-triangle example should produce valid code",
+    "kind": "snapshot"
+   }
+  ],
+  "wall_s": 85,
+  "tsc": {
+   "packages/typegpu-color": 0
+  },
+  "attempts": [
+   {
+    "run": "M40-r1",
+    "status": "CAUGHT-snapshot-only",
+    "failed": 1,
+    "wall_s": 85
+   }
+  ]
+ },
+ "M41": {
+  "status": "CAUGHT-snapshot-only",
+  "notes": "",
+  "tier": 1,
+  "title": "opSmoothUnion blend term loses a factor h",
+  "mock_catchable_guess": "likely",
+  "reach_class": "docs-only",
+  "files": [
+   "packages/typegpu-sdf/src/operators.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/ripple-cube.test.ts",
+    "name": "ripple-cube example should produce valid code",
+    "kind": "snapshot"
+   }
+  ],
+  "wall_s": 99,
+  "tsc": {
+   "packages/typegpu-sdf": 0
+  },
+  "attempts": [
+   {
+    "run": "M41-r1",
+    "status": "CAUGHT-snapshot-only",
+    "failed": 1,
+    "wall_s": 99
+   }
+  ]
+ },
+ "M42": {
+  "status": "MISSED",
+  "notes": "",
+  "tier": 2,
+  "title": "Bitonic sort default paddingValue 0x7fffffff instead of 0xffffffff",
+  "mock_catchable_guess": "unlikely",
+  "reach_class": "none",
+  "files": [
+   "packages/typegpu-sort/src/bitonic/bitonicSort.ts"
+  ],
+  "failing_tests": [],
+  "wall_s": 118,
+  "tsc": {
+   "packages/typegpu-sort": 0
+  },
+  "attempts": [
+   {
+    "run": "M42-r1",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 89
+   },
+   {
+    "run": "M42-r2",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 118
+   }
+  ],
+  "attest_run": {
+   "run": "M42-t1",
+   "failed": 0,
+   "non_timeout_failures": [],
+   "timeout_failures_(baseline-flaky under attest)": [],
+   "wall_s": 187
+  }
+ },
+ "M43": {
+  "status": "CAUGHT-snapshot-only",
+  "notes": "",
+  "tier": 1,
+  "title": "std.select emits select(t, f, cond)",
+  "mock_catchable_guess": "likely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu/src/std/boolean.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu-gl/tests/glslGenerator.test.ts",
+    "name": "GlslGenerator - standard function calls translates scalar `select()` to ternary expression",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu-gl/tests/glslGenerator.test.ts",
+    "name": "GlslGenerator - standard function calls translates vector `select()` to mix()",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu-gl/tests/textureSamplerPairing.test.ts",
+    "name": "TgpuRootWebGL - texture/sampler pairing allows a sampler to sample two different textures",
+    "kind": "snapshot"
+   },
+   {
+    "file": "packages/typegpu/tests/std/boolean/select.test.ts",
+    "name": "select (on the GPU) unifies numeric literal inputs to a common type",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/bitonic-sort.test.ts",
+    "name": "bitonic sort example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/box-raytracing.test.ts",
+    "name": "box raytracing example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/circles.test.ts",
+    "name": "circles example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/function-visualizer.test.ts",
+    "name": "function visualizer example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/game-of-life.test.ts",
+    "name": "game of life example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/global-wind-map.test.ts",
+    "name": "global wind map example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/image-tuning.test.ts",
+    "name": "image tuning example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/jelly-slider.test.ts",
+    "name": "jelly-slider example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/jelly-switch.test.ts",
+    "name": "jelly switch example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/jump-flood-distance.test.ts",
+    "name": "jump flood (distance) example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/jump-flood-voronoi.test.ts",
+    "name": "jump flood (voronoi) example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/lines-combinations.test.ts",
+    "name": "lines combinations example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/oklab.test.ts",
+    "name": "oklab example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/point-light-shadow.test.ts",
+    "name": "point light shadow example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/probability.test.ts",
+    "name": "probability distribution plot example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/ray-marching.test.ts",
+    "name": "ray-marching example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/ripple-cube.test.ts",
+    "name": "ripple-cube example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/shifting-gradient.test.ts",
+    "name": "react/shifting-gradient example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/slime-mold-3d.test.ts",
+    "name": "slime mold 3d example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/spinning-triangle.test.ts",
+    "name": "react/spinning-triangle example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/vaporrave.test.ts",
+    "name": "vaporrave example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/xor-dev-centrifuge-2.test.ts",
+    "name": "xor dev centrifuge example should produce valid code",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/xor-dev-runner.test.ts",
+    "name": "xor dev runner example should produce valid code",
+    "kind": "snapshot"
+   }
+  ],
+  "wall_s": 117,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M43-r1",
+    "status": "CAUGHT-snapshot-only",
+    "failed": 27,
+    "wall_s": 117
+   }
+  ]
+ },
+ "M44": {
+  "status": "CAUGHT-assertion",
+  "notes": "",
+  "tier": 2,
+  "title": "CPU .rgb swizzle returns (r, b, g)",
+  "mock_catchable_guess": "unknown",
+  "reach_class": "host-only",
+  "files": [
+   "packages/typegpu/src/data/vectorImpl.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/vector.test.ts",
+    "name": "RGBA swizzles vec2f should create vec3 from rgba swizzle",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/vector.test.ts",
+    "name": "RGBA swizzles vec3f should create a vector using identity rgba swizzle",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/vector.test.ts",
+    "name": "RGBA swizzles vec3f should create a vector using mixed rgba swizzle",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/vector.test.ts",
+    "name": "RGBA swizzles vec4f should create vec3 from rgba swizzle",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/vector.test.ts",
+    "name": "RGBA swizzles vec3b should work with boolean vectors",
+    "kind": "assertion"
+   },
+   {
+    "file": "packages/typegpu/tests/vector.test.ts",
+    "name": "RGBA swizzles GPU functions should work with rgba on compile-time known vectors",
+    "kind": "snapshot"
+   }
+  ],
+  "wall_s": 87,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M44-r1",
+    "status": "CAUGHT-assertion",
+    "failed": 6,
+    "wall_s": 87
+   }
+  ]
+ },
+ "M45": {
+  "status": "CAUGHT-snapshot-only",
+  "notes": "",
+  "tier": 2,
+  "title": "rotationY4 WGSL sign error",
+  "mock_catchable_guess": "likely",
+  "reach_class": "docs-only",
+  "files": [
+   "packages/typegpu/src/data/matrix.ts"
+  ],
+  "failing_tests": [
+   {
+    "file": "packages/typegpu/tests/std/matrix/rotate.test.ts",
+    "name": "rotate generates correct WGSL for rotateY4 with custom matrix",
+    "kind": "snapshot"
+   },
+   {
+    "file": "apps/typegpu-docs/tests/individual-example-tests/3d-fish.test.ts",
+    "name": "3d fish example should produce valid code",
+    "kind": "snapshot"
+   }
+  ],
+  "wall_s": 97,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M45-r1",
+    "status": "CAUGHT-snapshot-only",
+    "failed": 2,
+    "wall_s": 97
+   }
+  ]
+ },
+ "M46": {
+  "status": "MISSED",
+  "notes": "",
+  "tier": 1,
+  "title": "std.insertBits emits the base value and the inserted bits swapped",
+  "mock_catchable_guess": "unlikely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu/src/std/numeric.ts"
+  ],
+  "failing_tests": [],
+  "wall_s": 95,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M46-r1",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 100
+   },
+   {
+    "run": "M46-r2",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 95
+   }
+  ],
+  "attest_run": {
+   "run": "M46-t1",
+   "failed": 0,
+   "non_timeout_failures": [],
+   "timeout_failures_(baseline-flaky under attest)": [],
+   "wall_s": 169
+  }
+ },
+ "M47": {
+  "status": "MISSED",
+  "notes": "",
+  "tier": 1,
+  "title": "std.firstLeadingBit emits firstTrailingBit",
+  "mock_catchable_guess": "unlikely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu/src/std/numeric.ts"
+  ],
+  "failing_tests": [],
+  "wall_s": 96,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M47-r1",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 113
+   },
+   {
+    "run": "M47-r2",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 96
+   }
+  ],
+  "attest_run": {
+   "run": "M47-t1",
+   "failed": 1,
+   "non_timeout_failures": [],
+   "timeout_failures_(baseline-flaky under attest)": [
+    "probability.test.ts"
+   ],
+   "wall_s": 173
+  }
+ },
+ "M48": {
+  "status": "MISSED",
+  "notes": "",
+  "tier": 1,
+  "title": "std.countTrailingZeros emits firstTrailingBit",
+  "mock_catchable_guess": "unlikely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu/src/std/numeric.ts"
+  ],
+  "failing_tests": [],
+  "wall_s": 97,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M48-r1",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 103
+   },
+   {
+    "run": "M48-r2",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 97
+   }
+  ],
+  "attest_run": {
+   "run": "M48-t1",
+   "failed": 1,
+   "non_timeout_failures": [],
+   "timeout_failures_(baseline-flaky under attest)": [
+    "probability.test.ts"
+   ],
+   "wall_s": 222
+  }
+ },
+ "M49": {
+  "status": "MISSED",
+  "notes": "",
+  "tier": 1,
+  "title": "std.dot4U8Packed emits dot4I8Packed",
+  "mock_catchable_guess": "unlikely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu/src/std/numeric.ts"
+  ],
+  "failing_tests": [],
+  "wall_s": 153,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M49-r1",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 102
+   },
+   {
+    "run": "M49-r2",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 153
+   }
+  ],
+  "attest_run": {
+   "run": "M49-t1",
+   "failed": 1,
+   "non_timeout_failures": [],
+   "timeout_failures_(baseline-flaky under attest)": [
+    "probability.test.ts"
+   ],
+   "wall_s": 296
+  }
+ },
+ "M50": {
+  "status": "MISSED",
+  "notes": "",
+  "tier": 1,
+  "title": "std.trunc emits floor",
+  "mock_catchable_guess": "unlikely",
+  "reach_class": "gpu-suite",
+  "files": [
+   "packages/typegpu/src/std/numeric.ts"
+  ],
+  "failing_tests": [],
+  "wall_s": 145,
+  "tsc": {
+   "packages/typegpu": 0
+  },
+  "attempts": [
+   {
+    "run": "M50-r1",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 106
+   },
+   {
+    "run": "M50-r2",
+    "status": "MISSED",
+    "failed": 0,
+    "wall_s": 145
+   }
+  ],
+  "attest_run": {
+   "run": "M50-t1",
+   "failed": 1,
+   "non_timeout_failures": [],
+   "timeout_failures_(baseline-flaky under attest)": [
+    "probability.test.ts"
+   ],
+   "wall_s": 264
+  }
+ }
+}
