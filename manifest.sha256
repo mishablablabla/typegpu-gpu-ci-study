@@ -1,3 +1,4 @@
+bd094a8d9d36a574e3041164f3318aeea414cbfc820a5d40d6bfead940ee9cd4  ./.DS_Store
 ce6a731998e89e8ec7face9e5b9fc676a484b4968620e1286949bf4835c7aec4  ./.github/workflows/backend-compare-x64.yml
 0ab13b127f8c71893dde1df720bd7fd2d786b2264307ea0059862c3cbbc87f04  ./.github/workflows/ci-soak.yml
 9b17187132fa4513b053683c20ddf4633698becf962d1c80233378714256afdf  ./.github/workflows/lavapipe-x64-check.yml
@@ -114,10 +115,10 @@ d29a4c0f01a85cf30f05eeb838b5634ad815ed7e92dce8a4fb8bafc04303a9cc  ./docker/swift
 42b9bba37292a3224be86940579a111e6dfcfe1044b0fb4561b605148dd8eda3  ./docker/swiftshader/run-full.sh
 186904df28d92cfee6de409cfa449b2038393eaf1b59998ae4da0ad206065574  ./docker/swiftshader/run-inv.sh
 af1cc1d7c8156356a2c3a965e37c29b1911d1796814a4ecd84a702e5d04601b2  ./docker/swiftshader/run.sh
-e9da9e87e0b206f37b72a0c7fd7d485bbd1c8ef63c2595835fd6282415daba1d  ./docs/FINAL_DECISION.md
+7986af91806684ec1bddd15698e39b520051e8d74782df16b518ed773ce4be3a  ./docs/FINAL_DECISION.md
 6f322e1fd5fe423f218ebdd7e8c912198f41cafaa6410e67630ab4fe8b536a33  ./docs/INDEX.md
 b2b2ff46458e7d3c91f572b3020457433bd673f4a388b9d4fa77b585d5d97c90  ./docs/PLAN.md
-bff926e49c49b024f89a07162474f9d95880d5b9c804946c95ecaa9c6bdb73a4  ./docs/REPORT.pdf
+1c985be2c6d50910fe5eb07e048951859887250553fa6fb76017a71114dafde3  ./docs/REPORT.pdf
 14d4a5f0e4eea7fa8039997da2e67644fcf2a759bbc854aa187362ddc261d078  ./docs/phase1/BASELINE.md
 603c1be72cb0e5538dfc85b1892714e8529139a47b82853a63d8884f5a3eb932  ./docs/phase2/COMPARISON_REPORT.md
 0774b39eb71c5a559122981eb97b167e50ca6711ddf913f4436775eb0f00469a  ./docs/phase2/FINAL_REPORT.md

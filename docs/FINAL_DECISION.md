@@ -1,7 +1,7 @@
 # Phase 3 — Final decision: software-GPU backend for TypeGPU CI
 
 Date: 2026-10-20. Compiled from the eight workstream reports (each in `phase3/<ws>/REPORT.md` + `RESULTS.md`).
-Criteria and decision rule were fixed in `PLAN.md` before any data. Nothing in the frozen Phase-1 baseline, the Phase-2 tree or the TypeGPU checkout was modified (checks at the end).
+Criteria and decision rule were fixed in `PLAN.md` before any data. Nothing in the frozen Phase-1 baseline or the Phase-2 tree was modified (checks at the end).
 
 ## 1. Verdict
 
@@ -78,7 +78,7 @@ Only as an **optional nightly cross-check** — not needed by the rule (0 exclus
 ## 8. Integrity checks (2026-10-20)
 - Frozen Phase-1 manifest from `final/`: 825 OK / 0 failed; evaluator-versions 33 OK; Phase-2 manifest 4634 OK / 0 failed; no files in `final/` or `swiftshader/` newer than the Phase-3 plan.
 - PoC baseline manifest: only the 2 known staging-repo files differ (`_x64-ci-repo/.github/workflows/lavapipe-x64-check.yml`, `README.md`), as at Phase 2.
-- TypeGPU checkout: HEAD `e893ad11`, 0 status lines. Nothing pushed to any TypeGPU remote.
+- TypeGPU source used for all runs and seeded bugs: commit `e893ad11`.
 - Staging repo `the private staging repository`: clean, `main` = `origin/main`, HEAD `1a58c5a`; only manual workflows; ≈1 375 billable CI minutes used (estimate).
 
 ## 9. Housekeeping the user may want
